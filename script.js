@@ -71,7 +71,76 @@ function addToCart(name,price){
         });
 
     }
+function showCart(){
 
+    let total = 0;
+
+    let html = `
+    <h2>🛒 Cart</h2>
+    `;
+
+    cart.forEach((item,index)=>{
+
+        total += item.price * item.qty;
+
+        html += `
+        <div style="margin-bottom:15px;border-bottom:1px solid #ddd;padding-bottom:10px;">
+
+        <b>${item.name}</b>
+
+        <br><br>
+
+        <button onclick="decreaseQty(${index})">-</button>
+
+        ${item.qty}
+
+        <button onclick="increaseQty(${index})">+</button>
+
+        <button onclick="removeItem(${index})">
+
+        ❌
+
+        </button>
+
+        </div>
+        `;
+
+    });
+
+    html += `
+
+    <h3 class="total">
+
+    Total ₹${total}
+
+    </h3>
+
+    <input
+    id="customerName"
+    placeholder="Customer Name">
+
+    <input
+    id="customerMobile"
+    placeholder="Mobile Number">
+
+    <input
+    id="customerAddress"
+    placeholder="Address">
+
+    <br><br>
+
+    <button onclick="sendOrder()">
+
+    Order on WhatsApp
+
+    </button>
+
+    `;
+
+    document.getElementById("cartArea")
+    .innerHTML = html;
+
+}
     showCart();
 
 }
