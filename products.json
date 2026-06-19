@@ -1,0 +1,16 @@
+[
+{
+"id":1,
+"name":"Multipoint Ointment",
+"price":"95",
+"category":"Pain Relief",
+"image":"images/Ciplox_drop.jpg"
+},
+{
+"id":2,
+"name":"Fourderm Cream",
+"price":"120",
+"category":"Skin Care",
+"image":"images/Tenacid_MF_tab.jpg"
+}
+]
