@@ -6,18 +6,36 @@ fetch("products.json")
 
     displayProducts(products);
 
-    document.getElementById("search")
-    .addEventListener("keyup", function(){
+    function filterProducts() {
 
-        let value = this.value.toLowerCase();
+        let searchValue =
+        document.getElementById("search").value.toLowerCase();
 
-        let filtered = products.filter(product =>
-            product.name.toLowerCase().includes(value)
-        );
+        let categoryValue =
+        document.getElementById("categoryFilter").value;
+
+        let filtered = products.filter(product => {
+
+            let matchName =
+            product.name.toLowerCase().includes(searchValue);
+
+            let matchCategory =
+            categoryValue === "ALL" ||
+            product.category === categoryValue;
+
+            return matchName && matchCategory;
+
+        });
 
         displayProducts(filtered);
 
-    });
+    }
+
+    document.getElementById("search")
+    .addEventListener("keyup", filterProducts);
+
+    document.getElementById("categoryFilter")
+    .addEventListener("change", filterProducts);
 
 });
 
