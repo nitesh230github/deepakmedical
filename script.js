@@ -162,7 +162,7 @@ Order Details:
     });
 
     window.open(
-"https://wa.me/91YOURNUMBER?text="+encodeURIComponent(msg)
+"https://wa.me/917804008789?text="+encodeURIComponent(msg)
 );
 
 }
