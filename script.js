@@ -71,7 +71,10 @@ function addToCart(name,price){
         });
 
     }
-function showCart(){
+
+    showCart();
+
+}
 
     let total = 0;
 
@@ -139,9 +142,6 @@ function showCart(){
 
     document.getElementById("cartArea")
     .innerHTML = html;
-
-}
-    showCart();
 
 function increaseQty(index){
 
@@ -245,4 +245,11 @@ encodeURIComponent(msg)
 
 }
 
-}
+
+
+
+
+
+
+
+
