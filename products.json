@@ -26,5 +26,12 @@
 "price":"47.53",
 "category":"TABLET",
 "image":"images/neurobion_forte_tab.jpg"
+},
+{
+"id":4,
+"name":"OMNIGEL 100G",
+"price":"47.53",
+"category":"OINTMENT",
+"image":"images/omnigel_100g.jpg"
 }
 ]
