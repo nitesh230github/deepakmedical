@@ -143,4 +143,32 @@ function showCart(){
 }
     showCart();
 
+function increaseQty(index){
+
+    cart[index].qty++;
+
+    showCart();
+
+}
+
+function decreaseQty(index){
+
+    if(cart[index].qty > 1){
+
+        cart[index].qty--;
+
+    }
+
+    showCart();
+
+}
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    showCart();
+
+}
+
 }
