@@ -87,7 +87,11 @@ function showCart(){
 
     let total = 0;
 
-    let html = `<h2>🛒 Cart</h2>`;
+    let html = `
+
+    <button onclick="closeCart()"> ❌ Close
+
+    </button> <h2> 🛒 Cart </h2>`;
 
     cart.forEach((item,index)=>{
 
@@ -149,8 +153,11 @@ function showCart(){
 
 });
 
-document.getElementById("cartCount")
+document.getElementById("cartButton")
 .innerHTML = `🛒 Cart (${totalItems})`;
+
+document.getElementById("cartButton")
+.onclick = openCart;
 }
 
 function increaseQty(index){
@@ -242,3 +249,20 @@ encodeURIComponent(msg)
     );
 
 }
+
+function openCart(){
+
+    document.getElementById("cartArea")
+    .style.right = "0";
+
+}
+
+function closeCart(){
+
+    document.getElementById("cartArea")
+    .style.right = "-400px";
+
+}
+
+
+
