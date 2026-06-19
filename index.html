@@ -4,37 +4,23 @@
     <title>Deepak Medical Agency</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Deepak Medical Agency</h1>
+<header>
+    <h1>Deepak Medical Agency</h1>
+</header>
 
-<input type="text" id="search" placeholder="Search Products">
+<input
+type="text"
+id="search"
+class="search-box"
+placeholder="🔍 Search Products">
 
 <div id="products"></div>
 
-<script>
-fetch('products.json')
-  .then(response => response.json())
-  .then(products => {
-    let html = '';
-
-    products.forEach(product => {
-      html += `
-        <div style="border:1px solid #ccc; padding:15px; margin:10px;">
-          <img src="${product.image}" width="150">
-          <h3>${product.name}</h3>
-          <p>MRP ₹${product.price}</p>
-          <button onclick="window.open('https://wa.me/917804008789?text=I want to order ${product.name}')">
-            Order on WhatsApp
-          </button>
-        </div>
-      `;
-    });
-
-    document.getElementById('products').innerHTML = html;
-  });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
