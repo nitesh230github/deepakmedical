@@ -121,7 +121,7 @@ function showCart(){
     html += `
 
     <h3 class="total">
-        Total ₹${total}
+        Total ₹${total.toFixed(2)}
     </h3>
 
     <input
@@ -241,7 +241,7 @@ Order Details:
 
     });
 
-    msg += `Total Amount: ₹${total}`;
+    msg += `Total Amount: ₹${total.toFixed(2)}`;
 
     window.open(
 "https://wa.me/917804008789?text=" +
