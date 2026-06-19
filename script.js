@@ -242,7 +242,27 @@ Order Details:
     });
 
     msg += `Total Amount: ₹${total.toFixed(2)}`;
+    fetch("https://script.google.com/macros/s/AKfycbzpO7Wqq5ip9Kn6dzdRl-djWYoAHn3xrq-rU-9QiF5vJQ_4MGO7kRyo-7XH82MsrTjDUg/exec",{
 
+method:"POST",
+
+body:JSON.stringify({
+
+secret:"DeepakMedical2026",
+
+name:name,
+
+mobile:mobile,
+
+address:address,
+
+products:msg,
+
+total:total.toFixed(2)
+
+})
+
+});
     window.open(
 "https://wa.me/917804008789?text=" +
 encodeURIComponent(msg)
