@@ -242,7 +242,19 @@ Order Details:
     });
 
     msg += `Total Amount: ₹${total.toFixed(2)}`;
-    fetch("https://script.google.com/macros/s/AKfycbzpO7Wqq5ip9Kn6dzdRl-djWYoAHn3xrq-rU-9QiF5vJQ_4MGO7kRyo-7XH82MsrTjDUg/exec",{
+  let productList = "";
+
+cart.forEach(item => {
+
+    productList +=
+`${item.name} × ${item.qty}
+₹${(item.price * item.qty).toFixed(2)}
+
+`;
+
+});
+
+fetch("https://script.google.com/macros/s/AKfycbzpO7Wqq5ip9Kn6dzdRl-djWYoAHn3xrq-rU-9QiF5vJQ_4MGO7kRyo-7XH82MsrTjDUg/exec",{
 
 method:"POST",
 
@@ -256,7 +268,7 @@ mobile:mobile,
 
 address:address,
 
-products:msg,
+products:productList,
 
 total:total.toFixed(2)
 
