@@ -2,15 +2,29 @@
 {
 "id":1,
 "name":"CIPLOX DROP",
-"price":"95",
+"price":"16.48",
 "category":"DROP",
 "image":"images/ciplox_drop.jpg"
 },
 {
 "id":2,
 "name":"TENACID MF TAB",
-"price":"120",
+"price":"185",
 "category":"TABLET",
 "image":"images/tenacid_mf_tab.jpg"
+},
+{
+"id":3,
+"name":"CIPLOX-D DROP",
+"price":"29.2",
+"category":"DROP",
+"image":"images/ciplox_d_drop.jpg"
+},
+{
+"id":4,
+"name":"NEUROBION FORTE TAB",
+"price":"47.53",
+"category":"TABLET",
+"image":"images/neurobion_forte_tab.jpg"
 }
 ]
