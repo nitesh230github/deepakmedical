@@ -69,9 +69,9 @@ function showCart(){
     <hr>
     <h2>🛒 Cart</h2>
     `;
-
+    let total = 0;
     cart.forEach((item,index)=>{
-
+        total += item.price * item.qty;
         html += `
         <p>
         ${item.name}
@@ -85,7 +85,11 @@ function showCart(){
         </p>
         `;
     });
-
+    html += `
+    <h3 class="total">
+    Total ₹${total}
+    </h3>
+     `;
     html += `
 
     <br><br>
@@ -104,8 +108,16 @@ function showCart(){
 
     `;
 
-    document.getElementById("products").insertAdjacentHTML("afterend",
-    `<div id="cartArea">${html}</div>`);
+    let oldCart = document.getElementById("cartArea");
+
+    if(oldCart){
+    oldCart.remove();
+}
+
+    document.getElementById("products").insertAdjacentHTML(
+    "afterend",
+    `<div id="cartArea">${html}</div>`
+);
 }
 
 
@@ -138,7 +150,7 @@ function sendOrder(){
     let name = document.getElementById("customerName").value;
 
     let mobile = document.getElementById("customerMobile").value;
-
+   
     if(name==="" || mobile===""){
         alert("Please enter Name and Mobile Number");
         return;
