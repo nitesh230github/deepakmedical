@@ -36,20 +36,15 @@ function displayProducts(items){
 
             <p class="price">₹${product.price}</p>
 
-            <button
-            onclick="addToCart('${product.name}',${product.price})">
-
-            Add to Cart
-
+            <button onclick="addToCart('${product.name}',${product.price})">
+                Add to Cart
             </button>
 
         </div>
         `;
-
     });
 
     document.getElementById("products").innerHTML = html;
-
 }
 
 function addToCart(name,price){
@@ -57,30 +52,24 @@ function addToCart(name,price){
     let item = cart.find(x => x.name === name);
 
     if(item){
-
         item.qty++;
-
-    }else{
-
+    }
+    else{
         cart.push({
-
             name:name,
             price:price,
             qty:1
-
         });
-
     }
 
     showCart();
-
 }
+
+function showCart(){
 
     let total = 0;
 
-    let html = `
-    <h2>🛒 Cart</h2>
-    `;
+    let html = `<h2>🛒 Cart</h2>`;
 
     cart.forEach((item,index)=>{
 
@@ -89,33 +78,28 @@ function addToCart(name,price){
         html += `
         <div style="margin-bottom:15px;border-bottom:1px solid #ddd;padding-bottom:10px;">
 
-        <b>${item.name}</b>
+            <b>${item.name}</b>
 
-        <br><br>
+            <br><br>
 
-        <button onclick="decreaseQty(${index})">-</button>
+            <button onclick="decreaseQty(${index})">-</button>
 
-        ${item.qty}
+            ${item.qty}
 
-        <button onclick="increaseQty(${index})">+</button>
+            <button onclick="increaseQty(${index})">+</button>
 
-        <button onclick="removeItem(${index})">
-
-        ❌
-
-        </button>
+            <button onclick="removeItem(${index})">
+                ❌
+            </button>
 
         </div>
         `;
-
     });
 
     html += `
 
     <h3 class="total">
-
-    Total ₹${total}
-
+        Total ₹${total}
     </h3>
 
     <input
@@ -133,34 +117,28 @@ function addToCart(name,price){
     <br><br>
 
     <button onclick="sendOrder()">
-
-    Order on WhatsApp
-
+        Order on WhatsApp
     </button>
 
     `;
 
-    document.getElementById("cartArea")
-    .innerHTML = html;
+    document.getElementById("cartArea").innerHTML = html;
+}
 
 function increaseQty(index){
 
     cart[index].qty++;
 
     showCart();
-
 }
 
 function decreaseQty(index){
 
     if(cart[index].qty > 1){
-
         cart[index].qty--;
-
     }
 
     showCart();
-
 }
 
 function removeItem(index){
@@ -168,7 +146,6 @@ function removeItem(index){
     cart.splice(index,1);
 
     showCart();
-
 }
 
 function sendOrder(){
@@ -178,7 +155,6 @@ function sendOrder(){
         alert("Cart is empty!");
 
         return;
-
     }
 
     let name =
@@ -195,7 +171,6 @@ function sendOrder(){
         alert("Please enter Customer Name");
 
         return;
-
     }
 
     if(!/^[6-9]\d{9}$/.test(mobile)){
@@ -203,7 +178,6 @@ function sendOrder(){
         alert("Please enter a valid 10 digit Mobile Number");
 
         return;
-
     }
 
     let total = 0;
@@ -225,8 +199,7 @@ Order Details:
 
         total += item.price * item.qty;
 
-        msg +=
-`${item.name} × ${item.qty}
+        msg += `${item.name} × ${item.qty}
 ₹${item.price * item.qty}
 
 `;
@@ -235,21 +208,9 @@ Order Details:
 
     msg += `Total Amount: ₹${total}`;
 
-    // IMPORTANT:
-    // Replace 919876543210 with your WhatsApp number
-
     window.open(
 "https://wa.me/917804008789?text=" +
 encodeURIComponent(msg)
     );
 
 }
-
-
-
-
-
-
-
-
-
