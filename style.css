@@ -65,3 +65,40 @@ button {
 button:hover {
     background: #0b8043;
 }
+#cartArea{
+    position: fixed;
+    right: 10px;
+    top: 100px;
+    width: 280px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,.2);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.qty-btn{
+    width:30px;
+    height:30px;
+    margin:5px;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.cart-item{
+    margin-bottom:10px;
+    border-bottom:1px solid #eee;
+    padding-bottom:10px;
+}
+
+.total{
+    color:green;
+    font-weight:bold;
+    font-size:20px;
+}
