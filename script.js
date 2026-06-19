@@ -171,4 +171,78 @@ function removeItem(index){
 
 }
 
+function sendOrder(){
+
+    if(cart.length === 0){
+
+        alert("Cart is empty!");
+
+        return;
+
+    }
+
+    let name =
+    document.getElementById("customerName").value.trim();
+
+    let mobile =
+    document.getElementById("customerMobile").value.trim();
+
+    let address =
+    document.getElementById("customerAddress").value.trim();
+
+    if(name === ""){
+
+        alert("Please enter Customer Name");
+
+        return;
+
+    }
+
+    if(!/^[6-9]\d{9}$/.test(mobile)){
+
+        alert("Please enter a valid 10 digit Mobile Number");
+
+        return;
+
+    }
+
+    let total = 0;
+
+    let msg =
+`Hello Deepak Medical Agency
+
+Customer Name: ${name}
+
+Mobile Number: ${mobile}
+
+Address: ${address}
+
+Order Details:
+
+`;
+
+    cart.forEach(item => {
+
+        total += item.price * item.qty;
+
+        msg +=
+`${item.name} × ${item.qty}
+₹${item.price * item.qty}
+
+`;
+
+    });
+
+    msg += `Total Amount: ₹${total}`;
+
+    // IMPORTANT:
+    // Replace 919876543210 with your WhatsApp number
+
+    window.open(
+"https://wa.me/917804008789?text=" +
+encodeURIComponent(msg)
+    );
+
+}
+
 }
