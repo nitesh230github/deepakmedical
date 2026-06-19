@@ -254,7 +254,7 @@ cart.forEach(item => {
 
 });
 
-fetch("https://script.google.com/macros/s/AKfycbzpO7Wqq5ip9Kn6dzdRl-djWYoAHn3xrq-rU-9QiF5vJQ_4MGO7kRyo-7XH82MsrTjDUg/exec",{
+fetch("https://script.google.com/macros/s/AKfycbwVDN0OlZ5srpTFPFEIR0O0B43Oe5vcHap70EJcfBtsbXuPLy8QdKMTs8NtwaJ3JRnGxA/exec",{
 
 method:"POST",
 
