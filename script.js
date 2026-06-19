@@ -141,6 +141,16 @@ function showCart(){
     `;
 
     document.getElementById("cartArea").innerHTML = html;
+    let totalItems = 0;
+
+    cart.forEach(item => {
+
+    totalItems += item.qty;
+
+});
+
+document.getElementById("cartCount")
+.innerHTML = `🛒 Cart (${totalItems})`;
 }
 
 function increaseQty(index){
