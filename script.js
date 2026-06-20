@@ -149,6 +149,12 @@ function addToCart(name,price){
 
 function showCart(){
 
+    if(cart.length === 0){
+
+    document.getElementById("cartArea").innerHTML = "";
+    return;
+}
+    
     let total = 0;
 
     let html = `
