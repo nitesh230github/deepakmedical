@@ -156,32 +156,31 @@ header{
 }
 #cartButton{
 
-    position: fixed;
+    background:#fff;
 
-    right: 20px;
+    color:#16a34a;
 
-    bottom: 20px;
+    border:2px solid #16a34a;
 
-    background: #16a34a;
+    padding:12px 20px;
 
-    color: white;
+    border-radius:30px;
 
-    padding: 15px 25px;
+    font-weight:bold;
 
-    border-radius: 50px;
+    cursor:pointer;
 
-    cursor: pointer;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,.3);
-
-    z-index: 1001;
+    transition:.3s;
 
 }
 
+#cartButton:hover{
+
+    background:#16a34a;
+
+    color:white;
+
+}
 
 
 
