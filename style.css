@@ -211,6 +211,35 @@ input{
 
 }
 
+    header{
+    background:#16a34a !important;
+    color:white !important;
+    padding:20px !important;
+    display:flex !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+}
+
+.header-right{
+    display:flex !important;
+    align-items:center !important;
+    gap:20px !important;
+}
+
+.search-box{
+    padding:12px;
+    border-radius:10px;
+}
+
+#cartButton{
+    background:white;
+    color:#16a34a;
+    border:2px solid #16a34a;
+    padding:12px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+}
 
 
 
