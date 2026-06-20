@@ -220,6 +220,368 @@
     "company": "ALKEM",
     "bestseller":false,
     "image": "images/azikem_500_tab.jpg"
+  },
+  [
+  {
+    "id": 24,
+    "name": "BECOSULES CAP",
+    "price": "62.37",
+    "category": "CAPSULE",
+    "packing": "20's",
+    "company": "PFIZER",
+    "image": "images/becosules_cap.jpg"
+  },
+  {
+    "id": 25,
+    "name": "BECTODINE OINT",
+    "price": "58.50",
+    "category": "OINTMENT",
+    "packing": "20 g",
+    "company": "RANBAXY",
+    "image": "images/bectodine_oint.jpg"
+  },
+  {
+    "id": 26,
+    "name": "BETADINE 10% OINT",
+    "price": "132.30",
+    "category": "OINTMENT",
+    "packing": "20 g",
+    "company": "WIN-Medicare",
+    "image": "images/betadine_10_oint.jpg"
+  },
+  {
+    "id": 27,
+    "name": "BETAMIL GM CREAM",
+    "price": "54.10",
+    "category": "CREAM",
+    "packing": "30 gm",
+    "company": "P&G",
+    "image": "images/betamil_gm_cream.jpg"
+  },
+  {
+    "id": 28,
+    "name": "BETNOSOL ORAL DROP",
+    "price": "29.01",
+    "category": "DROP",
+    "packing": "15 ml",
+    "company": "GSK",
+    "image": "images/betnosol_oral_drop.jpg"
+  },
+  {
+    "id": 29,
+    "name": "BETNOVATE C CREAM",
+    "price": "77.90",
+    "category": "CREAM",
+    "packing": "30 g",
+    "company": "GSK",
+    "image": "images/betnovate_c_cream.jpg"
+  },
+  {
+    "id": 30,
+    "name": "BETNOVATE GM CREAM",
+    "price": "46.63",
+    "category": "CREAM",
+    "packing": "20 g",
+    "company": "GSK",
+    "image": "images/betnovate_gm_cream.jpg"
+  },
+  {
+    "id": 31,
+    "name": "BETNOVATE N CREAM",
+    "price": "62.67",
+    "category": "CREAM",
+    "packing": "25 gm",
+    "company": "GSK",
+    "image": "images/betnovate_n_cream.jpg"
+  },
+  {
+    "id": 32,
+    "name": "BROZEDEX SYP",
+    "price": "177.42",
+    "category": "SYRUP",
+    "packing": "100 ml",
+    "company": "DR REDDYS",
+    "image": "images/brozedex_syp.jpg"
+  },
+  {
+    "id": 33,
+    "name": "BURNHEAL CREAM",
+    "price": "99.15",
+    "category": "CREAM",
+    "packing": "15 g",
+    "company": "CIPLA",
+    "image": "images/burnheal_cream.jpg"
+  },
+  {
+    "id": 34,
+    "name": "BURNOL CREAM",
+    "price": "98.44",
+    "category": "CREAM",
+    "packing": "20 g",
+    "company": "DR MOREPEN",
+    "image": "images/burnol_cream.jpg"
+  },
+  {
+    "id": 35,
+    "name": "CALCITAS D3 CAP",
+    "price": "131.54",
+    "category": "CAPSULE",
+    "packing": "4's",
+    "company": "INTAS",
+    "image": "images/calcitas_d3_cap.jpg"
+  },
+  {
+    "id": 36,
+    "name": "CALPOL 120 SYP",
+    "price": "38.45",
+    "category": "SYRUP",
+    "packing": "60 ml",
+    "company": "GSK",
+    "image": "images/calpol_120_syp.jpg"
+  },
+  {
+    "id": 37,
+    "name": "CALPOL 250 SYP",
+    "price": "42.84",
+    "category": "SYRUP",
+    "packing": "60 ml",
+    "company": "GSK",
+    "image": "images/calpol_250_syp.jpg"
+  },
+  {
+    "id": 38,
+    "name": "CALPOL 500 TAB",
+    "price": "14.26",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "GSK",
+    "image": "images/calpol_500_tab.jpg"
+  },
+  {
+    "id": 39,
+    "name": "CALPOL 650 TAB",
+    "price": "32.04",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "GSK",
+    "image": "images/calpol_650_tab.jpg"
+  },
+  {
+    "id": 40,
+    "name": "CALPOL ORAL DROP",
+    "price": "30.98",
+    "category": "DROP",
+    "packing": "100 mg",
+    "company": "GSK",
+    "image": "images/calpol_oral_drop.jpg"
+  },
+  {
+    "id": 41,
+    "name": "CATASPA TAB",
+    "price": "47.50",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "USV",
+    "image": "images/cataspa_tab.jpg"
+  },
+  {
+    "id": 42,
+    "name": "CEFDOT 200 TAB",
+    "price": "311.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "MEDLEY",
+    "image": "images/cefdot_200_tab.jpg"
+  },
+  {
+    "id": 43,
+    "name": "CEFKEM SYP",
+    "price": "48.60",
+    "category": "SYRUP",
+    "packing": "30 ml",
+    "company": "ALKEM",
+    "image": "images/cefkem_syp.jpg"
+  },
+  {
+    "id": 44,
+    "name": "CEFLOX-D DROP",
+    "price": "69.30",
+    "category": "DROP",
+    "packing": "10 ml",
+    "company": "LABORATE PHARMA",
+    "image": "images/ceflox_d_drop.jpg"
+  },
+  {
+    "id": 45,
+    "name": "CHESTON COLD TAB",
+    "price": "65.79",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "CIPLA",
+    "image": "images/cheston_cold_tab.jpg"
+  },
+  {
+    "id": 46,
+    "name": "CHESTON COLD SYP",
+    "price": "67.50",
+    "category": "SYRUP",
+    "packing": "60 ml",
+    "company": "CIPLA",
+    "image": "images/cheston_cold_syp.jpg"
+  },
+  {
+    "id": 47,
+    "name": "CHORONEX GEL",
+    "price": "87.65",
+    "category": "GEL",
+    "packing": "10 g",
+    "company": "MACLEODS",
+    "image": "images/choronex_gel.jpg"
+  },
+  {
+    "id": 48,
+    "name": "CIPCAL 500 TAB",
+    "price": "107.92",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "CIPLA",
+    "image": "images/cipcal_500_tab.jpg"
+  },
+  {
+    "id": 49,
+    "name": "CIPCAL XT TAB",
+    "price": "338.77",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "CIPLA",
+    "image": "images/cipcal_xt_tab.jpg"
+  },
+  {
+    "id": 50,
+    "name": "CIPLADINE OINT",
+    "price": "36.22",
+    "category": "OINTMENT",
+    "packing": "10 g",
+    "company": "CIPLA",
+    "image": "images/cipladine_oint.jpg"
+  },
+  {
+    "id": 51,
+    "name": "CIPLOX EYE DROP",
+    "price": "16.48",
+    "category": "DROP",
+    "packing": "10 ml",
+    "company": "CIPLA",
+    "image": "images/ciplox_eye_drop.jpg"
+  },
+  {
+    "id": 52,
+    "name": "CIPLOX-D EYE DROP",
+    "price": "29.20",
+    "category": "DROP",
+    "packing": "10 ml",
+    "company": "CIPLA",
+    "image": "images/ciplox_d_eye_drop.jpg"
+  },
+  {
+    "id": 53,
+    "name": "CIPRODAC 500 TAB",
+    "price": "48.32",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "CADILA",
+    "image": "images/ciprodac_500_tab.jpg"
+  },
+  {
+    "id": 54,
+    "name": "CLINSOL GEL",
+    "price": "95.00",
+    "category": "GEL",
+    "packing": "15 g",
+    "company": "LEEFORD",
+    "image": "images/clinsol_gel.jpg"
+  },
+  {
+    "id": 55,
+    "name": "CLOBENATE GM OINT",
+    "price": "95.75",
+    "category": "OINTMENT",
+    "packing": "10 g",
+    "company": "INDSWIFT",
+    "image": "images/clobenate_gm_oint.jpg"
+  },
+  {
+    "id": 56,
+    "name": "CLOCIP DUSTING POWD",
+    "price": "102.00",
+    "category": "POWDER",
+    "packing": "75 g",
+    "company": "CIPLA",
+    "image": "images/clocip_dusting_powd.jpg"
+  },
+  {
+    "id": 57,
+    "name": "CLOCIP OINT",
+    "price": "48.03",
+    "category": "OINTMENT",
+    "packing": "15 g",
+    "company": "CIPLA",
+    "image": "images/clocip_oint.jpg"
+  },
+  {
+    "id": 58,
+    "name": "CLOT 1 POWDER BLUE",
+    "price": "80.00",
+    "category": "POWDER",
+    "packing": "75 g",
+    "company": "BVU",
+    "image": "images/clot_1_powder_blue.jpg"
+  },
+  {
+    "id": 59,
+    "name": "COMBIFLAM TAB",
+    "price": "57.45",
+    "category": "TABLET",
+    "packing": "20's",
+    "company": "SANOFI",
+    "image": "images/combiflam_tab.jpg"
+  },
+  {
+    "id": 60,
+    "name": "CTD 12.5 TAB",
+    "price": "159.55",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "IPCA",
+    "image": "images/ctd_125_tab.jpg"
+  },
+  {
+    "id": 61,
+    "name": "CTD 6.25 TAB",
+    "price": "116.58",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "IPCA",
+    "image": "images/ctd_625_tab.jpg"
+  },
+  {
+    "id": 62,
+    "name": "CTZ TAB",
+    "price": "39.30",
+    "category": "TABLET",
+    "packing": "20's",
+    "company": "NOVITA",
+    "image": "images/ctz_tab.jpg"
+  },
+  {
+    "id": 63,
+    "name": "CYPON SYP",
+    "price": "139.69",
+    "category": "SYRUP",
+    "packing": "200 ml",
+    "company": "GENO",
+    "image": "images/cypon_syp.jpg"
   }
+]
   
 ]
