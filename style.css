@@ -20,7 +20,13 @@ header{
     justify-content:space-between;
     align-items:center;
 }
+.header-right{
 
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+}
 .search-box{
     width:350px;
     max-width:90%;
