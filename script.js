@@ -19,8 +19,10 @@ fetch("products.json")
 .then(response => response.json())
 .then(products => {
 
-    let bestSellers =
+let bestSellers =
 products.filter(product => product.bestseller);
+
+bestSellers = shuffleArray(bestSellers);
 
 let otherProducts =
 products.filter(product => !product.bestseller);
@@ -49,7 +51,8 @@ displayProducts([
             product.bestseller &&
             product.name.toLowerCase().includes(searchValue)
         );
-
+        bestSellers = shuffleArray(bestSellers);
+        
         let otherProducts =
         products.filter(product =>
             !product.bestseller &&
