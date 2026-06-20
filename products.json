@@ -841,8 +841,373 @@
     "packing": "100 ml",
     "company": "LEEFORD",
     "image": "images/galirex_syp.jpg"
+  },
+  {
+    "id": 93,
+    "name": "GLYCOMET GP1 TAB",
+    "price": "123.28",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "USV",
+    "image": "images/glycomet_gp1_tab.jpg"
+  },
+  {
+    "id": 94,
+    "name": "GLYCOMET GP2 TAB",
+    "price": "180.00",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "USV",
+    "image": "images/glycomet_gp2_tab.jpg"
+  },
+  {
+    "id": 95,
+    "name": "GRIPE WATER",
+    "price": "75.00",
+    "category": "WATER",
+    "packing": "150 ml",
+    "company": "MACLEODS",
+    "image": "images/gripe_water.jpg"
+  },
+  {
+    "id": 96,
+    "name": "HEMOFORTE SYP",
+    "price": "202.00",
+    "category": "SYRUP",
+    "packing": "300 ml",
+    "company": "TORQUE",
+    "image": "images/hemoforte_syp.jpg"
+  },
+  {
+    "id": 97,
+    "name": "HEMOPLUS SYP",
+    "price": "140.00",
+    "category": "SYRUP",
+    "packing": "225 ml",
+    "company": "TORQUE",
+    "image": "images/hemoplus_syp.jpg"
+  },
+  {
+    "id": 98,
+    "name": "INTAGESIC MR TAB",
+    "price": "124.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "INTAS",
+    "image": "images/intagesic_mr_tab.jpg"
+  },
+  {
+    "id": 99,
+    "name": "KETOFLY SOAP",
+    "price": "125.00",
+    "category": "SOAP",
+    "packing": "75 g",
+    "company": "LEEFORD",
+    "image": "images/ketofly_soap.jpg"
+  },
+  {
+    "id": 100,
+    "name": "KETOFORD DT TAB",
+    "price": "60.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "LEEFORD",
+    "image": "images/ketoford_dt_tab.jpg"
+  },
+  {
+    "id": 101,
+    "name": "KETOFRESH CT OINT",
+    "price": "99.00",
+    "category": "OINTMENT",
+    "packing": "15 g",
+    "company": "SMARTWAY",
+    "image": "images/ketofresh_ct_oint.jpg"
+  },
+  {
+    "id": 102,
+    "name": "KETOKEM CT SOAP",
+    "price": "132.00",
+    "category": "SOAP",
+    "packing": "75 g",
+    "company": "ALKEM",
+    "image": "images/ketokem_ct_soap.jpg"
+  },
+  {
+    "id": 103,
+    "name": "KETOKEM SOAP",
+    "price": "143.00",
+    "category": "SOAP",
+    "packing": "75 g",
+    "company": "ALKEM",
+    "image": "images/ketokem_soap.jpg"
+  },
+  {
+    "id": 104,
+    "name": "KOPLYTE ORS POWD",
+    "price": "23.11",
+    "category": "POWDER",
+    "packing": "21.8 g",
+    "company": "ZENITH",
+    "image": "images/koplyte_ors_powd.jpg"
+  },
+  {
+    "id": 105,
+    "name": "KT 5 DERM OINT",
+    "price": "118.00",
+    "category": "OINTMENT",
+    "packing": "15 g",
+    "company": "LABORATE",
+    "image": "images/kt_5_derm_oint.jpg"
+  },
+  {
+    "id": 106,
+    "name": "KUFFDRYL SYP",
+    "price": "119.53",
+    "category": "SYRUP",
+    "packing": "100 ml",
+    "company": "INTAS",
+    "image": "images/kuffdryl_syp.jpg"
+  },
+  {
+    "id": 107,
+    "name": "L HIST MONT TAB",
+    "price": "257.80",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "ALKEM",
+    "image": "images/l_hist_mont_tab.jpg"
+  },
+  {
+    "id": 108,
+    "name": "L HIST TAB",
+    "price": "88.00",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "ALKEM",
+    "image": "images/l_hist_tab.jpg"
+  },
+  {
+    "id": 109,
+    "name": "LACTOBUILD GRANULES POWD",
+    "price": "250.00",
+    "category": "POWDER",
+    "packing": "200 g",
+    "company": "LEEFORD",
+    "image": "images/lactobuild_granules_powd.jpg"
+  },
+  {
+    "id": 110,
+    "name": "LAXMI SAT ISABGOL POWD",
+    "price": "104.00",
+    "category": "POWDER",
+    "packing": "50 g",
+    "company": "GIRIRAJ ENT",
+    "image": "images/laxmi_sat_isabgol_powd.jpg"
+  },
+  {
+    "id": 111,
+    "name": "LEEZOLE(VAGINAL) GEL",
+    "price": "102.00",
+    "category": "GEL",
+    "packing": "30 g",
+    "company": "LEEFORD",
+    "image": "images/leezole_vaginal_gel.jpg"
+  },
+  {
+    "id": 112,
+    "name": "LEVOBEX 5 TAB",
+    "price": "37.08",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "GLOBEX",
+    "image": "images/levobex_5_tab.jpg"
+  },
+  {
+    "id": 113,
+    "name": "LIMCEE TAB",
+    "price": "24.68",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "ABBOTT",
+    "image": "images/limcee_tab.jpg"
+  },
+  {
+    "id": 114,
+    "name": "LIV 52 DS SYP",
+    "price": "375.00",
+    "category": "SYRUP",
+    "packing": "200 ml",
+    "company": "HIMALAYA",
+    "image": "images/liv_52_ds_syp.jpg"
+  },
+  {
+    "id": 115,
+    "name": "LIV 52 SYP",
+    "price": "234.00",
+    "category": "SYRUP",
+    "packing": "200 ml",
+    "company": "HIMALAYA",
+    "image": "images/liv_52_syp.jpg"
+  },
+  {
+    "id": 116,
+    "name": "LIVSHINE DS SYP",
+    "price": "168.75",
+    "category": "SYRUP",
+    "packing": "300 ml",
+    "company": "GLOBEX",
+    "image": "images/livshine_ds_syp.jpg"
+  },
+  {
+    "id": 117,
+    "name": "LOMO D TAB",
+    "price": "23.20",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "VINTOCHEM",
+    "image": "images/lomo_d_tab.jpg"
+  },
+  {
+    "id": 118,
+    "name": "LULIDERM CREAM",
+    "price": "159.37",
+    "category": "CREAM",
+    "packing": "10 g",
+    "company": "ARISTO",
+    "image": "images/luliderm_cream.jpg"
+  },
+  {
+    "id": 119,
+    "name": "MANFORCE 100 TAB",
+    "price": "243.00",
+    "category": "TABLET",
+    "packing": "1*4",
+    "company": "MANKIND",
+    "image": "images/manforce_100_tab.jpg"
+  },
+  {
+    "id": 120,
+    "name": "MEDIVIT SYP",
+    "price": "70.00",
+    "category": "SYRUP",
+    "packing": "100 ml",
+    "company": "MEDITEK",
+    "image": "images/medivit_syp.jpg"
+  },
+  {
+    "id": 121,
+    "name": "MEFTAL SPAS TAB",
+    "price": "51.56",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "BLUE CROSS",
+    "image": "images/meftal_spas_tab.jpg"
+  },
+  {
+    "id": 122,
+    "name": "MELAMET CREAM",
+    "price": "79.80",
+    "category": "CREAM",
+    "packing": "15 g",
+    "company": "UTL",
+    "image": "images/melamet_cream.jpg"
+  },
+  {
+    "id": 123,
+    "name": "MIGRAFEN TAB",
+    "price": "112.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "LEEFORD",
+    "image": "images/migrafen_tab.jpg"
+  },
+  {
+    "id": 124,
+    "name": "MISS ME TAB",
+    "price": "60.00",
+    "category": "TABLET",
+    "packing": "1's",
+    "company": "ZEE",
+    "image": "images/miss_me_tab.jpg"
+  },
+  {
+    "id": 125,
+    "name": "MOMIN S OINT",
+    "price": "66.30",
+    "category": "OINTMENT",
+    "packing": "15 g",
+    "company": "UTL",
+    "image": "images/momin_s_oint.jpg"
+  },
+  {
+    "id": 126,
+    "name": "MONOCEF O 200 TAB",
+    "price": "215.62",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "ARISTO",
+    "image": "images/monocef_o_200_tab.jpg"
+  },
+  {
+    "id": 127,
+    "name": "MONTAS L TAB",
+    "price": "183.28",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "INTAS",
+    "image": "images/montas_l_tab.jpg"
+  },
+  {
+    "id": 128,
+    "name": "MOXATRIS CV 625 TAB",
+    "price": "204.80",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "AKUMS",
+    "image": "images/moxatris_cv_625_tab.jpg"
+  },
+  {
+    "id": 129,
+    "name": "MOXIKIND CV 625 TAB",
+    "price": "182.96",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "MANKIND",
+    "image": "images/moxikind_cv_625_tab.jpg"
+  },
+  {
+    "id": 130,
+    "name": "MOXIMAX D DROP",
+    "price": "126.00",
+    "category": "DROP",
+    "packing": "10 ml",
+    "company": "ALKEM",
+    "image": "images/moximax_d_drop.jpg"
+  },
+  {
+    "id": 131,
+    "name": "MULTI VITAMIN SYP",
+    "price": "185.00",
+    "category": "SYRUP",
+    "packing": "200 ml",
+    "company": "AUSTRO",
+    "image": "images/multi_vitamin_syp.jpg"
+  },
+  {
+    "id": 132,
+    "name": "MUPICIP OINT",
+    "price": "115.58",
+    "category": "OINTMENT",
+    "packing": "5 g",
+    "company": "CIPLA",
+    "image": "images/mupicip_oint.jpg"
   }
 ]
+
+
+
+
+    
 
 
 
