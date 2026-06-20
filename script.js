@@ -52,7 +52,17 @@ function displayProducts(items){
 
             <h3>${product.name}</h3>
 
-            <p class="price">₹${product.price}</p>
+             <p class="packing">
+             📦 Pack Size: ${product.packing}
+             </p>
+
+              <p class="company">
+             🏭 Mfg/Mkt: ${product.company}
+              </p>
+
+                <p class="price">
+               ₹${product.price}
+                 </p>
 
             <button onclick="addToCart('${product.name}',${product.price})">
                 Add to Cart
