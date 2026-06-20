@@ -215,6 +215,9 @@ function showCart(){
     `;
 
     document.getElementById("cartArea").innerHTML = html;
+
+    document.getElementById("cartArea").style.right = "20px";
+    
     let totalItems = 0;
 
     cart.forEach(item => {
