@@ -53,11 +53,11 @@ function displayProducts(items){
             <h3>${product.name}</h3>
 
              <p class="packing">
-             📦 Pack Size: ${product.packing}
+             Pack Size: ${product.packing}
              </p>
 
               <p class="company">
-             🏭 Mfg/Mkt: ${product.company}
+             Mfg/Mkt: ${product.company}
               </p>
 
                 <p class="price">
