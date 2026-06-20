@@ -6,6 +6,7 @@
 "category":"DROP",
 "packing":"10 ml",
 "company":"Cipla Ltd.",
+"bestseller":true,
 "image":"images/ciplox_drop.jpg"
 },
 {
@@ -13,6 +14,7 @@
 "name":"TENACID MF TAB",
 "price":"185",
 "category":"TABLET",
+"bestseller":false,
 "image":"https://cdn.postimage.me/2026/06/18/ACILOC-150-BOX.jpg"
 },
 {
@@ -20,6 +22,7 @@
 "name":"CIPLOX-D DROP",
 "price":"29.2",
 "category":"DROP",
+"bestseller":true,
 "image":"images/ciplox_d_drop.jpg"
 },
 {
@@ -27,6 +30,7 @@
 "name":"NEUROBION FORTE TAB",
 "price":"47.53",
 "category":"TABLET",
+"bestseller":true,
 "image":"images/neurobion_forte_tab.jpg"
 },
 {
@@ -34,6 +38,188 @@
 "name":"OMNIGEL 100G",
 "price":"47.53",
 "category":"OINTMENT",
+"bestseller":true,
 "image":"images/omnigel_100g.jpg"
-}
+},
+{
+    "id": 6,
+    "name": "ALCIFLOX D DROP",
+    "price": "49.00",
+    "category": "DROP",
+    "packing": "10 ml",
+    "company": "ALKEM",
+    "bestseller":true,
+    "image": "images/alciflox_d_drop.jpg"
+  },
+  {
+    "id": 7,
+    "name": "ALDIGESIC P TAB",
+    "price": "119.05",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "ALKEM",
+    "bestseller":true,
+    "image": "images/aldigesic_p_tab.jpg"
+  },
+  {
+    "id": 8,
+    "name": "ALKACITRAL SYP",
+    "price": "152.71",
+    "category": "SYRUP",
+    "packing": "100 ml",
+    "company": "BIOCHEM",
+    "bestseller":true,
+    "image": "images/alkacitral_syp.jpg"
+  },
+  {
+    "id": 9,
+    "name": "ALKOF DX SYP",
+    "price": "120.00",
+    "category": "SYRUP",
+    "packing": "100 ml",
+    "company": "ALKEM",
+    "bestseller":false,
+    "image": "images/alkof_dx_syp.jpg"
+  },
+  {
+    "id": 10,
+    "name": "ALMOX 250 CAP",
+    "price": "41.66",
+    "category": "CAPSULE",
+    "packing": "15's",
+    "company": "ALKEM",
+    "bestseller":true,
+    "image": "images/almox_250_cap.jpg"
+  },
+  {
+    "id": 11,
+    "name": "ALMOX CV 625 TAB",
+    "price": "208.50",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "ALKEM",
+    "bestseller":true,
+    "image": "images/almox_cv_625_tab.jpg"
+  },
+  {
+    "id": 12,
+    "name": "AMBRODIL LS SYP",
+    "price": "101.71",
+    "category": "SYRUP",
+    "packing": "100 ml",
+    "company": "ARISTO",
+    "bestseller":true,
+    "image": "images/ambrodil_ls_syp.jpg"
+  },
+  {
+    "id": 13,
+    "name": "AMBRODIL S SYP",
+    "price": "36.56",
+    "category": "SYRUP",
+    "packing": "100 ml",
+    "company": "ARISTO",
+    "bestseller":true,
+    "image": "images/ambrodil_s_syp.jpg"
+  },
+  {
+    "id": 14,
+    "name": "AMBROX LS SYP",
+    "price": "118.80",
+    "category": "SYRUP",
+    "packing": "100 ml",
+    "company": "GLOBEX",
+    "bestseller":false,
+    "image": "images/ambrox_ls_syp.jpg"
+  },
+  {
+    "id": 15,
+    "name": "AMLIP 5 TAB",
+    "price": "28.44",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "CIPLA",
+    "bestseller":false,
+    "image": "images/amlip_5_tab.jpg"
+  },
+  {
+    "id": 16,
+    "name": "AMLOVAS 2.5 TAB",
+    "price": "28.65",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "MACLEODS",
+    "bestseller":false,
+    "image": "images/amlovas_25_tab.jpg"
+  },
+  {
+    "id": 17,
+    "name": "AMLOVAS 5 TAB",
+    "price": "40.00",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "MACLEODS",
+    "bestseller":false,
+    "image": "images/amlovas_5_tab.jpg"
+  },
+  {
+    "id": 18,
+    "name": "ARISTOZYME SYP",
+    "price": "151.87",
+    "category": "SYRUP",
+    "packing": "200 ml",
+    "company": "ARISTO",
+    "bestseller":true,
+    "image": "images/aristozyme_syp.jpg"
+  },
+  {
+    "id": 19,
+    "name": "ASTHALIN 4 TAB",
+    "price": "15.59",
+    "category": "TABLET",
+    "packing": "45's",
+    "company": "CIPLA",
+    "bestseller":true,
+    "image": "images/asthalin_4_tab.jpg"
+  },
+  {
+    "id": 20,
+    "name": "ASTHALIN RESPULES",
+    "price": "8.80",
+    "category": "RESPULES",
+    "packing": "2.5 ml",
+    "company": "CIPLA",
+    "bestseller":false,
+    "image": "images/asthalin_respules.jpg"
+  },
+  {
+    "id": 21,
+    "name": "ATM 250 TAB",
+    "price": "124.64",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "INDOCO",
+    "bestseller":true,
+    "image": "images/atm_250_tab.jpg"
+  },
+  {
+    "id": 22,
+    "name": "AZIKEM 250 TAB",
+    "price": "74.78",
+    "category": "TABLET",
+    "packing": "6's",
+    "company": "ALKEM",
+    "bestseller":true,
+    "image": "images/azikem_250_tab.jpg"
+  },
+  {
+    "id": 23,
+    "name": "AZIKEM 500 TAB",
+    "price": "80.56",
+    "category": "TABLET",
+    "packing": "6's",
+    "company": "ALKEM",
+    "bestseller":false,
+    "image": "images/azikem_500_tab.jpg"
+  }
+  
 ]
