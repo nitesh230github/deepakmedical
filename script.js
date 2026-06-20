@@ -32,30 +32,55 @@ displayProducts([
     ...otherProducts
 ]);
 
-    function filterProducts() {
+   function filterProducts() {
 
-        let searchValue =
-        document.getElementById("search").value.toLowerCase();
+    let searchValue =
+    document.getElementById("search").value.toLowerCase();
 
-        let categoryValue =
-        document.getElementById("categoryFilter").value;
+    let categoryValue =
+    document.getElementById("categoryFilter").value;
 
-        let filtered = products.filter(product => {
+    let filtered;
 
-            let matchName =
-            product.name.toLowerCase().includes(searchValue);
+    if(categoryValue === "ALL"){
 
-            let matchCategory =
-            categoryValue === "ALL" ||
-            product.category === categoryValue;
+        let bestSellers =
+        products.filter(product =>
+            product.bestseller &&
+            product.name.toLowerCase().includes(searchValue)
+        );
 
-            return matchName && matchCategory;
+        let otherProducts =
+        products.filter(product =>
+            !product.bestseller &&
+            product.name.toLowerCase().includes(searchValue)
+        );
 
-        });
+        otherProducts = shuffleArray(otherProducts);
 
-        displayProducts(filtered);
+        filtered = [
+            ...bestSellers,
+            ...otherProducts
+        ];
 
     }
+    else{
+
+        filtered = products.filter(product =>
+
+            product.category === categoryValue &&
+
+            product.name.toLowerCase().includes(searchValue)
+
+        );
+
+        filtered = shuffleArray(filtered);
+
+    }
+
+    displayProducts(filtered);
+
+}
 
     document.getElementById("search")
     .addEventListener("keyup", filterProducts);
