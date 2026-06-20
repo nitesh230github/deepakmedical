@@ -26,22 +26,6 @@
 "image":"images/ciplox_d_drop.jpg"
 },
 {
-"id":4,
-"name":"NEUROBION FORTE TAB",
-"price":"47.53",
-"category":"TABLET",
-"bestseller":true,
-"image":"images/neurobion_forte_tab.jpg"
-},
-{
-"id":5,
-"name":"OMNIGEL 100G",
-"price":"47.53",
-"category":"OINTMENT",
-"bestseller":true,
-"image":"images/omnigel_100g.jpg"
-},
-{
     "id": 6,
     "name": "ALCIFLOX D DROP",
     "price": "49.00",
@@ -1201,6 +1185,294 @@
     "packing": "5 g",
     "company": "CIPLA",
     "image": "images/mupicip_oint.jpg"
+  },
+  {
+    "id": 133,
+    "name": "NEUROBION FORTE TAB",
+    "price": "47.53",
+    "category": "TABLET",
+    "packing": "30's",
+    "company": "P&G",
+    "image": "images/neurobion_forte_tab.jpg"
+  },
+  {
+    "id": 134,
+    "name": "NFLOX TZ TAB",
+    "price": "145.20",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "LABORATE",
+    "image": "images/nflox_tz_tab.jpg"
+  },
+  {
+    "id": 135,
+    "name": "NICIP PLUS TAB",
+    "price": "65.10",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "CIPLA",
+    "image": "images/nicip_plus_tab.jpg"
+  },
+  {
+    "id": 136,
+    "name": "NIMESULIDE 100MG TAB",
+    "price": "43.45",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "CIPLA",
+    "image": "images/nimesulide_100mg_tab.jpg"
+  },
+  {
+    "id": 137,
+    "name": "NIMUCET GOLD TAB",
+    "price": "60.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "INTAS",
+    "image": "images/nimucet_gold_tab.jpg"
+  },
+  {
+    "id": 138,
+    "name": "NIMUCET SYP",
+    "price": "52.97",
+    "category": "SYRUP",
+    "packing": "60 ml",
+    "company": "INTAS",
+    "image": "images/nimucet_syp.jpg"
+  },
+  {
+    "id": 139,
+    "name": "NIMUCET TAB",
+    "price": "60.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "INTAS",
+    "image": "images/nimucet_tab.jpg"
+  },
+  {
+    "id": 140,
+    "name": "NIZER GEL",
+    "price": "141.65",
+    "category": "GEL",
+    "packing": "30 g",
+    "company": "USV",
+    "image": "images/nizer_gel.jpg"
+  },
+  {
+    "id": 141,
+    "name": "NO SCARS CREAM",
+    "price": "253.00",
+    "category": "CREAM",
+    "packing": "20 g",
+    "company": "TORQUE",
+    "image": "images/no_scars_cream.jpg"
+  },
+  {
+    "id": 142,
+    "name": "NODARD PLUS TAB",
+    "price": "57.75",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "CIPLA",
+    "image": "images/nodard_plus_tab.jpg"
+  },
+  {
+    "id": 143,
+    "name": "NOGACID CAP",
+    "price": "49.06",
+    "category": "CAPSULE",
+    "packing": "15's",
+    "company": "CADILA",
+    "image": "images/nogacid_cap.jpg"
+  },
+  {
+    "id": 144,
+    "name": "NORFLOKEM TZ TAB",
+    "price": "120.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "ALKEM",
+    "image": "images/norflokem_tz_tab.jpg"
+  },
+  {
+    "id": 145,
+    "name": "O2 SYP",
+    "price": "77.80",
+    "category": "SYRUP",
+    "packing": "60 ml",
+    "company": "MEDLEY",
+    "image": "images/o2_syp.jpg"
+  },
+  {
+    "id": 146,
+    "name": "OFLAKEM OZ SYP",
+    "price": "70.00",
+    "category": "SYRUP",
+    "packing": "30 ml",
+    "company": "ALKEM",
+    "image": "images/oflakem_oz_syp.jpg"
+  },
+  {
+    "id": 147,
+    "name": "OMEE MPS ORAL SUSP",
+    "price": "110.00",
+    "category": "SUSPENSION",
+    "packing": "170 ml",
+    "company": "ALKEM",
+    "image": "images/omee_mps_oral_susp.jpg"
+  },
+  {
+    "id": 148,
+    "name": "OMNACORTIL 10 TAB",
+    "price": "13.66",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "MACLEODS",
+    "image": "images/omnacortil_10_tab.jpg"
+  },
+  {
+    "id": 149,
+    "name": "OMNIGEL OINT",
+    "price": "314.60",
+    "category": "OINTMENT",
+    "packing": "100 g",
+    "company": "CIPLA",
+    "image": "images/omnigel_oint.jpg"
+  },
+  {
+    "id": 150,
+    "name": "OMNIGEL OINT",
+    "price": "65.30",
+    "category": "OINTMENT",
+    "packing": "10 g",
+    "company": "CIPLA",
+    "image": "images/omnigel_oint.jpg"
+  },
+  {
+    "id": 151,
+    "name": "OMNIGEL OINT",
+    "price": "118.03",
+    "category": "OINTMENT",
+    "packing": "20 g",
+    "company": "CIPLA",
+    "image": "images/omnigel_oint.jpg"
+  },
+  {
+    "id": 152,
+    "name": "OMNIGEL OINT",
+    "price": "203.12",
+    "category": "OINTMENT",
+    "packing": "50 g",
+    "company": "CIPLA",
+    "image": "images/omnigel_oint.jpg"
+  },
+  {
+    "id": 153,
+    "name": "OMNIGEL SPRAY",
+    "price": "148.91",
+    "category": "SPRAY",
+    "packing": "35 g",
+    "company": "CIPLA",
+    "image": "images/omnigel_spray.jpg"
+  },
+  {
+    "id": 154,
+    "name": "ONDEM MD4 TAB",
+    "price": "54.85",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "ALKEM",
+    "image": "images/ondem_md4_tab.jpg"
+  },
+  {
+    "id": 155,
+    "name": "ORAFAST CREAM",
+    "price": "110.00",
+    "category": "CREAM",
+    "packing": "15 g",
+    "company": "LEEFORD",
+    "image": "images/orafast_cream.jpg"
+  },
+  {
+    "id": 156,
+    "name": "OROGARD TAB",
+    "price": "70.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "ALKEM",
+    "image": "images/orogard_tab.jpg"
+  },
+  {
+    "id": 157,
+    "name": "ORS ORANGE LIQUID",
+    "price": "31.50",
+    "category": "LIQUID",
+    "packing": "200 ml",
+    "company": "AUSTRO",
+    "image": "images/ors_orange_liquid.jpg"
+  },
+  {
+    "id": 158,
+    "name": "ORS SAM KEM POW",
+    "price": "25.40",
+    "category": "POWDER",
+    "packing": "21.8 g",
+    "company": "SAM-KE",
+    "image": "images/ors_sam_kem_pow.jpg"
+  },
+  {
+    "id": 159,
+    "name": "OZOMET G1 TAB",
+    "price": "54.79",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "OZONE",
+    "image": "images/ozomet_g1_tab.jpg"
+  },
+  {
+    "id": 160,
+    "name": "OZOMET G2 TAB",
+    "price": "58.45",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "OZONE",
+    "image": "images/ozomet_g2_tab.jpg"
+  },
+  {
+    "id": 161,
+    "name": "OZOMET PG1 TAB",
+    "price": "54.80",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "OZONE",
+    "image": "images/ozomet_pg1_tab.jpg"
+  },
+  {
+    "id": 162,
+    "name": "OZOMET PG2 TAB",
+    "price": "54.80",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "OZONE",
+    "image": "images/ozomet_pg2_tab.jpg"
+  },
+  {
+    "id": 163,
+    "name": "OZOMET VG1 TAB",
+    "price": "58.45",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "OZONE",
+    "image": "images/ozomet_vg1_tab.jpg"
+  },
+  {
+    "id": 164,
+    "name": "OZOMET VG2 TAB",
+    "price": "54.79",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "OZONE",
+    "image": "images/ozomet_vg2_tab.jpg"
   }
 ]
 
