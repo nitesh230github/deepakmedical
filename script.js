@@ -215,8 +215,6 @@ function showCart(){
     `;
 
     document.getElementById("cartArea").innerHTML = html;
-
-    document.getElementById("cartArea").style.right = "20px";
     
     let totalItems = 0;
 
@@ -358,7 +356,7 @@ encodeURIComponent(msg)
 function openCart(){
 
     document.getElementById("cartArea")
-    .style.right = "0";
+    .style.right = "20px";
 
 }
 
