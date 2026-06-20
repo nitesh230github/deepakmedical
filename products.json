@@ -580,9 +580,269 @@
     "packing": "200 ml",
     "company": "GENO",
     "image": "images/cypon_syp.jpg"
+  },
+  {
+    "id": 64,
+    "name": "DEFICICOT 6 TAB",
+    "price": "95.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "LEEFORD",
+    "image": "images/deficicot_6_tab.jpg"
+  },
+  {
+    "id": 65,
+    "name": "DEMISONE TAB",
+    "price": "2.46",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "CADILA",
+    "image": "images/demisone_tab.jpg"
+  },
+  {
+    "id": 66,
+    "name": "DERMI 5 CREAM",
+    "price": "51.00",
+    "category": "CREAM",
+    "packing": "15 g",
+    "company": "UTL",
+    "image": "images/dermi_5_cream.jpg"
+  },
+  {
+    "id": 67,
+    "name": "DERMIFORD CREAM",
+    "price": "105.00",
+    "category": "CREAM",
+    "packing": "15 g",
+    "company": "LEEFORD",
+    "image": "images/dermiford_cream.jpg"
+  },
+  {
+    "id": 68,
+    "name": "DERMIKEM OC+ CREAM",
+    "price": "103.10",
+    "category": "CREAM",
+    "packing": "15 g",
+    "company": "ALKEM",
+    "image": "images/dermikem_oc_cream.jpg"
+  },
+  {
+    "id": 69,
+    "name": "DEROBIN OINT",
+    "price": "130.78",
+    "category": "OINTMENT",
+    "packing": "30 g",
+    "company": "USV",
+    "image": "images/derobin_oint.jpg"
+  },
+  {
+    "id": 70,
+    "name": "DEXONA TAB",
+    "price": "6.93",
+    "category": "TABLET",
+    "packing": "30's",
+    "company": "ZYDUS",
+    "image": "images/dexona_tab.jpg"
+  },
+  {
+    "id": 71,
+    "name": "DEXORANGE CAP",
+    "price": "187.15",
+    "category": "CAPSULE",
+    "packing": "30's",
+    "company": "FRANCO",
+    "image": "images/dexorange_cap.jpg"
+  },
+  {
+    "id": 72,
+    "name": "DEXORANGE SYP",
+    "price": "197.80",
+    "category": "SYRUP",
+    "packing": "200 ml",
+    "company": "FRANCO",
+    "image": "images/dexorange_syp.jpg"
+  },
+  {
+    "id": 73,
+    "name": "DYNAPAR TAB",
+    "price": "130.45",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "TROIKAA",
+    "image": "images/dynapar_tab.jpg"
+  },
+  {
+    "id": 74,
+    "name": "EARWELL DROP",
+    "price": "25.10",
+    "category": "DROP",
+    "packing": "5 ml",
+    "company": "LEEFORD",
+    "image": "images/earwell_drop.jpg"
+  },
+  {
+    "id": 75,
+    "name": "EASYLAX PLUS ORAL SUSP",
+    "price": "173.03",
+    "category": "SUSPENSION",
+    "packing": "170 ml",
+    "company": "CIPLA",
+    "image": "images/easylax_plus_oral_susp.jpg"
+  },
+  {
+    "id": 76,
+    "name": "ELCTRAL SMALL POWD",
+    "price": "29.01",
+    "category": "POWDER",
+    "packing": "5*4.4 g",
+    "company": "FDC LTD",
+    "image": "images/elctral_small_powd.jpg"
+  },
+  {
+    "id": 77,
+    "name": "ELECTROLYTE POWD",
+    "price": "23.34",
+    "category": "POWDER",
+    "packing": "21.8 g",
+    "company": "DANISH",
+    "image": "images/electrolyte_powd.jpg"
+  },
+  {
+    "id": 78,
+    "name": "ELOSONE HT CREAM",
+    "price": "140.00",
+    "category": "CREAM",
+    "packing": "15 g",
+    "company": "LEEFORD",
+    "image": "images/elosone_ht_cream.jpg"
+  },
+  {
+    "id": 79,
+    "name": "ENSHINE TOOTHPASTE",
+    "price": "111.00",
+    "category": "TOOTHPASTE",
+    "packing": "100 g",
+    "company": "LEEFORD",
+    "image": "images/enshine_toothpaste.jpg"
+  },
+  {
+    "id": 80,
+    "name": "ETOFORD 120 TAB",
+    "price": "130.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "LEEFORD",
+    "image": "images/etoford_120_tab.jpg"
+  },
+  {
+    "id": 81,
+    "name": "ETOFORD 90 TAB",
+    "price": "110.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "LEEFORD",
+    "image": "images/etoford_90_tab.jpg"
+  },
+  {
+    "id": 82,
+    "name": "ETOFORD MR TAB",
+    "price": "180.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "LEEFORD",
+    "image": "images/etoford_mr_tab.jpg"
+  },
+  {
+    "id": 83,
+    "name": "EVION 400 TAB",
+    "price": "95.55",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "P&G",
+    "image": "images/evion_400_tab.jpg"
+  },
+  {
+    "id": 84,
+    "name": "FESTIVE D DROP",
+    "price": "69.30",
+    "category": "DROP",
+    "packing": "10 ml",
+    "company": "LABORATE PHARMA",
+    "image": "images/festive_d_drop.jpg"
+  },
+  {
+    "id": 85,
+    "name": "FESTIVE DROP",
+    "price": "57.20",
+    "category": "DROP",
+    "packing": "10 ml",
+    "company": "LABORATE PHARMA",
+    "image": "images/festive_drop.jpg"
+  },
+  {
+    "id": 86,
+    "name": "FLAGYL 400 TAB",
+    "price": "34.63",
+    "category": "TABLET",
+    "packing": "20's",
+    "company": "ABBOTT",
+    "image": "images/flagyl_400_tab.jpg"
+  },
+  {
+    "id": 87,
+    "name": "FLEXON MR TAB",
+    "price": "29.43",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "ARISTO",
+    "image": "images/flexon_mr_tab.jpg"
+  },
+  {
+    "id": 88,
+    "name": "FLEXON TAB",
+    "price": "35.25",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "ARISTO",
+    "image": "images/flexon_tab.jpg"
+  },
+  {
+    "id": 89,
+    "name": "FLUKA 150 TAB",
+    "price": "13.50",
+    "category": "TABLET",
+    "packing": "1's",
+    "company": "CIPLA",
+    "image": "images/fluka_150_tab.jpg"
+  },
+  {
+    "id": 90,
+    "name": "FOURDERM OINT",
+    "price": "117.97",
+    "category": "OINTMENT",
+    "packing": "10 g",
+    "company": "CIPLA",
+    "image": "images/fourderm_oint.jpg"
+  },
+  {
+    "id": 91,
+    "name": "FOURDERM OINT",
+    "price": "64.73",
+    "category": "OINTMENT",
+    "packing": "5 g",
+    "company": "CIPLA",
+    "image": "images/fourderm_oint.jpg"
+  },
+  {
+    "id": 92,
+    "name": "GALIREX SYP",
+    "price": "110.00",
+    "category": "SYRUP",
+    "packing": "100 ml",
+    "company": "LEEFORD",
+    "image": "images/galirex_syp.jpg"
   }
 ]
-  
 
 
 
