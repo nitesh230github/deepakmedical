@@ -19,7 +19,18 @@ fetch("products.json")
 .then(response => response.json())
 .then(products => {
 
-    displayProducts(products);
+    let bestSellers =
+products.filter(product => product.bestseller);
+
+let otherProducts =
+products.filter(product => !product.bestseller);
+
+otherProducts = shuffleArray(otherProducts);
+
+displayProducts([
+    ...bestSellers,
+    ...otherProducts
+]);
 
     function filterProducts() {
 
