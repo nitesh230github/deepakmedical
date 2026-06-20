@@ -1,43 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Medical Agency</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
 <header>
+
     <h1>Deepak Medical Agency</h1>
 
-    <input
+    <div class="header-right">
+
+        <input
         type="text"
         id="search"
         class="search-box"
         placeholder="🔍 Search Products">
+
         <select id="categoryFilter" class="search-box">
-        <option value="ALL">All Categories</option>
-        <option value="TABLET">TABLET</option>
-        <option value="CAPSULE">CAPSULE</option>
-        <option value="DROP">DROP</option>
-        <option value="SYRUP">SYRUP</option>
-        <option value="CREAM">CREAM</option>
-        <option value="OINTMENT">OINTMENT</option>
-        <option value="INJECTION">INJECTION</option>
-</select>
+
+            <option value="ALL">All Categories</option>
+            <option value="TABLET">TABLET</option>
+            <option value="CAPSULE">CAPSULE</option>
+            <option value="DROP">DROP</option>
+            <option value="SYRUP">SYRUP</option>
+            <option value="CREAM">CREAM</option>
+            <option value="OINTMENT">OINTMENT</option>
+            <option value="INJECTION">INJECTION</option>
+
+        </select>
+
+        <div id="cartButton">
+
+            🛒 Cart (0)
+
+        </div>
+
+    </div>
+
 </header>
 
 <div id="products"></div>
-<!-- <div id="cartArea"></div> -->
-<div id="cartButton">
-    🛒 Cart (0)
-</div>
-
-<div id="cartArea">
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
