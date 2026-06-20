@@ -1473,9 +1473,449 @@
     "packing": "15's",
     "company": "OZONE",
     "image": "images/ozomet_vg2_tab.jpg"
+  },
+  {
+    "id": 165,
+    "name": "PANTOP 40 TAB",
+    "price": "159.37",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "ARISTO",
+    "image": "images/pantop_40_tab.jpg"
+  },
+  {
+    "id": 166,
+    "name": "PANTOP D CAP",
+    "price": "195.00",
+    "category": "CAPSULE",
+    "packing": "15's",
+    "company": "ARISTO",
+    "image": "images/pantop_d_cap.jpg"
+  },
+  {
+    "id": 167,
+    "name": "PANTOP DSR CAP",
+    "price": "226.40",
+    "category": "CAPSULE",
+    "packing": "15's",
+    "company": "ARISTO",
+    "image": "images/pantop_dsr_cap.jpg"
+  },
+  {
+    "id": 168,
+    "name": "PHENSEDYL DX SYP",
+    "price": "119.42",
+    "category": "SYRUP",
+    "packing": "100 ml",
+    "company": "ABBOTT",
+    "image": "images/phensedyl_dx_syp.jpg"
+  },
+  {
+    "id": 169,
+    "name": "POLYBION LC SYP",
+    "price": "151.85",
+    "category": "SYRUP",
+    "packing": "150 ml",
+    "company": "P&G",
+    "image": "images/polybion_lc_syp.jpg"
+  },
+  {
+    "id": 170,
+    "name": "PREGACIP M CAP",
+    "price": "179.68",
+    "category": "CAPSULE",
+    "packing": "10's",
+    "company": "CIPLA",
+    "image": "images/pregacip_m_cap.jpg"
+  },
+  {
+    "id": 171,
+    "name": "QDIDERM OINT",
+    "price": "30.00",
+    "category": "OINTMENT",
+    "packing": "5 g",
+    "company": "MAPRO",
+    "image": "images/qdiderm_oint.jpg"
+  },
+  {
+    "id": 172,
+    "name": "RABALKEM DSR CAP",
+    "price": "155.00",
+    "category": "CAPSULE",
+    "packing": "10's",
+    "company": "ALKEM",
+    "image": "images/rabalkem_dsr_cap.jpg"
+  },
+  {
+    "id": 173,
+    "name": "REACTIN 100SR TAB",
+    "price": "74.41",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "LEEFORD",
+    "image": "images/reactin_100sr_tab.jpg"
+  },
+  {
+    "id": 174,
+    "name": "REBOZEN DSR CAP",
+    "price": "95.00",
+    "category": "CAPSULE",
+    "packing": "10's",
+    "company": "LEEFORD",
+    "image": "images/rebozen_dsr_cap.jpg"
+  },
+  {
+    "id": 175,
+    "name": "REFRESH TEAR E/D DROP",
+    "price": "140.03",
+    "category": "DROP",
+    "packing": "10 ml",
+    "company": "PIRAMAL PHARMA",
+    "image": "images/refresh_tear_e_d_drop.jpg"
+  },
+  {
+    "id": 176,
+    "name": "ROSEDAY F10 TAB",
+    "price": "269.10",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "USV",
+    "image": "images/roseday_f10_tab.jpg"
+  },
+  {
+    "id": 177,
+    "name": "SALICYLIC ACID",
+    "price": "95.00",
+    "category": "ACID",
+    "packing": "20 g",
+    "company": "MEDIC",
+    "image": "images/salicylic_acid.jpg"
+  },
+  {
+    "id": 178,
+    "name": "SARIDON TAB",
+    "price": "55.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "BAYER",
+    "image": "images/saridon_tab.jpg"
+  },
+  {
+    "id": 179,
+    "name": "SCRABIC LOTION",
+    "price": "51.00",
+    "category": "LOTION",
+    "packing": "50 ml",
+    "company": "LEEFORD",
+    "image": "images/scrabic_lotion.jpg"
+  },
+  {
+    "id": 180,
+    "name": "SIGORA GOLD",
+    "price": "0.00",
+    "category": "TABLET",
+    "packing": "TAB",
+    "company": "SMART LAB",
+    "image": "images/sigora_gold.jpg"
+  },
+  {
+    "id": 181,
+    "name": "SINAREST TAB",
+    "price": "123.64",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "CENTAUR",
+    "image": "images/sinarest_tab.jpg"
+  },
+  {
+    "id": 182,
+    "name": "SKIN SHINE OINT",
+    "price": "154.55",
+    "category": "OINTMENT",
+    "packing": "15 g",
+    "company": "CADILA",
+    "image": "images/skin_shine_oint.jpg"
+  },
+  {
+    "id": 183,
+    "name": "SOREGEL GEL",
+    "price": "75.00",
+    "category": "GEL",
+    "packing": "10 g",
+    "company": "INTAS",
+    "image": "images/soregel_gel.jpg"
+  },
+  {
+    "id": 184,
+    "name": "SPASMONIL TAB",
+    "price": "31.94",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "CIPLA",
+    "image": "images/spasmonil_tab.jpg"
+  },
+  {
+    "id": 185,
+    "name": "STEMETIL MD TAB",
+    "price": "195.91",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "ABBOTT",
+    "image": "images/stemetil_md_tab.jpg"
+  },
+  {
+    "id": 186,
+    "name": "SUMO GEL",
+    "price": "70.00",
+    "category": "GEL",
+    "packing": "15 g",
+    "company": "ALKEM",
+    "image": "images/sumo_gel.jpg"
+  },
+  {
+    "id": 187,
+    "name": "SUMO TAB",
+    "price": "167.50",
+    "category": "TABLET",
+    "packing": "1*15",
+    "company": "ALKEM",
+    "image": "images/sumo_tab.jpg"
+  },
+  {
+    "id": 188,
+    "name": "SUPERB CREAM",
+    "price": "95.00",
+    "category": "CREAM",
+    "packing": "20 g",
+    "company": "CUREWELL",
+    "image": "images/superb_cream.jpg"
+  },
+  {
+    "id": 189,
+    "name": "SUPRADYN DAILY TAB",
+    "price": "68.39",
+    "category": "TABLET",
+    "packing": "15's",
+    "company": "BAYER",
+    "image": "images/supradyn_daily_tab.jpg"
+  },
+  {
+    "id": 190,
+    "name": "TADACIP 20 TAB",
+    "price": "262.57",
+    "category": "TABLET",
+    "packing": "4's",
+    "company": "CIPLA",
+    "image": "images/tadacip_20_tab.jpg"
+  },
+  {
+    "id": 191,
+    "name": "TAXIM-O 200 TAB",
+    "price": "104.43",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "ALKEM",
+    "image": "images/taxim_o_200_tab.jpg"
+  },
+  {
+    "id": 192,
+    "name": "TAXIM-O DRY SYP",
+    "price": "52.09",
+    "category": "SYRUP",
+    "packing": "30 ml",
+    "company": "ALKEM",
+    "image": "images/taxim_o_dry_syp.jpg"
+  },
+  {
+    "id": 193,
+    "name": "TENACID MF TAB",
+    "price": "185.00",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "LEEFORD",
+    "image": "images/tenacid_mf_tab.jpg"
+  },
+  {
+    "id": 194,
+    "name": "THROMBOTAS OINT",
+    "price": "115.31",
+    "category": "OINTMENT",
+    "packing": "20 g",
+    "company": "INTAS",
+    "image": "images/thrombotas_oint.jpg"
+  },
+  {
+    "id": 195,
+    "name": "THYRONORM 100 TAB",
+    "price": "168.82",
+    "category": "TABLET",
+    "packing": "120's",
+    "company": "ABBOTT",
+    "image": "images/thyronorm_100_tab.jpg"
+  },
+  {
+    "id": 196,
+    "name": "THYRONORM 50 TAB",
+    "price": "132.02",
+    "category": "TABLET",
+    "packing": "120's",
+    "company": "ABBOTT",
+    "image": "images/thyronorm_50_tab.jpg"
+  },
+  {
+    "id": 197,
+    "name": "THYROX 100 TAB",
+    "price": "168.83",
+    "category": "TABLET",
+    "packing": "120's",
+    "company": "MACLEODS",
+    "image": "images/thyrox_100_tab.jpg"
+  },
+  {
+    "id": 198,
+    "name": "THYROX 25 TAB",
+    "price": "185.40",
+    "category": "TABLET",
+    "packing": "120's",
+    "company": "MACLEODS",
+    "image": "images/thyrox_25_tab.jpg"
+  },
+  {
+    "id": 199,
+    "name": "THYROX 50 TAB",
+    "price": "132.02",
+    "category": "TABLET",
+    "packing": "120's",
+    "company": "MACLEODS",
+    "image": "images/thyrox_50_tab.jpg"
+  },
+  {
+    "id": 200,
+    "name": "TOP BACT OINT",
+    "price": "113.40",
+    "category": "OINTMENT",
+    "packing": "5 g",
+    "company": "GLOBEX",
+    "image": "images/top_bact_oint.jpg"
+  },
+  {
+    "id": 201,
+    "name": "ULTRABRITE CREAM",
+    "price": "150.00",
+    "category": "CREAM",
+    "packing": "15 g",
+    "company": "LEEFORD",
+    "image": "images/ultrabrite_cream.jpg"
+  },
+  {
+    "id": 202,
+    "name": "UNIENZYME SYP",
+    "price": "169.65",
+    "category": "SYRUP",
+    "packing": "200 ml",
+    "company": "TORRENT",
+    "image": "images/unienzyme_syp.jpg"
+  },
+  {
+    "id": 203,
+    "name": "UNIENZYME DROP",
+    "price": "126.35",
+    "category": "DROP",
+    "packing": "15 ml",
+    "company": "TORRENT",
+    "image": "images/unienzyme_drop.jpg"
+  },
+  {
+    "id": 204,
+    "name": "VENTORANZ DX SYP",
+    "price": "113.00",
+    "category": "SYRUP",
+    "packing": "100 ml",
+    "company": "ALKEM",
+    "image": "images/ventoranz_dx_syp.jpg"
+  },
+  {
+    "id": 205,
+    "name": "VIGORE 100 TAB",
+    "price": "127.50",
+    "category": "TABLET",
+    "packing": "4's",
+    "company": "GERMED",
+    "image": "images/vigore_100_tab.jpg"
+  },
+  {
+    "id": 206,
+    "name": "VITCOFOL ORAL SUSPEN",
+    "price": "167.86",
+    "category": "SUSPENSION",
+    "packing": "200 ml",
+    "company": "FDC LTD",
+    "image": "images/vitcofol_oral_suspen.jpg"
+  },
+  {
+    "id": 207,
+    "name": "ZEEBEE SYP",
+    "price": "19.11",
+    "category": "SYRUP",
+    "packing": "10 ml",
+    "company": "RANBAXY",
+    "image": "images/zeebee_syp.jpg"
+  },
+  {
+    "id": 208,
+    "name": "ZERODOL P TAB",
+    "price": "75.94",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "IPCA",
+    "image": "images/zerodol_p_tab.jpg"
+  },
+  {
+    "id": 209,
+    "name": "ZERODOL SP TAB",
+    "price": "139.69",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "IPCA",
+    "image": "images/zerodol_sp_tab.jpg"
+  },
+  {
+    "id": 210,
+    "name": "ZERODOL SPAS TAB",
+    "price": "164.02",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "IPCA",
+    "image": "images/zerodol_spas_tab.jpg"
+  },
+  {
+    "id": 211,
+    "name": "ZOSTER SKIN CREAM",
+    "price": "53.00",
+    "category": "CREAM",
+    "packing": "5 g",
+    "company": "LEEFORD",
+    "image": "images/zoster_skin_cream.jpg"
+  },
+  {
+    "id": 212,
+    "name": "ZOTADOL SP TAB",
+    "price": "93.75",
+    "category": "TABLET",
+    "packing": "10's",
+    "company": "HORIZON",
+    "image": "images/zotadol_sp_tab.jpg"
+  },
+  {
+    "id": 213,
+    "name": "ZYMOX 500 CAP",
+    "price": "82.43",
+    "category": "CAPSULE",
+    "packing": "10's",
+    "company": "LABORATE PHARMA",
+    "image": "images/zymox_500_cap.jpg"
   }
 ]
-
 
 
 
