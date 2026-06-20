@@ -123,9 +123,32 @@ input{
 
 @media(max-width:768px){
 
-header{
+.header-right{
+
     flex-direction:column;
-    gap:15px;
+
+    width:100%;
+
+}
+
+#cartButton{
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:20px;
+
+    z-index:1000;
+
+    background:#16a34a;
+
+    color:white;
+
+    border:none;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.2);
+
 }
 
 #cartArea{
