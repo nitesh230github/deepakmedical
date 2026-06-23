@@ -19,11 +19,13 @@
 },
 {
 "id":3,
-"name":"CIPLOX-D DROP",
-"price":"29.2",
-"category":"DROP",
-"bestseller":true,
-"image":"images/ciplox_d_drop.jpg"
+"name":"ALCIDOL SP TAB",
+"price":"122.8",
+"category":"TABLET",
+"packing": "10's",
+"company": "MEDLEY",
+"bestseller":false,
+"image":"images/alcidol_sp_tab.jpg"
 },
 {
     "id": 6,
