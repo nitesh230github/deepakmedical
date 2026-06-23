@@ -518,12 +518,12 @@
   },
   {
     "id": 57,
-    "name": "CLOCIP OINT",
+    "name": "CLOCIP CREAM",
     "price": "48.03",
-    "category": "OINTMENT",
+    "category": "cream",
     "packing": "15 g",
     "company": "CIPLA",
-    "image": "images/clocip_oint.jpg"
+    "image": "images/clocip_cream.jpg"
   },
   {
     "id": 58,
