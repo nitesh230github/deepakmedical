@@ -17,7 +17,7 @@
     "packing":"30's",
     "company":"Cadila",
     "bestseller":true,
-    "image":"aciloc_150_tab.jpg"
+    "image":"images/aciloc_150_tab.jpg"
 },
 {
     "id":3,
@@ -27,7 +27,7 @@
     "packing":"15's",
     "company":"Cadila",
     "bestseller":true,
-    "image":"aciloc_rd_tab.jpg"
+    "image":"images/aciloc_rd_tab.jpg"
 },
 {
     "id":4,
