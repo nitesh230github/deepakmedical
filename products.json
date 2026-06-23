@@ -452,21 +452,21 @@
   },
   {
     "id": 51,
-    "name": "CIPLOX EYE DROP",
+    "name": "CIPLOX DROP",
     "price": "16.48",
     "category": "DROP",
     "packing": "10 ml",
     "company": "CIPLA",
-    "image": "images/ciplox_eye_drop.jpg"
+    "image": "images/ciplox_drop.jpg"
   },
   {
     "id": 52,
-    "name": "CIPLOX-D EYE DROP",
+    "name": "CIPLOX-D DROP",
     "price": "29.20",
     "category": "DROP",
     "packing": "10 ml",
     "company": "CIPLA",
-    "image": "images/ciplox_d_eye_drop.jpg"
+    "image": "images/ciplox_d_drop.jpg"
   },
   {
     "id": 53,
