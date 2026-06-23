@@ -1,31 +1,43 @@
 [
 {
-"id":1,
-"name":"CIPLOX DROP",
-"price":"16.48",
-"category":"DROP",
-"packing":"10 ml",
-"company":"Cipla Ltd.",
-"bestseller":true,
-"image":"images/ciplox_drop.jpg"
+    "id":1,
+    "name":"ACNETOIN SOAP",
+    "price":"85",
+    "category":"Others",
+    "packing":"75G",
+    "company":"Leeford",
+    "bestseller":false,
+    "image":"images/acnetoin_soap.jpg"
 },
 {
-"id":2,
-"name":"TENACID MF TAB",
-"price":"185",
-"category":"TABLET",
-"bestseller":false,
-"image":"https://cdn.postimage.me/2026/06/18/ACILOC-150-BOX.jpg"
+    "id":2,
+    "name":"ACILOC 150 TAB",
+    "price":"50.44",
+    "category":"TABLET",
+    "packing":"30's",
+    "company":"Cadila",
+    "bestseller":true,
+    "image":"aciloc_150_tab.jpg"
 },
 {
-"id":3,
-"name":"ALCIDOL SP TAB",
-"price":"122.8",
-"category":"TABLET",
-"packing": "10's",
-"company": "MEDLEY",
-"bestseller":false,
-"image":"images/alcidol_sp_tab.jpg"
+    "id":3,
+    "name":"ACILOC RD TAB",
+    "price":"94.69",
+    "category":"TABLET",
+    "packing":"15's",
+    "company":"Cadila",
+    "bestseller":true,
+    "image":"aciloc_150_tab.jpg"
+},
+{
+    "id":4,
+    "name":"ALCIDOL SP TAB",
+    "price":"122.8",
+    "category":"TABLET",
+    "packing": "10's",
+    "company": "MEDLEY",
+    "bestseller":false,
+    "image":"images/alcidol_sp_tab.jpg"
 },
 {
     "id": 6,
