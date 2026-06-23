@@ -914,12 +914,12 @@
   },
   {
     "id": 101,
-    "name": "KETOFRESH CT OINT",
+    "name": "KETOFRESH CT CREAM",
     "price": "99.00",
-    "category": "OINTMENT",
+    "category": "CREAM",
     "packing": "15 g",
     "company": "SMARTWAY",
-    "image": "images/ketofresh_ct_oint.jpg"
+    "image": "images/ketofresh_ct_cream.jpg"
   },
   {
     "id": 102,
