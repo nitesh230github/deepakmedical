@@ -3,7 +3,7 @@
     "id":1,
     "name":"ACNETOIN SOAP",
     "price":"85",
-    "category":"Others",
+    "category":"OTHERS",
     "packing":"75G",
     "company":"Leeford",
     "bestseller":false,
@@ -13,7 +13,7 @@
     "id":2,
     "name":"ACILOC 150 TAB",
     "price":"50.44",
-    "category":"TABLET",
+    "category":"TABLET_CAP",
     "packing":"30's",
     "company":"Cadila",
     "bestseller":true,
@@ -23,7 +23,7 @@
     "id":3,
     "name":"ACILOC RD TAB",
     "price":"94.69",
-    "category":"TABLET",
+    "category":"TABLET_CAP",
     "packing":"15's",
     "company":"Cadila",
     "bestseller":true,
@@ -33,7 +33,7 @@
     "id":4,
     "name":"ALCIDOL SP TAB",
     "price":"122.8",
-    "category":"TABLET",
+    "category":"TABLET_CAP",
     "packing": "10's",
     "company": "MEDLEY",
     "bestseller":false,
@@ -53,7 +53,7 @@
     "id": 7,
     "name": "ALDIGESIC P TAB",
     "price": "119.05",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "ALKEM",
     "bestseller":true,
@@ -83,7 +83,7 @@
     "id": 10,
     "name": "ALMOX 250 CAP",
     "price": "41.66",
-    "category": "CAPSULE",
+    "category": "TABLET_CAP",
     "packing": "15's",
     "company": "ALKEM",
     "bestseller":true,
@@ -93,7 +93,7 @@
     "id": 11,
     "name": "ALMOX CV 625 TAB",
     "price": "208.50",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "ALKEM",
     "bestseller":true,
@@ -133,7 +133,7 @@
     "id": 15,
     "name": "AMLIP 5 TAB",
     "price": "28.44",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "CIPLA",
     "bestseller":false,
@@ -143,7 +143,7 @@
     "id": 16,
     "name": "AMLOVAS 2.5 TAB",
     "price": "28.65",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "MACLEODS",
     "bestseller":false,
@@ -153,7 +153,7 @@
     "id": 17,
     "name": "AMLOVAS 5 TAB",
     "price": "40.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "MACLEODS",
     "bestseller":false,
@@ -173,7 +173,7 @@
     "id": 19,
     "name": "ASTHALIN 4 TAB",
     "price": "15.59",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "45's",
     "company": "CIPLA",
     "bestseller":true,
@@ -193,7 +193,7 @@
     "id": 21,
     "name": "ATM 250 TAB",
     "price": "124.64",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "INDOCO",
     "bestseller":true,
@@ -203,7 +203,7 @@
     "id": 22,
     "name": "AZIKEM 250 TAB",
     "price": "74.78",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "6's",
     "company": "ALKEM",
     "bestseller":true,
@@ -213,7 +213,7 @@
     "id": 23,
     "name": "AZIKEM 500 TAB",
     "price": "80.56",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "6's",
     "company": "ALKEM",
     "bestseller":false,
@@ -223,7 +223,7 @@
     "id": 24,
     "name": "BECOSULES CAP",
     "price": "62.37",
-    "category": "CAPSULE",
+    "category": "TABLET_CAP",
     "packing": "20's",
     "company": "PFIZER",
     "image": "images/becosules_cap.jpg"
@@ -322,7 +322,7 @@
     "id": 35,
     "name": "CALCITAS D3 CAP",
     "price": "131.54",
-    "category": "CAPSULE",
+    "category": "TABLET_CAP",
     "packing": "4's",
     "company": "INTAS",
     "image": "images/calcitas_d3_cap.jpg"
@@ -349,7 +349,7 @@
     "id": 38,
     "name": "CALPOL 500 TAB",
     "price": "14.26",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "GSK",
     "image": "images/calpol_500_tab.jpg"
@@ -358,7 +358,7 @@
     "id": 39,
     "name": "CALPOL 650 TAB",
     "price": "32.04",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "GSK",
     "image": "images/calpol_650_tab.jpg"
@@ -376,7 +376,7 @@
     "id": 41,
     "name": "CATASPA TAB",
     "price": "47.50",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "USV",
     "image": "images/cataspa_tab.jpg"
@@ -385,7 +385,7 @@
     "id": 42,
     "name": "CEFDOT 200 TAB",
     "price": "311.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "MEDLEY",
     "image": "images/cefdot_200_tab.jpg"
@@ -412,7 +412,7 @@
     "id": 45,
     "name": "CHESTON COLD TAB",
     "price": "65.79",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "CIPLA",
     "image": "images/cheston_cold_tab.jpg"
@@ -439,7 +439,7 @@
     "id": 48,
     "name": "CIPCAL 500 TAB",
     "price": "107.92",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "CIPLA",
     "image": "images/cipcal_500_tab.jpg"
@@ -448,7 +448,7 @@
     "id": 49,
     "name": "CIPCAL XT TAB",
     "price": "338.77",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "CIPLA",
     "image": "images/cipcal_xt_tab.jpg"
@@ -484,7 +484,7 @@
     "id": 53,
     "name": "CIPRODAC 500 TAB",
     "price": "48.32",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "CADILA",
     "image": "images/ciprodac_500_tab.jpg"
@@ -538,7 +538,7 @@
     "id": 59,
     "name": "COMBIFLAM TAB",
     "price": "57.45",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "20's",
     "company": "SANOFI",
     "image": "images/combiflam_tab.jpg"
@@ -547,7 +547,7 @@
     "id": 60,
     "name": "CTD 12.5 TAB",
     "price": "159.55",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "IPCA",
     "image": "images/ctd_12.5_tab.jpg"
@@ -556,7 +556,7 @@
     "id": 61,
     "name": "CTD 6.25 TAB",
     "price": "116.58",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "IPCA",
     "image": "images/ctd_6.25_tab.jpg"
@@ -565,7 +565,7 @@
     "id": 62,
     "name": "CTZ TAB",
     "price": "39.30",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "20's",
     "company": "NOVITA",
     "image": "images/ctz_tab.jpg"
@@ -583,7 +583,7 @@
     "id": 64,
     "name": "DEFICICOT 6 TAB",
     "price": "95.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "LEEFORD",
     "image": "images/deficicot_6_tab.jpg"
@@ -592,7 +592,7 @@
     "id": 65,
     "name": "DEMISONE TAB",
     "price": "2.46",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "CADILA",
     "image": "images/demisone_tab.jpg"
@@ -637,7 +637,7 @@
     "id": 70,
     "name": "DEXONA TAB",
     "price": "6.93",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "30's",
     "company": "ZYDUS",
     "image": "images/dexona_tab.jpg"
@@ -646,7 +646,7 @@
     "id": 71,
     "name": "DEXORANGE CAP",
     "price": "187.15",
-    "category": "CAPSULE",
+    "category": "TABLET_CAP",
     "packing": "30's",
     "company": "FRANCO",
     "image": "images/dexorange_cap.jpg"
@@ -664,7 +664,7 @@
     "id": 73,
     "name": "DYNAPAR TAB",
     "price": "130.45",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "TROIKAA",
     "image": "images/dynapar_tab.jpg"
@@ -727,7 +727,7 @@
     "id": 80,
     "name": "ETOFORD 120 TAB",
     "price": "130.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "LEEFORD",
     "image": "images/etoford_120_tab.jpg"
@@ -736,7 +736,7 @@
     "id": 81,
     "name": "ETOFORD 90 TAB",
     "price": "110.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "LEEFORD",
     "image": "images/etoford_90_tab.jpg"
@@ -745,7 +745,7 @@
     "id": 82,
     "name": "ETOFORD MR TAB",
     "price": "180.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "LEEFORD",
     "image": "images/etoford_mr_tab.jpg"
@@ -754,7 +754,7 @@
     "id": 83,
     "name": "EVION 400 TAB",
     "price": "95.55",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "P&G",
     "image": "images/evion_400_tab.jpg"
@@ -781,7 +781,7 @@
     "id": 86,
     "name": "FLAGYL 400 TAB",
     "price": "34.63",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "20's",
     "company": "ABBOTT",
     "image": "images/flagyl_400_tab.jpg"
@@ -790,7 +790,7 @@
     "id": 87,
     "name": "FLEXON MR TAB",
     "price": "29.43",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "ARISTO",
     "image": "images/flexon_mr_tab.jpg"
@@ -799,7 +799,7 @@
     "id": 88,
     "name": "FLEXON TAB",
     "price": "35.25",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "ARISTO",
     "image": "images/flexon_tab.jpg"
@@ -808,7 +808,7 @@
     "id": 89,
     "name": "FLUKA 150 TAB",
     "price": "13.50",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "1's",
     "company": "CIPLA",
     "image": "images/fluka_150_tab.jpg"
@@ -844,7 +844,7 @@
     "id": 93,
     "name": "GLYCOMET GP1 TAB",
     "price": "123.28",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "USV",
     "image": "images/glycomet_gp1_tab.jpg"
@@ -853,7 +853,7 @@
     "id": 94,
     "name": "GLYCOMET GP2 TAB",
     "price": "180.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "USV",
     "image": "images/glycomet_gp2_tab.jpg"
@@ -889,7 +889,7 @@
     "id": 98,
     "name": "INTAGESIC MR TAB",
     "price": "124.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "INTAS",
     "image": "images/intagesic_mr_tab.jpg"
@@ -898,7 +898,7 @@
     "id": 99,
     "name": "KETOFLY SOAP",
     "price": "125.00",
-    "category": "SOAP",
+    "category": "OTHERS",
     "packing": "75 g",
     "company": "LEEFORD",
     "image": "images/ketofly_soap.jpg"
@@ -907,7 +907,7 @@
     "id": 100,
     "name": "KETOFORD DT TAB",
     "price": "60.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "LEEFORD",
     "image": "images/ketoford_dt_tab.jpg"
@@ -925,7 +925,7 @@
     "id": 102,
     "name": "KETOKEM CT SOAP",
     "price": "132.00",
-    "category": "SOAP",
+    "category": "OTHERS",
     "packing": "75 g",
     "company": "ALKEM",
     "image": "images/ketokem_ct_soap.jpg"
@@ -934,7 +934,7 @@
     "id": 103,
     "name": "KETOKEM SOAP",
     "price": "143.00",
-    "category": "SOAP",
+    "category": "OTHERS",
     "packing": "75 g",
     "company": "ALKEM",
     "image": "images/ketokem_soap.jpg"
@@ -970,7 +970,7 @@
     "id": 107,
     "name": "L HIST MONT TAB",
     "price": "257.80",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "ALKEM",
     "image": "images/l_hist_mont_tab.jpg"
@@ -979,7 +979,7 @@
     "id": 108,
     "name": "L HIST TAB",
     "price": "88.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "ALKEM",
     "image": "images/l_hist_tab.jpg"
@@ -1015,7 +1015,7 @@
     "id": 112,
     "name": "LEVOBEX 5 TAB",
     "price": "37.08",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "GLOBEX",
     "image": "images/levobex_5_tab.jpg"
@@ -1024,7 +1024,7 @@
     "id": 113,
     "name": "LIMCEE TAB",
     "price": "24.68",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "ABBOTT",
     "image": "images/limcee_tab.jpg"
@@ -1060,7 +1060,7 @@
     "id": 117,
     "name": "LOMO D TAB",
     "price": "23.20",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "VINTOCHEM",
     "image": "images/lomo_d_tab.jpg"
@@ -1078,7 +1078,7 @@
     "id": 119,
     "name": "MANFORCE 100 TAB",
     "price": "243.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "1*4",
     "company": "MANKIND",
     "image": "images/manforce_100_tab.jpg"
@@ -1096,7 +1096,7 @@
     "id": 121,
     "name": "MEFTAL SPAS TAB",
     "price": "51.56",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "BLUE CROSS",
     "image": "images/meftal_spas_tab.jpg"
@@ -1114,7 +1114,7 @@
     "id": 123,
     "name": "MIGRAFEN TAB",
     "price": "112.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "LEEFORD",
     "image": "images/migrafen_tab.jpg"
@@ -1123,7 +1123,7 @@
     "id": 124,
     "name": "MISS ME TAB",
     "price": "60.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "1's",
     "company": "ZEE",
     "image": "images/miss_me_tab.jpg"
@@ -1141,7 +1141,7 @@
     "id": 126,
     "name": "MONOCEF O 200 TAB",
     "price": "215.62",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "ARISTO",
     "image": "images/monocef_o_200_tab.jpg"
@@ -1150,7 +1150,7 @@
     "id": 127,
     "name": "MONTAS L TAB",
     "price": "183.28",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "INTAS",
     "image": "images/montas_l_tab.jpg"
@@ -1159,7 +1159,7 @@
     "id": 128,
     "name": "MOXATRIS CV 625 TAB",
     "price": "204.80",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "AKUMS",
     "image": "images/moxatris_cv_625_tab.jpg"
@@ -1168,7 +1168,7 @@
     "id": 129,
     "name": "MOXIKIND CV 625 TAB",
     "price": "182.96",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "MANKIND",
     "image": "images/moxikind_cv_625_tab.jpg"
@@ -1204,7 +1204,7 @@
     "id": 133,
     "name": "NEUROBION FORTE TAB",
     "price": "47.53",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "30's",
     "company": "P&G",
     "image": "images/neurobion_forte_tab.jpg"
@@ -1213,7 +1213,7 @@
     "id": 134,
     "name": "NFLOX TZ TAB",
     "price": "145.20",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "LABORATE",
     "image": "images/nflox_tz_tab.jpg"
@@ -1222,7 +1222,7 @@
     "id": 135,
     "name": "NICIP PLUS TAB",
     "price": "65.10",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "CIPLA",
     "image": "images/nicip_plus_tab.jpg"
@@ -1231,7 +1231,7 @@
     "id": 136,
     "name": "NIMESULIDE 100MG TAB",
     "price": "43.45",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "CIPLA",
     "image": "images/nimesulide_100_tab.jpg"
@@ -1240,7 +1240,7 @@
     "id": 137,
     "name": "NIMUCET GOLD TAB",
     "price": "60.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "INTAS",
     "image": "images/nimucet_gold_tab.jpg"
@@ -1258,7 +1258,7 @@
     "id": 139,
     "name": "NIMUCET TAB",
     "price": "60.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "INTAS",
     "image": "images/nimucet_tab.jpg"
@@ -1285,7 +1285,7 @@
     "id": 142,
     "name": "NODARD PLUS TAB",
     "price": "57.75",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "CIPLA",
     "image": "images/nodard_plus_tab.jpg"
@@ -1294,7 +1294,7 @@
     "id": 143,
     "name": "NOGACID CAP",
     "price": "49.06",
-    "category": "CAPSULE",
+    "category": "TABLET_CAP",
     "packing": "15's",
     "company": "CADILA",
     "image": "images/nogacid_cap.jpg"
@@ -1303,7 +1303,7 @@
     "id": 144,
     "name": "NORFLOKEM TZ TAB",
     "price": "120.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "ALKEM",
     "image": "images/norflokem_tz_tab.jpg"
@@ -1339,7 +1339,7 @@
     "id": 148,
     "name": "OMNACORTIL 10 TAB",
     "price": "13.66",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "MACLEODS",
     "image": "images/omnacortil_10_tab.jpg"
@@ -1393,7 +1393,7 @@
     "id": 154,
     "name": "ONDEM MD4 TAB",
     "price": "54.85",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "ALKEM",
     "image": "images/ondem_md4_tab.jpg"
@@ -1411,7 +1411,7 @@
     "id": 156,
     "name": "OROGARD TAB",
     "price": "70.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "ALKEM",
     "image": "images/orogard_tab.jpg"
@@ -1438,7 +1438,7 @@
     "id": 159,
     "name": "OZOMET G1 TAB",
     "price": "54.79",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "OZONE",
     "image": "images/ozomet_g1_tab.jpg"
@@ -1447,7 +1447,7 @@
     "id": 160,
     "name": "OZOMET G2 TAB",
     "price": "58.45",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "OZONE",
     "image": "images/ozomet_g2_tab.jpg"
@@ -1456,7 +1456,7 @@
     "id": 161,
     "name": "OZOMET PG1 TAB",
     "price": "54.80",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "OZONE",
     "image": "images/ozomet_pg1_tab.jpg"
@@ -1465,7 +1465,7 @@
     "id": 162,
     "name": "OZOMET PG2 TAB",
     "price": "54.80",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "OZONE",
     "image": "images/ozomet_pg2_tab.jpg"
@@ -1474,7 +1474,7 @@
     "id": 163,
     "name": "OZOMET VG1 TAB",
     "price": "58.45",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "OZONE",
     "image": "images/ozomet_vg1_tab.jpg"
@@ -1483,7 +1483,7 @@
     "id": 164,
     "name": "OZOMET VG2 TAB",
     "price": "54.79",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "OZONE",
     "image": "images/ozomet_vg2_tab.jpg"
@@ -1492,7 +1492,7 @@
     "id": 165,
     "name": "PANTOP 40 TAB",
     "price": "159.37",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "ARISTO",
     "image": "images/pantop_40_tab.jpg"
@@ -1501,7 +1501,7 @@
     "id": 166,
     "name": "PANTOP D CAP",
     "price": "195.00",
-    "category": "CAPSULE",
+    "category": "TABLET_CAP",
     "packing": "15's",
     "company": "ARISTO",
     "image": "images/pantop_d_cap.jpg"
@@ -1510,7 +1510,7 @@
     "id": 167,
     "name": "PANTOP DSR CAP",
     "price": "226.40",
-    "category": "CAPSULE",
+    "category": "TABLET_CAP",
     "packing": "15's",
     "company": "ARISTO",
     "image": "images/pantop_dsr_cap.jpg"
@@ -1537,7 +1537,7 @@
     "id": 170,
     "name": "PREGACIP M CAP",
     "price": "179.68",
-    "category": "CAPSULE",
+    "category": "TABLET_CAP",
     "packing": "10's",
     "company": "CIPLA",
     "image": "images/pregacip_m_cap.jpg"
@@ -1555,7 +1555,7 @@
     "id": 172,
     "name": "RABALKEM DSR CAP",
     "price": "155.00",
-    "category": "CAPSULE",
+    "category": "TABLET_CAP",
     "packing": "10's",
     "company": "ALKEM",
     "image": "images/rabalkem_dsr_cap.jpg"
@@ -1564,7 +1564,7 @@
     "id": 173,
     "name": "REACTIN 100SR TAB",
     "price": "74.41",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "LEEFORD",
     "image": "images/reactin_100sr_tab.jpg"
@@ -1573,7 +1573,7 @@
     "id": 174,
     "name": "REBOZEN DSR CAP",
     "price": "95.00",
-    "category": "CAPSULE",
+    "category": "TABLET_CAP",
     "packing": "10's",
     "company": "LEEFORD",
     "image": "images/rebozen_dsr_cap.jpg"
@@ -1591,7 +1591,7 @@
     "id": 176,
     "name": "ROSEDAY F10 TAB",
     "price": "269.10",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "USV",
     "image": "images/roseday_f10_tab.jpg"
@@ -1609,7 +1609,7 @@
     "id": 178,
     "name": "SARIDON TAB",
     "price": "55.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "BAYER",
     "image": "images/saridon_tab.jpg"
@@ -1627,7 +1627,7 @@
     "id": 180,
     "name": "SIGORA GOLD TAB",
     "price": "187.5",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "1*4",
     "company": "SMART LAB",
     "image": "images/sigora_gold_tab.jpg"
@@ -1636,7 +1636,7 @@
     "id": 181,
     "name": "SINAREST TAB",
     "price": "123.64",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "CENTAUR",
     "image": "images/sinarest_tab.jpg"
@@ -1663,7 +1663,7 @@
     "id": 184,
     "name": "SPASMONIL TAB",
     "price": "31.94",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "CIPLA",
     "image": "images/spasmonil_tab.jpg"
@@ -1672,7 +1672,7 @@
     "id": 185,
     "name": "STEMETIL MD TAB",
     "price": "195.91",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "ABBOTT",
     "image": "images/stemetil_md_tab.jpg"
@@ -1690,7 +1690,7 @@
     "id": 187,
     "name": "SUMO TAB",
     "price": "167.50",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "1*15",
     "company": "ALKEM",
     "image": "images/sumo_tab.jpg"
@@ -1708,7 +1708,7 @@
     "id": 189,
     "name": "SUPRADYN DAILY TAB",
     "price": "68.39",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "15's",
     "company": "BAYER",
     "image": "images/supradyn_daily_tab.jpg"
@@ -1717,7 +1717,7 @@
     "id": 190,
     "name": "TADACIP 20 TAB",
     "price": "262.57",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "4's",
     "company": "CIPLA",
     "image": "images/tadacip_20_tab.jpg"
@@ -1726,7 +1726,7 @@
     "id": 191,
     "name": "TAXIM-O 200 TAB",
     "price": "104.43",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "ALKEM",
     "image": "images/taxim_o_200_tab.jpg"
@@ -1744,7 +1744,7 @@
     "id": 193,
     "name": "TENACID MF TAB",
     "price": "185.00",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "LEEFORD",
     "image": "images/tenacid_mf_tab.jpg"
@@ -1762,7 +1762,7 @@
     "id": 195,
     "name": "THYRONORM 100 TAB",
     "price": "168.82",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "120's",
     "company": "ABBOTT",
     "image": "images/thyronorm_100_tab.jpg"
@@ -1771,7 +1771,7 @@
     "id": 196,
     "name": "THYRONORM 50 TAB",
     "price": "132.02",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "120's",
     "company": "ABBOTT",
     "image": "images/thyronorm_50_tab.jpg"
@@ -1780,7 +1780,7 @@
     "id": 197,
     "name": "THYROX 100 TAB",
     "price": "168.83",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "120's",
     "company": "MACLEODS",
     "image": "images/thyrox_100_tab.jpg"
@@ -1789,7 +1789,7 @@
     "id": 198,
     "name": "THYROX 25 TAB",
     "price": "185.40",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "120's",
     "company": "MACLEODS",
     "image": "images/thyrox_25_tab.jpg"
@@ -1798,7 +1798,7 @@
     "id": 199,
     "name": "THYROX 50 TAB",
     "price": "132.02",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "120's",
     "company": "MACLEODS",
     "image": "images/thyrox_50_tab.jpg"
@@ -1852,7 +1852,7 @@
     "id": 205,
     "name": "VIGORE 100 TAB",
     "price": "127.50",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "4's",
     "company": "GERMED",
     "image": "images/vigore_100_tab.jpg"
@@ -1879,7 +1879,7 @@
     "id": 208,
     "name": "ZERODOL P TAB",
     "price": "75.94",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "IPCA",
     "image": "images/zerodol_p_tab.jpg"
@@ -1888,7 +1888,7 @@
     "id": 209,
     "name": "ZERODOL SP TAB",
     "price": "139.69",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "IPCA",
     "image": "images/zerodol_sp_tab.jpg"
@@ -1897,7 +1897,7 @@
     "id": 210,
     "name": "ZERODOL SPAS TAB",
     "price": "164.02",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "IPCA",
     "image": "images/zerodol_spas_tab.jpg"
@@ -1915,7 +1915,7 @@
     "id": 212,
     "name": "ZOTADOL SP TAB",
     "price": "93.75",
-    "category": "TABLET",
+   "category": "TABLET_CAP",
     "packing": "10's",
     "company": "HORIZON",
     "image": "images/zotadol_sp_tab.jpg"
@@ -1924,7 +1924,7 @@
     "id": 213,
     "name": "ZYMOX 500 CAP",
     "price": "82.43",
-    "category": "CAPSULE",
+    "category": "TABLET_CAP",
     "packing": "10's",
     "company": "LABORATE PHARMA",
     "image": "images/zymox_500_cap.jpg"
@@ -1934,6 +1934,5 @@
 
 
     
-
 
 
