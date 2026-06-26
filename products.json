@@ -1346,39 +1346,39 @@
   },
   {
     "id": 149,
-    "name": "OMNIGEL OINT",
+    "name": "OMNIGEL 100 OINT",
     "price": "314.60",
     "category": "OINTMENT",
     "packing": "100 g",
     "company": "CIPLA",
-    "image": "images/omnigel_oint.jpg"
+    "image": "images/omnigel__100_oint.jpg"
   },
   {
     "id": 150,
-    "name": "OMNIGEL OINT",
+    "name": "OMNIGEL 10 OINT",
     "price": "65.30",
     "category": "OINTMENT",
     "packing": "10 g",
     "company": "CIPLA",
-    "image": "images/omnigel_oint.jpg"
+    "image": "images/omnigel_10_oint.jpg"
   },
   {
     "id": 151,
-    "name": "OMNIGEL OINT",
+    "name": "OMNIGEL 20 OINT",
     "price": "118.03",
     "category": "OINTMENT",
     "packing": "20 g",
     "company": "CIPLA",
-    "image": "images/omnigel_oint.jpg"
+    "image": "images/omnigel_20_oint.jpg"
   },
   {
     "id": 152,
-    "name": "OMNIGEL OINT",
+    "name": "OMNIGEL 50 OINT",
     "price": "203.12",
     "category": "OINTMENT",
     "packing": "50 g",
     "company": "CIPLA",
-    "image": "images/omnigel_oint.jpg"
+    "image": "images/omnigel_50_oint.jpg"
   },
   {
     "id": 153,
