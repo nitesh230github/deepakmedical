@@ -1598,12 +1598,12 @@
   },
   {
     "id": 177,
-    "name": "SALICYLIC ACID",
+    "name": "SALICYLIC ACID POWDER",
     "price": "95.00",
     "category": "ACID",
     "packing": "20 g",
     "company": "MEDIC",
-    "image": "images/salicylic_acid.jpg"
+    "image": "images/salicylic_acid_powd.jpg"
   },
   {
     "id": 178,
