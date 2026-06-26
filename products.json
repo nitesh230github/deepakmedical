@@ -1625,12 +1625,12 @@
   },
   {
     "id": 180,
-    "name": "SIGORA GOLD",
-    "price": "0.00",
+    "name": "SIGORA GOLD TAB",
+    "price": "187.5",
     "category": "TABLET",
-    "packing": "TAB",
+    "packing": "1*4",
     "company": "SMART LAB",
-    "image": "images/sigora_gold.jpg"
+    "image": "images/sigora_gold_tab.jpg"
   },
   {
     "id": 181,
