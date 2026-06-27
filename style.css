@@ -314,7 +314,37 @@ input{
 }
 
 }
+.slider{
 
+    width:100%;
+
+    overflow:hidden;
+
+    margin:20px auto;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+}
+
+.slides{
+
+    display:flex;
+
+    width:300%;
+
+}
+
+.slides img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+}
 
 
 
