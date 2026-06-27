@@ -960,12 +960,12 @@
   },
   {
     "id": 105,
-    "name": "KT 5 DERM OINT",
+    "name": "KT 5 DERM CREAM",
     "price": "118.00",
-    "category": "OINTMENT",
+    "category": "CREAM",
     "packing": "15 g",
     "company": "LABORATE",
-    "image": "images/kt_5_derm_oint.jpg"
+    "image": "images/kt_5_derm_cream.jpg"
   },
   {
     "id": 106,
