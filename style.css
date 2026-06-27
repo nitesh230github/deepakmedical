@@ -299,39 +299,53 @@ input{
 
 #cartButton{
 
-    background:white;
+    display:flex;
 
-    color:#16a34a;
+    align-items:center;
 
-    border-radius:15px;
+    justify-content:center;
 
-    padding:14px 22px;
+    gap:8px;
 
-    font-weight:bold;
+    height:56px;
 
-    cursor:pointer;
+    min-width:130px;
 
-    box-shadow:0 6px 15px rgba(0,0,0,.15);
+    padding:0 22px;
 
-    transition:.3s;
-
- }
-
-#cartButton:hover{
-
-    transform:translateY(-2px);
-
-    background:#16a34a;
+    background:#2563eb;
 
     color:white;
 
+    border-radius:14px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(37,99,235,.35);
+
+    transition:.3s;
+
 }
+
+#cartButton:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+ }
 
 @media(max-width:768px){
 
 .header-right{
 
-    flex-direction:column;
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
 
     width:100%;
 
