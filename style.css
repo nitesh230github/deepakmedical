@@ -303,7 +303,7 @@ input{
     z-index: 1000;
 
 
-}
+ }
 
 #cartButton:hover{
 
@@ -311,9 +311,9 @@ input{
 
     color:white;
 
+ }
 }
 
-}
 .slider{
 
     width:100%;
@@ -326,7 +326,61 @@ input{
 
     box-shadow:0 8px 25px rgba(0,0,0,.15);
 
+    position:relative;
+
 }
+
+/* 👇 Ye naya code yahin add karna hai */
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:rgba(0,0,0,.4);
+
+    color:white;
+
+    border:none;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    z-index:100;
+
+}
+
+.prev{
+
+    left:15px;
+
+}
+
+.next{
+
+    right:15px;
+
+}
+
+.prev:hover,
+.next:hover{
+
+    background:#16a34a;
+
+}
+
+/* 👇 Iske baad existing code */
 
 .slides{
 
@@ -346,7 +400,4 @@ input{
 
     display:block;
 
-}
-
-
-
+ }

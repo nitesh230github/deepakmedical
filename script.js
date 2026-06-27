@@ -369,14 +369,24 @@ function closeCart(){
 
 
 /* adding slider code */
+// =================== Slider ===================
+
 let currentSlide = 0;
 
 const slides = document.querySelector(".slides");
 
-const totalSlides =
-document.querySelectorAll(".slides img").length;
+const slideImages = document.querySelectorAll(".slides img");
 
-setInterval(() => {
+const totalSlides = slideImages.length;
+
+function updateSlider(){
+
+    slides.style.transform =
+    `translateX(-${currentSlide * 100}%)`;
+
+}
+
+function nextSlide(){
 
     currentSlide++;
 
@@ -386,9 +396,28 @@ setInterval(() => {
 
     }
 
-    slides.style.transform =
-    `translateX(-${currentSlide * 100}%)`;
+    updateSlider();
 
-},4000);
+}
 
+function prevSlide(){
 
+    currentSlide--;
+
+    if(currentSlide < 0){
+
+        currentSlide = totalSlides - 1;
+
+    }
+
+    updateSlider();
+
+}
+
+document.querySelector(".next")
+.addEventListener("click",nextSlide);
+
+document.querySelector(".prev")
+.addEventListener("click",prevSlide);
+
+setInterval(nextSlide,4000);
