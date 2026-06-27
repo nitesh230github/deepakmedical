@@ -825,18 +825,18 @@
   },
   {
     "id": 90,
-    "name": "FOURDERM OINT",
+    "name": "FOURDERM CREAM",
     "price": "117.97",
-    "category": "OINTMENT",
+    "category": "CREAM",
     "packing": "10 g",
     "company": "CIPLA",
-    "image": "images/fourderm_oint.jpg"
+    "image": "images/fourderm_10_cream.jpg"
   },
   {
     "id": 91,
-    "name": "FOURDERM OINT",
+    "name": "FOURDERM CREAM",
     "price": "64.73",
-    "category": "OINTMENT",
+    "category": "CREAM",
     "packing": "5 g",
     "company": "CIPLA",
     "image": "images/fourderm_oint.jpg"
