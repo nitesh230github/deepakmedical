@@ -149,11 +149,18 @@ function addToCart(name,price){
 
 function showCart(){
 
-    if(cart.length === 0){
+  if(cart.length === 0){
 
     document.getElementById("cartArea").innerHTML = "";
+
+    document.getElementById("cartButton").innerHTML =
+    "🛒 Cart (0)";
+
+    document.getElementById("cartButton").onclick =
+    openCart;
+
     return;
-}
+ }
     
     let total = 0;
 
