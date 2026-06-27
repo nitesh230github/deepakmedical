@@ -710,7 +710,7 @@
     "id": 77,
     "name": "ELECTRORYTE ORS POWD",
     "price": "23.34",
-    "category": "POWDER",
+    "category": "OTHERS",
     "packing": "21.8 g",
     "company": "DANISH",
     "image": "images/electroryte_ors_powd.jpg"
@@ -953,7 +953,7 @@
     "id": 104,
     "name": "KOPLYTE ORS POWD",
     "price": "23.11",
-    "category": "POWDER",
+    "category": "OTHERS",
     "packing": "21.8 g",
     "company": "ZENITH",
     "image": "images/koplyte_ors_powd.jpg"
@@ -1430,7 +1430,7 @@
     "id": 157,
     "name": "ORS ORANGE LIQUID",
     "price": "31.50",
-    "category": "LIQUID",
+    "category": "OTHERS",
     "packing": "200 ml",
     "company": "AUSTRO",
     "image": "images/ors_orange_liquid.jpg"
@@ -1439,7 +1439,7 @@
     "id": 158,
     "name": "ORS SAM KEM POW",
     "price": "25.40",
-    "category": "POWDER",
+    "category": "OTHERS",
     "packing": "21.8 g",
     "company": "SAM-KE",
     "image": "images/ors_sam_kem_pow.jpg"
