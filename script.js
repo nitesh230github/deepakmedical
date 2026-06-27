@@ -1,5 +1,7 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+let cartOpen = false;
+
 /* saving time stamp of cart to automatically deltion after 24H */ 
 const savedTime =
 Number(localStorage.getItem("cartTime"));
@@ -190,7 +192,7 @@ function showCart(){
     "🛒 Cart (0)";
 
     document.getElementById("cartButton").onclick =
-    openCart;
+ toggleCart;
 
     return;
 }
@@ -267,8 +269,8 @@ function showCart(){
 document.getElementById("cartButton")
 .innerHTML = `🛒 Cart (${totalItems})`;
 
-document.getElementById("cartButton")
-.onclick = openCart;
+document.getElementById("cartButton").onclick =
+toggleCart;
 }
 
 function increaseQty(index){
@@ -403,12 +405,26 @@ localStorage.removeItem("cartTime");
 showCart();
 
 closeCart();
- }
+}
+function toggleCart(){
 
-function openCart(){
+    if(cart.length === 0){
+        return;
+    }
 
-    document.getElementById("cartArea")
-    .style.transform = "translateX(0)";
+    const cartArea = document.getElementById("cartArea");
+
+    if(cartOpen){
+
+        cartArea.style.transform = "translateX(100%)";
+        cartOpen = false;
+
+    }else{
+
+        cartArea.style.transform = "translateX(0)";
+        cartOpen = true;
+
+    }
 
 }
 
@@ -417,8 +433,8 @@ function closeCart(){
     document.getElementById("cartArea")
     .style.transform = "translateX(100%)";
 
+    cartOpen = false;
 }
-
 
 /* adding slider code */
 // =================== Slider ===================
