@@ -40,6 +40,16 @@
     "image":"images/alcidol_sp_tab.jpg"
 },
 {
+    "id":5,
+    "name":"EVINAL 400 VITAMIN E CAP",
+    "price":"55",
+    "category":"TABLET_CAP",
+    "packing": "10's",
+    "company": "ALEMBIC",
+    "bestseller":false,
+    "image":"images/evinal_400_cap.jpg"
+},
+{
     "id": 6,
     "name": "ALCIFLOX D DROP",
     "price": "49.00",
