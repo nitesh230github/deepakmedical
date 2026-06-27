@@ -178,6 +178,8 @@ function showCart(){
 
   if(cart.length === 0){
 
+    closeCart();
+
     document.getElementById("cartArea").innerHTML = "";
 
     document.getElementById("cartButton").innerHTML =
@@ -187,7 +189,7 @@ function showCart(){
     openCart;
 
     return;
- }
+}
     
     let total = 0;
 
@@ -402,14 +404,16 @@ closeCart();
 function openCart(){
 
     document.getElementById("cartArea")
-    .style.right = "20px";
+    .style.right = "0";
 
 }
 
 function closeCart(){
 
-    document.getElementById("cartArea")
-    .style.right = "-400px";
+    const cartArea =
+    document.getElementById("cartArea");
+
+    cartArea.style.right = "-100%";
 
 }
 
