@@ -12,7 +12,7 @@ body{
 header{
 
     background:
-    linear-gradient(rgba(22,163,74,.50), rgba(22,163,74,.50)),
+    linear-gradient(rgba(22,163,74,.30)),
     url("images/website_images/header_banner.jpg");
 
     background-size:cover;
