@@ -38,6 +38,54 @@ header{
     gap:20px;
 
 }
+
+.logo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.logo{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:white;
+
+    padding:8px;
+
+    object-fit:contain;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+
+}
+
+.logo-section h1{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    margin:0;
+
+}
+
+.logo-section p{
+
+    margin-top:5px;
+
+    font-size:18px;
+
+    opacity:.95;
+
+}
 .top-header{
 
     display:flex;
@@ -86,11 +134,21 @@ header{
 
 .tagline{
 
-    margin-top:5px;
+    margin-top:8px;
 
-    color:#d1fae5;
+    font-size:18px;
 
-    font-size:15px;
+    color:white;
+
+    text-decoration:underline;
+
+    text-underline-offset:6px;
+
+    text-decoration-thickness:2px;
+
+    font-weight:500;
+
+    letter-spacing:.5px;
 
 }
 
@@ -110,15 +168,19 @@ header{
 
 .search-box{
 
-    flex:1;
-
-    padding:15px;
+    height:52px;
 
     border:none;
 
-    border-radius:12px;
+    border-radius:15px;
 
-    font-size:16px;
+    padding:0 20px;
+
+    font-size:17px;
+
+    background:white;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.12);
 
 }
 
@@ -133,6 +195,13 @@ header{
     border-radius:12px;
 
     font-size:16px;
+
+}
+#categoryFilter{
+
+    cursor:pointer;
+
+    font-weight:600;
 
 }
 
@@ -234,25 +303,27 @@ input{
 
     color:#16a34a;
 
-    padding:15px 25px;
+    border-radius:15px;
 
-    border-radius:12px;
+    padding:14px 22px;
 
     font-weight:bold;
 
     cursor:pointer;
 
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+
     transition:.3s;
 
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
-
-}
+ }
 
 #cartButton:hover{
 
     transform:translateY(-2px);
 
-    background:#dcfce7;
+    background:#16a34a;
+
+    color:white;
 
 }
 
