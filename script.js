@@ -1,4 +1,4 @@
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function shuffleArray(array){
 
@@ -33,6 +33,7 @@ displayProducts([
     ...bestSellers,
     ...otherProducts
 ]);
+ showCart();
 
    function filterProducts() {
 
@@ -145,6 +146,13 @@ function addToCart(name,price){
     }
 
     showCart();
+    saveCart();
+}
+
+function saveCart(){
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
 }
 
 function showCart(){
@@ -243,6 +251,7 @@ function increaseQty(index){
     cart[index].qty++;
 
     showCart();
+    saveCart();
 }
 
 function decreaseQty(index){
@@ -252,6 +261,7 @@ function decreaseQty(index){
     }
 
     showCart();
+    saveCart();
 }
 
 function removeItem(index){
@@ -259,6 +269,7 @@ function removeItem(index){
     cart.splice(index,1);
 
     showCart();
+    saveCart();
 }
 
 function sendOrder(){
@@ -357,6 +368,14 @@ total:total.toFixed(2)
 "https://wa.me/917804008789?text=" +
 encodeURIComponent(msg)
     );
+
+cart = [];
+
+saveCart();
+
+showCart();
+
+closeCart();
 
 }
 
