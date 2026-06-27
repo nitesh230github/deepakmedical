@@ -368,4 +368,27 @@ function closeCart(){
 }
 
 
+/* adding slider code */
+let currentSlide = 0;
+
+const slides = document.querySelector(".slides");
+
+const totalSlides =
+document.querySelectorAll(".slides img").length;
+
+setInterval(() => {
+
+    currentSlide++;
+
+    if(currentSlide >= totalSlides){
+
+        currentSlide = 0;
+
+    }
+
+    slides.style.transform =
+    `translateX(-${currentSlide * 100}%)`;
+
+},4000);
+
 

@@ -332,17 +332,19 @@ input{
 
     display:flex;
 
-    width:300%;
+    transition:transform .6s ease;
 
 }
 
 .slides img{
 
-    width:100%;
+    min-width:100%;
 
     height:260px;
 
     object-fit:cover;
+
+    display:block;
 
 }
 
