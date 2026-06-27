@@ -1,5 +1,22 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+/* saving time stamp of cart to automatically deltion after 24H */ 
+const savedTime =
+Number(localStorage.getItem("cartTime"));
+
+const ONE_DAY = 24 * 60 * 60 * 1000;
+
+if(savedTime && (Date.now() - savedTime > ONE_DAY)){
+
+    localStorage.removeItem("cart");
+
+    localStorage.removeItem("cartTime");
+
+    cart = [];
+
+}
+
+
 function shuffleArray(array){
 
     let arr = [...array];
@@ -152,6 +169,8 @@ function addToCart(name,price){
 function saveCart(){
 
     localStorage.setItem("cart", JSON.stringify(cart));
+
+    localStorage.setItem("cartTime", Date.now());
 
 }
 
@@ -371,13 +390,14 @@ encodeURIComponent(msg)
 
 cart = [];
 
-saveCart();
+localStorage.removeItem("cart");
+
+localStorage.removeItem("cartTime");
 
 showCart();
 
 closeCart();
-
-}
+ }
 
 function openCart(){
 
