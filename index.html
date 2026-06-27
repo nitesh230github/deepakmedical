@@ -18,30 +18,77 @@
 
 <header>
 
-    <h1>Deepak Medical Agency</h1>
+    <!-- Top Header -->
 
-    <div class="header-right">
+    <div class="top-header">
+
+        <div class="logo-section">
+
+            <img src="images/logo.png"
+            class="logo">
+
+            <div>
+
+                <h1>Deepak Medical Agency</h1>
+
+                <p class="tagline">
+                    सही दवाई, सही दाम, सुपरफ़ास्ट सर्विस
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Search Section -->
+
+    <div class="search-section">
 
         <input
         type="text"
         id="search"
         class="search-box"
-        placeholder="🔍 Search Products">
+        placeholder="🔍 Search Medicines...">
 
-        <select id="categoryFilter" class="search-box">
+        <select
+        id="categoryFilter"
+        class="category-box">
 
-            <option value="ALL">All Categories</option>
-            <option value="TABLET_CAP">TABLET / CAP</option>
-            <option value="DROP">DROP</option>
-            <option value="SYRUP">SYRUP</option>
-            <option value="CREAM">CREAM</option>
-            <option value="OINTMENT">OINTMENT</option>
-            <option value="OTHERS">OTHERS</option>
+            <option value="ALL">
+                📦 All Categories
+            </option>
+
+            <option value="TABLET_CAP">
+                💊 Tablet / Cap
+            </option>
+
+            <option value="DROP">
+                💧 Drop
+            </option>
+
+            <option value="SYRUP">
+                🍯 Syrup
+            </option>
+
+            <option value="CREAM">
+                🧴 Cream
+            </option>
+
+            <option value="OINTMENT">
+                🩹 Ointment
+            </option>
+
+            <option value="OTHERS">
+                📦 Others
+            </option>
 
         </select>
 
         <div id="cartButton">
+
             🛒 Cart (0)
+
         </div>
 
     </div>
