@@ -180,7 +180,11 @@ function showCart(){
 
     closeCart();
 
-    document.getElementById("cartArea").innerHTML = "";
+    setTimeout(() => {
+
+        document.getElementById("cartArea").innerHTML = "";
+
+    }, 350);
 
     document.getElementById("cartButton").innerHTML =
     "🛒 Cart (0)";
@@ -404,16 +408,14 @@ closeCart();
 function openCart(){
 
     document.getElementById("cartArea")
-    .style.right = "0";
+    .style.transform = "translateX(0)";
 
 }
 
 function closeCart(){
 
-    const cartArea =
-    document.getElementById("cartArea");
-
-    cartArea.style.right = "-100%";
+    document.getElementById("cartArea")
+    .style.transform = "translateX(100%)";
 
 }
 
