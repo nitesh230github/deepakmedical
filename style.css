@@ -39,6 +39,70 @@ header{
 
 }
 
+.header-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+.logo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:white;
+
+}
+
+.brand h1{
+
+    font-size:24px;
+
+    margin-bottom:6px;
+
+}
+
+.brand p{
+
+    font-size:15px;
+
+    text-decoration:underline;
+
+}
+
+.search-cart{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex:1;
+
+    justify-content:flex-end;
+
+}
+
 .logo-section{
 
     display:flex;
@@ -165,7 +229,7 @@ header{
 
 }
 
-
+/*
 .search-box{
 
     height:40px;
@@ -181,10 +245,93 @@ header{
     background:white;
 
     box-shadow:0 6px 15px rgba(0,0,0,.12);
-    width: 100%;           /* Ye box ko responsive banayega */
-    max-width: 500px; /* Ye search box ko 500px se zyada lamba nahi hone dega */
+    width: 100%;           // Ye box ko responsive banayega 
+    max-width: 500px; /* Ye search box ko 500px se zyada lamba nahi hone dega 
+}*/
+.search-box{
+
+    width:700px;
+
+    max-width:100%;
+
+    padding:14px 18px;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-size:16px;
+
+}
+.header-bottom{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:18px;
+
+    overflow-x:auto;
+
+    padding-bottom:8px;
+
 }
 
+.header-bottom::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+#categoryFilter{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    background:white;
+
+}
+
+.cat-btn{
+
+    background:white;
+
+    color:#15803d;
+
+    border:none;
+
+    border-radius:30px;
+
+    padding:12px 18px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    transition:.3s;
+
+}
+
+.cat-btn:hover{
+
+    background:#16a34a;
+
+    color:white;
+
+}
 
 .category-box{
 
