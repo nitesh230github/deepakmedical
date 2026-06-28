@@ -157,7 +157,7 @@ header{
 
     display:flex;
 
-    gap:10px;
+    gap: 5px;
 
     align-items:center;
 
@@ -168,15 +168,15 @@ header{
 
 .search-box{
 
-    height:52px;
+    height:40px;
 
     border:none;
 
     border-radius:15px;
 
-    padding:0 15px;
+    padding:0 10px;
 
-    font-size:17px;
+    font-size:15px;
 
     background:white;
 
@@ -209,14 +209,14 @@ header{
 #products{
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
-    gap:25px;
-    padding:25px;
+    gap:20px;
+    padding:20px;
 }
 
 .card{
     background:white;
     border-radius:20px;
-    padding:20px;
+    padding:10px;
     text-align:center;
     box-shadow:0 4px 15px rgba(0,0,0,.1);
     transition:.3s;
@@ -309,7 +309,7 @@ input{
 
 .total{
     color:#16a34a;
-    margin-top:15px;
+    margin-top:10px;
 }
 
 #cartButton{
@@ -434,7 +434,7 @@ input{
 
     overflow:hidden;
 
-    margin:20px auto;
+    margin:15px auto;
 
     border-radius:20px;
 
@@ -508,7 +508,7 @@ input{
 
     min-width:100%;
 
-    height:260px;
+    height:200px;
 
     object-fit:cover;
 
