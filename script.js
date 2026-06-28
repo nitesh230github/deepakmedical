@@ -54,7 +54,7 @@ displayProducts([
 ]);
  showCart();
 
-   function filterProducts() {
+function filterProducts() {
 
     let searchValue =
     document.getElementById("search").value.toLowerCase();
@@ -103,7 +103,36 @@ displayProducts([
 
     displayProducts(filtered);
 
+// Active category button update
+
+document.querySelectorAll(".cat-btn")
+.forEach(btn => btn.classList.remove("active"));
+
+let activeButton = document.querySelector(
+`.cat-btn[onclick*="${categoryValue}"]`
+);
+
+if(activeButton){
+
+    activeButton.classList.add("active");
+
 }
+
+}
+
+function selectCategory(category,button){
+
+    document.getElementById("categoryFilter").value = category;
+
+    filterProducts();
+
+    document.querySelectorAll(".cat-btn")
+    .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+
+}
+
 
     document.getElementById("search")
     .addEventListener("keyup", filterProducts);

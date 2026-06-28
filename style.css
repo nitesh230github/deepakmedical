@@ -333,6 +333,14 @@ header{
 
 }
 
+.cat-btn.active{
+
+    background:#16a34a;
+
+    color:white;
+
+}
+
 .category-box{
 
     width:250px;
