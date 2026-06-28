@@ -34,25 +34,39 @@ function shuffleArray(array){
 
 }
 
+let products = [];
+
 fetch("products.json")
 .then(response => response.json())
-.then(products => {
+.then(data => {
 
-let bestSellers =
-products.filter(product => product.bestseller);
+ products = data;
 
-bestSellers = shuffleArray(bestSellers);
+ let bestSellers =
+ products.filter(product => product.bestseller);
 
-let otherProducts =
-products.filter(product => !product.bestseller);
+ bestSellers = shuffleArray(bestSellers);
 
-otherProducts = shuffleArray(otherProducts);
+ let otherProducts =
+ products.filter(product => !product.bestseller);
 
-displayProducts([
+ otherProducts = shuffleArray(otherProducts);
+
+ displayProducts([
     ...bestSellers,
     ...otherProducts
-]);
+ ]);
  showCart();
+
+
+    document.getElementById("search")
+    .addEventListener("keyup", filterProducts);
+
+    document.getElementById("categoryFilter")
+    .addEventListener("change", filterProducts);
+
+});
+
 
 function filterProducts() {
 
@@ -103,22 +117,23 @@ function filterProducts() {
 
     displayProducts(filtered);
 
-// Active category button update
+ // Active category button update
 
-document.querySelectorAll(".cat-btn")
-.forEach(btn => btn.classList.remove("active"));
+ document.querySelectorAll(".cat-btn")
+ .forEach(btn => btn.classList.remove("active"));
 
-let activeButton = document.querySelector(
-`.cat-btn[onclick*="${categoryValue}"]`
-);
+ let activeButton = document.querySelector(
+ `.cat-btn[onclick*="${categoryValue}"]`
+ );
 
-if(activeButton){
+ if(activeButton){
 
     activeButton.classList.add("active");
 
-}
+ }
 
-}
+ }
+
 
 function selectCategory(category,button){
 
@@ -132,15 +147,6 @@ function selectCategory(category,button){
     button.classList.add("active");
 
 }
-
-
-    document.getElementById("search")
-    .addEventListener("keyup", filterProducts);
-
-    document.getElementById("categoryFilter")
-    .addEventListener("change", filterProducts);
-
-});
 
 function displayProducts(items){
 
