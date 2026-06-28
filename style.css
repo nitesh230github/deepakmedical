@@ -594,6 +594,61 @@ input{
  }
 }
 
+.logo-area{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:15px;
+
+}
+
+.logo{
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+}
+
+.title-box{
+
+flex:1;
+
+}
+
+.title-box h1{
+
+font-size:32px;
+
+line-height:1.1;
+
+margin:0;
+
+}
+
+.title-box p{
+
+margin-top:6px;
+
+font-size:15px;
+
+text-decoration:underline;
+
+}
+
+
+
+
+
+
+
+/* 👇 slider code in mobile */
 .slider{
 
     width:100%;
@@ -610,7 +665,7 @@ input{
 
 }
 
-/* 👇 Ye naya code yahin add karna hai */
+
 
 .prev,
 .next{
