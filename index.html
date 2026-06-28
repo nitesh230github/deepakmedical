@@ -18,77 +18,88 @@
 
 <header>
 
-    <!-- Top Header -->
-
-    <div class="top-header">
+    <!-- Top Row -->
+    <div class="header-top">
 
         <div class="logo-section">
 
-           <img src="images/website_images/logo.png" class="logo">
+            <img src="images/logo.png" class="logo">
 
-        <div>
+            <div class="brand">
 
-     <h1>Deepak Medical Agency</h1>
+                <h1>Deepak Medical Agency</h1>
 
-     <p class="tagline">
-       सही दवा 💊&nbsp;•&nbsp;सही दाम💰&nbsp;•&nbsp;FREE & FAST डिलीवरी 🚚 
-     </p>
+                <p>
+                    सही दवाई 💊 • सही दाम 💰 • FREE & FAST Delivery 🚚
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="search-cart">
+
+            <input
+            type="text"
+            id="search"
+            class="search-box"
+            placeholder="🔍 Search Medicines...">
+
+            <div id="cartButton">
+                🛒 Cart (0)
+            </div>
+
+        </div>
 
     </div>
 
-</div>
 
-    </div>
+    <!-- Bottom Row -->
 
-    <!-- Search Section -->
+    <div class="header-bottom">
 
-    <div class="search-section">
+        <select id="categoryFilter">
 
-        <input
-        type="text"
-        id="search"
-        class="search-box"
-        placeholder="🔍 Search Medicines...">
-
-        <select
-        id="categoryFilter"
-        class="category-box">
-
-            <option value="ALL">
-                📦 All Categories
-            </option>
-
-            <option value="TABLET_CAP">
-                💊 Tablet / Cap
-            </option>
-
-            <option value="DROP">
-                💧 Drop
-            </option>
-
-            <option value="SYRUP">
-                🍯 Syrup
-            </option>
-
-            <option value="CREAM">
-                🧴 Cream
-            </option>
-
-            <option value="OINTMENT">
-                🩹 Ointment
-            </option>
-
-            <option value="OTHERS">
-                📦 Others
-            </option>
+            <option value="ALL">📂 All Categories</option>
+            <option value="TABLET_CAP">💊 Tablet/Cap</option>
+            <option value="SYRUP">🧴 Syrup</option>
+            <option value="CREAM">🧴 Cream</option>
+            <option value="DROP">👁 Drop</option>
+            <option value="OINTMENT">🩹 Ointment</option>
+            <option value="OTHERS">📦 Others</option>
 
         </select>
 
-        <div id="cartButton">
 
-            🛒 Cart (0)
+        <button class="cat-btn"
+        onclick="selectCategory('TABLET_CAP')">
+            💊 Tablet/Cap
+        </button>
 
-        </div>
+        <button class="cat-btn"
+        onclick="selectCategory('SYRUP')">
+            🧴 Syrup
+        </button>
+
+        <button class="cat-btn"
+        onclick="selectCategory('CREAM')">
+            🧴 Cream
+        </button>
+
+        <button class="cat-btn"
+        onclick="selectCategory('DROP')">
+            👁 Drop
+        </button>
+
+        <button class="cat-btn"
+        onclick="selectCategory('OINTMENT')">
+            🩹 Ointment
+        </button>
+
+        <button class="cat-btn"
+        onclick="selectCategory('OTHERS')">
+            📦 Others
+        </button>
 
     </div>
 
