@@ -400,7 +400,7 @@
     "company": "MEDLEY",
     "image": "images/cefdot_200_tab.jpg"
   },
-  {
+  /*{
     "id": 43,
     "name": "CEFKEM SYP",
     "price": "48.60",
@@ -408,7 +408,7 @@
     "packing": "30 ml",
     "company": "ALKEM",
     "image": "images/cefkem_syp.jpg"
-  },
+  },*/
   {
     "id": 44,
     "name": "CEFLOX-D DROP",
@@ -1066,7 +1066,7 @@
     "company": "GLOBEX",
     "image": "images/livshine_ds_syp.jpg"
   },
-  {
+  /*{
     "id": 117,
     "name": "LOMO D TAB",
     "price": "23.20",
@@ -1074,7 +1074,7 @@
     "packing": "10's",
     "company": "VINTOCHEM",
     "image": "images/lomo_d_tab.jpg"
-  },
+  },*/
   {
     "id": 118,
     "name": "LULIDERM CREAM",
@@ -1426,7 +1426,7 @@
     "company": "ALKEM",
     "image": "images/orogard_tab.jpg"
   },
-  {
+     /*{
     "id": 157,
     "name": "ORS ORANGE LIQUID",
     "price": "31.50",
@@ -1434,7 +1434,7 @@
     "packing": "200 ml",
     "company": "AUSTRO",
     "image": "images/ors_orange_liquid.jpg"
-  },
+      },*/
   {
     "id": 158,
     "name": "ORS SAM KEM POW",
