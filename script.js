@@ -471,7 +471,7 @@ function closeCart(){
     cartOpen = false;
 }
 
-/* adding slider code */
+/* adding slider code 
 // =================== Slider ===================
 
 let currentSlide = 0;
@@ -524,3 +524,4 @@ document.querySelector(".prev")
 .addEventListener("click",prevSlide);
 
 setInterval(nextSlide,4000);
+*/
