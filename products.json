@@ -1938,7 +1938,99 @@
     "packing": "10's",
     "company": "LABORATE PHARMA",
     "image": "images/zymox_500_cap.jpg"
+  },
+  {
+    "id":214,
+    "name":"DABUR HONITUS",
+    "price":"125",
+    "category":"OTHERS",
+    "packing":"100 ml",
+    "company":"Dabur",
+    "bestseller":false,
+    "image":"images/dabur_honitus.jpg"
+  },
+  {
+    "id":215,
+    "name":"CLOVE OIL",
+    "price":"20",
+    "category":"OTHERS",
+    "packing":"75G",
+    "company":"Gopi Baba",
+    "bestseller":false,
+    "image":"images/clove_oil.jpg"
+  },
+  {
+    "id":216,
+    "name":"HEMOLAB FORTE SYP",
+    "price":"280",
+    "category":"SYRUP",
+    "packing":"300 ml",
+    "company":"LABORATE",
+    "bestseller":false,
+    "image":"images/hemolab_forte_syp.jpg"
+  },
+  {
+    "id":217,
+    "name":"JHANDU MUGDHA RASA",
+    "price":"110",
+    "category":"OTHERS",
+    "packing":"30's",
+    "company":"JHANDU",
+    "bestseller":false,
+    "image":"images/jhandu_mugdha_rasa.jpg"
+  },
+  {
+    "id":218,
+    "name":"LITE FACE CREAM",
+    "price":"85",
+    "category":"CREAM",
+    "packing":"20G",
+    "company":"KIRAAT",
+    "bestseller":false,
+    "image":"images/lite_face_cream.jpg"
+  },
+  {
+    "id":219,
+    "name":"DR ORTHO OIL",
+    "price":"158",
+    "category":"OTHERS",
+    "packing":"60 ml",
+    "company":"DIVISA",
+    "bestseller":false,
+    "image":"images/ortho_oil.jpg"
+  },
+  {
+    "id":220,
+    "name":"ORTHO AID OIL",
+    "price":"300",
+    "category":"OTHERS",
+    "packing":"100 ml",
+    "company":"Leeford",
+    "bestseller":false,
+    "image":"images/ortho_aid_oil.jpg"
+ },
+ {
+    "id":221,
+    "name":"CHIRAYU POSHAK OIL",
+    "price":"150",
+    "category":"OTHERS",
+    "packing":"100 ml",
+    "company":"CHIRAYU",
+    "bestseller":false,
+    "image":"images/poshak_100_oil.jpg"
+  },
+  {
+    "id":222,
+    "name":"CHIRAYU POSHAK OIL",
+    "price":"240",
+    "category":"OTHERS",
+    "packing":"200 ml",
+    "company":"CHIRAYU",
+    "bestseller":false,
+    "image":"images/poshak_200_oil.jpg"
   }
+
+
 ]
 
 
