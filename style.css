@@ -624,9 +624,9 @@ flex:1;
 
 .title-box h1{
 
-font-size:32px;
+font-size:20px;
 
-line-height:1.1;
+line-height:1;
 
 margin:0;
 
@@ -634,7 +634,7 @@ margin:0;
 
 .title-box p{
 
-margin-top:6px;
+margin-top:5px;
 
 font-size:15px;
 
