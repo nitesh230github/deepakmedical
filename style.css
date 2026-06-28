@@ -181,8 +181,10 @@ header{
     background:white;
 
     box-shadow:0 6px 15px rgba(0,0,0,.12);
-
+    width: 100%;           /* Ye box ko responsive banayega */
+    max-width: 500px; /* Ye search box ko 500px se zyada lamba nahi hone dega */
 }
+
 
 .category-box{
 
