@@ -10,43 +10,369 @@ body{
 }
 
 header{
-    background:#16a34a;
-    color:white;
-    padding:20px;
+
+    background:
+    linear-gradient(rgba(22,163,74,.30)),
+    url("images/website_images/header_banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    color:black;
+
+    padding:10px 30px;
+
     position:sticky;
+
     top:0;
+
     z-index:1000;
+
     display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+.header-top{
+
+    display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
+    gap:30px;
+
 }
-.header-right{
+
+.logo-section{
 
     display:flex;
+
     align-items:center;
-    gap:20px;
+
+    gap:15px;
 
 }
-.search-box{
-    width:350px;
-    max-width:90%;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    font-size:16px;
+
+.logo{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:white;
+
 }
+
+.brand h1{
+
+    font-size:32px;
+    margin:0;
+    white-space:nowrap;
+}
+
+.brand p{
+
+    font-size:15px;
+
+    text-decoration:underline;
+
+}
+
+.search-cart{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex:1;
+
+    justify-content:flex-end;
+
+}
+
+.logo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.logo{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:white;
+
+    padding:8px;
+
+    object-fit:contain;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+
+}
+
+.logo-section h1{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin:0;
+
+}
+
+.logo-section p{
+
+    margin-top:2px;
+
+    font-size:14px;
+
+    opacity:.95;
+
+}
+.top-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.logo{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+    border-radius:50%;
+
+    background:white;
+
+    padding:2px;
+
+}
+
+.logo-section h1{
+
+    font-size:34px;
+
+    margin:0;
+
+    font-weight:700;
+
+}
+
+.tagline{
+
+    margin-top:2px;
+
+    font-size:10px;
+
+    color:black;
+
+    text-decoration:underline;
+
+    text-underline-offset:6px;
+
+    text-decoration-thickness:2px;
+
+    font-weight:500;
+
+    letter-spacing:.5px;
+
+}
+
+
+.search-section{
+
+    display:flex;
+
+    gap: 5px;
+
+    align-items:center;
+
+    margin-top:10px;
+
+}
+
+/*
+.search-box{
+
+    height:40px;
+
+    border:none;
+
+    border-radius:15px;
+
+    padding:0 10px;
+
+    font-size:15px;
+
+    background:white;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.12);
+    width: 100%;           // Ye box ko responsive banayega 
+    max-width: 500px; /* Ye search box ko 500px se zyada lamba nahi hone dega 
+}*/
+.search-box{
+
+    width:700px;
+
+    max-width:100%;
+
+    padding:14px 18px;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-size:16px;
+
+}
+.header-bottom{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:18px;
+
+    overflow-x:auto;
+
+    padding-bottom:8px;
+
+}
+
+.header-bottom::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+#categoryFilter{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    background:white;
+
+}
+
+.cat-btn{
+
+    background:white;
+
+    color:#15803d;
+
+    border:none;
+
+    border-radius:30px;
+
+    padding:12px 18px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    transition:.3s;
+
+}
+
+.cat-btn:hover{
+
+    background:#16a34a;
+
+    color:white;
+
+}
+
+.cat-btn.active{
+
+    background:#16a34a;
+
+    color:white;
+
+}
+
+.category-box{
+
+    width:250px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+}
+#categoryFilter{
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
 
 #products{
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
-    gap:25px;
-    padding:25px;
+    gap:20px;
+    padding:20px;
 }
 
 .card{
     background:white;
     border-radius:20px;
-    padding:20px;
+    padding:10px;
     text-align:center;
     box-shadow:0 4px 15px rgba(0,0,0,.1);
     transition:.3s;
@@ -58,40 +384,49 @@ header{
 
 .card img{
     width:100%;
-    height:220px;
+    height:180px;
     object-fit:contain;
+    margin-bottom:6px;
+
 }
 
 .card h3{
-    margin-top:15px;
+     margin:3px 0 2px;
+    font-size:14px;
+    line-height:1;
 }
 
 .price{
+
     color:#16a34a;
-    font-size:28px;
+    font-size:18px;
     font-weight:bold;
-    margin:15px 0;
+    margin:2px 0;
+
 }
+
 .packing{
     font-size:13px;
     color:#666;
-    margin:3px 0;
+    margin:2px 0;
+
 }
 
 .company{
     font-size:12px;
     color:#888;
-    margin-bottom:8px;
-}
+    margin:2px 0 6px;
 
+}
+  
 button{
     background:#16a34a;
     color:white;
     border:none;
-    padding:12px 18px;
+    padding:10px 16px;
     border-radius:10px;
     cursor:pointer;
-    font-size:15px;
+    font-size:14px;
     font-weight:bold;
 }
 
@@ -100,18 +435,33 @@ button:hover{
 }
 
 #cartArea{
+
     position:fixed;
+
     top:80px;
-    right:-400px;   /* hidden */
+
+    right:20px;
+
     width:280px;
+
     background:white;
+
     padding:20px;
+
     border-radius:20px;
+
     box-shadow:0 4px 20px rgba(0,0,0,.2);
+
     max-height:80vh;
+
     overflow-y:auto;
+
     z-index:1000;
-    transition:.3s;
+
+    transform:translateX(120%);
+
+    transition:transform .35s ease;
+
 }
 
 input{
@@ -124,24 +474,36 @@ input{
 
 .total{
     color:#16a34a;
-    margin-top:15px;
+    margin-top:10px;
 }
 
 #cartButton{
 
-    background:#ffffff;
+    display:flex;
 
-    color:#2563eb;
+    align-items:center;
 
-    border:2px solid #2563eb;
+    justify-content:center;
 
-    padding:12px 20px;
+    gap:8px;
 
-    border-radius:30px;
+    height:56px;
 
-    font-weight:bold;
+    min-width:130px;
+
+    padding:0 22px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border-radius:14px;
+
+    font-weight:700;
 
     cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(37,99,235,.35);
 
     transition:.3s;
 
@@ -149,21 +511,38 @@ input{
 
 #cartButton:hover{
 
-    background:#2563eb;
+    background:#1d4ed8;
 
-    color:white;
+    transform:translateY(-2px);
 
-}
+ }
 
 @media(max-width:768px){
 
 .header-right{
 
-    flex-direction:column;
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
 
     width:100%;
 
 }
+
+.header-top{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    gap:12px;
+
+}
+
 #cartButton{
 
     position:fixed;
@@ -194,11 +573,13 @@ input{
 
     top: 0;
 
-    right: -400px;
+    right: 0;
 
-    width: 350px;
+    width: 100%;
 
-    height: 100%;
+    max-width: 360px;
+
+    height: 100vh;
 
     background: white;
 
@@ -208,23 +589,193 @@ input{
 
     box-shadow: -5px 0 20px rgba(0,0,0,.2);
 
-    transition: .3s;
+    transform: translateX(100%);
 
-    z-index: 1000;
+    transition: transform .35s ease;
 
+    z-index: 9999;
+
+ }
+
+#cartButton:hover{
+ background:#2563eb;
+    color:white;
+
+ 
+ }
+
+.logo-area{
+   display:flex;
+   align-items:center;
+   gap:15px;
+   margin-bottom:15px;
 
 }
 
-#cartButton:hover{
+.logo-section{
 
-    background:#2563eb;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    gap:12px;
+
+ }
+.logo{
+   width:70px;
+   height:70px;
+   border-radius:50%;
+
+ }
+
+.title-box{
+  flex:1;
+
+ }
+
+.title-box h1{
+  font-size:20px;
+  line-height:1;
+  margin:0;
+
+ }
+
+.title-box p{
+  margin-top:5px;
+  font-size:15px;
+  text-decoration:underline;
+ }
+
+.search-cart{
+
+    display:block;
+
+    width:100%;
+
+}
+
+.search-box{
+
+    width:100%;
+
+    max-width:100%;
+
+    box-sizing:border-box;
+
+}
+
+.brand{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+.brand h1{
+
+    font-size:22px;
+
+    margin:0;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+} 
+
+
+/* 👇 slider code in mobile */
+.slider{
+
+    width:100%;
+
+    overflow:hidden;
+
+    margin:15px auto;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+    position:relative;
+
+}
+
+
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:rgba(0,0,0,.4);
 
     color:white;
 
-}
+    border:none;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    z-index:100;
 
 }
 
+.prev{
 
+    left:15px;
 
+}
 
+.next{
+
+    right:15px;
+
+}
+
+.prev:hover,
+.next:hover{
+
+    background:#16a34a;
+
+}
+
+/* 👇 Iske baad existing code */
+
+.slides{
+
+    display:flex;
+
+    transition:transform .6s ease;
+
+}
+
+.slides img{
+
+    min-width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+
+    display:block;
+
+ }

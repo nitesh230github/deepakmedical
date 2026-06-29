@@ -18,35 +18,112 @@
 
 <header>
 
-    <h1>Deepak Medical Agency</h1>
+    <!-- Top Row -->
+    <div class="header-top">
 
-    <div class="header-right">
+        <div class="logo-section">
 
-        <input
-        type="text"
-        id="search"
-        class="search-box"
-        placeholder="🔍 Search Products">
+            <img src="images/website_images/logo.png" class="logo">
 
-        <select id="categoryFilter" class="search-box">
+            <div class="brand">
 
-            <option value="ALL">All Categories</option>
-            <option value="TABLET_CAP">TABLET / CAP</option>
-            <option value="DROP">DROP</option>
-            <option value="SYRUP">SYRUP</option>
-            <option value="CREAM">CREAM</option>
-            <option value="OINTMENT">OINTMENT</option>
-            <option value="OTHERS">OTHERS</option>
+                <h1>Deepak Medical Agency</h1>
 
-        </select>
+                <p>
+                    सही दवा💊 सही दाम💰 FREE & FAST Delivery🚚
+                </p>
 
-        <div id="cartButton">
-            🛒 Cart (0)
+            </div>
+
+        </div>
+
+        <div class="search-cart">
+
+            <input
+            type="text"
+            id="search"
+            class="search-box"
+            placeholder="🔍 Search Medicines...">
+
+            <div id="cartButton">
+                🛒 Cart (0)
+            </div>
+
         </div>
 
     </div>
 
+
+    <!-- Bottom Row -->
+
+    <div class="header-bottom">
+
+        <select id="categoryFilter">
+
+            <option value="ALL">📂 All Categories</option>
+            <option value="TABLET_CAP">💊 Tablet/Cap</option>
+            <option value="SYRUP">🧴 Syrup</option>
+            <option value="CREAM">🧴 Cream</option>
+            <option value="DROP">👁‍🗨 Drop</option>
+            <option value="OINTMENT">🩹 Ointment</option>
+            <option value="OTHERS">📦 Others</option>
+
+        </select>
+
+        <!--<button class="cat-btn active" onclick="selectCategory('ALL',this)"> 📂 All </button> -->
+
+        <button class="cat-btn"
+        onclick="selectCategory('TABLET_CAP',this)">
+            💊 Tablet/Cap
+        </button>
+
+        <button class="cat-btn"
+        onclick="selectCategory('SYRUP',this)">
+            🧴 Syrup
+        </button>
+
+        <button class="cat-btn"
+        onclick="selectCategory('CREAM',this)">
+            🧴 Cream
+        </button>
+
+        <button class="cat-btn"
+        onclick="selectCategory('DROP',this)">
+            👁 Drop
+        </button>
+
+        <button class="cat-btn"
+        onclick="selectCategory('OINTMENT',this)">
+            🩹 Ointment
+        </button>
+
+        <button class="cat-btn"
+        onclick="selectCategory('OTHERS',this)">
+            📦 Others
+        </button>
+
+    </div>
+
 </header>
+
+<!-- Slider code  
+<div class="slider">
+
+    <button class="prev">&#10094;</button>
+
+    <div class="slides">
+
+        <img src="images/website_images/slider1.jpg">
+
+        <img src="images/website_images/slider2.jpg">
+
+        <img src="images/website_images/slider3.jpg">
+
+    </div>
+
+    <button class="next">&#10095;</button>
+
+</div> -->
 
 <div id="products"></div>
 
@@ -56,3 +133,4 @@
 
 </body>
 </html>
+                              

@@ -400,16 +400,7 @@
     "company": "MEDLEY",
     "image": "images/cefdot_200_tab.jpg"
   },
-  {
-    "id": 43,
-    "name": "CEFKEM SYP",
-    "price": "48.60",
-    "category": "SYRUP",
-    "packing": "30 ml",
-    "company": "ALKEM",
-    "image": "images/cefkem_syp.jpg"
-  },
-  {
+   {
     "id": 44,
     "name": "CEFLOX-D DROP",
     "price": "69.30",
@@ -710,7 +701,7 @@
     "id": 77,
     "name": "ELECTRORYTE ORS POWD",
     "price": "23.34",
-    "category": "POWDER",
+    "category": "OTHERS",
     "packing": "21.8 g",
     "company": "DANISH",
     "image": "images/electroryte_ors_powd.jpg"
@@ -728,7 +719,7 @@
     "id": 79,
     "name": "ENSHINE TOOTHPASTE",
     "price": "111.00",
-    "category": "TOOTHPASTE",
+    "category": "OTHERS",
     "packing": "100 g",
     "company": "LEEFORD",
     "image": "images/enshine_toothpaste.jpg"
@@ -953,7 +944,7 @@
     "id": 104,
     "name": "KOPLYTE ORS POWD",
     "price": "23.11",
-    "category": "POWDER",
+    "category": "OTHERS",
     "packing": "21.8 g",
     "company": "ZENITH",
     "image": "images/koplyte_ors_powd.jpg"
@@ -1066,16 +1057,7 @@
     "company": "GLOBEX",
     "image": "images/livshine_ds_syp.jpg"
   },
-  {
-    "id": 117,
-    "name": "LOMO D TAB",
-    "price": "23.20",
-   "category": "TABLET_CAP",
-    "packing": "10's",
-    "company": "VINTOCHEM",
-    "image": "images/lomo_d_tab.jpg"
-  },
-  {
+   {
     "id": 118,
     "name": "LULIDERM CREAM",
     "price": "159.37",
@@ -1426,20 +1408,12 @@
     "company": "ALKEM",
     "image": "images/orogard_tab.jpg"
   },
-  {
-    "id": 157,
-    "name": "ORS ORANGE LIQUID",
-    "price": "31.50",
-    "category": "LIQUID",
-    "packing": "200 ml",
-    "company": "AUSTRO",
-    "image": "images/ors_orange_liquid.jpg"
-  },
+
   {
     "id": 158,
     "name": "ORS SAM KEM POW",
     "price": "25.40",
-    "category": "POWDER",
+    "category": "OTHERS",
     "packing": "21.8 g",
     "company": "SAM-KE",
     "image": "images/ors_sam_kem_pow.jpg"
@@ -1938,7 +1912,110 @@
     "packing": "10's",
     "company": "LABORATE PHARMA",
     "image": "images/zymox_500_cap.jpg"
+  },
+  {
+    "id":214,
+    "name":"DABUR HONITUS",
+    "price":"125",
+    "category":"OTHERS",
+    "packing":"100 ml",
+    "company":"Dabur",
+    "bestseller":false,
+    "image":"images/dabur_honitus.jpg"
+  },
+  {
+    "id":215,
+    "name":"CLOVE OIL",
+    "price":"20",
+    "category":"OTHERS",
+    "packing":"75G",
+    "company":"Gopi Baba",
+    "bestseller":false,
+    "image":"images/clove_oil.jpg"
+  },
+  {
+    "id":216,
+    "name":"HEMOLAB FORTE SYP",
+    "price":"280",
+    "category":"SYRUP",
+    "packing":"300 ml",
+    "company":"LABORATE",
+    "bestseller":false,
+    "image":"images/hemolab_forte_syp.jpg"
+  },
+  {
+    "id":217,
+    "name":"JHANDU MUGDHA RASA",
+    "price":"110",
+    "category":"OTHERS",
+    "packing":"30's",
+    "company":"JHANDU",
+    "bestseller":false,
+    "image":"images/jhandu_mugdha_rasa.jpg"
+  },
+  {
+    "id":218,
+    "name":"LITE FACE CREAM",
+    "price":"85",
+    "category":"CREAM",
+    "packing":"20G",
+    "company":"KIRAAT",
+    "bestseller":false,
+    "image":"images/lite_face_cream.jpg"
+  },
+  {
+    "id":219,
+    "name":"DR ORTHO OIL",
+    "price":"158",
+    "category":"OTHERS",
+    "packing":"60 ml",
+    "company":"DIVISA",
+    "bestseller":false,
+    "image":"images/ortho_oil.jpg"
+  },
+  {
+    "id":220,
+    "name":"ORTHO AID OIL",
+    "price":"300",
+    "category":"OTHERS",
+    "packing":"100 ml",
+    "company":"Leeford",
+    "bestseller":false,
+    "image":"images/ortho_aid_oil.jpg"
+ },
+ {
+    "id":221,
+    "name":"CHIRAYU POSHAK OIL",
+    "price":"150",
+    "category":"OTHERS",
+    "packing":"100 ml",
+    "company":"CHIRAYU",
+    "bestseller":false,
+    "image":"images/poshak_100_oil.jpg"
+  },
+  {
+    "id":222,
+    "name":"CHIRAYU POSHAK OIL",
+    "price":"240",
+    "category":"OTHERS",
+    "packing":"200 ml",
+    "company":"CHIRAYU",
+    "bestseller":false,
+    "image":"images/poshak_200_oil.jpg"
+  },
+  {
+    "id":223,
+    "name":"GARIMA GLUCOSE ORANGE",
+    "price":"45",
+    "category":"OTHERS",
+    "packing":"100 g",
+    "company":"GARIMA",
+    "bestseller":false,
+    "image":"images/garima_glucose_orange.jpg"
   }
+
+
+
 ]
 
 
