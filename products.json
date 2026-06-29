@@ -2002,7 +2002,18 @@
     "company":"CHIRAYU",
     "bestseller":false,
     "image":"images/poshak_200_oil.jpg"
+  },
+  {
+    "id":223,
+    "name":"GARIMA GLUCOSE ORANGE",
+    "price":"45",
+    "category":"OTHERS",
+    "packing":"75 g",
+    "company":"GARIMA",
+    "bestseller":false,
+    "image":"images/garima_glucose_orange.jpg"
   }
+
 
 
 ]
