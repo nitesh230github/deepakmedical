@@ -780,53 +780,52 @@ input{
 
  }
 
- /* toggle button for loose and box
+ /* ================= Order Type Toggle ================= */
 
- .order-type{
+.order-type{
 
-display:flex;
+    display:flex;
 
-gap:10px;
+    gap:10px;
 
-margin:10px 0;
+    margin:10px 0;
 
 }
 
 .type-btn{
 
-background:#f3f4f6;
+    background:#f3f4f6;
 
-color:#333;
+    color:#444;
 
-border:2px solid #d1d5db;
+    border:2px solid #d1d5db;
 
-padding:8px 18px;
+    padding:8px 16px;
 
-border-radius:25px;
+    border-radius:25px;
 
-font-size:14px;
+    font-size:14px;
 
-font-weight:bold;
+    font-weight:bold;
 
-cursor:pointer;
+    cursor:pointer;
 
-transition:.3s;
-
-}
-
-.type-btn.active{
-
-background:#16a34a;
-
-color:white;
-
-border-color:#16a34a;
+    transition:0.3s;
 
 }
 
 .type-btn:hover{
 
-transform:scale(1.05);
+    transform:scale(1.05);
 
 }
-*/
+
+.type-btn.active{
+
+    background:#16a34a;
+
+    color:white;
+
+    border-color:#16a34a;
+
+ }
