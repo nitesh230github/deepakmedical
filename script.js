@@ -192,10 +192,11 @@ function addToCart(name,price){
         item.qty++;
     }
     else{
-        cart.push({
-            name:name,
-            price:price,
-            qty:1
+       cart.push({
+        name:name,
+        price:price,
+        qty:1,
+        orderType:"Loose"
         });
     }
 
@@ -249,18 +250,37 @@ function showCart(){
 
             <b>${item.name}</b>
 
-            <br><br>
+           <br><br>
 
-            <button onclick="decreaseQty(${index})">-</button>
+<div class="order-type">
 
-            ${item.qty}
+<button
+class="${item.orderType === 'Loose' ? 'type-btn active' : 'type-btn'}"
+onclick="changeOrderType(${index},'Loose')">
 
-            <button onclick="increaseQty(${index})">+</button>
+Loose
 
-            <button onclick="removeItem(${index})">
-                ❌
-            </button>
+</button>
 
+<button
+class="${item.orderType === 'Box' ? 'type-btn active' : 'type-btn'}"
+onclick="changeOrderType(${index},'Box')">
+
+📦 Box
+
+</button>
+
+</div>
+
+<button onclick="decreaseQty(${index})">-</button>
+
+${item.qty}
+
+<button onclick="increaseQty(${index})">+</button>
+
+<button onclick="removeItem(${index})">
+❌
+</button>
         </div>
         `;
     });
@@ -333,6 +353,16 @@ function removeItem(index){
     showCart();
     saveCart();
 }
+  // Loose or Box order
+function changeOrderType(index,type){
+
+    cart[index].orderType = type;
+
+    saveCart();
+
+    showCart();
+
+ }
 
 function sendOrder(){
 
