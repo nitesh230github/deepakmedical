@@ -10,16 +10,6 @@
     "image":"images/acnetoin_soap.jpg"
 },
 {
-    "id":2,
-    "name":"ACILOC 150 TAB",
-    "price":"50.44",
-    "category":"TABLET_CAP",
-    "packing":"30's",
-    "company":"Cadila",
-    "bestseller":true,
-    "image":"images/aciloc_150_tab.jpg"
-},
-{
     "id":3,
     "name":"ACILOC RD TAB",
     "price":"94.69",
