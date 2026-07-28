@@ -477,16 +477,17 @@ Order Details:
    Total Products : ${totalProducts}
 
    Total Amount : ₹${total.toFixed(2)}`;
-   
+
   let productList = "";
 
 cart.forEach(item => {
 
-    productList +=
-`${item.name} × ${item.qty}
-₹${(item.price * item.qty).toFixed(2)}
+ productList +=
+ `🔹 ${item.name} (${item.packing})
 
-`;
+ Qty : ${item.qty} | Amount : ₹${(item.price * item.qty).toFixed(2)}
+
+ `;
 
 });
 
