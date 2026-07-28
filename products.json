@@ -1830,8 +1830,8 @@
     "price": 70,
     "category": "TABLET_CAP",
     "packing": "20*1*10",
-    "saltContent": "Multivitamin/probiotic-type OTC tablet",
-    "uses": "General health supplement",
+    "saltContent": "Folic Acid (1.5 Mg) + Lactic Acid Bacillus (60 M) + Niacinamide (100 Mg) + Riboflavin / Vitamin B2 (10 Mg)",
+    "uses": " Mouth Ulcers",
     "bestseller": true,
     "image": "images/orogard_tab.jpg"
   },
@@ -2202,8 +2202,8 @@
     "price": 95,
     "category": "CREAM_OINT",
     "packing": "20 g",
-    "saltContent": "Hydroquinone + Vitamin combination",
-    "uses": "Skin lightening",
+    "saltContent": "KETOCONAZOLE CLOBETASOLE NEOMYCIN TOLNAFLATE IODOCHLORHYDROXYQUINONE",
+    "uses": "Skin lightening, Antifungal, Antibacterial ",
     "bestseller": true,
     "image": "images/superb_cream.jpg"
   },
