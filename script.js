@@ -70,6 +70,43 @@ function matchesSearch(product, searchValue){
 
 }
 
+
+
+ // adding priorty to search text
+function getSearchScore(product, searchValue){
+
+    let score = 0;
+
+    const name = normalizeText(product.name);
+
+    const salt = normalizeText(product.saltContent);
+
+    const uses = normalizeText(product.uses);
+
+    const words = searchValue.split(/\s+/);
+
+    words.forEach(word => {
+
+        word = normalizeText(word);
+
+        if(name.includes(word)){
+            score += 100;
+        }
+
+        if(salt.includes(word)){
+            score += 50;
+        }
+
+        if(uses.includes(word)){
+            score += 20;
+        }
+
+    });
+
+    return score;
+
+}
+
 let products = [];
 
 fetch("products.json")
@@ -149,7 +186,13 @@ function filterProducts() {
 
     }
 
-    displayProducts(filtered);
+    filtered.sort((a,b)=>
+
+    getSearchScore(b,searchValue) -
+
+    getSearchScore(a,searchValue)
+
+ );
 
  // Active category button update
 
@@ -207,7 +250,7 @@ function displayProducts(items){
                ₹${product.price}
                  </p>
 
-            <button onclick="addToCart('${product.name}',${product.price})">
+            <button onclick="addToCart('${product.name}',${product.price},'${product.packing}')">
                 Add to Cart
             </button>
 
@@ -218,7 +261,7 @@ function displayProducts(items){
     document.getElementById("products").innerHTML = html;
 }
 
-function addToCart(name,price){
+function addToCart(name,price,packing){
 
     let item = cart.find(x => x.name === name);
 
@@ -227,9 +270,10 @@ function addToCart(name,price){
     }
     else{
         cart.push({
-            name:name,
-            price:price,
-            qty:1
+          name:name,
+          price:price,
+          packing:packing,
+          qty:1,    
         });
     }
 
@@ -419,10 +463,12 @@ Order Details:
 
         total += item.price * item.qty;
 
-        msg += `${item.name} × ${item.qty}
-₹${item.price * item.qty}
+        msg += `🔹 ${item.name} (${item.packing})
 
-`;
+      Qty : ${item.qty} | Amount : ₹${(item.price * item.qty).toFixed(2)}
+
+       `;
+
 
     });
 
