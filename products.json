@@ -102,7 +102,7 @@
     "price": 41.66,
     "category": "TABLET_CAP",
     "packing": "10*3*10",
-    "saltContent": "Amoxicillin 250mg",
+    "saltContent": "amoxycillin 250 ",
     "uses": "Bacterial infections (respiratory, ENT, UTI etc.)",
     "bestseller": true,
     "image": "images/almox_250_cap.jpg"
@@ -114,7 +114,7 @@
     "price": 208.5,
     "category": "TABLET_CAP",
     "packing": "10*1*10",
-    "saltContent": "Amoxicillin 500mg + Clavulanic Acid 125mg",
+    "saltContent": " Amoxycillin 500mg + Clavulanic Acid 125mg",
     "uses": "Broad-spectrum bacterial infections",
     "bestseller": true,
     "image": "images/almox_cv_625_tab.jpg"
@@ -1494,7 +1494,7 @@
     "price": 204.8,
     "category": "TABLET_CAP",
     "packing": "20*1*10",
-    "saltContent": "Amoxicillin 500mg + Clavulanic Acid 125mg",
+    "saltContent": "Amoxycillin 500mg + Clavulanic Acid 125mg ",
     "uses": "Bacterial infections",
     "bestseller": true,
     "image": "images/moxatris_cv_625_tab.jpg"
@@ -1506,7 +1506,7 @@
     "price": 182.96,
     "category": "TABLET_CAP",
     "packing": "10*1*10",
-    "saltContent": "Amoxicillin 500mg + Clavulanic Acid 125mg",
+    "saltContent": "Amoxycillin 500mg + Clavulanic Acid 125mg",
     "uses": "Bacterial infections",
     "bestseller": true,
     "image": "images/moxikind_cv_625_tab.jpg"
@@ -2502,7 +2502,7 @@
     "price": 82.43,
     "category": "TABLET_CAP",
     "packing": "20*10",
-    "saltContent": "Amoxicillin 500mg",
+    "saltContent": "Amoxycillin 500mg ",
     "uses": "Bacterial infections",
     "bestseller": false,
     "image": "images/zymox_500_cap.jpg"
