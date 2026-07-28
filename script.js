@@ -34,6 +34,85 @@ function shuffleArray(array){
 
 }
 
+/* To Normalize the text, Original : tea/tree. Normalize : teatree  */
+function normalizeText(text){
+
+    return text
+        .toLowerCase()
+        .replace(/[\s+\-\/;(),.*]+/g,"");
+
+}
+
+
+/* Helper function to match normalize text value. In future you can also add other keys for search like COMPANY or PACKING.
+   Now if you search Paracetamol fever, then its shows all items which contain paracetamol and uses value has fever text. */
+function matchesSearch(product, rawSearch){
+
+    // Empty search → show all
+    if(rawSearch.trim() === ''){
+        return true;
+    }
+
+    // Product searchable text
+    let searchableText = normalizeText(
+        product.name + ' ' +
+        product.company + ' ' +
+        product.saltContent + ' ' +
+        product.uses
+    );
+
+    // User words
+    let words = rawSearch
+        .toLowerCase()
+        .split(/\s+/)
+        .map(w => normalizeText(w))
+        .filter(w => w !== '');
+
+    // Every word must exist
+    return words.every(word =>
+        searchableText.includes(word)
+    );
+ }
+
+ /* adding priorty to search text
+function getSearchScore(product, rawSearch){
+
+    let score = 0;
+
+    const name = normalizeText(product.name);
+
+    const salt = normalizeText(product.saltContent);
+
+    const uses = normalizeText(product.uses);
+
+    const words = rawSearch
+                  .toLowerCase()
+                  .split(/\s+/)
+                  .map(w => normalizeText(w))
+                  .filter(w => w !== "");
+
+    words.forEach(word => {
+
+        word = normalizeText(word);
+
+        if(name.includes(word)){
+            score += 100;
+        }
+
+        if(salt.includes(word)){
+            score += 50;
+        }
+
+        if(uses.includes(word)){
+            score += 20;
+        }
+
+    });
+
+    return score;
+
+}  */
+
 let products = [];
 
 fetch("products.json")
@@ -70,8 +149,9 @@ fetch("products.json")
 
 function filterProducts() {
 
-    let searchValue =
-    document.getElementById("search").value.toLowerCase();
+    let rawSearch = document.getElementById('search').value;    // raw search value stored
+
+    let searchValue = normalizeText(rawSearch);                // normalized search text stored
 
     let categoryValue =
     document.getElementById("categoryFilter").value;
@@ -83,14 +163,14 @@ function filterProducts() {
         let bestSellers =
         products.filter(product =>
             product.bestseller &&
-            product.name.toLowerCase().includes(searchValue)
+            matchesSearch(product, rawSearch)
         );
         bestSellers = shuffleArray(bestSellers);
         
         let otherProducts =
         products.filter(product =>
             !product.bestseller &&
-            product.name.toLowerCase().includes(searchValue)
+            matchesSearch(product, rawSearch)
         );
 
         otherProducts = shuffleArray(otherProducts);
@@ -103,19 +183,26 @@ function filterProducts() {
     }
     else{
 
-        filtered = products.filter(product =>
-
+     filtered = products.filter(product =>
             product.category === categoryValue &&
-
-            product.name.toLowerCase().includes(searchValue)
+            matchesSearch(product, rawSearch)
 
         );
 
         filtered = shuffleArray(filtered);
 
     }
+    
 
-    displayProducts(filtered);
+    /* priorty to search text
+   filtered.sort((a,b)=>
+     getSearchScore(b,rawSearch) -
+     getSearchScore(a,rawSearch)
+
+    );  */
+
+displayProducts(filtered);
+
 
  // Active category button update
 
@@ -173,7 +260,7 @@ function displayProducts(items){
                ₹${product.price}
                  </p>
 
-            <button onclick="addToCart('${product.name}',${product.price})">
+            <button onclick="addToCart('${product.name}',${product.price},'${product.packing}')">
                 Add to Cart
             </button>
 
@@ -184,7 +271,7 @@ function displayProducts(items){
     document.getElementById("products").innerHTML = html;
 }
 
-function addToCart(name,price){
+function addToCart(name,price,packing){
 
     let item = cart.find(x => x.name === name);
 
@@ -192,11 +279,11 @@ function addToCart(name,price){
         item.qty++;
     }
     else{
-       cart.push({
-        name:name,
-        price:price,
-        qty:1,
-        orderType:"Loose"
+        cart.push({
+          name:name,
+          price:price,
+          packing:packing,
+          qty:1,    
         });
     }
 
@@ -397,7 +484,7 @@ function sendOrder(){
     }
 
     let total = 0;
-
+    let totalProducts = cart.length;
     let msg =
 `Hello Deepak Medical Agency
 
@@ -415,23 +502,31 @@ Order Details:
 
         total += item.price * item.qty;
 
-        msg += `${item.name} × ${item.qty}
-₹${item.price * item.qty}
+        msg += `🔹 ${item.name} (${item.packing})
 
-`;
+      Qty : ${item.qty} | Amount : ₹${(item.price * item.qty).toFixed(2)}
+
+       `;
+
 
     });
 
-    msg += `Total Amount: ₹${total.toFixed(2)}`;
+    msg += `━━━━━━━━━━━━━━
+
+   Total Products : ${totalProducts}
+
+   Total Amount : ₹${total.toFixed(2)}`;
+
   let productList = "";
 
 cart.forEach(item => {
 
-    productList +=
-`${item.name} × ${item.qty}
-₹${(item.price * item.qty).toFixed(2)}
+ productList +=
+ `🔹 ${item.name} (${item.packing})
 
-`;
+ Qty : ${item.qty} | Amount : ₹${(item.price * item.qty).toFixed(2)}
+
+ `;
 
 });
 
