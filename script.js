@@ -445,7 +445,7 @@ function sendOrder(){
     }
 
     let total = 0;
-
+    let totalProducts = cart.length;
     let msg =
 `Hello Deepak Medical Agency
 
@@ -472,7 +472,12 @@ Order Details:
 
     });
 
-    msg += `Total Amount: ₹${total.toFixed(2)}`;
+    msg += `━━━━━━━━━━━━━━
+
+   Total Products : ${totalProducts}
+
+   Total Amount : ₹${total.toFixed(2)}`;
+   
   let productList = "";
 
 cart.forEach(item => {
