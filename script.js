@@ -34,6 +34,31 @@ function shuffleArray(array){
 
 }
 
+/* To Normalize the text, Original : tea/tree. Normalize : teatree  */
+function normalizeText(text){
+
+    return text
+        .toLowerCase()
+        .replace(/[\s+\-\/;(),.*]+/g,"");
+
+}
+
+
+/* Helper function to match normalize text value. In future you can also add other keys for search like COMPANY or PACKING */
+function matchesSearch(product, searchValue){
+
+    return (
+
+        normalizeText(product.name).includes(searchValue) ||
+
+        normalizeText(product.saltContent).includes(searchValue) ||
+
+        normalizeText(product.uses).includes(searchValue)
+
+    );
+
+}
+
 let products = [];
 
 fetch("products.json")
@@ -70,8 +95,8 @@ fetch("products.json")
 
 function filterProducts() {
 
-    let searchValue =
-    document.getElementById("search").value.toLowerCase();
+    let searchValue = normalizeText(
+    document.getElementById("search").value);
 
     let categoryValue =
     document.getElementById("categoryFilter").value;
@@ -83,14 +108,14 @@ function filterProducts() {
         let bestSellers =
         products.filter(product =>
             product.bestseller &&
-            product.name.toLowerCase().includes(searchValue)
+            matchesSearch(product, searchValue)
         );
         bestSellers = shuffleArray(bestSellers);
         
         let otherProducts =
         products.filter(product =>
             !product.bestseller &&
-            product.name.toLowerCase().includes(searchValue)
+            matchesSearch(product, searchValue)
         );
 
         otherProducts = shuffleArray(otherProducts);
@@ -103,11 +128,9 @@ function filterProducts() {
     }
     else{
 
-        filtered = products.filter(product =>
-
+     filtered = products.filter(product =>
             product.category === categoryValue &&
-
-            product.name.toLowerCase().includes(searchValue)
+            matchesSearch(product, searchValue)
 
         );
 
