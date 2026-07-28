@@ -966,7 +966,7 @@
     "price": 95.55,
     "category": "TABLET_CAP",
     "packing": "10*10",
-    "saltContent": "Vitamin E (Tocopheryl Acetate) 400mg",
+    "saltContent": "Vitamin E  400mg",
     "uses": "Antioxidant, skin/hair health",
     "bestseller": true,
     "image": "images/evion_400_tab.jpg"
@@ -1555,7 +1555,7 @@
     "category": "TABLET_CAP",
     "packing": "30's",
     "saltContent": "Vitamin B1 + B6 + B12",
-    "uses": "Nerve health, B-vitamin deficiency",
+    "uses": "NNerve health, vitamin-b deficiency",
     "bestseller": true,
     "image": "images/neurobion_forte_tab.jpg"
   },
