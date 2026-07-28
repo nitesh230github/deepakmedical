@@ -56,6 +56,7 @@ function matchesSearch(product, rawSearch){
     // Product searchable text
     let searchableText = normalizeText(
         product.name + ' ' +
+        product.company + ' ' +
         product.saltContent + ' ' +
         product.uses
     );
