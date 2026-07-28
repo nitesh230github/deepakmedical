@@ -691,7 +691,7 @@
     "category": "TABLET_CAP",
     "packing": "15's",
     "saltContent": "Chlorthalidone/Telmisartan combo (antihypertensive)",
-    "uses": "Hypertension",
+    "uses": "Hypertension High BP",
     "bestseller": true,
     "image": "images/ctd_12.5_tab.jpg"
   },
@@ -703,7 +703,7 @@
     "category": "TABLET_CAP",
     "packing": "15's",
     "saltContent": "Chlorthalidone/Telmisartan combo (lower dose)",
-    "uses": "Hypertension",
+    "uses": "Hypertension High BP",
     "bestseller": true,
     "image": "images/ctd_6.25_tab.jpg"
   },
