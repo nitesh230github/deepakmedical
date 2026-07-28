@@ -46,31 +46,32 @@ function normalizeText(text){
 
 /* Helper function to match normalize text value. In future you can also add other keys for search like COMPANY or PACKING.
    Now if you search Paracetamol fever, then its shows all items which contain paracetamol and uses value has fever text. */
-function matchesSearch(product, searchValue){
+function matchesSearch(product, rawSearch){
 
-    // Agar search box empty hai to sab products dikhao
-    if(searchValue === ""){
+    // Empty search → show all
+    if(rawSearch.trim() === ''){
         return true;
     }
 
-    // Product ke saare searchable fields ko ek string me combine karo
+    // Product searchable text
     let searchableText = normalizeText(
-        product.name + " " +
-        product.saltContent + " " +
+        product.name + ' ' +
+        product.saltContent + ' ' +
         product.uses
     );
 
-    // User ke search ko words me divide karo
-    let words = searchValue.split(/\s+/);
+    // User words
+    let words = rawSearch
+        .toLowerCase()
+        .split(/\s+/)
+        .map(w => normalizeText(w))
+        .filter(w => w !== '');
 
-    // Har word product me hona chahiye
+    // Every word must exist
     return words.every(word =>
-        searchableText.includes(normalizeText(word))
+        searchableText.includes(word)
     );
-
-}
-
-
+ }
 
  // adding priorty to search text
 function getSearchScore(product, searchValue){
@@ -143,8 +144,9 @@ fetch("products.json")
 
 function filterProducts() {
 
-    let searchValue = normalizeText(
-    document.getElementById("search").value);
+    let rawSearch = document.getElementById('search').value;    // raw search value stored
+
+    let searchValue = normalizeText(rawSearch);                // normalized search text stored
 
     let categoryValue =
     document.getElementById("categoryFilter").value;
@@ -156,14 +158,14 @@ function filterProducts() {
         let bestSellers =
         products.filter(product =>
             product.bestseller &&
-            matchesSearch(product, searchValue)
+            matchesSearch(product, rawSearch)
         );
         bestSellers = shuffleArray(bestSellers);
         
         let otherProducts =
         products.filter(product =>
             !product.bestseller &&
-            matchesSearch(product, searchValue)
+            matchesSearch(product, rawSearch)
         );
 
         otherProducts = shuffleArray(otherProducts);
@@ -178,7 +180,7 @@ function filterProducts() {
 
      filtered = products.filter(product =>
             product.category === categoryValue &&
-            matchesSearch(product, searchValue)
+            matchesSearch(product, rawSearch)
 
         );
 
