@@ -73,7 +73,7 @@ function matchesSearch(product, rawSearch){
     );
  }
 
- // adding priorty to search text
+ /* adding priorty to search text
 function getSearchScore(product, rawSearch){
 
     let score = 0;
@@ -110,7 +110,7 @@ function getSearchScore(product, rawSearch){
 
     return score;
 
-}
+}  */
 
 let products = [];
 
@@ -191,14 +191,14 @@ function filterProducts() {
         filtered = shuffleArray(filtered);
 
     }
+    
 
+    /* priorty to search text
    filtered.sort((a,b)=>
+     getSearchScore(b,rawSearch) -
+     getSearchScore(a,rawSearch)
 
-    getSearchScore(b,rawSearch) -
-
-    getSearchScore(a,rawSearch)
-
-);
+    );  */
 
 displayProducts(filtered);
 
