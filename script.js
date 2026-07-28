@@ -74,7 +74,7 @@ function matchesSearch(product, rawSearch){
  }
 
  // adding priorty to search text
-function getSearchScore(product, searchValue){
+function getSearchScore(product, rawSearch){
 
     let score = 0;
 
@@ -84,7 +84,11 @@ function getSearchScore(product, searchValue){
 
     const uses = normalizeText(product.uses);
 
-    const words = searchValue.split(/\s+/);
+    const words = rawSearch
+                  .toLowerCase()
+                  .split(/\s+/)
+                  .map(w => normalizeText(w))
+                  .filter(w => w !== "");
 
     words.forEach(word => {
 
@@ -188,13 +192,16 @@ function filterProducts() {
 
     }
 
-    filtered.sort((a,b)=>
+   filtered.sort((a,b)=>
 
-    getSearchScore(b,searchValue) -
+    getSearchScore(b,rawSearch) -
 
-    getSearchScore(a,searchValue)
+    getSearchScore(a,rawSearch)
 
- );
+);
+
+displayProducts(filtered);
+
 
  // Active category button update
 
