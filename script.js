@@ -44,17 +44,28 @@ function normalizeText(text){
 }
 
 
-/* Helper function to match normalize text value. In future you can also add other keys for search like COMPANY or PACKING */
+/* Helper function to match normalize text value. In future you can also add other keys for search like COMPANY or PACKING.
+   Now if you search Paracetamol fever, then its shows all items which contain paracetamol and uses value has fever text. */
 function matchesSearch(product, searchValue){
 
-    return (
+    // Agar search box empty hai to sab products dikhao
+    if(searchValue === ""){
+        return true;
+    }
 
-        normalizeText(product.name).includes(searchValue) ||
+    // Product ke saare searchable fields ko ek string me combine karo
+    let searchableText = normalizeText(
+        product.name + " " +
+        product.saltContent + " " +
+        product.uses
+    );
 
-        normalizeText(product.saltContent).includes(searchValue) ||
+    // User ke search ko words me divide karo
+    let words = searchValue.split(/\s+/);
 
-        normalizeText(product.uses).includes(searchValue)
-
+    // Har word product me hona chahiye
+    return words.every(word =>
+        searchableText.includes(normalizeText(word))
     );
 
 }
