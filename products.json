@@ -73,7 +73,7 @@
   },
   {
     "id": 7,
-    "name": "ALKACITRAL SYP",
+    "name": "ALKACITRAL SYRUP",
     "company": "BIOCHEM",
     "price": 152.71,
     "category": "LIQUID",
@@ -85,7 +85,7 @@
   },
   {
     "id": 8,
-    "name": "ALKOF DX SYP",
+    "name": "ALKOF DX SYRUP",
     "company": "ALKEM",
     "price": 120,
     "category": "LIQUID",
@@ -121,7 +121,7 @@
   },
   {
     "id": 11,
-    "name": "AMBRODIL LS SYP",
+    "name": "AMBRODIL LS SYRUP",
     "company": "ARISTO",
     "price": 101.71,
     "category": "LIQUID",
@@ -133,7 +133,7 @@
   },
   {
     "id": 12,
-    "name": "AMBRODIL S SYP",
+    "name": "AMBRODIL S SYRUP",
     "company": "ARISTO",
     "price": 36.56,
     "category": "LIQUID",
@@ -145,7 +145,7 @@
   },
   {
     "id": 13,
-    "name": "AMBROX LS SYP",
+    "name": "AMBROX LS SYRUP",
     "company": "GLOBEX",
     "price": 118.8,
     "category": "LIQUID",
@@ -193,7 +193,7 @@
   },
   {
     "id": 17,
-    "name": "ARISTOZYME SYP",
+    "name": "ARISTOZYME SYRUP",
     "company": "ARISTO",
     "price": 151.87,
     "category": "LIQUID",
@@ -361,7 +361,7 @@
   },
   {
     "id": 31,
-    "name": "BROZEDEX SYP",
+    "name": "BROZEDEX SYRUP",
     "company": "DR REDDYS",
     "price": 177.42,
     "category": "LIQUID",
@@ -409,7 +409,7 @@
   },
   {
     "id": 35,
-    "name": "CALPOL 120 SYP",
+    "name": "CALPOL 120 SYRUP",
     "company": "GSK",
     "price": 38.45,
     "category": "LIQUID",
@@ -421,7 +421,7 @@
   },
   {
     "id": 36,
-    "name": "CALPOL 250 SYP",
+    "name": "CALPOL 250 SYRUP",
     "company": "GSK",
     "price": 42.84,
     "category": "LIQUID",
@@ -517,7 +517,7 @@
   },
   {
     "id": 44,
-    "name": "CHESTON COLD SYP",
+    "name": "CHESTON COLD SYRUP",
     "company": "CIPLA",
     "price": 67.5,
     "category": "LIQUID",
@@ -721,7 +721,7 @@
   },
   {
     "id": 61,
-    "name": "CYPON SYP",
+    "name": "CYPON SYRUP",
     "company": "GENO",
     "price": 139.69,
     "category": "LIQUID",
@@ -829,7 +829,7 @@
   },
   {
     "id": 70,
-    "name": "DEXORANGE SYP",
+    "name": "DEXORANGE SYRUP",
     "company": "FRANCO",
     "price": 197.8,
     "category": "LIQUID",
@@ -1069,7 +1069,7 @@
   },
   {
     "id": 90,
-    "name": "GALIREX SYP",
+    "name": "GALIREX SYRUP",
     "company": "LEEFORD",
     "price": 110,
     "category": "LIQUID",
@@ -1117,7 +1117,7 @@
   },
   {
     "id": 94,
-    "name": "HEMOFORTE SYP",
+    "name": "HEMOFORTE SYRUP",
     "company": "TORQUE",
     "price": 202,
     "category": "LIQUID",
@@ -1129,7 +1129,7 @@
   },
   {
     "id": 95,
-    "name": "HEMOPLUS SYP",
+    "name": "HEMOPLUS SYRUP",
     "company": "TORQUE",
     "price": 140,
     "category": "LIQUID",
@@ -1237,7 +1237,7 @@
   },
   {
     "id": 104,
-    "name": "KUFFDRYL SYP",
+    "name": "KUFFDRYL SYRUP",
     "company": "INTAS",
     "price": 119.53,
     "category": "LIQUID",
@@ -1333,7 +1333,7 @@
   },
   {
     "id": 112,
-    "name": "LIV 52 DS SYP",
+    "name": "LIV 52 DS SYRUP",
     "company": "HIMALAYA",
     "price": 375,
     "category": "LIQUID",
@@ -1345,7 +1345,7 @@
   },
   {
     "id": 113,
-    "name": "LIV 52 SYP",
+    "name": "LIV 52 SYRUP",
     "company": "HIMALAYA",
     "price": 234,
     "category": "LIQUID",
@@ -1357,7 +1357,7 @@
   },
   {
     "id": 114,
-    "name": "LIVSHINE DS SYP",
+    "name": "LIVSHINE DS SYRUP",
     "company": "GLOBEX",
     "price": 168.75,
     "category": "LIQUID",
@@ -1393,7 +1393,7 @@
   },
   {
     "id": 117,
-    "name": "MEDIVIT SYP",
+    "name": "MEDIVIT SYRUP",
     "company": "MEDITEK",
     "price": 70,
     "category": "LIQUID",
@@ -1525,7 +1525,7 @@
   },
   {
     "id": 128,
-    "name": "MULTI VITAMIN SYP",
+    "name": "MULTI VITAMIN SYRUP",
     "company": "AUSTRO",
     "price": 185,
     "category": "LIQUID",
@@ -1609,7 +1609,7 @@
   },
   {
     "id": 135,
-    "name": "NIMUCET SYP",
+    "name": "NIMUCET SYRUP",
     "company": "INTAS",
     "price": 52.97,
     "category": "LIQUID",
@@ -1693,7 +1693,7 @@
   },
   {
     "id": 142,
-    "name": "O2 SYP",
+    "name": "O2 SYRUP",
     "company": "MEDLEY",
     "price": 77.8,
     "category": "LIQUID",
@@ -1705,7 +1705,7 @@
   },
   {
     "id": 143,
-    "name": "OFLAKEM OZ SYP",
+    "name": "OFLAKEM OZ SYRUP",
     "company": "ALKEM",
     "price": 70,
     "category": "LIQUID",
@@ -1957,7 +1957,7 @@
   },
   {
     "id": 164,
-    "name": "PHENSEDYL DX SYP",
+    "name": "PHENSEDYL DX SYRUP",
     "company": "ABBOTT",
     "price": 119.42,
     "category": "LIQUID",
@@ -1969,7 +1969,7 @@
   },
   {
     "id": 165,
-    "name": "POLYBION LC SYP",
+    "name": "POLYBION LC SYRUP",
     "company": "P&G",
     "price": 151.85,
     "category": "LIQUID",
@@ -2245,7 +2245,7 @@
   },
   {
     "id": 188,
-    "name": "TAXIM-O DRY SYP",
+    "name": "TAXIM-O DRY SYRUP",
     "company": "ALKEM",
     "price": 52.09,
     "category": "LIQUID",
@@ -2365,7 +2365,7 @@
   },
   {
     "id": 198,
-    "name": "UNIENZYME SYP",
+    "name": "UNIENZYME SYRUP",
     "company": "TORRENT",
     "price": 169.65,
     "category": "LIQUID",
@@ -2389,7 +2389,7 @@
   },
   {
     "id": 200,
-    "name": "VENTORANZ DX SYP",
+    "name": "VENTORANZ DX SYRUP",
     "company": "ALKEM",
     "price": 113,
     "category": "LIQUID",
@@ -2425,13 +2425,13 @@
   },
   {
     "id": 203,
-    "name": "ZEEBEE SYP",
+    "name": "ZEEBEE SYRUP",
     "company": "RANBAXY",
     "price": 19.11,
     "category": "LIQUID",
     "packing": "10 ml",
-    "saltContent": "Vitamin B-Complex",
-    "uses": "Vitamin B deficiency tonic",
+    "saltContent": "Albendazole (200mg)",
+    "uses": "Parasitic infections + Intestinal Worm Infections",
     "bestseller": true,
     "image": "images/zeebee_syp.jpg"
   },
@@ -2533,7 +2533,7 @@
   },
   {
     "id": 212,
-    "name": "HEMOLAB FORTE SYP",
+    "name": "HEMOLAB FORTE SYRUP",
     "company": "LABORATE",
     "price": 280,
     "category": "LIQUID",
