@@ -516,8 +516,7 @@ function removeItem(index){
 
     cart.splice(index,1);
 
-    showCart();
-    saveCart();
+    refreshUI();
 }
   // Loose or Box order
 function changeOrderType(index,type){
