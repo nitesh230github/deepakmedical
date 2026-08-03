@@ -249,7 +249,7 @@ function displayProducts(items){
             <h3>${product.name}</h3>
 
              <p class="packing">
-             Pack Size: ${product.packing}
+             Packing: ${product.packing}
              </p>
 
               <p class="company">
@@ -257,7 +257,7 @@ function displayProducts(items){
               </p>
 
                 <p class="price">
-               ₹${product.price}
+               MRP ₹${product.price}
                  </p>
 
             <button onclick="addToCart('${product.name}',${product.price},'${product.packing}')">
