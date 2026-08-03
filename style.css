@@ -536,7 +536,7 @@ input{
 
     height:42px;
 
-    background:#EDF5FF;
+    background:#d0e2f7;
 
     border-radius:999px;
 
@@ -556,15 +556,15 @@ input{
 
 .qty-btn{
 
-    width:35px;
+    width:38px;
 
-    height:35px;
+    height:38px;
 
     border-radius:50%;
 
     background:#0066CC;
 
-    color:#fff;
+    color:#000;
 
     display:flex;
 
@@ -600,7 +600,7 @@ input{
 
     text-align:center;
 
-    color:#0066CC;
+    color:#000;
 
     font-size:17px;
 
