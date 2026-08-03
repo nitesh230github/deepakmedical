@@ -175,7 +175,7 @@
     "category": "TABLET_CAP",
     "packing": "10*15",
     "saltContent": "Amlodipine 2.5mg",
-    "uses": "(High BP / Hypertension)",
+    "uses": "High BP / Hypertension / high blood pressure ",
     "bestseller": false,
     "image": "images/amlovas_2.5_tab.jpg"
   },
@@ -187,7 +187,7 @@
     "category": "TABLET_CAP",
     "packing": "10*15",
     "saltContent": "Amlodipine 5mg",
-    "uses": "(High BP / Hypertension)",
+    "uses": "High BP / Hypertension / high blood pressure ",
     "bestseller": false,
     "image": "images/amlovas_5_tab.jpg"
   },
@@ -222,7 +222,7 @@
     "price": 8.8,
     "category": "OTHERS",
     "packing": "2.5 ml",
-    "saltContent": "Salbutamol (nebulizer solution)",
+    "saltContent": "Salbutamol ",
     "uses": "Acute asthma/COPD attack, breathlessness via nebulization",
     "bestseller": false,
     "image": "images/asthalin_respules.jpg"
@@ -319,7 +319,7 @@
     "category": "DROP",
     "packing": "15 ml",
     "saltContent": "Betamethasone",
-    "uses": "Allergic conditions, inflammation, croup",
+    "uses": "Allergic conditions, inflammation",
     "bestseller": true,
     "image": "images/betnesol_oral_drop.jpg"
   },
@@ -690,8 +690,8 @@
     "price": 159.55,
     "category": "TABLET_CAP",
     "packing": "15's",
-    "saltContent": "Chlorthalidone/Telmisartan combo (antihypertensive)",
-    "uses": "Hypertension High BP",
+    "saltContent": "Chlorthalidone ",
+    "uses": "Hypertension High BP, high blood pressure",
     "bestseller": true,
     "image": "images/ctd_12.5_tab.jpg"
   },
@@ -702,8 +702,8 @@
     "price": 116.58,
     "category": "TABLET_CAP",
     "packing": "15's",
-    "saltContent": "Chlorthalidone/Telmisartan combo (lower dose)",
-    "uses": "Hypertension High BP",
+    "saltContent": "Chlorthalidone ",
+    "uses": "Hypertension High BP, high blood pressure",
     "bestseller": true,
     "image": "images/ctd_6.25_tab.jpg"
   },
@@ -1338,8 +1338,8 @@
     "price": 375,
     "category": "LIQUID",
     "packing": "200 ml",
-    "saltContent": "Herbal liver tonic (Kasani, Kasmard etc.)",
-    "uses": "Liver protection, hepatoprotective",
+    "saltContent": "Herbal liver tonic + liver syrup",
+    "uses": "Liver protection, supports digestion",
     "bestseller": true,
     "image": "images/liv52_ds_syp.jpg"
   },
@@ -1350,7 +1350,7 @@
     "price": 234,
     "category": "LIQUID",
     "packing": "200 ml",
-    "saltContent": "Herbal liver tonic",
+    "saltContent": "Herbal liver tonic + liver syrup ",
     "uses": "Liver health, appetite stimulant",
     "bestseller": true,
     "image": "images/liv52_syp.jpg"
@@ -1974,7 +1974,7 @@
     "price": 151.85,
     "category": "LIQUID",
     "packing": "150 ml",
-    "saltContent": "Vitamin B-Complex + Lysine",
+    "saltContent": "Vitamin B-Complex + Lysine + Cyanocobalamin +Pyridoxine + Nicotinamide ",
     "uses": "Vitamin B deficiency, tonic",
     "bestseller": true,
     "image": "images/polybion_lc_syp.jpg"
@@ -2286,8 +2286,8 @@
     "price": 168.82,
     "category": "TABLET_CAP",
     "packing": "120's",
-    "saltContent": "Levothyroxine 100 mcg",
-    "uses": "Hypothyroidism",
+    "saltContent": "THYROXINE 100 mcg",
+    "uses": "Hypothyroidism, thyroid",
     "bestseller": true,
     "image": "images/thyronorm_100_tab.jpg"
   },
@@ -2298,8 +2298,8 @@
     "price": 132.02,
     "category": "TABLET_CAP",
     "packing": "120's",
-    "saltContent": "Levothyroxine 50mcg",
-    "uses": "Hypothyroidism",
+    "saltContent": "THYROXINE 50 mcg ",
+    "uses": "Hypothyroidism, thyroid",
     "bestseller": true,
     "image": "images/thyronorm_50_tab.jpg"
   },
@@ -2310,8 +2310,8 @@
     "price": 168.83,
     "category": "TABLET_CAP",
     "packing": "120's",
-    "saltContent": "Levothyroxine 100mcg",
-    "uses": "Hypothyroidism",
+    "saltContent": "THYROXINE 100 mcg ",
+    "uses": "Hypothyroidism, thyroid",
     "bestseller": true,
     "image": "images/thyrox_100_tab.jpg"
   },
@@ -2322,8 +2322,8 @@
     "price": 185.4,
     "category": "TABLET_CAP",
     "packing": "120's",
-    "saltContent": "Levothyroxine 25mcg",
-    "uses": "Hypothyroidism",
+    "saltContent": "THYROXINE 25 mcg",
+    "uses": "Hypothyroidism, thyroid",
     "bestseller": true,
     "image": "images/thyrox_25_tab.jpg"
   },
@@ -2334,8 +2334,8 @@
     "price": 132.02,
     "category": "TABLET_CAP",
     "packing": "120's",
-    "saltContent": "Levothyroxine 50mcg",
-    "uses": "Hypothyroidism",
+    "saltContent": "THYROXINE 50 mcg",
+    "uses": "Hypothyroidism, thyroid",
     "bestseller": true,
     "image": "images/thyrox_50_tab.jpg"
   },
