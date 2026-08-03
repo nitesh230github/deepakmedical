@@ -241,67 +241,71 @@ function displayProducts(items){
 
     items.forEach(product => {
 
-         let cartItem = cart.find(item => item.name === product.name);
+        let cartItem = cart.find(item => item.name === product.name);
 
-         let qty = cartItem ? cartItem.qty : 0;
+        let qty = cartItem ? cartItem.qty : 0;
 
-         html += `
+        html += `
         <div class="card">
 
             <img src="${product.image}" alt="${product.name}">
 
             <h3>${product.name}</h3>
 
-             <p class="packing">
-             Packing: ${product.packing}
-             </p>
+            <p class="packing">
+                Packing: ${product.packing}
+            </p>
 
-              <p class="company">
-             Mfg/Mkt: ${product.company}
-              </p>
+            <p class="company">
+                Mfg/Mkt: ${product.company}
+            </p>
 
-              <p class="price">
-               <span class="mrp-text">MRP</span>
-               <span class="mrp-price">₹ ${product.price}</span>
-              </p>
+            <p class="price">
+                <span class="mrp-text">MRP</span>
+                <span class="mrp-price">₹ ${product.price}</span>
+            </p>
 
-             
+            ${
+                qty === 0 ?
 
-         ${
-              qty === 0 ?
+                `
+                <button onclick="addToCart('${product.name}',${product.price},'${product.packing}')">
+                    Add to Cart
+                </button>
+                `
 
-             ` 
-             <button
-               onclick="addToCart('${product.name}',${product.price},'${product.packing}')">
-                Add to Cart
-             </button>
-             `
+                :
 
-             :
+                `
+                <div class="qty-box">
 
-             `
-            <div class="qty-box">
+                    <div class="qty-btn minus"
+                        onclick="decreaseQtyByName('${product.name}')">
+                        −
+                    </div>
 
-             <div class="qty-btn minus"
-               onclick="decreaseQtyByName('${product.name}')">
-               −
-             </div>
+                    <div class="qty-value">
+                        ${qty}
+                    </div>
 
-             <div class="qty-value">
-             ${qty}
-             </div>
+                    <div class="qty-btn plus"
+                        onclick="increaseQtyByName('${product.name}')">
+                        +
+                    </div>
 
-             <div class="qty-btn plus"
-               onclick="increaseQtyByName('${product.name}')">
-                +
-             </div>
+                </div>
+                `
+            }
 
-            </div>
+        </div>
         `;
+
     });
 
     document.getElementById("products").innerHTML = html;
+
 }
+
 
 function addToCart(name,price,packing){
 
