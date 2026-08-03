@@ -241,7 +241,11 @@ function displayProducts(items){
 
     items.forEach(product => {
 
-        html += `
+         let cartItem = cart.find(item => item.name === product.name);
+
+         let qty = cartItem ? cartItem.qty : 0;
+
+         html += `
         <div class="card">
 
             <img src="${product.image}" alt="${product.name}">
@@ -263,9 +267,36 @@ function displayProducts(items){
 
              
 
-            <button onclick="addToCart('${product.name}',${product.price},'${product.packing}')">
+         ${
+              qty === 0 ?
+
+             ` 
+             <button
+               onclick="addToCart('${product.name}',${product.price},'${product.packing}')">
                 Add to Cart
-            </button>
+             </button>
+             `
+
+             :
+
+             `
+             <div class="qty-box">
+
+             <button
+             onclick="decreaseQtyByName('${product.name}')">
+             -
+             </button>
+
+             <span>${qty}</span>
+
+             <button
+             onclick="increaseQtyByName('${product.name}')">
+             +
+             </button>
+
+             </div>
+             `
+         }
 
         </div>
         `;
