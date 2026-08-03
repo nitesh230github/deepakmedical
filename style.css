@@ -542,41 +542,55 @@ input{
 
     border:2px solid #2563eb;
 
-    border-radius:8px;
+    border-radius:999px;
 
-    overflow:hidden;
+    background:#fff;
+
+    padding:4px;
 
     margin-top:8px;
 
-    background:#fff;
+    box-sizing:border-box;
 
 }
 
 .qty-box button{
 
-    width:40px;
+    width:32px;
 
-    height:100%;
+    height:32px;
 
     border:none;
+
+    border-radius:50%;
 
     background:#2563eb;
 
     color:#fff;
 
-    font-size:22px;
+    font-size:20px;
 
-    font-weight:bold;
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     cursor:pointer;
 
-    transition:.2s;
+    transition:.25s;
+
+    flex-shrink:0;
 
 }
 
 .qty-box button:hover{
 
     background:#1d4ed8;
+
+    transform:scale(1.08);
 
 }
 
@@ -586,7 +600,7 @@ input{
 
     text-align:center;
 
-    font-size:18px;
+    font-size:17px;
 
     font-weight:700;
 
