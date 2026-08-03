@@ -256,9 +256,12 @@ function displayProducts(items){
              Mfg/Mkt: ${product.company}
               </p>
 
-                <p class="price">
-               MRP ₹${product.price}
-                 </p>
+              <p class="price">
+               <span class="mrp-text">MRP</span>
+               <span class="mrp-price">₹ ${product.price}</span>
+              </p>
+
+             
 
             <button onclick="addToCart('${product.name}',${product.price},'${product.packing}')">
                 Add to Cart

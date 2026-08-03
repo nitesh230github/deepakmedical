@@ -396,13 +396,21 @@ header{
     line-height:1;
 }
 
-.price{
 
-    color:#000;
+ .price{
     font-size:18px;
     font-weight:bold;
     margin:2px 0;
+}
 
+.mrp-text{
+    color:#777;      /* Grey */
+    font-weight:500;
+}
+
+.mrp-price{
+    color:#000;      /* Black */
+    font-weight:700;
 }
 
 .packing{
