@@ -115,6 +115,8 @@ function getSearchScore(product, rawSearch){
 
 let products = [];
 
+let currentProducts = [];    // global variable to store currently displayed order
+
 fetch("products.json")
 .then(response => response.json())
 .then(data => {
@@ -131,10 +133,13 @@ fetch("products.json")
 
  otherProducts = shuffleArray(otherProducts);
 
- displayProducts([
+ currentProducts = [
     ...bestSellers,
     ...otherProducts
- ]);
+   ] ;
+
+ displayProducts(currentProducts);
+
  showCart();
 
 
@@ -201,7 +206,9 @@ function filterProducts() {
 
     );  */
 
-displayProducts(filtered);
+ currentProducts = filtered;
+
+ displayProducts(currentProducts);
 
 
  // Active category button update
@@ -465,7 +472,7 @@ function refreshUI(){
 
     showCart();
 
-    displayProducts(products);
+    displayProducts(currentProducts);
 
 }
 
