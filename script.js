@@ -281,7 +281,7 @@ function displayProducts(items){
 
                     <div class="qty-btn minus"
                         onclick="decreaseQtyByName('${product.name}')">
-                        −
+                        &minus;
                     </div>
 
                     <div class="qty-value">
@@ -290,7 +290,7 @@ function displayProducts(items){
 
                     <div class="qty-btn plus"
                         onclick="increaseQtyByName('${product.name}')">
-                        +
+                        &plus;
                     </div>
 
                 </div>
