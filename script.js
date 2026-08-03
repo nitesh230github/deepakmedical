@@ -280,25 +280,23 @@ function displayProducts(items){
              :
 
              `
-             <div class="qty-box">
+            <div class="qty-box">
 
-             <button
-             onclick="decreaseQtyByName('${product.name}')">
-             -
-             </button>
-
-             <span>${qty}</span>
-
-             <button
-             onclick="increaseQtyByName('${product.name}')">
-             +
-             </button>
-
+             <div class="qty-btn minus"
+               onclick="decreaseQtyByName('${product.name}')">
+               −
              </div>
-             `
-         }
 
-        </div>
+             <div class="qty-value">
+             ${qty}
+             </div>
+
+             <div class="qty-btn plus"
+               onclick="increaseQtyByName('${product.name}')">
+                +
+             </div>
+
+            </div>
         `;
     });
 
