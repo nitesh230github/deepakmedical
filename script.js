@@ -401,25 +401,7 @@ function showCart(){
 
            <br><br>
 
- <div class="order-type">
-
- <button
- class="${item.orderType === 'Loose' ? 'type-btn active' : 'type-btn'}"
- onclick="changeOrderType(${index},'Loose')">
-
-  Loose
-
-  </button>
-
-  <button
- class="${item.orderType === 'Box' ? 'type-btn active' : 'type-btn'}"
- onclick="changeOrderType(${index},'Box')">
-
- 📦 Box
-
- </button>
-
- </div>
+ 
 
  <button onclick="decreaseQty(${index})">-</button>
 
