@@ -534,8 +534,6 @@ input{
 
     align-items:center;
 
-    justify-content:space-between;
-
     width:100%;
 
     height:42px;
@@ -544,25 +542,21 @@ input{
 
     border-radius:999px;
 
-    background:#fff;
-
-    padding:4px;
+    overflow:hidden;
 
     margin-top:8px;
 
-    box-sizing:border-box;
+    background:#eaf3ff;
 
 }
 
 .qty-box button{
 
-    width:32px;
+    width:42px;
 
-    height:32px;
+    height:42px;
 
     border:none;
-
-    border-radius:50%;
 
     background:#2563eb;
 
@@ -572,25 +566,26 @@ input{
 
     font-weight:700;
 
-    display:flex;
+    cursor:pointer;
 
-    align-items:center;
+    display:flex;
 
     justify-content:center;
 
-    cursor:pointer;
+    align-items:center;
 
-    transition:.25s;
+    transition:.2s;
+
+    border-radius:50%;
+
+    margin:0;
 
     flex-shrink:0;
 
-}
-
+ }
 .qty-box button:hover{
 
     background:#1d4ed8;
-
-    transform:scale(1.08);
 
 }
 
@@ -598,15 +593,21 @@ input{
 
     flex:1;
 
-    text-align:center;
+    height:100%;
 
-    font-size:17px;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#eaf3ff;
+
+    color:#2563eb;
+
+    font-size:16px;
 
     font-weight:700;
-
-    color:#111827;
-
-    user-select:none;
 
 }
 
