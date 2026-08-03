@@ -321,9 +321,35 @@ function addToCart(name,price,packing){
         });
     }
 
-    showCart();
-    saveCart();
+    refreshUI();
 }
+
+
+function increaseQtyByName(name){
+
+    let index = cart.findIndex(item => item.name === name);
+
+    if(index !== -1){
+
+        increaseQty(index);
+
+    }
+
+}
+
+
+function decreaseQtyByName(name){
+
+    let index = cart.findIndex(item => item.name === name);
+
+    if(index !== -1){
+
+        decreaseQty(index);
+
+    }
+
+}
+
 
 function saveCart(){
 
@@ -352,7 +378,7 @@ function showCart(){
  toggleCart;
 
     return;
-}
+ }
     
     let total = 0;
 
@@ -373,35 +399,35 @@ function showCart(){
 
            <br><br>
 
-<div class="order-type">
+ <div class="order-type">
 
-<button
-class="${item.orderType === 'Loose' ? 'type-btn active' : 'type-btn'}"
-onclick="changeOrderType(${index},'Loose')">
+ <button
+ class="${item.orderType === 'Loose' ? 'type-btn active' : 'type-btn'}"
+ onclick="changeOrderType(${index},'Loose')">
 
-Loose
+  Loose
 
-</button>
+  </button>
 
-<button
-class="${item.orderType === 'Box' ? 'type-btn active' : 'type-btn'}"
-onclick="changeOrderType(${index},'Box')">
+  <button
+ class="${item.orderType === 'Box' ? 'type-btn active' : 'type-btn'}"
+ onclick="changeOrderType(${index},'Box')">
 
-📦 Box
+ 📦 Box
 
-</button>
+ </button>
 
-</div>
+ </div>
 
-<button onclick="decreaseQty(${index})">-</button>
+ <button onclick="decreaseQty(${index})">-</button>
 
-${item.qty}
+ ${item.qty}
 
-<button onclick="increaseQty(${index})">+</button>
+ <button onclick="increaseQty(${index})">+</button>
 
-<button onclick="removeItem(${index})">
-❌
-</button>
+ <button onclick="removeItem(${index})">
+ ❌
+ </button>
         </div>
         `;
     });
@@ -438,33 +464,52 @@ ${item.qty}
 
     cart.forEach(item => {
 
-    totalItems += item.qty;
+     totalItems += item.qty;
 
-});
+     });
 
-document.getElementById("cartButton")
-.innerHTML = `🛒 Cart (${totalItems})`;
+ document.getElementById("cartButton")
+ .innerHTML = `🛒 Cart (${totalItems})`;
 
-document.getElementById("cartButton").onclick =
-toggleCart;
+ document.getElementById("cartButton").onclick =
+ toggleCart;
 }
+
+function refreshUI(){
+
+    saveCart();
+
+    showCart();
+
+    displayProducts(products);
+
+}
+
 
 function increaseQty(index){
 
     cart[index].qty++;
 
-    showCart();
-    saveCart();
+    refreshUI();
+
 }
+
 
 function decreaseQty(index){
 
     if(cart[index].qty > 1){
+
         cart[index].qty--;
+
+    }
+    else{
+
+        cart.splice(index,1);
+
     }
 
-    showCart();
-    saveCart();
+    refreshUI();
+
 }
 
 function removeItem(index){
