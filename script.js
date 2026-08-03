@@ -115,6 +115,8 @@ function getSearchScore(product, rawSearch){
 
 let products = [];
 
+let currentProducts = [];    // global variable to store currently displayed order
+
 fetch("products.json")
 .then(response => response.json())
 .then(data => {
@@ -131,10 +133,13 @@ fetch("products.json")
 
  otherProducts = shuffleArray(otherProducts);
 
- displayProducts([
+ currentProducts = [
     ...bestSellers,
     ...otherProducts
- ]);
+   ] ;
+
+ displayProducts(currentProducts);
+
  showCart();
 
 
@@ -201,7 +206,9 @@ function filterProducts() {
 
     );  */
 
-displayProducts(filtered);
+ currentProducts = filtered;
+
+ displayProducts(currentProducts);
 
 
  // Active category button update
@@ -241,6 +248,10 @@ function displayProducts(items){
 
     items.forEach(product => {
 
+        let cartItem = cart.find(item => item.name === product.name);
+
+        let qty = cartItem ? cartItem.qty : 0;
+
         html += `
         <div class="card">
 
@@ -248,28 +259,60 @@ function displayProducts(items){
 
             <h3>${product.name}</h3>
 
-             <p class="packing">
-             Pack Size: ${product.packing}
-             </p>
+            <p class="packing">
+                Packing: ${product.packing}
+            </p>
 
-              <p class="company">
-             Mfg/Mkt: ${product.company}
-              </p>
+            <p class="company">
+                Mfg/Mkt: ${product.company}
+            </p>
 
-                <p class="price">
-               ₹${product.price}
-                 </p>
+            <p class="price">
+                <span class="mrp-text">MRP</span>
+                <span class="mrp-price">₹ ${product.price}</span>
+            </p>
 
-            <button onclick="addToCart('${product.name}',${product.price},'${product.packing}')">
-                Add to Cart
-            </button>
+            ${
+                qty === 0 ?
+
+                `
+                <button onclick="addToCart('${product.name}',${product.price},'${product.packing}')">
+                    Add to Cart
+                </button>
+                `
+
+                :
+
+                `
+                <div class="qty-box">
+
+                    <div class="qty-btn minus"
+                        onclick="decreaseQtyByName('${product.name}')">
+                        &minus;
+                    </div>
+
+                    <div class="qty-value">
+                        ${qty}
+                    </div>
+
+                    <div class="qty-btn plus"
+                        onclick="increaseQtyByName('${product.name}')">
+                        &plus;
+                    </div>
+
+                </div>
+                `
+            }
 
         </div>
         `;
+
     });
 
     document.getElementById("products").innerHTML = html;
+
 }
+
 
 function addToCart(name,price,packing){
 
@@ -287,9 +330,35 @@ function addToCart(name,price,packing){
         });
     }
 
-    showCart();
-    saveCart();
+    refreshUI();
 }
+
+
+function increaseQtyByName(name){
+
+    let index = cart.findIndex(item => item.name === name);
+
+    if(index !== -1){
+
+        increaseQty(index);
+
+    }
+
+}
+
+
+function decreaseQtyByName(name){
+
+    let index = cart.findIndex(item => item.name === name);
+
+    if(index !== -1){
+
+        decreaseQty(index);
+
+    }
+
+}
+
 
 function saveCart(){
 
@@ -318,7 +387,7 @@ function showCart(){
  toggleCart;
 
     return;
-}
+ }
     
     let total = 0;
 
@@ -339,35 +408,17 @@ function showCart(){
 
            <br><br>
 
-<div class="order-type">
+ 
 
-<button
-class="${item.orderType === 'Loose' ? 'type-btn active' : 'type-btn'}"
-onclick="changeOrderType(${index},'Loose')">
+ <button onclick="decreaseQty(${index})">-</button>
 
-Loose
+ ${item.qty}
 
-</button>
+ <button onclick="increaseQty(${index})">+</button>
 
-<button
-class="${item.orderType === 'Box' ? 'type-btn active' : 'type-btn'}"
-onclick="changeOrderType(${index},'Box')">
-
-📦 Box
-
-</button>
-
-</div>
-
-<button onclick="decreaseQty(${index})">-</button>
-
-${item.qty}
-
-<button onclick="increaseQty(${index})">+</button>
-
-<button onclick="removeItem(${index})">
-❌
-</button>
+ <button onclick="removeItem(${index})">
+ ❌
+ </button>
         </div>
         `;
     });
@@ -404,41 +455,59 @@ ${item.qty}
 
     cart.forEach(item => {
 
-    totalItems += item.qty;
+     totalItems += item.qty;
 
-});
+     });
 
-document.getElementById("cartButton")
-.innerHTML = `🛒 Cart (${totalItems})`;
+ document.getElementById("cartButton")
+ .innerHTML = `🛒 Cart (${totalItems})`;
 
-document.getElementById("cartButton").onclick =
-toggleCart;
+ document.getElementById("cartButton").onclick =
+ toggleCart;
 }
+
+function refreshUI(){
+
+    saveCart();
+
+    showCart();
+
+    displayProducts(currentProducts);
+
+}
+
 
 function increaseQty(index){
 
     cart[index].qty++;
 
-    showCart();
-    saveCart();
+    refreshUI();
+
 }
+
 
 function decreaseQty(index){
 
     if(cart[index].qty > 1){
+
         cart[index].qty--;
+
+    }
+    else{
+
+        cart.splice(index,1);
+
     }
 
-    showCart();
-    saveCart();
+    refreshUI();
+
 }
 
 function removeItem(index){
 
     cart.splice(index,1);
 
-    showCart();
-    saveCart();
+    refreshUI();
 }
   // Loose or Box order
 function changeOrderType(index,type){

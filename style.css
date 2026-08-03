@@ -304,7 +304,7 @@ header{
 
     background:white;
 
-    color:#15803d;
+    color:#000;
 
     border:none;
 
@@ -326,7 +326,7 @@ header{
 
 .cat-btn:hover{
 
-    background:#16a34a;
+    background:#084f58;
 
     color:white;
 
@@ -334,7 +334,7 @@ header{
 
 .cat-btn.active{
 
-    background:#16a34a;
+    background:#084f58;
 
     color:white;
 
@@ -396,13 +396,22 @@ header{
     line-height:1;
 }
 
-.price{
 
-    color:#16a34a;
+ .price{
     font-size:18px;
     font-weight:bold;
-    margin:2px 0;
+    margin:0.5px 0;
+}
 
+.mrp-text{
+    color:#888;           /* GREY  */
+    font-size:11px;
+    text-transform:uppercase;  
+    letter-spacing:0.5px;
+ }
+.mrp-price{
+    color:#000;      /* Black */
+    font-weight:700;
 }
 
 .packing{
@@ -516,6 +525,91 @@ input{
     transform:translateY(-2px);
 
  }
+
+ /* + and - button on product card after clicking on add to cart */
+
+/* ---------- Quantity Selector ---------- */
+
+.qty-box{
+
+    width:100%;
+
+    height:42px;
+
+    background:#d0e2f7;
+
+    border-radius:999px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:1px;
+
+    box-sizing:border-box;
+
+    margin-top:8px;
+
+}
+
+.qty-btn{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    background:#127fec;
+
+    color:#000;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    transition:all .2s ease;
+
+    flex-shrink:0;
+
+}
+
+.qty-btn:hover{
+
+    background:#0958d9;
+
+    transform:scale(1.08);
+
+}
+
+.qty-value{
+
+    flex:1;
+
+    text-align:center;
+
+    color:#000;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    line-height:1;
+
+}
+
 
 @media(max-width:768px){
 
