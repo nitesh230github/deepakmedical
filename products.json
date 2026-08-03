@@ -42,7 +42,7 @@
     "price": 55,
     "category": "TABLET_CAP",
     "packing": "20*10",
-    "saltContent": "Vitamin E (Tocopheryl Acetate) 400mg",
+    "saltContent": "Vitamin E 400mg",
     "uses": "Vitamin E supplementation, antioxidant, skin & hair health",
     "bestseller": false,
     "image": "images/evinal_400_cap.jpg"
@@ -163,7 +163,7 @@
     "category": "TABLET_CAP",
     "packing": "50*10",
     "saltContent": "Amlodipine 5mg",
-    "uses": "(High BP / Hypertension)",
+    "uses": "High BP / Hypertension / high blood pressure",
     "bestseller": false,
     "image": "images/amlip_5_tab.jpg"
   },
@@ -498,7 +498,7 @@
     "price": 69.3,
     "category": "DROP",
     "packing": "10 ml",
-    "saltContent": "Ciprofloxacin + Betamethasone",
+    "saltContent": "CIPROFLOXACIN + DEXAMETHASONE",
     "uses": "Bacterial eye/ear infections with inflammation",
     "bestseller": true,
     "image": "images/ceflox_d_drop.jpg"
@@ -510,7 +510,7 @@
     "price": 65.79,
     "category": "TABLET_CAP",
     "packing": "25*10",
-    "saltContent": "Cetirizine + Paracetamol + Phenylephrine",
+    "saltContent": "PARACETAMOL + PHENYLEPHRINE HCL + CAFFINE + DIPHENHYDRAMINE",
     "uses": "Common cold, allergy, congestion, fever",
     "bestseller": true,
     "image": "images/cheston_cold_tab.jpg"
@@ -522,8 +522,8 @@
     "price": 67.5,
     "category": "LIQUID",
     "packing": "60 ml",
-    "saltContent": "Cetirizine + Paracetamol + Phenylephrine (liquid)",
-    "uses": "Cold/flu symptoms in liquid form",
+    "saltContent": "PARACETAMOL + PHENYLEPHRINE HCL + CAFFINE + DIPHENHYDRAMINE ",
+    "uses": "Cold/flu. Common cold, allergy, congestion, fever in liquid form",
     "bestseller": true,
     "image": "images/cheston_cold_syp.jpg"
   },
@@ -618,7 +618,7 @@
     "price": 95,
     "category": "CREAM_OINT",
     "packing": "15 g",
-    "saltContent": "Clindamycin (topical)",
+    "saltContent": "CLINDAMYCIN + NICOTINAMIDE",
     "uses": "Acne treatment",
     "bestseller": true,
     "image": "images/clinsol_gel.jpg"
@@ -630,7 +630,7 @@
     "price": 95.75,
     "category": "CREAM_OINT",
     "packing": "10 g",
-    "saltContent": "Clobetasol + Gentamicin + Miconazole",
+    "saltContent": "CLOBETASOL + MICONAZOLE + NEOMYCIN",
     "uses": "Skin infection with inflammation",
     "bestseller": true,
     "image": "images/clobenate_gm_cream.jpg"
@@ -786,7 +786,7 @@
     "price": 103.1,
     "category": "CREAM_OINT",
     "packing": "15 g",
-    "saltContent": "Clobetasol + Neomycin + Miconazole + Zinc Oxide",
+    "saltContent": "Clobetasol + Neomycin + Miconazole ",
     "uses": "Mixed bacterial/fungal skin infection",
     "bestseller": true,
     "image": "images/dermikem_oc_cream.jpg"
@@ -798,7 +798,7 @@
     "price": 130.78,
     "category": "CREAM_OINT",
     "packing": "30 g",
-    "saltContent": "Coal Tar + Dithranol + Salicylic Acid",
+    "saltContent": "Dithranol + Salicylic Acid",
     "uses": "Psoriasis, scaly skin conditions",
     "bestseller": true,
     "image": "images/derobin_oint.jpg"
@@ -834,7 +834,7 @@
     "price": 197.8,
     "category": "LIQUID",
     "packing": "200 ml",
-    "saltContent": "Iron + Folic Acid + B12 (liquid)",
+    "saltContent": "Iron + Folic Acid + VITAMIN B12 (liquid)",
     "uses": "Anemia tonic",
     "bestseller": true,
     "image": "images/dexorange_syp.jpg"
@@ -846,7 +846,7 @@
     "price": 130.45,
     "category": "TABLET_CAP",
     "packing": "20*15",
-    "saltContent": "Diclofenac",
+    "saltContent": "PARACETAMOL + DICLOFENAC",
     "uses": "Pain, inflammation",
     "bestseller": true,
     "image": "images/dynapar_tab.jpg"
@@ -978,7 +978,7 @@
     "price": 69.3,
     "category": "DROP",
     "packing": "10 ml",
-    "saltContent": "Ofloxacin + Dexamethasone + HPMC",
+    "saltContent": "Ofloxacin + Dexamethasone ",
     "uses": "Bacterial eye/ear infection with lubrication",
     "bestseller": true,
     "image": "images/festive_dee_drop.jpg"
@@ -990,7 +990,7 @@
     "price": 57.2,
     "category": "DROP",
     "packing": "10 ml",
-    "saltContent": "Ofloxacin + Dexamethasone/Betamethasone",
+    "saltContent": "Ofloxacin ",
     "uses": "Bacterial eye/ear infection",
     "bestseller": true,
     "image": "images/festive_drop.jpg"
@@ -1087,7 +1087,7 @@
     "category": "TABLET_CAP",
     "packing": "5*2*15",
     "saltContent": "Glimepiride 1mg + Metformin 500mg",
-    "uses": "Type 2 diabetes",
+    "uses": "Type 2 diabetes, Sugar",
     "bestseller": true,
     "image": "images/glycomet_gp1_tab.jpg"
   },
@@ -1362,7 +1362,7 @@
     "price": 168.75,
     "category": "LIQUID",
     "packing": "300 ml",
-    "saltContent": "Herbal liver tonic",
+    "saltContent": "Herbal liver tonic / SYRUP",
     "uses": "Hepatoprotective",
     "bestseller": true,
     "image": "images/livshine_ds_syp.jpg"
@@ -1434,7 +1434,7 @@
     "price": 112,
     "category": "TABLET_CAP",
     "packing": "10*1*10",
-    "saltContent": "Ergotamine + Caffeine + Paracetamol + Prochlorperazine",
+    "saltContent": "Ergotamine + Caffeine ",
     "uses": "Migraine relief",
     "bestseller": true,
     "image": "images/migrafen_tab.jpg"
@@ -1566,7 +1566,7 @@
     "price": 145.2,
     "category": "TABLET_CAP",
     "packing": "20*10",
-    "saltContent": "Norfloxacin + Tinidazole",
+    "saltContent": "OFLOXACIN + ORNIDAZOLE, ",
     "uses": "Diarrhea, GI bacterial/protozoal infection",
     "bestseller": true,
     "image": "images/nflox_tz_tab.jpg"
@@ -1614,7 +1614,7 @@
     "price": 52.97,
     "category": "LIQUID",
     "packing": "60 ml",
-    "saltContent": "Nimesulide (syrup)",
+    "saltContent": "Paracetamol  + Mefenamic",
     "uses": "Pain, fever (pediatric)",
     "bestseller": true,
     "image": "images/nimucet_syp.jpg"
@@ -1626,7 +1626,7 @@
     "price": 60,
     "category": "TABLET_CAP",
     "packing": "15*2*10",
-    "saltContent": "Nimesulide",
+    "saltContent": "PARACETAMOL + NIMESULIDE",
     "uses": "Pain, inflammation",
     "bestseller": true,
     "image": "images/nimucet_tab.jpg"
@@ -1674,7 +1674,7 @@
     "price": 49.06,
     "category": "TABLET_CAP",
     "packing": "20*15",
-    "saltContent": "Rabeprazole",
+    "saltContent": "OMEPRAZOLE",
     "uses": "Acidity, GERD",
     "bestseller": true,
     "image": "images/nogacid_cap.jpg"
@@ -1855,7 +1855,7 @@
     "category": "TABLET_CAP",
     "packing": "10*2*15",
     "saltContent": "Glimepiride (1 mg) + Metformin Hydrochloride (500 mg)",
-    "uses": "Type 2 diabetes management",
+    "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
     "image": "images/ozomet_g1_tab.jpg"
   },
@@ -1867,7 +1867,7 @@
     "category": "TABLET_CAP",
     "packing": "10*2*15",
     "saltContent": "Glimepiride (2 mg) + Metformin Hydrochloride (500 mg)",
-    "uses": "Type 2 diabetes management",
+    "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
     "image": "images/ozomet_g2_tab.jpg"
   },
@@ -1879,7 +1879,7 @@
     "category": "TABLET_CAP",
     "packing": "10*2*15",
     "saltContent": "Glimepiride (1 mg) +Metformin Hydrochloride (500 mg) +Pioglitazone (15 mg)",
-    "uses": "Type 2 diabetes management",
+    "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
     "image": "images/ozomet_pg1_tab.jpg"
   },
@@ -1891,7 +1891,7 @@
     "category": "TABLET_CAP",
     "packing": "10*2*15",
     "saltContent": "Glimepiride (2 mg) +Metformin Hydrochloride (500 mg) +Pioglitazone (15 mg)",
-    "uses": "Type 2 diabetes management",
+    "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
     "image": "images/ozomet_pg2_tab.jpg"
   },
@@ -1903,7 +1903,7 @@
     "category": "TABLET_CAP",
     "packing": "10*2*15",
     "saltContent": "Metformin Hydrochloride (500 mg) + Glimepiride (1 mg) + Voglibose (0.2 mg)",
-    "uses": "Type 2 diabetes management",
+    "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
     "image": "images/ozomet_vg1_tab.jpg"
   },
@@ -1915,7 +1915,7 @@
     "category": "TABLET_CAP",
     "packing": "10*2*15",
     "saltContent": "Metformin Hydrochloride (500 mg) + Glimepiride (2 mg) + Voglibose (0.2 mg)",
-    "uses": "Type 2 diabetes management",
+    "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
     "image": "images/ozomet_vg2_tab.jpg"
   },
@@ -1998,7 +1998,7 @@
     "price": 30,
     "category": "CREAM_OINT",
     "packing": "5 g",
-    "saltContent": "Clobetasol + Miconazole + Neomycin",
+    "saltContent": "BECLOMETHASONE + CLOTRIMAZOLE + Neomycin",
     "uses": "Mixed skin infection",
     "bestseller": true,
     "image": "images/qdiderm_oint.jpg"
@@ -2154,8 +2154,8 @@
     "price": 31.94,
     "category": "TABLET_CAP",
     "packing": "10*5*10",
-    "saltContent": "Dicyclomine",
-    "uses": "Abdominal cramps, colic",
+    "saltContent": "PARACETAMOL + DICYCLOMINE",
+    "uses": "Abdominal cramps, STOMACH PAIN",
     "bestseller": true,
     "image": "images/spasmonil_tab.jpg"
   },
@@ -2178,7 +2178,7 @@
     "price": 70,
     "category": "CREAM_OINT",
     "packing": "15 g",
-    "saltContent": "Nimesulide + Diclofenac (topical)",
+    "saltContent": " Diclofenac ",
     "uses": "Pain relief gel",
     "bestseller": true,
     "image": "images/sumo_gel.jpg"
@@ -2466,8 +2466,8 @@
     "price": 164.02,
     "category": "TABLET_CAP",
     "packing": "10*10",
-    "saltContent": "Aceclofenac + Paracetamol + Chlorzoxazone",
-    "uses": "Muscle spasm pain",
+    "saltContent": "ACECLOFENAC + DROTAVERINE",
+    "uses": "Abdominal pain, STOMACH PAIN",
     "bestseller": true,
     "image": "images/zerodol_spas_tab.jpg"
   },
