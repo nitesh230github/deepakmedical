@@ -2540,7 +2540,7 @@
     "packing": "300 ml",
     "saltContent": "Iron + Folic Acid + B12 (hematinic tonic)",
     "uses": "Anemia, iron deficiency",
-    "bestseller": false,
+    "bestseller": true,
     "image": "images/hemolab_forte_syp.jpg"
   },
   {
@@ -2580,10 +2580,10 @@
     "image": "images/ortho_oil.jpg"
   },
   {
-    "id": 1006,
+    "id": 291,
     "name": "ORTHO AID OIL",
     "company": "LEEFORD",
-    "price": 300,
+    "price": 285,
     "category": "OTHERS",
     "packing": "100 ml",
     "saltContent": "Ayurvedic pain relief oil",
@@ -2616,7 +2616,7 @@
     "image": "images/poshak_200_oil.jpg"
   },
   {
-    "id": 1007,
+    "id": 1006,
     "name": "GARIMA GLUCOSE ORANGE",
     "company": "GARIMA",
     "price": 45,
@@ -2674,6 +2674,18 @@
     "uses": "constipation",
     "bestseller": true,
     "image": "images/dulcoflex_tab.jpg"
+  },
+   {
+    "id": 292,
+    "name": "HEMOLAB FORTE SYRUP (450 ML)",
+    "company": "LABORATE",
+    "price": 266,
+    "category": "LIQUID",
+    "packing": "450 ml",
+    "saltContent": "Iron + Folic Acid + B12 (hematinic tonic)",
+    "uses": "Anemia, iron deficiency",
+    "bestseller": false,
+    "image": "images/hemolab_forte_syp_450.jpg"
   }
 
 
