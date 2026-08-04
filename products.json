@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 98,
     "name": "ACNETOIN SOAP",
     "company": "LEEFORD",
     "price": 85,
@@ -12,7 +12,7 @@
     "image": "images/acnetoin_soap.jpg"
   },
   {
-    "id": 2,
+    "id": 58,
     "name": "ACILOC RD TAB",
     "company": "CADILA",
     "price": 94.69,
@@ -24,7 +24,7 @@
     "image": "images/aciloc_rd_tab.jpg"
   },
   {
-    "id": 3,
+    "id": 114,
     "name": "ALCIDOL SP TAB",
     "company": "MEDLEY",
     "price": 122.8,
@@ -36,7 +36,7 @@
     "image": "images/alcidol_sp_tab.jpg"
   },
   {
-    "id": 4,
+    "id": 245,
     "name": "EVINAL 400 VITAMIN E CAP",
     "company": "ALEMBIC",
     "price": 55,
@@ -48,7 +48,7 @@
     "image": "images/evinal_400_cap.jpg"
   },
   {
-    "id": 5,
+    "id": 130,
     "name": "ALCIFLOX D DROP",
     "company": "ALKEM",
     "price": 49,
@@ -60,7 +60,7 @@
     "image": "images/alciflox_d_drop.jpg"
   },
   {
-    "id": 6,
+    "id": 149,
     "name": "ALDIGESIC P TAB",
     "company": "ALKEM",
     "price": 119.05,
@@ -72,7 +72,7 @@
     "image": "images/aldigesic_p_tab.jpg"
   },
   {
-    "id": 7,
+    "id": 111,
     "name": "ALKACITRAL SYRUP",
     "company": "BIOCHEM",
     "price": 152.71,
@@ -84,7 +84,7 @@
     "image": "images/alkacitral_syp.jpg"
   },
   {
-    "id": 8,
+    "id": 140,
     "name": "ALKOF DX SYRUP",
     "company": "ALKEM",
     "price": 120,
@@ -96,7 +96,7 @@
     "image": "images/alkof_dx_syp.jpg"
   },
   {
-    "id": 9,
+    "id": 105,
     "name": "ALMOX 250 CAP",
     "company": "ALKEM",
     "price": 41.66,
@@ -108,7 +108,7 @@
     "image": "images/almox_250_cap.jpg"
   },
   {
-    "id": 10,
+    "id": 150,
     "name": "ALMOX CV 625 TAB",
     "company": "ALKEM",
     "price": 208.5,
@@ -120,7 +120,7 @@
     "image": "images/almox_cv_625_tab.jpg"
   },
   {
-    "id": 11,
+    "id": 51,
     "name": "AMBRODIL LS SYRUP",
     "company": "ARISTO",
     "price": 101.71,
@@ -132,7 +132,7 @@
     "image": "images/ambrodil_ls_syp.jpg"
   },
   {
-    "id": 12,
+    "id": 52,
     "name": "AMBRODIL S SYRUP",
     "company": "ARISTO",
     "price": 36.56,
@@ -144,7 +144,7 @@
     "image": "images/ambrodil_s_syp.jpg"
   },
   {
-    "id": 13,
+    "id": 151,
     "name": "AMBROX LS SYRUP",
     "company": "GLOBEX",
     "price": 118.8,
@@ -156,7 +156,7 @@
     "image": "images/ambrox_ls_syp.jpg"
   },
   {
-    "id": 14,
+    "id": 80,
     "name": "AMLIP 5 TAB",
     "company": "CIPLA",
     "price": 28.44,
@@ -168,7 +168,7 @@
     "image": "images/amlip_5_tab.jpg"
   },
   {
-    "id": 15,
+    "id": 47,
     "name": "AMLOVAS 2.5 TAB",
     "company": "MACLEODS",
     "price": 28.65,
@@ -180,7 +180,7 @@
     "image": "images/amlovas_2.5_tab.jpg"
   },
   {
-    "id": 16,
+    "id": 46,
     "name": "AMLOVAS 5 TAB",
     "company": "MACLEODS",
     "price": 40,
@@ -192,7 +192,7 @@
     "image": "images/amlovas_5_tab.jpg"
   },
   {
-    "id": 17,
+    "id": 54,
     "name": "ARISTOZYME SYRUP",
     "company": "ARISTO",
     "price": 151.87,
@@ -204,7 +204,7 @@
     "image": "images/aristozyme_syp.jpg"
   },
   {
-    "id": 18,
+    "id": 17,
     "name": "ASTHALIN 4 TAB",
     "company": "CIPLA",
     "price": 15.59,
@@ -216,7 +216,7 @@
     "image": "images/asthalin_4_tab.jpg"
   },
   {
-    "id": 19,
+    "id": 23,
     "name": "ASTHALIN RESPULES",
     "company": "CIPLA",
     "price": 8.8,
@@ -228,7 +228,7 @@
     "image": "images/asthalin_respules.jpg"
   },
   {
-    "id": 20,
+    "id": 232,
     "name": "ATM 250 TAB",
     "company": "INDOCO",
     "price": 124.64,
@@ -240,7 +240,7 @@
     "image": "images/atm_250_tab.jpg"
   },
   {
-    "id": 21,
+    "id": 126,
     "name": "AZIKEM 250 TAB",
     "company": "ALKEM",
     "price": 74.78,
@@ -252,7 +252,7 @@
     "image": "images/azikem_250_tab.jpg"
   },
   {
-    "id": 22,
+    "id": 127,
     "name": "AZIKEM 500 TAB",
     "company": "ALKEM",
     "price": 80.56,
@@ -264,7 +264,7 @@
     "image": "images/azikem_500_tab.jpg"
   },
   {
-    "id": 23,
+    "id": 56,
     "name": "BECOSULES CAP",
     "company": "PFIZER",
     "price": 62.37,
@@ -276,7 +276,7 @@
     "image": "images/becosules_cap.jpg"
   },
   {
-    "id": 24,
+    "id": 97,
     "name": "BECTODINE OINT",
     "company": "RANBAXY",
     "price": 58.5,
@@ -288,7 +288,7 @@
     "image": "images/bectodine_oint.jpg"
   },
   {
-    "id": 25,
+    "id": 244,
     "name": "BETADINE 10% OINT",
     "company": "WIN-Medicare",
     "price": 132.3,
@@ -300,7 +300,7 @@
     "image": "images/betadine_10_oint.jpg"
   },
   {
-    "id": 26,
+    "id": 36,
     "name": "BETAMIL GM CREAM",
     "company": "P&G",
     "price": 54.1,
@@ -312,7 +312,7 @@
     "image": "images/betamil_gm_cream.jpg"
   },
   {
-    "id": 27,
+    "id": 33,
     "name": "BETNESOL ORAL DROP",
     "company": "GSK",
     "price": 29.01,
@@ -324,7 +324,7 @@
     "image": "images/betnesol_oral_drop.jpg"
   },
   {
-    "id": 28,
+    "id": 55,
     "name": "BETNOVATE C CREAM",
     "company": "GSK",
     "price": 77.9,
@@ -336,7 +336,7 @@
     "image": "images/betnovate_c_cream.jpg"
   },
   {
-    "id": 29,
+    "id": 22,
     "name": "BETNOVATE GM CREAM",
     "company": "GSK",
     "price": 46.63,
@@ -348,7 +348,7 @@
     "image": "images/betnovate_gm_cream.jpg"
   },
   {
-    "id": 30,
+    "id": 37,
     "name": "BETNOVATE N CREAM",
     "company": "GSK",
     "price": 62.67,
@@ -360,7 +360,7 @@
     "image": "images/betnovate_n_cream.jpg"
   },
   {
-    "id": 31,
+    "id": 66,
     "name": "BROZEDEX SYRUP",
     "company": "DR REDDYS",
     "price": 177.42,
@@ -372,7 +372,7 @@
     "image": "images/brozedex_syp.jpg"
   },
   {
-    "id": 32,
+    "id": 141,
     "name": "BURNHEAL CREAM",
     "company": "CIPLA",
     "price": 99.15,
@@ -384,7 +384,7 @@
     "image": "images/burnheal_cream.jpg"
   },
   {
-    "id": 33,
+    "id": 85,
     "name": "BURNOL CREAM",
     "company": "DR MOREPEN",
     "price": 98.44,
@@ -396,7 +396,7 @@
     "image": "images/burnol_cream.jpg"
   },
   {
-    "id": 34,
+    "id": 133,
     "name": "CALCITAS D3 CAP",
     "company": "INTAS",
     "price": 131.54,
@@ -408,7 +408,7 @@
     "image": "images/calcitas_d3_cap.jpg"
   },
   {
-    "id": 35,
+    "id": 34,
     "name": "CALPOL 120 SYRUP",
     "company": "GSK",
     "price": 38.45,
@@ -420,7 +420,7 @@
     "image": "images/calpol_120_syp.jpg"
   },
   {
-    "id": 36,
+    "id": 35,
     "name": "CALPOL 250 SYRUP",
     "company": "GSK",
     "price": 42.84,
@@ -432,7 +432,7 @@
     "image": "images/calpol_250_syp.jpg"
   },
   {
-    "id": 37,
+    "id": 10,
     "name": "CALPOL 500 TAB",
     "company": "GSK",
     "price": 14.26,
@@ -444,7 +444,7 @@
     "image": "images/calpol_500_tab.jpg"
   },
   {
-    "id": 38,
+    "id": 11,
     "name": "CALPOL 650 TAB",
     "company": "GSK",
     "price": 32.04,
@@ -456,7 +456,7 @@
     "image": "images/calpol_650_tab.jpg"
   },
   {
-    "id": 39,
+    "id": 227,
     "name": "CALPOL ORAL DROP",
     "company": "GSK",
     "price": 30.98,
@@ -468,7 +468,7 @@
     "image": "images/calpol_oral_drop.jpg"
   },
   {
-    "id": 40,
+    "id": 65,
     "name": "CATASPA TAB",
     "company": "USV",
     "price": 47.5,
@@ -480,7 +480,7 @@
     "image": "images/cataspa_tab.jpg"
   },
   {
-    "id": 41,
+    "id": 117,
     "name": "CEFDOT 200 TAB",
     "company": "MEDLEY",
     "price": 311,
@@ -492,7 +492,7 @@
     "image": "images/cefdot_200_tab.jpg"
   },
   {
-    "id": 42,
+    "id": 88,
     "name": "CEFLOX-D DROP",
     "company": "LABORATE",
     "price": 69.3,
@@ -504,7 +504,7 @@
     "image": "images/ceflox_d_drop.jpg"
   },
   {
-    "id": 43,
+    "id": 71,
     "name": "CHESTON COLD TAB",
     "company": "CIPLA",
     "price": 65.79,
@@ -516,7 +516,7 @@
     "image": "images/cheston_cold_tab.jpg"
   },
   {
-    "id": 44,
+    "id": 166,
     "name": "CHESTON COLD SYRUP",
     "company": "CIPLA",
     "price": 67.5,
@@ -528,7 +528,7 @@
     "image": "images/cheston_cold_syp.jpg"
   },
   {
-    "id": 45,
+    "id": 214,
     "name": "CHORONEX GEL",
     "company": "MACLEODS",
     "price": 87.65,
@@ -540,7 +540,7 @@
     "image": "images/choronex_gel.jpg"
   },
   {
-    "id": 46,
+    "id": 216,
     "name": "CIPCAL 500 TAB",
     "company": "CIPLA",
     "price": 107.92,
@@ -552,7 +552,7 @@
     "image": "images/cipcal_500_tab.jpg"
   },
   {
-    "id": 47,
+    "id": 77,
     "name": "CIPCAL XT TAB",
     "company": "CIPLA",
     "price": 338.77,
@@ -564,7 +564,7 @@
     "image": "images/cipcal_xt_tab.jpg"
   },
   {
-    "id": 48,
+    "id": 143,
     "name": "CIPLADINE OINT",
     "company": "CIPLA",
     "price": 36.22,
@@ -576,7 +576,7 @@
     "image": "images/cipladine_oint.jpg"
   },
   {
-    "id": 49,
+    "id": 25,
     "name": "CIPLOX DROP",
     "company": "CIPLA",
     "price": 16.48,
@@ -588,7 +588,7 @@
     "image": "images/ciplox_drop.jpg"
   },
   {
-    "id": 50,
+    "id": 26,
     "name": "CIPLOX-D DROP",
     "company": "CIPLA",
     "price": 29.2,
@@ -600,7 +600,7 @@
     "image": "images/ciplox_d_drop.jpg"
   },
   {
-    "id": 51,
+    "id": 135,
     "name": "CIPRODAC 500 TAB",
     "company": "CADILA",
     "price": 48.32,
@@ -612,7 +612,7 @@
     "image": "images/ciprodac_500_tab.jpg"
   },
   {
-    "id": 52,
+    "id": 102,
     "name": "CLINSOL GEL",
     "company": "LEEFORD",
     "price": 95,
@@ -624,7 +624,7 @@
     "image": "images/clinsol_gel.jpg"
   },
   {
-    "id": 53,
+    "id": 94,
     "name": "CLOBENATE GM CREAM",
     "company": "INDSWIFT",
     "price": 95.75,
@@ -636,8 +636,8 @@
     "image": "images/clobenate_gm_cream.jpg"
   },
   {
-    "id": 54,
-    "name": "CLOCIP DUSTING POWD",
+    "id": 70,
+    "name": "CLOCIP DUSTING POWDER",
     "company": "CIPLA",
     "price": 102,
     "category": "OTHERS",
@@ -648,7 +648,7 @@
     "image": "images/clocip_dusting_powd.jpg"
   },
   {
-    "id": 55,
+    "id": 92,
     "name": "CLOCIP CREAM",
     "company": "CIPLA",
     "price": 48.03,
@@ -660,7 +660,7 @@
     "image": "images/clocip_cream.jpg"
   },
   {
-    "id": 56,
+    "id": 69,
     "name": "CLOT 1 POWDER BLUE",
     "company": "BVU",
     "price": 80,
@@ -672,7 +672,7 @@
     "image": "images/clot_1_powder_blue.jpg"
   },
   {
-    "id": 57,
+    "id": 179,
     "name": "COMBIFLAM TAB",
     "company": "SANOFI",
     "price": 57.45,
@@ -684,7 +684,7 @@
     "image": "images/combiflam_tab.jpg"
   },
   {
-    "id": 58,
+    "id": 12,
     "name": "CTD 12.5 TAB",
     "company": "IPCA",
     "price": 159.55,
@@ -696,7 +696,7 @@
     "image": "images/ctd_12.5_tab.jpg"
   },
   {
-    "id": 59,
+    "id": 13,
     "name": "CTD 6.25 TAB",
     "company": "IPCA",
     "price": 116.58,
@@ -708,7 +708,7 @@
     "image": "images/ctd_6.25_tab.jpg"
   },
   {
-    "id": 60,
+    "id": 137,
     "name": "CTZ TAB",
     "company": "NOVITA",
     "price": 39.3,
@@ -720,7 +720,7 @@
     "image": "images/ctz_tab.jpg"
   },
   {
-    "id": 61,
+    "id": 209,
     "name": "CYPON SYRUP",
     "company": "GENO",
     "price": 139.69,
@@ -732,7 +732,7 @@
     "image": "images/cypon_syp.jpg"
   },
   {
-    "id": 62,
+    "id": 190,
     "name": "DEFICICOT 6 TAB",
     "company": "LEEFORD",
     "price": 95,
@@ -744,7 +744,7 @@
     "image": "images/deficicot_6_tab.jpg"
   },
   {
-    "id": 63,
+    "id": 128,
     "name": "DEMISONE TAB",
     "company": "CADILA",
     "price": 2.46,
@@ -756,7 +756,7 @@
     "image": "images/demisone_tab.jpg"
   },
   {
-    "id": 64,
+    "id": 144,
     "name": "DERMI 5 CREAM",
     "company": "UTL",
     "price": 51,
@@ -768,7 +768,7 @@
     "image": "images/dermi_5_cream.jpg"
   },
   {
-    "id": 65,
+    "id": 178,
     "name": "DERMIFORD CREAM",
     "company": "LEEFORD",
     "price": 105,
@@ -780,7 +780,7 @@
     "image": "images/dermiford_cream.jpg"
   },
   {
-    "id": 66,
+    "id": 87,
     "name": "DERMIKEM OC+ CREAM",
     "company": "ALKEM",
     "price": 103.1,
@@ -792,7 +792,7 @@
     "image": "images/dermikem_oc_cream.jpg"
   },
   {
-    "id": 67,
+    "id": 194,
     "name": "DEROBIN OINT",
     "company": "USV",
     "price": 130.78,
@@ -804,7 +804,7 @@
     "image": "images/derobin_oint.jpg"
   },
   {
-    "id": 68,
+    "id": 18,
     "name": "DEXONA TAB",
     "company": "ZYDUS",
     "price": 6.93,
@@ -816,7 +816,7 @@
     "image": "images/dexona_tab.jpg"
   },
   {
-    "id": 69,
+    "id": 239,
     "name": "DEXORANGE CAP",
     "company": "FRANCO",
     "price": 187.15,
@@ -828,7 +828,7 @@
     "image": "images/dexorange_cap.jpg"
   },
   {
-    "id": 70,
+    "id": 200,
     "name": "DEXORANGE SYRUP",
     "company": "FRANCO",
     "price": 197.8,
@@ -840,7 +840,7 @@
     "image": "images/dexorange_syp.jpg"
   },
   {
-    "id": 71,
+    "id": 233,
     "name": "DYNAPAR TAB",
     "company": "TROIKAA",
     "price": 130.45,
@@ -852,7 +852,7 @@
     "image": "images/dynapar_tab.jpg"
   },
   {
-    "id": 72,
+    "id": 202,
     "name": "EARWELL DROP",
     "company": "LEEFORD",
     "price": 25.1,
@@ -876,7 +876,7 @@
     "image": "images/easylax_plus_oral_emulsion.jpg"
   },
   {
-    "id": 74,
+    "id": 53,
     "name": "ELECTRAL POWDER",
     "company": "FDC",
     "price": 29.01,
@@ -888,7 +888,7 @@
     "image": "images/electral_powd.jpg"
   },
   {
-    "id": 75,
+    "id": 224,
     "name": "ELECTRORYTE ORS POWD",
     "company": "DANISH",
     "price": 23.34,
@@ -900,7 +900,7 @@
     "image": "images/electroryte_ors_powd.jpg"
   },
   {
-    "id": 76,
+    "id": 154,
     "name": "ELOSONE HT CREAM",
     "company": "LEEFORD",
     "price": 140,
@@ -912,7 +912,7 @@
     "image": "images/elosone_ht_cream.jpg"
   },
   {
-    "id": 77,
+    "id": 174,
     "name": "ENSHINE TOOTHPASTE",
     "company": "LEEFORD",
     "price": 111,
@@ -924,7 +924,7 @@
     "image": "images/enshine_toothpaste.jpg"
   },
   {
-    "id": 78,
+    "id": 115,
     "name": "ETOFORD 120 TAB",
     "company": "LEEFORD",
     "price": 130,
@@ -936,7 +936,7 @@
     "image": "images/etoford_120_tab.jpg"
   },
   {
-    "id": 79,
+    "id": 156,
     "name": "ETOFORD 90 TAB",
     "company": "LEEFORD",
     "price": 110,
@@ -948,7 +948,7 @@
     "image": "images/etoford_90_tab.jpg"
   },
   {
-    "id": 80,
+    "id": 81,
     "name": "ETOFORD MR TAB",
     "company": "LEEFORD",
     "price": 180,
@@ -960,7 +960,7 @@
     "image": "images/etoford_mr_tab.jpg"
   },
   {
-    "id": 81,
+    "id": 4,
     "name": "EVION 400 TAB",
     "company": "P&G",
     "price": 95.55,
@@ -972,7 +972,7 @@
     "image": "images/evion_400_tab.jpg"
   },
   {
-    "id": 82,
+    "id": 90,
     "name": "FESTIVE DEE DROP",
     "company": "LABORATE",
     "price": 69.3,
@@ -984,7 +984,7 @@
     "image": "images/festive_dee_drop.jpg"
   },
   {
-    "id": 83,
+    "id": 89,
     "name": "FESTIVE DROP",
     "company": "LABORATE",
     "price": 57.2,
@@ -996,7 +996,7 @@
     "image": "images/festive_drop.jpg"
   },
   {
-    "id": 84,
+    "id": 32,
     "name": "FLAGYL 400 TAB",
     "company": "ABBOTT",
     "price": 34.63,
@@ -1008,7 +1008,7 @@
     "image": "images/flagyl_400_tab.jpg"
   },
   {
-    "id": 85,
+    "id": 60,
     "name": "FLEXON MR TAB",
     "company": "ARISTO",
     "price": 29.43,
@@ -1020,7 +1020,7 @@
     "image": "images/flexon_mr_tab.jpg"
   },
   {
-    "id": 86,
+    "id": 59,
     "name": "FLEXON TAB",
     "company": "ARISTO",
     "price": 35.25,
@@ -1032,7 +1032,7 @@
     "image": "images/flexon_tab.jpg"
   },
   {
-    "id": 87,
+    "id": 147,
     "name": "FLUKA 150 TAB",
     "company": "CIPLA",
     "price": 13.5,
@@ -1044,7 +1044,7 @@
     "image": "images/fluka_150_tab.jpg"
   },
   {
-    "id": 88,
+    "id": 68,
     "name": "FOURDERM CREAM",
     "company": "CIPLA",
     "price": 117.97,
@@ -1056,7 +1056,7 @@
     "image": "images/fourderm_10_cream.jpg"
   },
   {
-    "id": 89,
+    "id": 67,
     "name": "FOURDERM CREAM",
     "company": "CIPLA",
     "price": 64.73,
@@ -1068,7 +1068,7 @@
     "image": "images/fourderm_oint.jpg"
   },
   {
-    "id": 90,
+    "id": 160,
     "name": "GALIREX SYRUP",
     "company": "LEEFORD",
     "price": 110,
@@ -1080,7 +1080,7 @@
     "image": "images/galirex_syp.jpg"
   },
   {
-    "id": 91,
+    "id": 19,
     "name": "GLYCOMET GP1 TAB",
     "company": "USV",
     "price": 123.28,
@@ -1092,7 +1092,7 @@
     "image": "images/glycomet_gp1_tab.jpg"
   },
   {
-    "id": 92,
+    "id": 20,
     "name": "GLYCOMET GP2 TAB",
     "company": "USV",
     "price": 180,
@@ -1104,7 +1104,7 @@
     "image": "images/glycomet_gp2_tab.jpg"
   },
   {
-    "id": 93,
+    "id": 212,
     "name": "GRIPE WATER",
     "company": "MACLEODS",
     "price": 75,
@@ -1116,7 +1116,7 @@
     "image": "images/gripe_water.jpg"
   },
   {
-    "id": 94,
+    "id": 110,
     "name": "HEMOFORTE SYRUP",
     "company": "TORQUE",
     "price": 202,
@@ -1128,7 +1128,7 @@
     "image": "images/hemoforte_syp.jpg"
   },
   {
-    "id": 95,
+    "id": 122,
     "name": "HEMOPLUS SYRUP",
     "company": "TORQUE",
     "price": 140,
@@ -1140,7 +1140,7 @@
     "image": "images/hemoplus_syp.jpg"
   },
   {
-    "id": 96,
+    "id": 82,
     "name": "INTAGESIC MR TAB",
     "company": "INTAS",
     "price": 124,
@@ -1152,7 +1152,7 @@
     "image": "images/intagesic_mr_tab.jpg"
   },
   {
-    "id": 97,
+    "id": 106,
     "name": "KETOFLY SOAP",
     "company": "LEEFORD",
     "price": 125,
@@ -1164,7 +1164,7 @@
     "image": "images/ketofly_soap.jpg"
   },
   {
-    "id": 98,
+    "id": 157,
     "name": "KETOFORD DT TAB",
     "company": "LEEFORD",
     "price": 60,
@@ -1176,7 +1176,7 @@
     "image": "images/ketoford_dt_tab.jpg"
   },
   {
-    "id": 99,
+    "id": 91,
     "name": "KETOFRESH CT CREAM",
     "company": "SMARTWAY",
     "price": 99,
@@ -1188,7 +1188,7 @@
     "image": "images/ketofresh_ct_cream.jpg"
   },
   {
-    "id": 100,
+    "id": 132,
     "name": "KETOKEM CT SOAP",
     "company": "ALKEM",
     "price": 132,
@@ -1200,7 +1200,7 @@
     "image": "images/ketokem_ct_soap.jpg"
   },
   {
-    "id": 101,
+    "id": 131,
     "name": "KETOKEM SOAP",
     "company": "ALKEM",
     "price": 143,
@@ -1212,7 +1212,7 @@
     "image": "images/ketokem_soap.jpg"
   },
   {
-    "id": 102,
+    "id": 167,
     "name": "KOPLYTE ORS POWD",
     "company": "ZENITH",
     "price": 23.11,
@@ -1224,7 +1224,7 @@
     "image": "images/koplyte_ors_powd.jpg"
   },
   {
-    "id": 103,
+    "id": 84,
     "name": "KT 5 DERM CREAM",
     "company": "LABORATE",
     "price": 118,
@@ -1236,7 +1236,7 @@
     "image": "images/kt_5_derm_cream.jpg"
   },
   {
-    "id": 104,
+    "id": 113,
     "name": "KUFFDRYL SYRUP",
     "company": "INTAS",
     "price": 119.53,
@@ -1248,7 +1248,7 @@
     "image": "images/kuffdryl_syp.jpg"
   },
   {
-    "id": 105,
+    "id": 235,
     "name": "L HIST MONT TAB",
     "company": "ALKEM",
     "price": 257.8,
@@ -1260,7 +1260,7 @@
     "image": "images/l_hist_mont_tab.jpg"
   },
   {
-    "id": 106,
+    "id": 129,
     "name": "L HIST TAB",
     "company": "ALKEM",
     "price": 88,
@@ -1272,7 +1272,7 @@
     "image": "images/l_hist_tab.jpg"
   },
   {
-    "id": 107,
+    "id": 74,
     "name": "LACTOBUILD GRANULES POWD",
     "company": "LEEFORD",
     "price": 250,
@@ -1284,7 +1284,7 @@
     "image": "images/lactobuild_granules_powd.jpg"
   },
   {
-    "id": 108,
+    "id": 226,
     "name": "LAXMI SAT ISABGOL POWD",
     "company": "GIRIRAJ",
     "price": 104,
@@ -1296,7 +1296,7 @@
     "image": "images/laxmi_sat_isabgol_powd.jpg"
   },
   {
-    "id": 109,
+    "id": 186,
     "name": "LEEZOLE(VAGINAL) GEL",
     "company": "LEEFORD",
     "price": 102,
@@ -1308,7 +1308,7 @@
     "image": "images/leezole_gel.jpg"
   },
   {
-    "id": 110,
+    "id": 146,
     "name": "LEVOBEX 5 TAB",
     "company": "GLOBEX",
     "price": 37.08,
@@ -1320,7 +1320,7 @@
     "image": "images/levobex_5_tab.jpg"
   },
   {
-    "id": 111,
+    "id": 9,
     "name": "LIMCEE TAB",
     "company": "ABBOTT",
     "price": 24.68,
@@ -1332,7 +1332,7 @@
     "image": "images/limcee_tab.jpg"
   },
   {
-    "id": 112,
+    "id": 7,
     "name": "LIV 52 DS SYRUP",
     "company": "HIMALAYA",
     "price": 375,
@@ -1344,7 +1344,7 @@
     "image": "images/liv52_ds_syp.jpg"
   },
   {
-    "id": 113,
+    "id": 8,
     "name": "LIV 52 SYRUP",
     "company": "HIMALAYA",
     "price": 234,
@@ -1356,7 +1356,7 @@
     "image": "images/liv52_syp.jpg"
   },
   {
-    "id": 114,
+    "id": 158,
     "name": "LIVSHINE DS SYRUP",
     "company": "GLOBEX",
     "price": 168.75,
@@ -1368,7 +1368,7 @@
     "image": "images/livshine_ds_syp.jpg"
   },
   {
-    "id": 115,
+    "id": 228,
     "name": "LULIDERM CREAM",
     "company": "ARISTO",
     "price": 159.37,
@@ -1380,7 +1380,7 @@
     "image": "images/luliderm_cream.jpg"
   },
   {
-    "id": 116,
+    "id": 208,
     "name": "MANFORCE 100 TAB",
     "company": "MANKIND",
     "price": 243,
@@ -1392,7 +1392,7 @@
     "image": "images/manforce_100_tab.jpg"
   },
   {
-    "id": 117,
+    "id": 99,
     "name": "MEDIVIT SYRUP",
     "company": "MEDITEK",
     "price": 70,
@@ -1404,7 +1404,7 @@
     "image": "images/medivit_syp.jpg"
   },
   {
-    "id": 118,
+    "id": 38,
     "name": "MEFTAL SPAS TAB",
     "company": "BLUE CROSS",
     "price": 51.56,
@@ -1416,7 +1416,7 @@
     "image": "images/meftal_spas_tab.jpg"
   },
   {
-    "id": 119,
+    "id": 153,
     "name": "MELAMET CREAM",
     "company": "UTL",
     "price": 79.8,
@@ -1428,7 +1428,7 @@
     "image": "images/melamet_cream.jpg"
   },
   {
-    "id": 120,
+    "id": 191,
     "name": "MIGRAFEN TAB",
     "company": "LEEFORD",
     "price": 112,
@@ -1440,7 +1440,7 @@
     "image": "images/migrafen_tab.jpg"
   },
   {
-    "id": 121,
+    "id": 171,
     "name": "MISS ME TAB",
     "company": "ZEE",
     "price": 60,
@@ -1452,7 +1452,7 @@
     "image": "images/miss_me_tab.jpg"
   },
   {
-    "id": 122,
+    "id": 155,
     "name": "MOMIN S OINT",
     "company": "UTL",
     "price": 66.3,
@@ -1464,7 +1464,7 @@
     "image": "images/momin_s_oint.jpg"
   },
   {
-    "id": 123,
+    "id": 61,
     "name": "MONOCEF O 200 TAB",
     "company": "ARISTO",
     "price": 215.62,
@@ -1476,7 +1476,7 @@
     "image": "images/monocef_o_200_tab.jpg"
   },
   {
-    "id": 124,
+    "id": 165,
     "name": "MONTAS L TAB",
     "company": "INTAS",
     "price": 183.28,
@@ -1488,7 +1488,7 @@
     "image": "images/montas_l_tab.jpg"
   },
   {
-    "id": 125,
+    "id": 236,
     "name": "MOXATRIS CV 625 TAB",
     "company": "AKUMS",
     "price": 204.8,
@@ -1500,7 +1500,7 @@
     "image": "images/moxatris_cv_625_tab.jpg"
   },
   {
-    "id": 126,
+    "id": 210,
     "name": "MOXIKIND CV 625 TAB",
     "company": "MANKIND",
     "price": 182.96,
@@ -1512,7 +1512,7 @@
     "image": "images/moxikind_cv_625_tab.jpg"
   },
   {
-    "id": 127,
+    "id": 139,
     "name": "MOXIMAX D DROP",
     "company": "ALKEM",
     "price": 126,
@@ -1524,7 +1524,7 @@
     "image": "images/moximax_d_drop.jpg"
   },
   {
-    "id": 128,
+    "id": 107,
     "name": "MULTI VITAMIN SYRUP",
     "company": "AUSTRO",
     "price": 185,
@@ -1536,7 +1536,7 @@
     "image": "images/multi_vitamin_syp.jpg"
   },
   {
-    "id": 129,
+    "id": 100,
     "name": "MUPICIP OINT",
     "company": "CIPLA",
     "price": 115.58,
@@ -1548,7 +1548,7 @@
     "image": "images/mupicip_oint.jpg"
   },
   {
-    "id": 130,
+    "id": 30,
     "name": "NEUROBION FORTE TAB",
     "company": "P&G",
     "price": 47.53,
@@ -1560,7 +1560,7 @@
     "image": "images/neurobion_forte_tab.jpg"
   },
   {
-    "id": 131,
+    "id": 78,
     "name": "NFLOX TZ TAB",
     "company": "LABORATE",
     "price": 145.2,
@@ -1572,7 +1572,7 @@
     "image": "images/nflox_tz_tab.jpg"
   },
   {
-    "id": 132,
+    "id": 123,
     "name": "NICIP PLUS TAB",
     "company": "CIPLA",
     "price": 65.1,
@@ -1584,7 +1584,7 @@
     "image": "images/nicip_plus_tab.jpg"
   },
   {
-    "id": 133,
+    "id": 168,
     "name": "NIMESULIDE 100MG TAB",
     "company": "CIPLA",
     "price": 43.45,
@@ -1596,7 +1596,7 @@
     "image": "images/nimesulide_100_tab.jpg"
   },
   {
-    "id": 134,
+    "id": 3,
     "name": "NIMUCET GOLD TAB",
     "company": "INTAS",
     "price": 60,
@@ -1608,7 +1608,7 @@
     "image": "images/nimucet_gold_tab.jpg"
   },
   {
-    "id": 135,
+    "id": 118,
     "name": "NIMUCET SYRUP",
     "company": "INTAS",
     "price": 52.97,
@@ -1620,7 +1620,7 @@
     "image": "images/nimucet_syp.jpg"
   },
   {
-    "id": 136,
+    "id": 145,
     "name": "NIMUCET TAB",
     "company": "INTAS",
     "price": 60,
@@ -1632,7 +1632,7 @@
     "image": "images/nimucet_tab.jpg"
   },
   {
-    "id": 137,
+    "id": 242,
     "name": "NIZER GEL",
     "company": "USV",
     "price": 141.65,
@@ -1644,7 +1644,7 @@
     "image": "images/nizer_gel.jpg"
   },
   {
-    "id": 138,
+    "id": 170,
     "name": "NO SCARS CREAM",
     "company": "TORQUE",
     "price": 253,
@@ -1656,7 +1656,7 @@
     "image": "images/no_scars_cream.jpg"
   },
   {
-    "id": 139,
+    "id": 148,
     "name": "NODARD PLUS TAB",
     "company": "CIPLA",
     "price": 57.75,
@@ -1668,7 +1668,7 @@
     "image": "images/nodard_plus_tab.jpg"
   },
   {
-    "id": 140,
+    "id": 134,
     "name": "NOGACID CAP",
     "company": "CADILA",
     "price": 49.06,
@@ -1680,7 +1680,7 @@
     "image": "images/nogacid_cap.jpg"
   },
   {
-    "id": 141,
+    "id": 159,
     "name": "NORFLOKEM TZ TAB",
     "company": "ALKEM",
     "price": 120,
@@ -1692,7 +1692,7 @@
     "image": "images/norflokem_tz_tab.jpg"
   },
   {
-    "id": 142,
+    "id": 243,
     "name": "O2 SYRUP",
     "company": "MEDLEY",
     "price": 77.8,
@@ -1704,7 +1704,7 @@
     "image": "images/o2_syp.jpg"
   },
   {
-    "id": 143,
+    "id": 217,
     "name": "OFLAKEM OZ SYRUP",
     "company": "ALKEM",
     "price": 70,
@@ -1716,7 +1716,7 @@
     "image": "images/oflakem_oz_syp.jpg"
   },
   {
-    "id": 144,
+    "id": 152,
     "name": "OMEE MPS ORAL SUSP",
     "company": "ALKEM",
     "price": 110,
@@ -1728,7 +1728,7 @@
     "image": "images/omee_mps_oral_susp.jpg"
   },
   {
-    "id": 145,
+    "id": 21,
     "name": "OMNACORTIL 10 TAB",
     "company": "MACLEODS",
     "price": 13.66,
@@ -1740,7 +1740,7 @@
     "image": "images/omnacortil_10_tab.jpg"
   },
   {
-    "id": 146,
+    "id": 119,
     "name": "OMNIGEL 100 OINT",
     "company": "CIPLA",
     "price": 314.6,
@@ -1752,7 +1752,7 @@
     "image": "images/omnigel_100_oint.jpg"
   },
   {
-    "id": 147,
+    "id": 142,
     "name": "OMNIGEL 10 OINT",
     "company": "CIPLA",
     "price": 65.3,
@@ -1764,7 +1764,7 @@
     "image": "images/omnigel_10_oint.jpg"
   },
   {
-    "id": 148,
+    "id": 185,
     "name": "OMNIGEL 20 OINT",
     "company": "CIPLA",
     "price": 118.03,
@@ -1776,7 +1776,7 @@
     "image": "images/omnigel_20_oint.jpg"
   },
   {
-    "id": 149,
+    "id": 184,
     "name": "OMNIGEL 50 OINT",
     "company": "CIPLA",
     "price": 203.12,
@@ -1788,7 +1788,7 @@
     "image": "images/omnigel_50_oint.jpg"
   },
   {
-    "id": 150,
+    "id": 138,
     "name": "OMNIGEL SPRAY",
     "company": "CIPLA",
     "price": 148.91,
@@ -1800,7 +1800,7 @@
     "image": "images/omnigel_spray.jpg"
   },
   {
-    "id": 151,
+    "id": 64,
     "name": "ONDEM MD4 TAB",
     "company": "ALKEM",
     "price": 54.85,
@@ -1812,7 +1812,7 @@
     "image": "images/ondem_md4_tab.jpg"
   },
   {
-    "id": 152,
+    "id": 95,
     "name": "ORAFAST GEL",
     "company": "LEEFORD",
     "price": 110,
@@ -1824,7 +1824,7 @@
     "image": "images/orafast_gel.jpg"
   },
   {
-    "id": 153,
+    "id": 124,
     "name": "OROGARD TAB",
     "company": "ALKEM",
     "price": 70,
@@ -1836,7 +1836,7 @@
     "image": "images/orogard_tab.jpg"
   },
   {
-    "id": 154,
+    "id": 183,
     "name": "ORS SAM KEM POW",
     "company": "SAM-KE",
     "price": 25.4,
@@ -1848,7 +1848,7 @@
     "image": "images/ors_sam_kem_pow.jpg"
   },
   {
-    "id": 155,
+    "id": 44,
     "name": "OZOMET G1 TAB",
     "company": "OZONE",
     "price": 54.79,
@@ -1860,7 +1860,7 @@
     "image": "images/ozomet_g1_tab.jpg"
   },
   {
-    "id": 156,
+    "id": 45,
     "name": "OZOMET G2 TAB",
     "company": "OZONE",
     "price": 58.45,
@@ -1872,7 +1872,7 @@
     "image": "images/ozomet_g2_tab.jpg"
   },
   {
-    "id": 157,
+    "id": 43,
     "name": "OZOMET PG1 TAB",
     "company": "OZONE",
     "price": 54.8,
@@ -1884,7 +1884,7 @@
     "image": "images/ozomet_pg1_tab.jpg"
   },
   {
-    "id": 158,
+    "id": 42,
     "name": "OZOMET PG2 TAB",
     "company": "OZONE",
     "price": 54.8,
@@ -1896,7 +1896,7 @@
     "image": "images/ozomet_pg2_tab.jpg"
   },
   {
-    "id": 159,
+    "id": 41,
     "name": "OZOMET VG1 TAB",
     "company": "OZONE",
     "price": 58.45,
@@ -1908,7 +1908,7 @@
     "image": "images/ozomet_vg1_tab.jpg"
   },
   {
-    "id": 160,
+    "id": 40,
     "name": "OZOMET VG2 TAB",
     "company": "OZONE",
     "price": 54.79,
@@ -1920,7 +1920,7 @@
     "image": "images/ozomet_vg2_tab.jpg"
   },
   {
-    "id": 161,
+    "id": 14,
     "name": "PANTOP 40 TAB",
     "company": "ARISTO",
     "price": 159.37,
@@ -1932,7 +1932,7 @@
     "image": "images/pantop_40_tab.jpg"
   },
   {
-    "id": 162,
+    "id": 16,
     "name": "PANTOP D CAP",
     "company": "ARISTO",
     "price": 195,
@@ -1944,7 +1944,7 @@
     "image": "images/pantop_d_cap.jpg"
   },
   {
-    "id": 163,
+    "id": 15,
     "name": "PANTOP DSR CAP",
     "company": "ARISTO",
     "price": 226.4,
@@ -1956,7 +1956,7 @@
     "image": "images/pantop_dsr_cap.jpg"
   },
   {
-    "id": 164,
+    "id": 112,
     "name": "PHENSEDYL DX SYRUP",
     "company": "ABBOTT",
     "price": 119.42,
@@ -1968,7 +1968,7 @@
     "image": "images/phensedyl_dx_syp.jpg"
   },
   {
-    "id": 165,
+    "id": 28,
     "name": "POLYBION LC SYRUP",
     "company": "P&G",
     "price": 151.85,
@@ -1980,7 +1980,7 @@
     "image": "images/polybion_lc_syp.jpg"
   },
   {
-    "id": 166,
+    "id": 162,
     "name": "PREGACIP M CAP",
     "company": "CIPLA",
     "price": 179.68,
@@ -1992,7 +1992,7 @@
     "image": "images/pregacip_m_cap.jpg"
   },
   {
-    "id": 167,
+    "id": 104,
     "name": "QDIDERM CREAM",
     "company": "MAPRO",
     "price": 30,
@@ -2004,7 +2004,7 @@
     "image": "images/qdiderm_oint.jpg"
   },
   {
-    "id": 168,
+    "id": 161,
     "name": "RABALKEM DSR CAP",
     "company": "ALKEM",
     "price": 155,
@@ -2016,7 +2016,7 @@
     "image": "images/rabalkem_dsr_cap.jpg"
   },
   {
-    "id": 169,
+    "id": 192,
     "name": "REACTIN 100SR TAB",
     "company": "LEEFORD",
     "price": 74.41,
@@ -2028,7 +2028,7 @@
     "image": "images/reactin_100sr_tab.jpg"
   },
   {
-    "id": 170,
+    "id": 76,
     "name": "REBOZEN DSR CAP",
     "company": "LEEFORD",
     "price": 95,
@@ -2040,7 +2040,7 @@
     "image": "images/rebozen_dsr_cap.jpg"
   },
   {
-    "id": 171,
+    "id": 24,
     "name": "REFRESH TEAR E/D DROP",
     "company": "PIRAMAL",
     "price": 140.03,
@@ -2052,7 +2052,7 @@
     "image": "images/refresh_tear_e_d_drop.jpg"
   },
   {
-    "id": 172,
+    "id": 199,
     "name": "ROSEDAY F10 TAB",
     "company": "USV",
     "price": 269.1,
@@ -2064,7 +2064,7 @@
     "image": "images/roseday_f10_tab.jpg"
   },
   {
-    "id": 173,
+    "id": 223,
     "name": "SALICYLIC ACID POWDER",
     "company": "MEDIC",
     "price": 95,
@@ -2076,7 +2076,7 @@
     "image": "images/salicylic_acid_powd.jpg"
   },
   {
-    "id": 174,
+    "id": 31,
     "name": "SARIDON TAB",
     "company": "BAYER",
     "price": 55,
@@ -2088,7 +2088,7 @@
     "image": "images/saridon_tab.jpg"
   },
   {
-    "id": 175,
+    "id": 103,
     "name": "SCRABIC LOTION",
     "company": "LEEFORD",
     "price": 51,
@@ -2100,7 +2100,7 @@
     "image": "images/scrabic_lotion.jpg"
   },
   {
-    "id": 176,
+    "id": 201,
     "name": "SIGORA GOLD TAB",
     "company": "SMART LAB",
     "price": 187.5,
@@ -2112,7 +2112,7 @@
     "image": "images/sigora_gold_tab.jpg"
   },
   {
-    "id": 177,
+    "id": 229,
     "name": "SINAREST TAB",
     "company": "CENTAUR",
     "price": 123.64,
@@ -2124,7 +2124,7 @@
     "image": "images/sinarest_tab.jpg"
   },
   {
-    "id": 178,
+    "id": 211,
     "name": "SKINSHINE CREAM",
     "company": "CADILA",
     "price": 154.55,
@@ -2136,7 +2136,7 @@
     "image": "images/skinshine_cream.jpg"
   },
   {
-    "id": 179,
+    "id": 120,
     "name": "SOREGEL GEL",
     "company": "INTAS",
     "price": 75,
@@ -2148,7 +2148,7 @@
     "image": "images/soregel_gel.jpg"
   },
   {
-    "id": 180,
+    "id": 83,
     "name": "SPASMONIL TAB",
     "company": "CIPLA",
     "price": 31.94,
@@ -2160,7 +2160,7 @@
     "image": "images/spasmonil_tab.jpg"
   },
   {
-    "id": 181,
+    "id": 230,
     "name": "STEMETIL MD TAB",
     "company": "ABBOTT",
     "price": 195.91,
@@ -2172,7 +2172,7 @@
     "image": "images/stemetil_md_tab.jpg"
   },
   {
-    "id": 182,
+    "id": 187,
     "name": "SUMO GEL",
     "company": "ALKEM",
     "price": 70,
@@ -2184,7 +2184,7 @@
     "image": "images/sumo_gel.jpg"
   },
   {
-    "id": 183,
+    "id": 193,
     "name": "SUMO TAB",
     "company": "ALKEM",
     "price": 167.5,
@@ -2196,7 +2196,7 @@
     "image": "images/sumo_tab.jpg"
   },
   {
-    "id": 184,
+    "id": 93,
     "name": "SUPERB CREAM",
     "company": "CUREWELL",
     "price": 95,
@@ -2208,7 +2208,7 @@
     "image": "images/superb_cream.jpg"
   },
   {
-    "id": 185,
+    "id": 39,
     "name": "SUPRADYN DAILY TAB",
     "company": "BAYER",
     "price": 68.39,
@@ -2220,7 +2220,7 @@
     "image": "images/supradyn_daily_tab.jpg"
   },
   {
-    "id": 186,
+    "id": 172,
     "name": "TADACIP 20 TAB",
     "company": "CIPLA",
     "price": 262.57,
@@ -2232,7 +2232,7 @@
     "image": "images/tadacip_20_tab.jpg"
   },
   {
-    "id": 187,
+    "id": 181,
     "name": "TAXIM-O 200 TAB",
     "company": "ALKEM",
     "price": 104.43,
@@ -2244,7 +2244,7 @@
     "image": "images/taxim_o_200_tab.jpg"
   },
   {
-    "id": 188,
+    "id": 231,
     "name": "TAXIM-O DRY SYRUP",
     "company": "ALKEM",
     "price": 52.09,
@@ -2256,7 +2256,7 @@
     "image": "images/taxim_o_dry_syp.jpg"
   },
   {
-    "id": 189,
+    "id": 86,
     "name": "TENACID MF TAB",
     "company": "LEEFORD",
     "price": 185,
@@ -2268,7 +2268,7 @@
     "image": "images/tenacid_mf_tab.jpg"
   },
   {
-    "id": 190,
+    "id": 189,
     "name": "THROMBOTAS OINT",
     "company": "INTAS",
     "price": 115.31,
@@ -2280,7 +2280,7 @@
     "image": "images/thrombotas_oint.jpg"
   },
   {
-    "id": 191,
+    "id": 5,
     "name": "THYRONORM 100 TAB",
     "company": "ABBOTT",
     "price": 168.82,
@@ -2292,7 +2292,7 @@
     "image": "images/thyronorm_100_tab.jpg"
   },
   {
-    "id": 192,
+    "id": 6,
     "name": "THYRONORM 50 TAB",
     "company": "ABBOTT",
     "price": 132.02,
@@ -2304,7 +2304,7 @@
     "image": "images/thyronorm_50_tab.jpg"
   },
   {
-    "id": 193,
+    "id": 48,
     "name": "THYROX 100 TAB",
     "company": "MACLEODS",
     "price": 168.83,
@@ -2316,7 +2316,7 @@
     "image": "images/thyrox_100_tab.jpg"
   },
   {
-    "id": 194,
+    "id": 50,
     "name": "THYROX 25 TAB",
     "company": "MACLEODS",
     "price": 185.4,
@@ -2328,7 +2328,7 @@
     "image": "images/thyrox_25_tab.jpg"
   },
   {
-    "id": 195,
+    "id": 49,
     "name": "THYROX 50 TAB",
     "company": "MACLEODS",
     "price": 132.02,
@@ -2340,7 +2340,7 @@
     "image": "images/thyrox_50_tab.jpg"
   },
   {
-    "id": 196,
+    "id": 163,
     "name": "TOP BACT OINT",
     "company": "GLOBEX",
     "price": 113.4,
@@ -2352,7 +2352,7 @@
     "image": "images/top_bact_oint.jpg"
   },
   {
-    "id": 197,
+    "id": 221,
     "name": "ULTRABRITE CREAM",
     "company": "LEEFORD",
     "price": 150,
@@ -2364,7 +2364,7 @@
     "image": "images/ultrabrite_cream.jpg"
   },
   {
-    "id": 198,
+    "id": 136,
     "name": "UNIENZYME SYRUP",
     "company": "TORRENT",
     "price": 169.65,
@@ -2376,7 +2376,7 @@
     "image": "images/unienzyme_syp.jpg"
   },
   {
-    "id": 199,
+    "id": 219,
     "name": "UNIENZYME DROP",
     "company": "TORRENT",
     "price": 126.35,
@@ -2388,7 +2388,7 @@
     "image": "images/unienzyme_drop.jpg"
   },
   {
-    "id": 200,
+    "id": 72,
     "name": "VENTORANZ DX SYRUP",
     "company": "ALKEM",
     "price": 113,
@@ -2400,7 +2400,7 @@
     "image": "images/ventoranz_dx_syp.jpg"
   },
   {
-    "id": 201,
+    "id": 164,
     "name": "VIGORE 100 TAB",
     "company": "GERMED",
     "price": 127.5,
@@ -2412,7 +2412,7 @@
     "image": "images/vigore_100_tab.jpg"
   },
   {
-    "id": 202,
+    "id": 182,
     "name": "VITCOFOL ORAL SUSPEN",
     "company": "FDC LTD",
     "price": 167.86,
@@ -2424,7 +2424,7 @@
     "image": "images/vitcofol_oral_suspen.jpg"
   },
   {
-    "id": 203,
+    "id": 96,
     "name": "ZEEBEE SYRUP",
     "company": "RANBAXY",
     "price": 19.11,
@@ -2436,7 +2436,7 @@
     "image": "images/zeebee_syp.jpg"
   },
   {
-    "id": 204,
+    "id": 62,
     "name": "ZERODOL P TAB",
     "company": "IPCA",
     "price": 75.94,
@@ -2448,7 +2448,7 @@
     "image": "images/zerodol_p_tab.jpg"
   },
   {
-    "id": 205,
+    "id": 63,
     "name": "ZERODOL SP TAB",
     "company": "IPCA",
     "price": 139.69,
@@ -2460,7 +2460,7 @@
     "image": "images/zerodol_sp_tab.jpg"
   },
   {
-    "id": 206,
+    "id": 180,
     "name": "ZERODOL SPAS TAB",
     "company": "IPCA",
     "price": 164.02,
@@ -2472,7 +2472,7 @@
     "image": "images/zerodol_spas_tab.jpg"
   },
   {
-    "id": 207,
+    "id": 101,
     "name": "ZOSTER SKIN CREAM",
     "company": "LEEFORD",
     "price": 53,
@@ -2484,7 +2484,7 @@
     "image": "images/zoster_skin_cream.jpg"
   },
   {
-    "id": 208,
+    "id": 220,
     "name": "ZOTADOL SP TAB",
     "company": "HORIZON",
     "price": 93.75,
@@ -2496,7 +2496,7 @@
     "image": "images/zotadol_sp_tab.jpg"
   },
   {
-    "id": 209,
+    "id": 79,
     "name": "ZYMOX 500 CAP",
     "company": "LABORATE",
     "price": 82.43,
@@ -2508,7 +2508,7 @@
     "image": "images/zymox_500_cap.jpg"
   },
   {
-    "id": 210,
+    "id": 1001,
     "name": "DABUR HONITUS",
     "company": "Dabur",
     "price": 125,
@@ -2520,7 +2520,7 @@
     "image": "images/dabur_honitus.jpg"
   },
   {
-    "id": 211,
+    "id": 1002,
     "name": "CLOVE OIL",
     "company": "Gopi Baba",
     "price": 20,
@@ -2544,7 +2544,7 @@
     "image": "images/hemolab_forte_syp.jpg"
   },
   {
-    "id": 213,
+    "id": 1003,
     "name": "JHANDU MUGDHA RASA",
     "company": "JHANDU",
     "price": 110,
@@ -2556,7 +2556,7 @@
     "image": "images/jhandu_mugdha_rasa.jpg"
   },
   {
-    "id": 214,
+    "id": 1004,
     "name": "LITE FACE CREAM",
     "company": "KIRAAT",
     "price": 85,
@@ -2568,7 +2568,7 @@
     "image": "images/lite_face_cream.jpg"
   },
   {
-    "id": 215,
+    "id": 1005,
     "name": "DR ORTHO OIL",
     "company": "DIVISA",
     "price": 158,
@@ -2580,7 +2580,7 @@
     "image": "images/ortho_oil.jpg"
   },
   {
-    "id": 216,
+    "id": 1006,
     "name": "ORTHO AID OIL",
     "company": "LEEFORD",
     "price": 300,
@@ -2592,7 +2592,7 @@
     "image": "images/ortho_aid_oil.jpg"
   },
   {
-    "id": 217,
+    "id": 175,
     "name": "CHIRAYU POSHAK OIL",
     "company": "CHIRAYU",
     "price": 150,
@@ -2604,7 +2604,7 @@
     "image": "images/poshak_100_oil.jpg"
   },
   {
-    "id": 218,
+    "id": 176,
     "name": "CHIRAYU POSHAK OIL",
     "company": "CHIRAYU",
     "price": 240,
@@ -2616,7 +2616,7 @@
     "image": "images/poshak_200_oil.jpg"
   },
   {
-    "id": 219,
+    "id": 1007,
     "name": "GARIMA GLUCOSE ORANGE",
     "company": "GARIMA",
     "price": 45,

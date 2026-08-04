@@ -248,7 +248,7 @@ function displayProducts(items){
 
     items.forEach(product => {
 
-        let cartItem = cart.find(item => item.name === product.name);
+        let cartItem = cart.find(item => item.id === product.id);
 
         let qty = cartItem ? cartItem.qty : 0;
 
@@ -287,7 +287,7 @@ function displayProducts(items){
                 <div class="qty-box">
 
                     <div class="qty-btn minus"
-                        onclick="decreaseQtyByName('${product.name}')">
+                       onclick="decreaseQtyById(${product.id})">
                         &minus;
                     </div>
 
@@ -296,7 +296,7 @@ function displayProducts(items){
                     </div>
 
                     <div class="qty-btn plus"
-                        onclick="increaseQtyByName('${product.name}')">
+                        onclick="increaseQtyById(${product.id})">
                         &plus;
                     </div>
 
@@ -314,48 +314,75 @@ function displayProducts(items){
 }
 
 
-function addToCart(name,price,packing){
+function addToCart(id){
 
-    let item = cart.find(x => x.name === name);
+    const product = products.find(p => p.id === id);
+
+    if(!product) return;
+
+    let item = cart.find(x => x.id === id);
 
     if(item){
+
         item.qty++;
-    }
-    else{
+
+    }else{
+
         cart.push({
-          name:name,
-          price:price,
-          packing:packing,
-          qty:1,    
+
+            id:product.id,
+
+            name:product.name,
+
+            packing:product.packing,
+
+            company:product.company,
+
+            price:product.price,
+
+            qty:1
+
         });
+
     }
 
     refreshUI();
+
 }
 
 
-function increaseQtyByName(name){
+function increaseQtyById(id){
 
-    let index = cart.findIndex(item => item.name === name);
+    const item = cart.find(x => x.id === id);
 
-    if(index !== -1){
+    if(item){
 
-        increaseQty(index);
+        item.qty++;
+
+        refreshUI();
 
     }
 
 }
 
 
-function decreaseQtyByName(name){
+function decreaseQtyById(id){
 
-    let index = cart.findIndex(item => item.name === name);
+    const index = cart.findIndex(x => x.id === id);
 
-    if(index !== -1){
+    if(index === -1) return;
 
-        decreaseQty(index);
+    if(cart[index].qty > 1){
+
+        cart[index].qty--;
+
+    }else{
+
+        cart.splice(index,1);
 
     }
+
+    refreshUI();
 
 }
 
