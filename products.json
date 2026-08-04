@@ -2626,5 +2626,55 @@
     "uses": "Energy/instant refreshment drink",
     "bestseller": false,
     "image": "images/garima_glucose_orange.jpg"
+  },
+  {
+    "id": 116,
+    "name": "CEFACLASS 200 TAB 10'S",
+    "company": "MANKIND",
+    "price": 102.0,
+    "category": "TABLET_CAP",
+    "packing": "10*10",
+    "saltContent": "CEFIXIME 200 mg",
+    "uses": "Bacterial infections",
+    "bestseller": true,
+    "image": "images/cefaclass_200_tab.jpg"
+  },
+  {
+    "id": 121,
+    "name": "DERMA KT NEO-CREAM 15G",
+    "company": "WINSLEY",
+    "price": 96.0,
+    "category": "CREAM_OINT",
+    "packing": "15 g",
+    "saltContent": "Clobetasol propionate, Ketoconazole, Neomycin sulfate, Tolnaftate, and Iodochlorhydroxyquinoline",
+    "uses": "bacterial and fungal infections, promote healthier skin",
+    "bestseller": true,
+    "image": "images/dermakt_neo_cream.jpg"
+  },
+  {
+    "id": 234,
+    "name": "CEFKEM SYP 30ML",
+    "company": "ALKEM",
+    "price": 55.57,
+    "category": "LIQUID",
+    "packing": "30 ml",
+    "saltContent": "CEFIXIME",
+    "uses": "bacterial infections in KIDS, including ear infections, throat infections like tonsillitis, bronchitis, and UTI",
+    "bestseller": true,
+    "image": "images/cefkem_syp.jpg"
+  },
+  {
+    "id": 240,
+    "name": "DULCOFLEX TAB 15'S",
+    "company": "OPELLA",
+    "price": 18.59,
+    "category": "TABLET_CAP",
+    "packing": "14*3*15",
+    "saltContent": "Bisacodyl (5mg)",
+    "uses": "constipation",
+    "bestseller": true,
+    "image": "images/dulcoflex_tab.jpg"
   }
+
+
 ]
