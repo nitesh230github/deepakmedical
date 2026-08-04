@@ -276,14 +276,14 @@ function displayProducts(items){
                 qty === 0 ?
 
                 `
-                <button onclick="addToCart('${product.name}',${product.price},'${product.packing}')">
-                    Add to Cart
-                </button>
-                `
+                <button onclick="addToCart(${product.id})">
+                      Add to Cart
+                      </button>
+                 `
 
-                :
+                 :
 
-                `
+                 `
                 <div class="qty-box">
 
                     <div class="qty-btn minus"
