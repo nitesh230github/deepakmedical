@@ -2629,7 +2629,7 @@
   },
   {
     "id": 116,
-    "name": "CEFACLASS 200 TAB 10'S",
+    "name": "CEFACLASS 200 TAB ",
     "company": "MANKIND",
     "price": 102.0,
     "category": "TABLET_CAP",
@@ -2641,7 +2641,7 @@
   },
   {
     "id": 121,
-    "name": "DERMA KT NEO-CREAM 15G",
+    "name": "DERMA KT NEO-CREAM ",
     "company": "WINSLEY",
     "price": 96.0,
     "category": "CREAM_OINT",
@@ -2653,7 +2653,7 @@
   },
   {
     "id": 234,
-    "name": "CEFKEM SYP 30ML",
+    "name": "CEFKEM SYP ",
     "company": "ALKEM",
     "price": 55.57,
     "category": "LIQUID",
@@ -2665,7 +2665,7 @@
   },
   {
     "id": 240,
-    "name": "DULCOFLEX TAB 15'S",
+    "name": "DULCOFLEX TAB ",
     "company": "OPELLA",
     "price": 18.59,
     "category": "TABLET_CAP",
