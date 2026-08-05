@@ -1140,7 +1140,7 @@ input{
 
  }
 
- /* Cart Buttons - order on whatsapp, + and - and close button */
+ /* //Cart Buttons - order on whatsapp, + and - and close button */
 
  .cart-header{
 
@@ -1153,3 +1153,116 @@ input{
     margin-bottom:15px;
 
 }
+
+/* Cart row */
+
+.cart-action{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:10px;
+
+}
+
+
+/* Capsule */
+
+.cart-qty-box{
+
+    display:flex;
+
+    align-items:center;
+
+    background:#dff5ea;
+
+    border-radius:999px;
+
+    padding:3px;
+
+}
+
+
+/* Circle Buttons */
+
+.cart-qty-box .qty-btn{
+
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    background:#00897b;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:.2s;
+
+}
+
+.cart-qty-box .qty-btn:hover{
+
+    background:#00695c;
+
+}
+
+
+/* Quantity */
+
+.cart-qty-box .qty-value{
+
+    min-width:34px;
+
+    text-align:center;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    color:#222;
+
+}
+
+
+/* Remove Button */
+
+.remove-btn{
+
+    background:none;
+
+    border:none;
+
+    color:#d32f2f;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    padding:4px;
+
+}
+
+.remove-btn:hover{
+
+    transform:scale(1.15);
+
+}
+/*  cart buttons end */
