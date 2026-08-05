@@ -579,7 +579,7 @@ header{
 
     display:inline-block;
 
-    width:28px;
+    width: 54px;
 
     text-align:center;
 
@@ -1227,7 +1227,7 @@ input{
 
 .cart-qty-box .qty-value{
 
-    min: width 54px;
+     min: width 34px;;
 
     text-align:center;
 
