@@ -268,95 +268,118 @@ function displayProducts(items){
 
         let cartItem = cart.find(item => item.id === product.id);
         let qty = cartItem ? cartItem.qty : 0;
+html += `
 
-        html += `
+<!-- =====================================================
+     PRODUCT CARD
+===================================================== -->
 
-        <!-- =====================================================
-             PRODUCT CARD
-        ====================================================== -->
+<div class="card">
 
-        <div class="card">
+    <!-- =====================================================
+         LEFT SECTION (PRODUCT IMAGE)
+    ====================================================== -->
+
+    <div class="product-left">
+
+        <div class="product-image">
+
+            <img
+                src="${product.image}"
+                alt="${product.name}">
+
+        </div>
+
+    </div>
 
 
-            <!-- =====================================================
-                 LEFT SECTION (PRODUCT IMAGE)
-            ====================================================== -->
+    <!-- =====================================================
+         RIGHT SECTION (PRODUCT DETAILS)
+    ====================================================== -->
 
-            <div class="product-left">
+    <div class="product-right">
 
-                <div class="product-image">
+        <!-- Product Name -->
 
-                    <img
-                        src="${product.image}"
-                        alt="${product.name}">
+        <div class="product-title">
+
+            <h3>${product.name}</h3>
+
+        </div>
+
+
+        <!-- Product Information -->
+
+        <div class="product-meta">
+
+            <div class="info-row">
+
+                <!-- Left -->
+
+                <div class="info-left">
+
+                    <p class="packing">
+                        Pack : ${product.packing}
+                    </p>
+
+                    <p class="company">
+                        Mfg/Mkt : ${product.company}
+                    </p>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="info-right">
+
+                    <span class="mrp-price">
+                        ₹ ${product.price}
+                    </span>
+
+                    <span class="mrp-text">
+                        MRP
+                    </span>
 
                 </div>
 
             </div>
 
+        </div>
 
+        <!-- Add To Cart / Qty box -->
+        ${
+            qty === 0
+            ? `
+                <button onclick="addToCart(${product.id})">
+                    Add to Cart
+                </button>
+              `
+            : `
+                <div class="qty-box">
 
-            <!-- =====================================================
-                 RIGHT SECTION (PRODUCT DETAILS)
-            ====================================================== -->
+                    <div class="qty-btn minus"
+                        onclick="decreaseQtyById(${product.id})">
+                        &minus;
+                    </div>
 
-            <div class="product-right">
+                    <div class="qty-value">
+                        ${qty}
+                    </div>
 
-
-                <!-- Product Name -->
-
-                <div class="product-title">
-
-                    <h3>${product.name}</h3>
-
-                </div>
-
-
-
-                <!-- Product Information -->
-
-                <div class="product-meta">
-
-                    <div class="info-row">
-
-                        <!-- Left -->
-
-                        <div class="info-left">
-
-                            <p class="packing">
-                                Pack : ${product.packing}
-                            </p>
-
-                            <p class="company">
-                                Mfg/Mkt : ${product.company}
-                            </p>
-
-                        </div>
-
-
-                        <!-- Right -->
-
-                        <div class="info-right">
-
-                            <div class="info-right">
-
-                                <span class="mrp-price">
-                                     ₹ ${product.price}
-                                </span>
-
-                                <span class="mrp-text">
-                                      MRP
-                                </span>
-
-                            </div>
-
-                        </div>
-
+                    <div class="qty-btn plus"
+                        onclick="increaseQtyById(${product.id})">
+                        &plus;
                     </div>
 
                 </div>
+              `
+        }
 
+    </div>
 
+</div>
+
+`;
 
                 <!-- =====================================================
                      ADD TO CART / QUANTITY SELECTOR
