@@ -513,7 +513,7 @@ function showCart(){
 
         <button class="close-btn"
         onclick="closeCart()">
-            ❌ Close
+             Close
         </button>
 
     </div>
