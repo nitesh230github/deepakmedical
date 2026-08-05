@@ -1330,7 +1330,7 @@ input{
 
     gap:10px;
 
-    align-items:flex-start;
+    align-items:center;   /* pehle flex-start tha */
 
 }
 
