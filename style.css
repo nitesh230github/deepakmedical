@@ -544,6 +544,121 @@ header{
 
 }
 
+
+/* Cart + and - */
+
+.cart-qty-btn{
+
+    width:32px;
+
+    height:32px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#00897b;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.cart-qty-btn:hover{
+
+    background:#00695c;
+
+}
+
+.cart-qty-value{
+
+    display:inline-block;
+
+    width:28px;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+
+/* WhatsApp Button */
+
+.order-btn{
+
+    width:100%;
+
+    height:44px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#25D366;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.order-btn:hover{
+
+    background:#1EBE5D;
+
+}
+
+
+/* Close Button */
+
+.close-btn{
+
+    background:#ef4444;
+
+    color:#fff;
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.close-btn:hover{
+
+    background:#dc2626;
+
+}
+
+
+/* Remove Button */
+
+.remove-btn{
+
+    background:transparent;
+
+    border:none;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
 #cartArea{
 
     position:fixed;

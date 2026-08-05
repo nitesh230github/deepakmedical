@@ -435,7 +435,7 @@ function showCart(){
 
     let html = `
 
-    <button onclick="closeCart()"> ❌ Close
+    <button class="close-btn" onclick="closeCart()"> ❌ Close
 
     </button> <h2> 🛒 Cart </h2>`;
 
@@ -452,15 +452,25 @@ function showCart(){
 
  
 
- <button onclick="decreaseQty(${index})">-</button>
+           <button class="cart-qty-btn"
+              onclick="decreaseQty(${index})">
+               −
+           </button>
 
- ${item.qty}
+           <span class="cart-qty-value">
+             ${item.qty}
+           </span>
 
- <button onclick="increaseQty(${index})">+</button>
+           <button class="cart-qty-btn"
+             onclick="increaseQty(${index})">
+              +
+           </button>
 
- <button onclick="removeItem(${index})">
- ❌
- </button>
+           <button class="remove-btn"
+               onclick="removeItem(${index})">
+              ❌
+           </button>
+
         </div>
         `;
     });
@@ -485,7 +495,8 @@ function showCart(){
 
     <br><br>
 
-    <button onclick="sendOrder()">
+    <button class="order-btn"
+        onclick="sendOrder()">
         Order on WhatsApp
     </button>
 
