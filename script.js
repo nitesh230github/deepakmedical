@@ -259,18 +259,33 @@ function displayProducts(items){
 
             <h3>${product.name}</h3>
 
-            <p class="packing">
-                Packing: ${product.packing}
-            </p>
+            <div class="product-info">
 
-            <p class="company">
-                Mfg/Mkt: ${product.company}
-            </p>
+               <div class="info-left">
 
-            <p class="price">
-                <span class="mrp-text">MRP</span>
-                <span class="mrp-price">₹ ${product.price}</span>
-            </p>
+                  <p class="packing">
+                     Pack: ${product.packing}
+                  </p>
+
+                   <p class="company">
+                     Mfg/Mkt: ${product.company}
+                   </p>
+
+                </div>
+
+                <div class="info-right">
+
+                     <div class="mrp-price">
+                        ₹ ${product.price}
+                    </div>
+
+                    <div class="mrp-text">
+                       MRP
+                    </div>
+
+                </div>
+
+            </div>
 
             ${
                 qty === 0 ?
@@ -418,36 +433,73 @@ function showCart(){
     
     let total = 0;
 
-    let html = `
+    html = `
 
-    <button onclick="closeCart()"> ❌ Close
+         <div class="cart-header">
 
-    </button> <h2> 🛒 Cart </h2>`;
+              <h2>🛒 Cart</h2>
+
+              <button class="close-btn"
+                   onclick="closeCart()">
+
+                  ❌ Close
+
+              </button>
+
+        </div>   `;
 
     cart.forEach((item,index)=>{
 
         total += item.price * item.qty;
 
         html += `
-        <div style="margin-bottom:15px;border-bottom:1px solid #ddd;padding-bottom:10px;">
+        <div class="cart-item">
 
-            <b>${item.name}</b>
+           <div class="cart-item-top">
 
-           <br><br>
+                <span class="cart-name">
+                  ${item.name}
+               </span>
 
- 
+                <span class="cart-price">
+                  ₹${item.price}
+                </span>
 
- <button onclick="decreaseQty(${index})">-</button>
+            </div>
 
- ${item.qty}
+            <div class="cart-pack">
+               (${item.packing})
+            </div>
 
- <button onclick="increaseQty(${index})">+</button>
+           <div class="cart-action">
 
- <button onclick="removeItem(${index})">
- ❌
- </button>
-        </div>
-        `;
+           <div class="cart-qty-box">
+
+           <div class="qty-btn minus"
+                onclick="decreaseQty(${index})">
+               &minus;
+            </div>
+
+            <div class="qty-value">
+                ${item.qty}
+            </div>
+
+            <div class="qty-btn plus"
+               onclick="increaseQty(${index})">
+              &plus;
+            </div>
+
+            </div>
+
+             <button class="remove-btn"
+                onclick="removeItem(${index})">
+               ❌
+             </button>
+
+            </div>
+
+        </div> `;
+
     });
 
     html += `
@@ -470,7 +522,8 @@ function showCart(){
 
     <br><br>
 
-    <button onclick="sendOrder()">
+    <button class="order-btn"
+        onclick="sendOrder()">
         Order on WhatsApp
     </button>
 
