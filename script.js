@@ -452,56 +452,67 @@ function showCart(){
 
         total += item.price * item.qty;
 
-        html += `
-        <div class="cart-item">
+       html += `
+<div class="cart-item">
 
-           <div class="cart-item-top">
+    <div class="cart-row">
+
+        <img
+            src="${item.image}"
+            class="cart-img"
+            alt="${item.name}">
+
+        <div class="cart-details">
+
+            <div class="cart-item-top">
 
                 <span class="cart-name">
-                  ${item.name}
-               </span>
+                    ${item.name}
+                </span>
 
                 <span class="cart-price">
-                  ₹${item.price}
+                    ₹${item.price}
                 </span>
 
             </div>
 
             <div class="cart-pack">
-               (${item.packing})
+                (${item.packing})
             </div>
 
-           <div class="cart-action">
+            <div class="cart-action">
 
-           <div class="cart-qty-box">
+                <div class="cart-qty-box">
 
-           <div class="qty-btn minus"
-                onclick="decreaseQty(${index})">
-               &minus;
+                    <div class="qty-btn minus"
+                        onclick="decreaseQty(${index})">
+                        &minus;
+                    </div>
+
+                    <div class="qty-value">
+                        ${item.qty}
+                    </div>
+
+                    <div class="qty-btn plus"
+                        onclick="increaseQty(${index})">
+                        &plus;
+                    </div>
+
+                </div>
+
+                <button class="remove-btn"
+                    onclick="removeItem(${index})">
+                    ❌
+                </button>
+
             </div>
 
-            <div class="qty-value">
-                ${item.qty}
-            </div>
+        </div>
 
-            <div class="qty-btn plus"
-               onclick="increaseQty(${index})">
-              &plus;
-            </div>
+    </div>
 
-            </div>
-
-             <button class="remove-btn"
-                onclick="removeItem(${index})">
-               ❌
-             </button>
-
-            </div>
-
-        </div> `;
-
-    });
-
+</div>
+`;
     html += `
 
     <h3 class="total">

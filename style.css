@@ -1325,4 +1325,39 @@ input{
 
 }
 
+/* adding image of product on cart */
+.cart-row{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:flex-start;
+
+}
+
+.cart-img{
+
+    width:48px;
+
+    height:48px;
+
+    object-fit:contain;
+
+    border:1px solid #eee;
+
+    border-radius:8px;
+
+    background:#fff;
+
+    flex-shrink:0;
+
+}
+
+.cart-details{
+
+    flex:1;
+
+}
+
 /*  cart buttons end */
