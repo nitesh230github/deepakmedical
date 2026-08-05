@@ -1248,15 +1248,7 @@ header{
 
     align-items:baseline;
 
-    justify-content:flex-start;
-
     gap:6px;
-
-    width:auto;
-
-    padding:0;
-
-    margin-top:2px;
 
 }
 
@@ -1266,12 +1258,6 @@ header{
 
     color:#999;
 
-    font-weight:500;
-
-    margin:0;
-
-    line-height:1;
-
 }
 
 .mrp-price{
@@ -1279,12 +1265,6 @@ header{
     font-size:18px;
 
     font-weight:700;
-
-    color:#111;
-
-    line-height:1;
-
-    white-space:nowrap;
 
 }
 

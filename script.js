@@ -338,12 +338,16 @@ function displayProducts(items){
 
                         <div class="info-right">
 
-                            <div class="mrp-price">
-                                ₹ ${product.price}
-                            </div>
+                            <div class="info-right">
 
-                            <div class="mrp-text">
-                                MRP
+                                <span class="mrp-price">
+                                     ₹ ${product.price}
+                                </span>
+
+                                <span class="mrp-text">
+                                      MRP
+                                </span>
+
                             </div>
 
                         </div>
