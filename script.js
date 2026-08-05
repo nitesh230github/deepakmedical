@@ -241,6 +241,14 @@ function selectCategory(category,button){
     button.classList.add("active");
 
 }
+/*=========================================================
+  DISPLAY PRODUCTS
+  ---------------------------------------------------------
+  Purpose:
+  - Display all products in product grid
+  - Show Add to Cart button if qty = 0
+  - Show Quantity selector if product already in cart
+=========================================================*/
 
 function displayProducts(items){
 
@@ -249,77 +257,114 @@ function displayProducts(items){
     items.forEach(product => {
 
         let cartItem = cart.find(item => item.id === product.id);
-
         let qty = cartItem ? cartItem.qty : 0;
 
         html += `
+
         <div class="card">
 
-            <img src="${product.image}" alt="${product.name}">
+            <!-- =====================================================
+                 PRODUCT IMAGE SECTION
+            ====================================================== -->
 
-            <h3>${product.name}</h3>
+            <div class="product-image">
 
-            <div class="product-info">
-
-               <div class="info-left">
-
-                  <p class="packing">
-                     Pack: ${product.packing}
-                  </p>
-
-                   <p class="company">
-                     Mfg/Mkt: ${product.company}
-                   </p>
-
-                </div>
-
-                <div class="info-right">
-
-                     <div class="mrp-price">
-                        ₹ ${product.price}
-                    </div>
-
-                    <div class="mrp-text">
-                       MRP
-                    </div>
-
-                </div>
+                <img
+                    src="${product.image}"
+                    alt="${product.name}">
 
             </div>
 
-            ${
-                qty === 0 ?
 
-                `
-                <button onclick="addToCart(${product.id})">
-                      Add to Cart
-                      </button>
-                 `
+            <!-- =====================================================
+                 PRODUCT DETAILS SECTION
+            ====================================================== -->
 
-                 :
+            <div class="product-info">
 
-                 `
-                <div class="qty-box">
+                <h3>${product.name}</h3>
 
-                    <div class="qty-btn minus"
-                       onclick="decreaseQtyById(${product.id})">
-                        &minus;
+
+                <!-- Product Info Row -->
+
+                <div class="info-row">
+
+                    <!--======================Left Side===================== -->
+
+                    <div class="info-left">
+
+                        <p class="packing">
+                            Pack: ${product.packing}
+                        </p>
+
+                        <p class="company">
+                            Mfg/Mkt: ${product.company}
+                        </p>
+
                     </div>
 
-                    <div class="qty-value">
-                        ${qty}
-                    </div>
 
-                    <div class="qty-btn plus"
-                        onclick="increaseQtyById(${product.id})">
-                        &plus;
+                    <!--======================== Right Side========================= -->
+
+                    <div class="info-right">
+
+                        <div class="mrp-price">
+                            ₹ ${product.price}
+                        </div>
+
+                        <div class="mrp-text">
+                            MRP
+                        </div>
+
                     </div>
 
                 </div>
-                `
-            }
+
+
+                <!-- Add to Cart / Quantity Selector -->
+
+                ${
+                    qty === 0 ?
+
+                    `
+                    <button onclick="addToCart(${product.id})">
+                        Add to Cart
+                    </button>
+                    `
+
+                    :
+
+                    `
+                    <div class="qty-box">
+
+                        <div class="qty-btn minus"
+                            onclick="decreaseQtyById(${product.id})">
+
+                            &minus;
+
+                        </div>
+
+                        <div class="qty-value">
+
+                            ${qty}
+
+                        </div>
+
+                        <div class="qty-btn plus"
+                            onclick="increaseQtyById(${product.id})">
+
+                            &plus;
+
+                        </div>
+
+                    </div>
+                    `
+                }
+
+            </div>
 
         </div>
+
         `;
 
     });
@@ -327,7 +372,6 @@ function displayProducts(items){
     document.getElementById("products").innerHTML = html;
 
 }
-
 
 function addToCart(id){
 
@@ -351,7 +395,7 @@ function addToCart(id){
 
             packing:product.packing,
 
-            company:product.company,
+            image:product.image,
 
             price:product.price,
 
@@ -412,93 +456,107 @@ function saveCart(){
 
 function showCart(){
 
-  if(cart.length === 0){
+    if(cart.length === 0){
 
-    closeCart();
+        closeCart();
 
-    setTimeout(() => {
+        setTimeout(() => {
+            document.getElementById("cartArea").innerHTML = "";
+        },350);
 
-        document.getElementById("cartArea").innerHTML = "";
+        document.getElementById("cartButton").innerHTML =
+        "🛒 Cart (0)";
 
-    }, 350);
+        document.getElementById("cartButton").onclick =
+        toggleCart;
 
-    document.getElementById("cartButton").innerHTML =
-    "🛒 Cart (0)";
+        return;
+    }
 
-    document.getElementById("cartButton").onclick =
- toggleCart;
-
-    return;
- }
-    
     let total = 0;
 
-    html = `
+    let html = `
 
-         <div class="cart-header">
+    <div class="cart-header">
 
-              <h2>🛒 Cart</h2>
+        <h2>🛒 Cart</h2>
 
-              <button class="close-btn"
-                   onclick="closeCart()">
+        <button class="close-btn"
+        onclick="closeCart()">
+            ❌ Close
+        </button>
 
-                  ❌ Close
+    </div>
 
-              </button>
-
-        </div>   `;
+    `;
 
     cart.forEach((item,index)=>{
 
         total += item.price * item.qty;
 
         html += `
+
         <div class="cart-item">
 
-           <div class="cart-item-top">
+            <div class="cart-row">
 
-                <span class="cart-name">
-                  ${item.name}
-               </span>
+                <img
+                    src="${item.image}"
+                    class="cart-img"
+                    alt="${item.name}">
 
-                <span class="cart-price">
-                  ₹${item.price}
-                </span>
+                <div class="cart-details">
+
+                    <div class="cart-item-top">
+
+                        <span class="cart-name">
+                            ${item.name}
+                        </span>
+
+                        <span class="cart-price">
+                            ₹${item.price}
+                        </span>
+
+                    </div>
+
+                    <div class="cart-pack">
+                        (${item.packing})
+                    </div>
+
+                    <div class="cart-action">
+
+                        <div class="cart-qty-box">
+
+                            <div class="qty-btn minus"
+                                onclick="decreaseQty(${index})">
+                                &minus;
+                            </div>
+
+                            <div class="qty-value">
+                                ${item.qty}
+                            </div>
+
+                            <div class="qty-btn plus"
+                                onclick="increaseQty(${index})">
+                                &plus;
+                            </div>
+
+                        </div>
+
+                        <button class="remove-btn"
+                            onclick="removeItem(${index})">
+                            ❌
+                        </button>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="cart-pack">
-               (${item.packing})
-            </div>
+        </div>
 
-           <div class="cart-action">
-
-           <div class="cart-qty-box">
-
-           <div class="qty-btn minus"
-                onclick="decreaseQty(${index})">
-               &minus;
-            </div>
-
-            <div class="qty-value">
-                ${item.qty}
-            </div>
-
-            <div class="qty-btn plus"
-               onclick="increaseQty(${index})">
-              &plus;
-            </div>
-
-            </div>
-
-             <button class="remove-btn"
-                onclick="removeItem(${index})">
-               ❌
-             </button>
-
-            </div>
-
-        </div> `;
+        `;
 
     });
 
@@ -530,22 +588,20 @@ function showCart(){
     `;
 
     document.getElementById("cartArea").innerHTML = html;
-    
+
     let totalItems = 0;
 
-    cart.forEach(item => {
+    cart.forEach(item=>{
+        totalItems += item.qty;
+    });
 
-     totalItems += item.qty;
+    document.getElementById("cartButton").innerHTML =
+    `🛒 Cart (${totalItems})`;
 
-     });
+    document.getElementById("cartButton").onclick =
+    toggleCart;
 
- document.getElementById("cartButton")
- .innerHTML = `🛒 Cart (${totalItems})`;
-
- document.getElementById("cartButton").onclick =
- toggleCart;
 }
-
 function refreshUI(){
 
     saveCart();

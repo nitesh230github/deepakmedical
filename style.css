@@ -579,7 +579,7 @@ header{
 
     display:inline-block;
 
-    width:28px;
+    width: 54px;
 
     text-align:center;
 
@@ -998,6 +998,58 @@ input{
 
 }
 
+/*=========================================================
+  MOBILE PRODUCT CARD LAYOUT
+  ---------------------------------------------------------
+  Screen Width <= 768px
+  Product Image Left | Product Details Right
+=========================================================*/
+
+.card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px;
+
+}
+
+.product-image{
+
+    width:40%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.product-info{
+
+    width:60%;
+
+}
+
+/*=========================================================
+  MOBILE PRODUCT GRID
+  One product per row
+=========================================================*/
+
+#products{
+
+    grid-template-columns:1fr;
+
+    gap:14px;
+
+    padding:12px;
+
+}
+
 } 
 
 
@@ -1164,8 +1216,6 @@ input{
 
     align-items:center;
 
-    margin-top:10px;
-
 }
 
 
@@ -1181,7 +1231,7 @@ input{
 
     border-radius:999px;
 
-    padding:3px;
+    padding:3px ;  /* horizontal padding badh gaya  / before it was padding:3px;*/
 
 }
 
@@ -1229,7 +1279,7 @@ input{
 
 .cart-qty-box .qty-value{
 
-    min-width:34px;
+    min-width:60px;
 
     text-align:center;
 
@@ -1280,19 +1330,19 @@ input{
 
 .cart-name{
 
-    font-size:14px;
+    font-size:13px;
 
     font-weight:600;
 
-    color:#222;
+    line-height:1.15;
 
-    line-height:1.2;
+    color:#222;
 
 }
 
 .cart-price{
 
-    font-size:14px;
+    font-size:13px;
 
     font-weight:700;
 
@@ -1308,9 +1358,9 @@ input{
 
     color:#777;
 
-    margin-bottom:6px;
+    margin-top:2px;
 
-    line-height:1.1;
+    margin-bottom:6px;
 
 }
 
@@ -1325,4 +1375,40 @@ input{
 
 }
 
+/* adding image of product on cart */
+.cart-row{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;   /* pehle flex-start tha */
+
+}
+
+.cart-img{
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit:contain;
+
+    border:1px solid #ececec;
+
+    border-radius:8px;
+
+    background:#fff;
+
+    padding:3px;
+
+    flex-shrink:0;
+
+}
+
+.cart-details{
+
+    flex:1;
+
+}
 /*  cart buttons end */
