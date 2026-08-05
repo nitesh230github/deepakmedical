@@ -1288,7 +1288,7 @@ header{
 
 
 /*=========================================================
-                BUTTON
+            MOBILE ADD TO CART BUTTON
 =========================================================*/
 
 #products .card button{
@@ -1297,7 +1297,17 @@ header{
 
     min-width:140px;
 
+    height:34px;
+
     padding:0 18px;
+
+    margin-top:2px;
+
+    border-radius:10px;
+
+    font-size:13px;
+
+    font-weight:600;
 
 }
 
