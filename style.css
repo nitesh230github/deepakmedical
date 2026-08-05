@@ -1265,4 +1265,64 @@ input{
     transform:scale(1.15);
 
 }
+
+.cart-item-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:2px;
+
+}
+
+.cart-name{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#222;
+
+    line-height:1.2;
+
+}
+
+.cart-price{
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:#111;
+
+    white-space:nowrap;
+
+}
+
+.cart-pack{
+
+    font-size:11px;
+
+    color:#777;
+
+    margin-bottom:6px;
+
+    line-height:1.1;
+
+}
+
+/* cart styling Name and spacing  and horizontal line after every product*/
+.cart-item{
+
+    margin-bottom:10px;
+
+    padding-bottom:8px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
 /*  cart buttons end */

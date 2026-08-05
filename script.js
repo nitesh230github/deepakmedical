@@ -453,11 +453,23 @@ function showCart(){
         total += item.price * item.qty;
 
         html += `
-        <div style="margin-bottom:15px;border-bottom:1px solid #ddd;padding-bottom:10px;">
+        <div class="cart-item">
 
-            <b>${item.name}</b>
+           <div class="cart-item-top">
 
-           <br><br>
+                <span class="cart-name">
+                  ${item.name}
+               </span>
+
+                <span class="cart-price">
+                  ₹${item.price}
+                </span>
+
+            </div>
+
+            <div class="cart-pack">
+               (${item.packing})
+            </div>
 
            <div class="cart-action">
 
@@ -487,7 +499,7 @@ function showCart(){
             </div>
 
         </div> `;
-        
+
     });
 
     html += `
