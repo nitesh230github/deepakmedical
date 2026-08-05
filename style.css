@@ -1139,3 +1139,17 @@ input{
     border-color:#16a34a;
 
  }
+
+ /* Cart Buttons - order on whatsapp, + and - and close button */
+
+ .cart-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}

@@ -433,11 +433,20 @@ function showCart(){
     
     let total = 0;
 
-    let html = `
+    html = `
 
-    <button class="close-btn" onclick="closeCart()"> ❌ Close
+         <div class="cart-header">
 
-    </button> <h2> 🛒 Cart </h2>`;
+              <h2>🛒 Cart</h2>
+
+              <button class="close-btn"
+                   onclick="closeCart()">
+
+                  ❌ Close
+
+              </button>
+
+        </div>   `;
 
     cart.forEach((item,index)=>{
 
@@ -450,29 +459,35 @@ function showCart(){
 
            <br><br>
 
- 
+           <div class="cart-action">
 
-           <button class="cart-qty-btn"
-              onclick="decreaseQty(${index})">
-               −
-           </button>
+           <div class="cart-qty-box">
 
-           <span class="cart-qty-value">
-             ${item.qty}
-           </span>
+           <div class="qty-btn minus"
+                onclick="decreaseQty(${index})">
+               &minus;
+            </div>
 
-           <button class="cart-qty-btn"
-             onclick="increaseQty(${index})">
-              +
-           </button>
+            <div class="qty-value">
+                ${item.qty}
+            </div>
 
-           <button class="remove-btn"
-               onclick="removeItem(${index})">
-              ❌
-           </button>
+            <div class="qty-btn plus"
+               onclick="increaseQty(${index})">
+              &plus;
+            </div>
 
-        </div>
-        `;
+            </div>
+
+             <button class="remove-btn"
+                onclick="removeItem(${index})">
+               ❌
+             </button>
+
+            </div>
+
+        </div> `;
+        
     });
 
     html += `
