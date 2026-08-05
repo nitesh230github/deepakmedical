@@ -998,6 +998,58 @@ input{
 
 }
 
+/*=========================================================
+  MOBILE PRODUCT CARD LAYOUT
+  ---------------------------------------------------------
+  Screen Width <= 768px
+  Product Image Left | Product Details Right
+=========================================================*/
+
+.card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px;
+
+}
+
+.product-image{
+
+    width:40%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.product-info{
+
+    width:60%;
+
+}
+
+/*=========================================================
+  MOBILE PRODUCT GRID
+  One product per row
+=========================================================*/
+
+#products{
+
+    grid-template-columns:1fr;
+
+    gap:14px;
+
+    padding:12px;
+
+}
+
 } 
 
 
