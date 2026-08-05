@@ -259,18 +259,33 @@ function displayProducts(items){
 
             <h3>${product.name}</h3>
 
-            <p class="packing">
-                Packing: ${product.packing}
-            </p>
+            <div class="product-info">
 
-            <p class="company">
-                Mfg/Mkt: ${product.company}
-            </p>
+               <div class="info-left">
 
-            <p class="price">
-                <span class="mrp-text">MRP</span>
-                <span class="mrp-price">₹ ${product.price}</span>
-            </p>
+                  <p class="packing">
+                     Packing: ${product.packing}
+                  </p>
+
+                   <p class="company">
+                     Mfg/Mkt: ${product.company}
+                   </p>
+
+                </div>
+
+                <div class="info-right">
+
+                     <div class="mrp-price">
+                        ₹ ${product.price}
+                    </div>
+
+                    <div class="mrp-text">
+                       MRP
+                    </div>
+
+                </div>
+
+            </div>
 
             ${
                 qty === 0 ?
