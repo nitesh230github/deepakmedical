@@ -502,7 +502,9 @@ header{
     padding-right:12px;
 
 }
-button{
+
+ /* ADD TO CART Button */
+#products .card button{
 
     background:#00897b;
 
@@ -526,17 +528,17 @@ button{
 
 }
 
-button:hover{
+#products .card button:hover{
 
     background:#00695c;
 
-    transform:translateY(-2px) ;
+    transform:translateY(-2px);
 
     box-shadow:0 5px 14px rgba(15,157,88,0.30);
 
 }
 
-button:active{
+#products .card button:active{
 
     transform:scale(0.98);
 
