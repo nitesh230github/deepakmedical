@@ -575,7 +575,7 @@ function showCart(){
 
                         <button class="remove-btn"
                             onclick="removeItem(${index})">
-                            ❌
+                            &times;
                         </button>
 
                     </div>
