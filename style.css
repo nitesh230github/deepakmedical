@@ -1227,7 +1227,7 @@ input{
 
 .cart-qty-box .qty-value{
 
-     min: width 34px;;
+    min-width:60px;
 
     text-align:center;
 
