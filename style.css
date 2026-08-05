@@ -1050,7 +1050,50 @@ input{
 
 }
 
-} 
+/*=========================================================
+  MOBILE PRODUCT DETAILS LAYOUT
+=========================================================*/
+
+.info-row{
+
+    display:block;
+
+}
+
+.info-left{
+
+    margin-bottom:8px;
+
+}
+
+.info-right{
+
+    text-align:left;
+
+    margin-bottom:10px;
+
+}
+
+.product-info button{
+
+    width:100%;
+
+    margin-top:8px;
+
+}
+
+.qty-box{
+
+    width:100%;
+
+    margin-top:8px;
+
+    justify-content:center;
+
+}
+
+}
+
 
 
 /* 👇 slider code in mobile */
