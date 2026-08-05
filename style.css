@@ -530,7 +530,7 @@ button:hover{
 
     background:#00695c;
 
-    transform:translateY(-2px) scale(1.02);
+    transform:translateY(-2px) ;
 
     box-shadow:0 6px 16px rgba(0,105,92,.35);
 
