@@ -1242,29 +1242,49 @@ header{
         MOBILE PRICE LAYOUT
 =========================================================*/
 
-.info-right{
+.product-right .info-right{
+
+    width:auto;
 
     display:flex;
 
+    flex-direction:row !important;
+
     align-items:baseline;
 
-    gap:6px;
+    justify-content:flex-start;
+
+    gap:4px;
+
+    padding-right:0;
 
 }
 
-.mrp-text{
+.product-right .mrp-price{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111;
+
+    line-height:1;
+
+    white-space:nowrap;
+
+}
+
+.product-right .mrp-text{
 
     font-size:10px;
 
     color:#999;
 
-}
+    margin:0;
 
-.mrp-price{
+    letter-spacing:0;
 
-    font-size:18px;
-
-    font-weight:700;
+    line-height:1;
 
 }
 
