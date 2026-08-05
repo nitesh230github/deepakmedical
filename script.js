@@ -268,7 +268,8 @@ function displayProducts(items){
 
         let cartItem = cart.find(item => item.id === product.id);
         let qty = cartItem ? cartItem.qty : 0;
-html += `
+
+        html += `
 
 <!-- =====================================================
      PRODUCT CARD
@@ -292,7 +293,6 @@ html += `
 
     </div>
 
-
     <!-- =====================================================
          RIGHT SECTION (PRODUCT DETAILS)
     ====================================================== -->
@@ -306,7 +306,6 @@ html += `
             <h3>${product.name}</h3>
 
         </div>
-
 
         <!-- Product Information -->
 
@@ -346,32 +345,49 @@ html += `
 
         </div>
 
-        <!-- Add To Cart / Qty box -->
+        <!-- =====================================================
+             ADD TO CART / QUANTITY SELECTOR
+        ====================================================== -->
+
         ${
             qty === 0
+
             ? `
+
                 <button onclick="addToCart(${product.id})">
+
                     Add to Cart
+
                 </button>
+
               `
+
             : `
+
                 <div class="qty-box">
 
                     <div class="qty-btn minus"
                         onclick="decreaseQtyById(${product.id})">
+
                         &minus;
+
                     </div>
 
                     <div class="qty-value">
+
                         ${qty}
+
                     </div>
 
                     <div class="qty-btn plus"
                         onclick="increaseQtyById(${product.id})">
+
                         &plus;
+
                     </div>
 
                 </div>
+
               `
         }
 
@@ -381,65 +397,11 @@ html += `
 
 `;
 
-                <!-- =====================================================
-                     ADD TO CART / QUANTITY SELECTOR
-                ====================================================== -->
-
-                ${
-                    qty === 0
-
-                    ?
-
-                    `
-                    <button
-                        onclick="addToCart(${product.id})">
-
-                        Add to Cart
-
-                    </button>
-                    `
-
-                    :
-
-                    `
-                    <div class="qty-box">
-
-                        <div class="qty-btn minus"
-                            onclick="decreaseQtyById(${product.id})">
-
-                            &minus;
-
-                        </div>
-
-                        <div class="qty-value">
-
-                            ${qty}
-
-                        </div>
-
-                        <div class="qty-btn plus"
-                            onclick="increaseQtyById(${product.id})">
-
-                            &plus;
-
-                        </div>
-
-                    </div>
-                    `
-                }
-
-            </div>
-
-        </div>
-
-        `;
-
     });
 
     document.getElementById("products").innerHTML = html;
 
 }
-
 
 function addToCart(id){
 
