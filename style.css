@@ -360,7 +360,7 @@ header{
 
 .product-meta{
 
-    margin-bottom:10px;
+    margin-bottom:4px;
 
 }
 
@@ -544,7 +544,7 @@ header{
 
     padding:1px;
 
-    margin-top:8px;
+    margin-top:4px;
 
     box-sizing:border-box;
 
@@ -1230,22 +1230,24 @@ header{
 }
 
 /*=========================================================
-            MOBILE PRICE ROW
+        MOBILE PRICE SECTION
 =========================================================*/
 
 .info-right{
 
     display:flex;
 
-    flex-direction:row;
+    justify-content:flex-start;
 
-    justify-content:space-between;
+    align-items:baseline;
 
-    align-items:center;
+    gap:6px;
 
-    width:100%;
+    width:auto;
 
     margin-top:4px;
+
+    padding:0;
 
 }
 
@@ -1253,9 +1255,13 @@ header{
 
     font-size:10px;
 
-    color:#999;
-
     font-weight:500;
+
+    color:#9a9a9a;
+
+    line-height:1;
+
+    margin:0;
 
 }
 
@@ -1266,6 +1272,8 @@ header{
     font-weight:700;
 
     color:#111;
+
+    line-height:1;
 
 }
 
