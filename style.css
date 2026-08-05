@@ -1392,4 +1392,44 @@ header{
 
 }
 
+/*=========================================================
+                MOBILE CART REMOVE BUTTON
+=========================================================*/
+
+.remove-btn{
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ef4444;
+
+    color:#fff;          /* White cross */
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.remove-btn:hover{
+
+    background:#dc2626;
+
+    color:#fff;
+
+}
+
 }
