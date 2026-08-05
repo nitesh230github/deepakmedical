@@ -484,7 +484,7 @@ header{
 
     width:88%;
 
-    height:42px;
+    height:36px;
 
     background:#00897b;
 
@@ -1229,19 +1229,23 @@ header{
 
 }
 
+/*=========================================================
+            MOBILE PRICE ROW
+=========================================================*/
+
 .info-right{
 
-    width:auto;
+    display:flex;
 
-    padding:0;
+    flex-direction:row;
 
-    align-items:flex-start;
+    justify-content:space-between;
 
-}
+    align-items:center;
 
-.mrp-price{
+    width:100%;
 
-    font-size:20px;
+    margin-top:4px;
 
 }
 
@@ -1249,7 +1253,19 @@ header{
 
     font-size:10px;
 
-    margin-bottom:10px;
+    color:#999;
+
+    font-weight:500;
+
+}
+
+.mrp-price{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#111;
 
 }
 
