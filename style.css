@@ -1239,24 +1239,24 @@ header{
 }
 
 /*=========================================================
-        MOBILE PRICE SECTION
+        MOBILE PRICE LAYOUT
 =========================================================*/
 
 .info-right{
 
     display:flex;
 
-    justify-content:flex-start;
-
     align-items:baseline;
+
+    justify-content:flex-start;
 
     gap:6px;
 
     width:auto;
 
-    margin-top:2px;
-
     padding:0;
+
+    margin-top:2px;
 
 }
 
@@ -1264,19 +1264,19 @@ header{
 
     font-size:10px;
 
+    color:#999;
+
     font-weight:500;
 
-    color:#9a9a9a;
+    margin:0;
 
     line-height:1;
-
-    margin:0;
 
 }
 
 .mrp-price{
 
-    font-size:20px;
+    font-size:18px;
 
     font-weight:700;
 
@@ -1284,8 +1284,9 @@ header{
 
     line-height:1;
 
-}
+    white-space:nowrap;
 
+}
 
 /*=========================================================
             MOBILE ADD TO CART BUTTON
@@ -1311,16 +1312,41 @@ header{
 
 }
 
-
 /*=========================================================
-                QTY
+        MOBILE PRODUCT QTY BOX
 =========================================================*/
 
-.qty-box{
+#products .qty-box{
 
-    width:145px;
+    width:140px;
 
-    margin-top:8px;
+    height:34px;
+
+    margin-top:2px;
+
+    padding:1px;
+
+}
+
+/*=========================================================
+        MOBILE PRODUCT QTY BUTTON
+=========================================================*/
+
+#products .qty-btn{
+
+    width:30px;
+
+    height:30px;
+
+    font-size:17px;
+
+}
+
+#products .qty-value{
+
+    font-size:15px;
+
+    font-weight:700;
 
 }
 
