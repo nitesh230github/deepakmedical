@@ -1394,7 +1394,7 @@ header{
 
 /*=========================================================
                 MOBILE CART REMOVE BUTTON
-=========================================================*/
+=========================================================
 
 .remove-btn{
 
@@ -1408,7 +1408,7 @@ header{
 
     background:#ef4444;
 
-    color:#fff;          /* White cross */
+    color:#fff;          /* White cross 
 
     cursor:pointer;
 
@@ -1430,6 +1430,6 @@ header{
 
     color:#fff;
 
-}
+}*/
 
 }
