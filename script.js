@@ -351,7 +351,7 @@ function addToCart(id){
 
             packing:product.packing,
 
-            company:product.company,
+            image:product.image,
 
             price:product.price,
 
