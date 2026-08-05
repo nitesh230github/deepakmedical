@@ -1179,7 +1179,7 @@ input{
 
     border-radius:999px;
 
-    padding:3px 8px;   /* horizontal padding badh gaya  / before it was padding:3px;*/
+    padding:3px ;  /* horizontal padding badh gaya  / before it was padding:3px;*/
 
 }
 
@@ -1227,7 +1227,7 @@ input{
 
 .cart-qty-box .qty-value{
 
-    min-width:34px;
+    min: width 54px;
 
     text-align:center;
 
