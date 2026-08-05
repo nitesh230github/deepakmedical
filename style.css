@@ -411,24 +411,22 @@ header{
 
     color:#111;
 
-    line-height:1;
+    line-height:1.05;
 
-    white-space:nowrap;   /* ₹ aur price kabhi alag nahi honge */
-
+    white-space:nowrap;
 }
 
 .mrp-text{
 
-    font-size:11px;
+    font-size:10px;
 
     font-weight:500;
 
     color:#9a9a9a;
 
+    letter-spacing:0.5px;
+
     margin-top:2px;
-
-    letter-spacing:0.4px;
-
 }
 
 .packing{
@@ -483,14 +481,15 @@ header{
 
     text-align:left;
 
-    padding-left:6px;
+    padding-left:12px;
 
-    padding-right:10px;
+    padding-right:14px;
 
 }
+
 .info-right{
 
-    width:90px;
+    width:95px;
 
     display:flex;
 
@@ -500,7 +499,8 @@ header{
 
     align-items:flex-end;
 
-    padding-right:6px;
+    padding-right:12px;
+
 }
   
 button{
