@@ -1164,8 +1164,6 @@ input{
 
     align-items:center;
 
-    margin-top:10px;
-
 }
 
 
@@ -1280,19 +1278,19 @@ input{
 
 .cart-name{
 
-    font-size:14px;
+    font-size:13px;
 
     font-weight:600;
 
-    color:#222;
+    line-height:1.15;
 
-    line-height:1.2;
+    color:#222;
 
 }
 
 .cart-price{
 
-    font-size:14px;
+    font-size:13px;
 
     font-weight:700;
 
@@ -1308,9 +1306,9 @@ input{
 
     color:#777;
 
-    margin-bottom:6px;
+    margin-top:2px;
 
-    line-height:1.1;
+    margin-bottom:6px;
 
 }
 
@@ -1338,17 +1336,19 @@ input{
 
 .cart-img{
 
-    width:48px;
+    width:50px;
 
-    height:48px;
+    height:50px;
 
     object-fit:contain;
 
-    border:1px solid #eee;
+    border:1px solid #ececec;
 
     border-radius:8px;
 
     background:#fff;
+
+    padding:3px;
 
     flex-shrink:0;
 
@@ -1359,5 +1359,4 @@ input{
     flex:1;
 
 }
-
 /*  cart buttons end */
