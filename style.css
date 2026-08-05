@@ -502,20 +502,44 @@ header{
     padding-right:12px;
 
 }
-  
 button{
-    background:#16a34a;
-    color:white;
+
+    background:#00796b;
+
+    color:#fff;
+
     border:none;
-    padding:10px 16px;
-    border-radius:10px;
+
+    width:88%;
+
+    height:42px;
+
+    border-radius:12px;
+
     cursor:pointer;
-    font-size:14px;
-    font-weight:bold;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:all 0.25s ease;
+
 }
 
 button:hover{
-    background:#15803d;
+
+    background:#00695c;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 5px 14px rgba(15,157,88,0.30);
+
+}
+
+button:active{
+
+    transform:scale(0.98);
+
 }
 
 #cartArea{

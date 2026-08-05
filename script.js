@@ -264,7 +264,7 @@ function displayProducts(items){
                <div class="info-left">
 
                   <p class="packing">
-                     Packing: ${product.packing}
+                     Pack: ${product.packing}
                   </p>
 
                    <p class="company">
