@@ -2686,7 +2686,57 @@
     "uses": "Anemia, iron deficiency",
     "bestseller": false,
     "image": "images/hemolab_forte_syp_450.jpg"
+  },
+  [
+  {
+    "id": 274,
+    "name": "LYKORICH Z SYRUP",
+    "company": "",
+    "price": 210.25,
+    "category": "LIQUID",
+    "packing": "225 ml",
+    "saltContent": "LYCOPENE + FOLIC ACID + CYANOCOBALAMIN",
+    "uses": "vitamin or mineral syrup, support overall health, energy metabolism, and immune function",
+    "bestseller": false,
+    "image": "images/lykorich_syp.jpg"
+  },
+  {
+    "id": 273,
+    "name": "NIMUDEC PLUS TAB ",
+    "company": "LABORATE",
+    "price": 52.07,
+    "category": "TABLET_CAP",
+    "packing": "15*2*10",
+    "saltContent": "PARACETAMOL + NIMESULIDE",
+    "uses": "Pain, fever",
+    "bestseller": true,
+    "image": "images/nimudec_plus_tab.jpg"
+  },
+  {
+    "id": 272,
+    "name": "TANCET COLD & FLU TAB",
+    "company": "BIOCHEM",
+    "price": 41.77,
+    "category": "TABLET_CAP",
+    "packing": "10*2*10",
+    "saltContent": "PARACETAMOL + PHENYLEPHRINE HCL + CAFFINE + DIPHENHYDRAMINE",
+    "uses": "Cold/flu , COMMON COLD, ALLERGY, CONGESTION, FEVER",
+    "bestseller": true,
+    "image": "images/tancet_cold&flu_tab.jpg"
+  },
+  {
+    "id": 271,
+    "name": "FERCEE RED SYRUP",
+    "company": "ALKEM",
+    "price": 150.0,
+    "category": "LIQUID",
+    "packing": "225 ml",
+    "saltContent": "FOLIC ACID + VITAMIN B12 + FERRIC AMMONIUM CITRATE",
+    "uses": "Iron deficiency anemia",
+    "bestseller": true,
+    "image": "images/fercee_red_syp.jpg"
   }
+]
 
 
 ]
