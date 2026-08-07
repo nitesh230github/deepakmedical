@@ -2687,7 +2687,6 @@
     "bestseller": false,
     "image": "images/hemolab_forte_syp_450.jpg"
   },
-  [
   {
     "id": 274,
     "name": "LYKORICH Z SYRUP",
@@ -2736,7 +2735,8 @@
     "bestseller": true,
     "image": "images/fercee_red_syp.jpg"
   }
+
+  
 ]
 
 
-]
