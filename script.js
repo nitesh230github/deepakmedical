@@ -250,6 +250,16 @@ function selectCategory(category,button){
   - Show Quantity selector if product already in cart
 =========================================================*/
 
+/*=========================================================
+  DISPLAY PRODUCTS
+-----------------------------------------------------------
+Purpose:
+- Display all products on website
+- Show Add to Cart button if quantity = 0
+- Show Quantity Selector if already added
+- Structure optimized for Desktop + Mobile Layout
+=========================================================*/
+
 function displayProducts(items){
 
     let html = "";
@@ -261,111 +271,131 @@ function displayProducts(items){
 
         html += `
 
-        <div class="card">
+<!-- =====================================================
+     PRODUCT CARD
+===================================================== -->
 
-            <!-- =====================================================
-                 PRODUCT IMAGE SECTION
-            ====================================================== -->
+<div class="card">
 
-            <div class="product-image">
+    <!-- =====================================================
+         LEFT SECTION (PRODUCT IMAGE)
+    ====================================================== -->
 
-                <img
-                    src="${product.image}"
-                    alt="${product.name}">
+    <div class="product-left">
 
-            </div>
+        <div class="product-image">
 
+            <img
+                src="${product.image}"
+                alt="${product.name}">
 
-            <!-- =====================================================
-                 PRODUCT DETAILS SECTION
-            ====================================================== -->
+        </div>
 
-            <div class="product-info">
+    </div>
 
-                <h3>${product.name}</h3>
+    <!-- =====================================================
+         RIGHT SECTION (PRODUCT DETAILS)
+    ====================================================== -->
 
+    <div class="product-right">
 
-                <!-- Product Info Row -->
+        <!-- Product Name -->
 
-                <div class="info-row">
+        <div class="product-title">
 
-                    <!--======================Left Side===================== -->
+            <h3>${product.name}</h3>
 
-                    <div class="info-left">
+        </div>
 
-                        <p class="packing">
-                            Pack: ${product.packing}
-                        </p>
+        <!-- Product Information -->
 
-                        <p class="company">
-                            Mfg/Mkt: ${product.company}
-                        </p>
+        <div class="product-meta">
 
-                    </div>
+            <div class="info-row">
 
+                <!-- Left -->
 
-                    <!--======================== Right Side========================= -->
+                <div class="info-left">
 
-                    <div class="info-right">
+                    <p class="packing">
+                        Pack : ${product.packing}
+                    </p>
 
-                        <div class="mrp-price">
-                            ₹ ${product.price}
-                        </div>
-
-                        <div class="mrp-text">
-                            MRP
-                        </div>
-
-                    </div>
+                    <p class="company">
+                        Mfg/Mkt : ${product.company}
+                    </p>
 
                 </div>
 
+                <!-- Right -->
 
-                <!-- Add to Cart / Quantity Selector -->
+                <div class="info-right">
 
-                ${
-                    qty === 0 ?
+                    <span class="mrp-price">
+                        ₹ ${product.price}
+                    </span>
 
-                    `
-                    <button onclick="addToCart(${product.id})">
-                        Add to Cart
-                    </button>
-                    `
+                    <span class="mrp-text">
+                        MRP
+                    </span>
 
-                    :
-
-                    `
-                    <div class="qty-box">
-
-                        <div class="qty-btn minus"
-                            onclick="decreaseQtyById(${product.id})">
-
-                            &minus;
-
-                        </div>
-
-                        <div class="qty-value">
-
-                            ${qty}
-
-                        </div>
-
-                        <div class="qty-btn plus"
-                            onclick="increaseQtyById(${product.id})">
-
-                            &plus;
-
-                        </div>
-
-                    </div>
-                    `
-                }
+                </div>
 
             </div>
 
         </div>
 
-        `;
+        <!-- =====================================================
+             ADD TO CART / QUANTITY SELECTOR
+        ====================================================== -->
+
+        ${
+            qty === 0
+
+            ? `
+
+                <button onclick="addToCart(${product.id})">
+
+                    Add to Cart
+
+                </button>
+
+              `
+
+            : `
+
+                <div class="qty-box">
+
+                    <div class="qty-btn minus"
+                        onclick="decreaseQtyById(${product.id})">
+
+                        &minus;
+
+                    </div>
+
+                    <div class="qty-value">
+
+                        ${qty}
+
+                    </div>
+
+                    <div class="qty-btn plus"
+                        onclick="increaseQtyById(${product.id})">
+
+                        &plus;
+
+                    </div>
+
+                </div>
+
+              `
+        }
+
+    </div>
+
+</div>
+
+`;
 
     });
 
@@ -483,7 +513,7 @@ function showCart(){
 
         <button class="close-btn"
         onclick="closeCart()">
-            ❌ Close
+             Close
         </button>
 
     </div>
@@ -545,7 +575,7 @@ function showCart(){
 
                         <button class="remove-btn"
                             onclick="removeItem(${index})">
-                            ❌
+                            &times;
                         </button>
 
                     </div>
