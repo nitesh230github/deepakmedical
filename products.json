@@ -2734,9 +2734,21 @@
     "uses": "Iron deficiency anemia",
     "bestseller": true,
     "image": "images/fercee_red_syp.jpg"
+  },
+  {
+    "id": 1007,
+    "name": "OKACET SYRUP",
+    "company": "CIPLA",
+    "price": 21.0,
+    "category": "LIQUID",
+    "packing": "30 ml",
+    "saltContent": "CETIRIZINE (5 mg)",
+    "uses": "Cold, cough, allergy, blocked/runny/itchy nose, red/watery eyes, and skin rashes",
+    "bestseller": true,
+    "image": "images/okacet_syp.jpg"
   }
 
-  
+
 ]
 
 
