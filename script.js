@@ -266,143 +266,249 @@ function displayProducts(items){
 
     items.forEach(product => {
 
+        // =====================================================
+        // CHECK CART QUANTITY
+        // =====================================================
+
         let cartItem = cart.find(item => item.id === product.id);
+
         let qty = cartItem ? cartItem.qty : 0;
 
-        html += `
 
-<!-- =====================================================
-     PRODUCT CARD
-===================================================== -->
+        // =====================================================
+        // PRODUCT IMAGE LIST
+        //
+        // New products:
+        // product.images = ["image1.jpg", "image2.jpg"]
+        //
+        // Old products:
+        // product.image = "image.jpg"
+        //
+        // This keeps old products working normally.
+        // =====================================================
 
-<div class="card">
+        let productImages =
+            Array.isArray(product.images) && product.images.length > 0
+                ? product.images
+                : [product.image];
 
-    <!-- =====================================================
-         LEFT SECTION (PRODUCT IMAGE)
-    ====================================================== -->
 
-    <div class="product-left">
+        // =====================================================
+        // MAIN IMAGE
+        // First image will be shown on product card.
+        // =====================================================
 
-        <div class="product-image">
+        let mainImage = productImages[0];
 
-            <img
-                src="${product.image}"
-                alt="${product.name}">
 
-        </div>
+        // =====================================================
+        // MULTIPLE IMAGE BADGE
+        //
+        // Badge will ONLY appear when product has more
+        // than one image.
+        // =====================================================
 
-    </div>
+        let imageBadge = "";
 
-    <!-- =====================================================
-         RIGHT SECTION (PRODUCT DETAILS)
-    ====================================================== -->
+        if(productImages.length > 1){
 
-    <div class="product-right">
+            imageBadge = `
 
-        <!-- Product Name -->
+                <div class="multiple-image-badge">
 
-        <div class="product-title">
-
-            <h3>${product.name}</h3>
-
-        </div>
-
-        <!-- Product Information -->
-
-        <div class="product-meta">
-
-            <div class="info-row">
-
-                <!-- Left -->
-
-                <div class="info-left">
-
-                    <p class="packing">
-                        Pack : ${product.packing}
-                    </p>
-
-                    <p class="company">
-                        Mfg/Mkt : ${product.company}
-                    </p>
+                    📷 ${productImages.length}
 
                 </div>
 
-                <!-- Right -->
+            `;
 
-                <div class="info-right">
+        }
 
-                    <span class="mrp-price">
-                        ₹ ${product.price}
-                    </span>
 
-                    <span class="mrp-text">
-                        MRP
-                    </span>
+        // =====================================================
+        // PRODUCT CARD
+        // =====================================================
+
+        html += `
+
+        <div class="card">
+
+
+            <!-- =================================================
+                 LEFT SECTION - PRODUCT IMAGE
+            ================================================== -->
+
+            <div class="product-left">
+
+                <div class="product-image">
+
+                    <img
+                        src="${mainImage}"
+                        alt="${product.name}"
+                        class="zoomable-image"
+                        onclick='openImageZoom(${JSON.stringify(productImages)})'>
+
+
+                    <!-- =========================================
+                         MULTIPLE IMAGE INDICATOR
+                         Only visible when multiple images exist.
+                    ========================================== -->
+
+                    ${imageBadge}
 
                 </div>
 
             </div>
 
-        </div>
 
-        <!-- =====================================================
-             ADD TO CART / QUANTITY SELECTOR
-        ====================================================== -->
+            <!-- =================================================
+                 RIGHT SECTION - PRODUCT DETAILS
+            ================================================== -->
 
-        ${
-            qty === 0
+            <div class="product-right">
 
-            ? `
 
-                <button onclick="addToCart(${product.id})">
+                <!-- =============================================
+                     PRODUCT NAME
+                ============================================== -->
 
-                    Add to Cart
+                <div class="product-title">
 
-                </button>
+                    <h3>${product.name}</h3>
 
-              `
+                </div>
 
-            : `
 
-                <div class="qty-box">
+                <!-- =============================================
+                     PRODUCT INFORMATION
+                ============================================== -->
 
-                    <div class="qty-btn minus"
-                        onclick="decreaseQtyById(${product.id})">
+                <div class="product-meta">
 
-                        &minus;
+                    <div class="info-row">
 
-                    </div>
 
-                    <div class="qty-value">
+                        <!-- LEFT SIDE
+                             Packing + Manufacturer
+                        -->
 
-                        ${qty}
+                        <div class="info-left">
 
-                    </div>
+                            <p class="packing">
 
-                    <div class="qty-btn plus"
-                        onclick="increaseQtyById(${product.id})">
+                                Pack : ${product.packing}
 
-                        &plus;
+                            </p>
+
+
+                            <p class="company">
+
+                                Mfg/Mkt : ${product.company}
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- RIGHT SIDE
+                             Price + MRP
+                        -->
+
+                        <div class="info-right">
+
+                            <span class="mrp-price">
+
+                                ₹ ${product.price}
+
+                            </span>
+
+
+                            <span class="mrp-text">
+
+                                MRP
+
+                            </span>
+
+                        </div>
 
                     </div>
 
                 </div>
 
-              `
-        }
 
-    </div>
+                <!-- =================================================
+                     ADD TO CART / QUANTITY SELECTOR
+                ================================================== -->
 
-</div>
+                ${
+                    qty === 0
 
-`;
+                    ?
+
+                    `
+
+                    <button
+                        onclick="addToCart(${product.id})">
+
+                        Add to Cart
+
+                    </button>
+
+                    `
+
+                    :
+
+                    `
+
+                    <div class="qty-box">
+
+
+                        <div
+                            class="qty-btn minus"
+                            onclick="decreaseQtyById(${product.id})">
+
+                            &minus;
+
+                        </div>
+
+
+                        <div class="qty-value">
+
+                            ${qty}
+
+                        </div>
+
+
+                        <div
+                            class="qty-btn plus"
+                            onclick="increaseQtyById(${product.id})">
+
+                            &plus;
+
+                        </div>
+
+                    </div>
+
+                    `
+
+                }
+
+            </div>
+
+        </div>
+
+        `;
 
     });
+
+
+    // =========================================================
+    // DISPLAY PRODUCTS
+    // =========================================================
 
     document.getElementById("products").innerHTML = html;
 
 }
-
 function addToCart(id){
 
     const product = products.find(p => p.id === id);
@@ -830,6 +936,272 @@ function closeCart(){
 
     cartOpen = false;
 }
+
+
+/* =========================================================
+   PRODUCT IMAGE ZOOM / AMAZON STYLE VIEWER
+   ---------------------------------------------------------
+   Features:
+   - One large image at a time
+   - Small thumbnails on left side
+   - Thumbnail click changes large image
+   - Image stays inside screen
+   - Outside area click closes zoom
+========================================================= */
+
+function openImageZoom(images){
+
+
+    /* =====================================================
+       SUPPORT SINGLE IMAGE + MULTIPLE IMAGES
+       -----------------------------------------------------
+       Old product:
+       openImageZoom("images/product.jpg")
+
+       New product:
+       openImageZoom([
+           "images/front.jpg",
+           "images/back.jpg"
+       ])
+    ===================================================== */
+
+    if(!Array.isArray(images)){
+
+        images = [images];
+
+    }
+
+
+    /* =====================================================
+       CREATE OVERLAY
+    ===================================================== */
+
+    const overlay = document.createElement("div");
+
+    overlay.className = "image-zoom-overlay";
+
+
+    /* =====================================================
+       CREATE AMAZON-STYLE VIEWER
+       -----------------------------------------------------
+       Left  = thumbnails
+       Right = one large image
+    ===================================================== */
+
+    overlay.innerHTML = `
+
+        <div class="zoom-viewer">
+
+
+            <!-- =================================================
+                 LEFT THUMBNAIL SIDEBAR
+            ================================================== -->
+
+            <div class="zoom-sidebar">
+
+                ${
+                    images.map((image, index) => `
+
+                        <div
+                            class="zoom-sidebar-thumb ${
+                                index === 0 ? "active" : ""
+                            }"
+                            data-image="${image}">
+
+                            <img
+                                src="${image}"
+                                alt="Product image ${index + 1}">
+
+                        </div>
+
+                    `).join("")
+                }
+
+            </div>
+
+
+            <!-- =================================================
+                 LARGE IMAGE AREA
+                 ONLY ONE IMAGE IS DISPLAYED HERE
+            ================================================== -->
+
+            <div class="zoom-main-image">
+
+                <img
+                    src="${images[0]}"
+                    class="zoomed-image"
+                    alt="Product Image">
+
+            </div>
+
+
+        </div>
+
+    `;
+
+
+    /* =====================================================
+       ADD OVERLAY TO BODY
+    ===================================================== */
+
+    document.body.appendChild(overlay);
+
+
+    /* =====================================================
+       START OVERLAY ANIMATION
+    ===================================================== */
+
+    requestAnimationFrame(() => {
+
+        overlay.classList.add("active");
+
+    });
+
+
+    /* =====================================================
+       GET MAIN IMAGE
+    ===================================================== */
+
+    const mainImage =
+        overlay.querySelector(".zoomed-image");
+
+
+    /* =====================================================
+       GET ALL THUMBNAILS
+    ===================================================== */
+
+    const thumbnails =
+        overlay.querySelectorAll(".zoom-sidebar-thumb");
+
+
+    /* =====================================================
+       THUMBNAIL CLICK
+       -----------------------------------------------------
+       Only main image changes.
+       Other images are NOT added to screen.
+    ===================================================== */
+
+    thumbnails.forEach(thumbnail => {
+
+        thumbnail.addEventListener("click", function(event){
+
+            event.stopPropagation();
+
+
+            /* Change large image */
+
+            mainImage.src =
+                this.dataset.image;
+
+
+            /* Remove active border */
+
+            thumbnails.forEach(item => {
+
+                item.classList.remove("active");
+
+            });
+
+
+            /* Highlight selected thumbnail */
+
+            this.classList.add("active");
+
+        });
+
+    });
+
+
+    /* =========================================================
+   CLOSE ZOOM WHEN CLICKING / TAPPING OUTSIDE VIEWER
+   ---------------------------------------------------------
+   - Main image par click  → kuch nahi hoga
+   - Thumbnail par click   → image change hogi
+   - Viewer ke empty area  → zoom close
+   - Screen ke kisi bhi
+     dark/empty area par    → zoom close
+   - Mobile tap bhi work karega
+    ========================================================= */
+
+    overlay.addEventListener("click", function(event){
+
+      const clickedImage =
+        event.target.closest(".zoomed-image");
+
+      const clickedThumbnail =
+        event.target.closest(".zoom-sidebar-thumb");
+
+     /*  Large image ya thumbnail par click hua
+       to overlay close nahi hoga.
+      */
+
+        if(clickedImage || clickedThumbnail){
+
+          return;
+
+         }
+
+
+       /*
+       Baaki kahin bhi click hua:
+       zoom close.
+      */
+
+        closeImageZoom(overlay);
+
+     });
+
+}
+
+/* =========================================================
+   CLOSE PRODUCT IMAGE ZOOM
+   ---------------------------------------------------------
+   Zoom overlay ko smoothly close karta hai.
+========================================================= */
+
+function closeImageZoom(overlay){
+
+    /* Remove active class for closing animation */
+
+    overlay.classList.remove("active");
+
+
+    /* Wait for CSS fade-out animation */
+
+    setTimeout(() => {
+
+        if(overlay && overlay.parentNode){
+
+            overlay.parentNode.removeChild(overlay);
+
+        }
+
+    }, 250);
+
+}
+
+/* =========================================================
+   ESC KEY CLOSE
+========================================================= */
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+
+        const overlay =
+            document.querySelector(".image-zoom-overlay");
+
+        if(overlay){
+
+            closeImageZoom(overlay);
+
+        }
+
+    }
+
+});
+
+
 
 /* adding slider code 
 // =================== Slider ===================

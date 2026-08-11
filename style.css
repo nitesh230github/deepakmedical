@@ -1034,6 +1034,289 @@ header{
 
 }
 
+
+
+
+/* =========================================================
+   PRODUCT IMAGE ZOOM OVERLAY
+   ---------------------------------------------------------
+   Main image center me
+   Thumbnails main image ke bottom-center me
+========================================================= */
+
+.image-zoom-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+    background:rgba(0,0,0,.82);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    box-sizing:border-box;
+
+    z-index:99999;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:opacity .25s ease,
+               visibility .25s ease;
+
+}
+
+
+
+/* =========================================================
+   ACTIVE ZOOM OVERLAY
+========================================================= */
+
+.image-zoom-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+/* =========================================================
+   ZOOM VIEWER
+   ---------------------------------------------------------
+   Main image + bottom thumbnail strip ke liye fixed
+   vertical layout.
+========================================================= */
+
+.zoom-viewer{
+
+    position:relative !important;
+
+    width:min(95vw,1400px);
+
+    height:min(94vh,950px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    box-sizing:border-box;
+
+    overflow:hidden;
+
+}
+
+
+/* =========================================================
+   BOTTOM THUMBNAIL CONTAINER
+   ---------------------------------------------------------
+   IMPORTANT:
+   Thumbnails ALWAYS stay at bottom-center.
+========================================================= */
+
+.zoom-sidebar{
+
+    position:absolute !important;
+
+    top:auto !important;
+
+    left:50% !important;
+
+    right:auto !important;
+
+    bottom:10px !important;
+
+    transform:translateX(-50%) !important;
+
+    width:auto !important;
+
+    height:auto !important;
+
+    display:flex !important;
+
+    flex-direction:row !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    gap:8px;
+
+    margin:0 !important;
+
+    padding:0 !important;
+
+    z-index:100000;
+
+ }
+
+.zoom-sidebar-thumb{
+
+   position:static !important;
+
+    flex-shrink:0;
+
+    margin:0 !important;
+
+ }
+
+
+
+
+/* =========================================================
+   THUMBNAIL IMAGE
+========================================================= */
+
+.zoom-sidebar-thumb img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
+
+}
+
+
+/* =========================================================
+   ACTIVE THUMBNAIL
+========================================================= */
+
+.zoom-sidebar-thumb.active{
+
+    border:2px solid #168b80;
+
+}
+
+
+/* =========================================================
+   ZOOM MAIN IMAGE AREA
+   ---------------------------------------------------------
+   Thumbnail strip ke liye bottom me fixed space reserve
+   karta hai, taaki long/portrait images thumbnail ke
+   upar overlap na karein.
+========================================================= */
+
+.zoom-main-image{
+
+    width:100%;
+
+    height:calc(100% - 75px);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+
+    box-sizing:border-box;
+
+}
+
+/* =========================================================
+   ZOOMED PRODUCT IMAGE
+   ---------------------------------------------------------
+   Portrait / landscape dono images available area ke
+   andar contain hongi.
+========================================================= */
+
+.zoomed-image{
+
+    display:block;
+
+    width:auto;
+
+    height:auto;
+
+    max-width:100%;
+
+    max-height:100%;
+
+    object-fit:contain;
+
+    box-sizing:border-box;
+
+}
+
+/* =========================================================
+   ZOOM IMAGE ANIMATION
+========================================================= */
+
+.image-zoom-overlay.active .zoomed-image{
+
+    transform:scale(1);
+
+}
+
+
+
+/* =========================================================
+   MULTIPLE IMAGE BADGE
+   Shows number of images available for a product.
+   Only appears when product has 2 or more images.
+========================================================= */
+
+.product-image{
+
+    position:relative;
+
+}
+
+
+/* =========================================================
+   IMAGE COUNT BADGE
+========================================================= */
+
+.multiple-image-badge{
+
+    position:absolute;
+
+    right:6px;
+
+    bottom:6px;
+
+    background:rgba(0,0,0,.65);
+
+    color:white;
+
+    padding:4px 7px;
+
+    border-radius:999px;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    line-height:1;
+
+    pointer-events:none;
+
+}
+
+
+
+
 /*=========================================================
                 MOBILE RESPONSIVE
 =========================================================*/
@@ -1392,6 +1675,119 @@ header{
 
 }
 
+/* =========================================================
+   MOBILE IMAGE ZOOM
+   ---------------------------------------------------------
+   Large image gets maximum screen space.
+   Thumbnails stay at bottom.
+========================================================= */
+
+.image-zoom-overlay{
+
+    padding:8px;
+
+}
+
+
+/* =========================================================
+   MOBILE ZOOM VIEWER
+========================================================= */
+
+.zoom-viewer{
+
+    width:96vw;
+
+    height:94vh;
+
+    gap:8px;
+
+}
+
+
+/* =========================================================
+   MOBILE LARGE MAIN IMAGE AREA
+========================================================= */
+
+.zoom-main-image{
+
+    width:100%;
+
+    height:calc(100% - 63px);
+
+}
+
+
+/* =========================================================
+   MOBILE LARGE ZOOMED IMAGE
+========================================================= */
+
+.zoomed-image{
+
+    max-width:100%;
+
+    max-height:100%;
+
+    padding:2px;
+
+    border-radius:7px;
+
+}
+
+
+ /* -----------------------------------------------------
+       Mobile bottom thumbnail strip
+       Same bottom-center position.
+    ----------------------------------------------------- */
+
+     .zoom-sidebar{
+
+        position:absolute !important;
+
+        top:auto !important;
+
+        left:50% !important;
+
+        right:auto !important;
+
+        bottom:8px !important;
+
+        transform:translateX(-50%) !important;
+
+        width:auto !important;
+
+        height:auto !important;
+
+        display:flex !important;
+
+        flex-direction:row !important;
+
+        align-items:center !important;
+
+        justify-content:center !important;
+
+        gap:7px;
+
+    }
+
+
+ /* -----------------------------------------------------
+       Mobile thumbnail
+    ----------------------------------------------------- */
+
+    .zoom-sidebar-thumb{
+
+        width:48px !important;
+
+        height:48px !important;
+
+        min-width:48px;
+
+        min-height:48px;
+
+        flex-shrink:0;
+
+    }
+
 /*=========================================================
                 MOBILE CART REMOVE BUTTON
 =========================================================
@@ -1431,5 +1827,131 @@ header{
     color:#fff;
 
 }*/
+
+}
+
+/* =========================================================
+   DESKTOP ZOOM THUMBNAILS
+   ---------------------------------------------------------
+   Thumbnail images ko fixed small size me rakhta hai.
+   Main zoomed image ko affect nahi karta.
+========================================================= */
+
+.zoom-sidebar{
+
+    position:absolute !important;
+
+    left:50% !important;
+
+    bottom:10px !important;
+
+    top:auto !important;
+
+    right:auto !important;
+
+    transform:translateX(-50%) !important;
+
+    width:auto !important;
+
+    height:65px !important;
+
+    display:flex !important;
+
+    flex-direction:row !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    gap:8px;
+
+    margin:0 !important;
+
+    padding:0 !important;
+
+    z-index:100000;
+
+}
+
+
+/* =========================================================
+   DESKTOP THUMBNAIL BOX
+========================================================= */
+
+.zoom-sidebar-thumb{
+
+    width:55px !important;
+
+    height:55px !important;
+
+    min-width:55px !important;
+
+    min-height:55px !important;
+
+    max-width:55px !important;
+
+    max-height:55px !important;
+
+    flex:0 0 55px !important;
+
+    position:static !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    padding:2px !important;
+
+    margin:0 !important;
+
+    box-sizing:border-box;
+
+    overflow:hidden !important;
+
+    background:#fff;
+
+    border-radius:6px;
+
+}
+
+
+/* =========================================================
+   DESKTOP THUMBNAIL IMAGE
+   ---------------------------------------------------------
+   IMPORTANT:
+   Thumbnail ke andar image kabhi bhi original
+   large size me nahi jayegi.
+========================================================= */
+
+.zoom-sidebar-thumb img{
+
+    width:100% !important;
+
+    height:100% !important;
+
+    max-width:100% !important;
+
+    max-height:100% !important;
+
+    min-width:0 !important;
+
+    min-height:0 !important;
+
+    object-fit:contain !important;
+
+    display:block !important;
+
+}
+
+
+/* =========================================================
+   ACTIVE THUMBNAIL
+========================================================= */
+
+.zoom-sidebar-thumb.active{
+
+    border:2px solid #168b80 !important;
 
 }
