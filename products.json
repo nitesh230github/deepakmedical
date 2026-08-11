@@ -2241,7 +2241,7 @@
     "saltContent": "Cefixime 200mg",
     "uses": "Bacterial infections",
     "bestseller": true,
-    "image": "images/taxim_o_200_tab.jpg"
+    "images": ["images/taxim_o_200_tab_box.jpg", "images/taxim_o_200_tab_back.jpg", "images/taxim_o_200_tab_front.jpg"]
   },
   {
     "id": 231,
@@ -2746,6 +2746,54 @@
     "uses": "Cold, cough, allergy, blocked/runny/itchy nose, red/watery eyes, and skin rashes",
     "bestseller": true,
     "image": "images/okacet_syp.jpg"
+  },
+  {
+    "id": 296,
+    "name": "ZEDEX COUGH SYRUP",
+    "company": "DR REDDYS",
+    "salt content": "Chlorpheniramine Maleate (2 mg) + Dextromethorphan Hydrobromide (10 mg)",
+    "uses": "Dry cough, throat irritation, sneezing, watery eyes, and runny nose",
+    "price": "197.48",
+    "category": "LIQUID",
+    "packing": "100 ML",
+    "bestseller": true,
+    "image": "images/zedex_syp_1.jpg"
+  },
+  {
+    "id": 297,
+    "name": "AMLYCURE DS SYRUP",
+    "company": "AIMIL",
+    "salt content": "Herbal liver tonic + liver syrup",
+    "uses": "Herbal liver tonic, liver syrup",
+    "price": "360",
+    "category": "LIQUID",
+    "packing": "200 ML",
+    "bestseller": true,
+    "image": "images/amlycure_ds_syp_1.jpg"
+  },
+  {
+    "id": 283,
+    "name": "VASOGRAIN EC TAB",
+    "company": "CADILA",
+    "salt content": "Ergotamine (1mg) + Caffeine (100mg)",
+    "uses": "migraine headaches",
+    "price": "217",
+    "category": "TABLET_CAP",
+    "packing": "20*20",
+    "bestseller": true,
+    "image": "images/vasograin_ec_tab_box.jpg"
+  },
+  {
+    "id": 285,
+    "name": "SUMO COLD TAB",
+    "company": "ALKEM",
+    "salt content": "Caffeine (30mg) + Diphenhydramine (25mg) + Paracetamol (500mg) + Phenylephrine (5mg)",
+    "uses": "sneezing, a runny or blocked nose, CONGESTION, sore throat, cough, body ache, and fever",
+    "price": "50.6",
+    "category": "TABLET_CAP",
+    "packing": "10*2*10",
+    "bestseller": true,
+    "image": "images/sumo_cold_tab_box.jpg"
   }
 
 
