@@ -34,6 +34,17 @@ function shuffleArray(array){
 
 }
 
+/*  Jab tak customer typing continue karta hai, function call hold rehta hai. 
+Typing rukne ke 300ms baad hi search chalega — isse har keystroke pe re-render/reshuffle nahi hoga. */
+
+function debounce(func, delay){
+    let timer;
+    return function(...args){
+        clearTimeout(timer);
+        timer = setTimeout(() => func.apply(this, args), delay);
+    };
+}
+
 /* To Normalize the text, Original : tea/tree. Normalize : teatree  */
 function normalizeText(text){
 
@@ -114,8 +125,8 @@ function getSearchScore(product, rawSearch){
 }  */
 
 let products = [];
-
-let currentProducts = [];    // global variable to store currently displayed order
+let currentProducts = [];    // currently displayed/filtered products
+let displayOrder = [];       // stable shuffled order — sirf ek baar set hota hai
 
 fetch("products.json")
 .then(response => response.json())
@@ -133,10 +144,12 @@ fetch("products.json")
 
  otherProducts = shuffleArray(otherProducts);
 
- currentProducts = [
+ displayOrder = [
     ...bestSellers,
     ...otherProducts
-   ] ;
+   ];
+
+ currentProducts = displayOrder;
 
  displayProducts(currentProducts);
 
@@ -144,67 +157,41 @@ fetch("products.json")
 
 
     document.getElementById("search")
-    .addEventListener("keyup", filterProducts);
+    .addEventListener("keyup", debounce(filterProducts, 300));
 
     document.getElementById("categoryFilter")
     .addEventListener("change", filterProducts);
 
+})                                                         /* if fetch fail ho or JSON invalid, customer will see mesage instead of blank screen, */
+                                                           /* & error log will be in console(for debugging) */
+
+.catch(error => {
+
+    console.error("Products load failed:", error);
+
+    document.getElementById("products").innerHTML =
+        `<p style="padding:20px;text-align:center;color:#666;">
+            ⚠️ Products load nahi ho paaye. Please page refresh karein.
+        </p>`;
+
 });
 
 
+/*  Pehle: har search/filter call pe naya shuffleArray() chalta tha → products jump/reorder hote the
+Ab: displayOrder (jo load pe ek baar shuffle hui thi) se sirf .filter() kiya jaa raha hai → order stable rehta hai, bestsellers hamesha top pe rehte hain, 
+aur search jaldi (koi extra shuffle overhead nahi) chalta hai */
+
 function filterProducts() {
 
-    let rawSearch = document.getElementById('search').value;    // raw search value stored
-
-    let searchValue = normalizeText(rawSearch);                // normalized search text stored
+    let rawSearch = document.getElementById('search').value;
 
     let categoryValue =
     document.getElementById("categoryFilter").value;
 
-    let filtered;
-
-    if(categoryValue === "ALL"){
-
-        let bestSellers =
-        products.filter(product =>
-            product.bestseller &&
-            matchesSearch(product, rawSearch)
-        );
-        bestSellers = shuffleArray(bestSellers);
-        
-        let otherProducts =
-        products.filter(product =>
-            !product.bestseller &&
-            matchesSearch(product, rawSearch)
-        );
-
-        otherProducts = shuffleArray(otherProducts);
-
-        filtered = [
-            ...bestSellers,
-            ...otherProducts
-        ];
-
-    }
-    else{
-
-     filtered = products.filter(product =>
-            product.category === categoryValue &&
-            matchesSearch(product, rawSearch)
-
-        );
-
-        filtered = shuffleArray(filtered);
-
-    }
-    
-
-    /* priorty to search text
-   filtered.sort((a,b)=>
-     getSearchScore(b,rawSearch) -
-     getSearchScore(a,rawSearch)
-
-    );  */
+    let filtered = displayOrder.filter(product =>
+        (categoryValue === "ALL" || product.category === categoryValue) &&
+        matchesSearch(product, rawSearch)
+    );
 
  currentProducts = filtered;
 
@@ -227,7 +214,6 @@ function filterProducts() {
  }
 
  }
-
 
 function selectCategory(category,button){
 
@@ -531,7 +517,9 @@ function addToCart(id){
 
             packing:product.packing,
 
-            image:product.image,
+            image: (Array.isArray(product.images) && product.images.length > 0)   /* firstly it checks image or images[] in  products.json */
+                ? product.images[0]                                              
+                : product.image,
 
             price:product.price,
 
@@ -875,6 +863,8 @@ fetch("https://script.google.com/macros/s/AKfycbwVDN0OlZ5srpTFPFEIR0O0B43Oe5vcHa
 
 method:"POST",
 
+mode:"no-cors",
+
 body:JSON.stringify({
 
 secret:"DeepakMedical2026",
@@ -890,6 +880,11 @@ products:productList,
 total:total.toFixed(2)
 
 })
+
+})
+.catch(error => {
+
+    console.error("Order log to Sheet failed:", error);
 
 });
     window.open(
@@ -1201,7 +1196,86 @@ document.addEventListener("keydown", function(event){
 
 });
 
+/* =========================================================
+   MOBILE STICKY HEADER — HIDE LOGO ON SCROLL DIRECTION
+   ---------------------------------------------------------
+   Transition ke dauraan (300ms) naye scroll events ko
+   ignore karta hai — isse layout-shift se hone wala
+   feedback loop / flicker nahi hota.
+========================================================= */
 
+const siteHeader = document.querySelector("header");
+
+let lastScrollY = window.scrollY;
+let isCompact = false;
+let ticking = false;
+let locked = false;
+
+const MIN_MOVEMENT = 8;
+const TOP_SAFE_ZONE = 20;
+const TRANSITION_TIME = 320;   // CSS transition (.3s) se thoda zyada
+
+function setCompact(state){
+
+    if(state === isCompact) return;
+
+    isCompact = state;
+
+    if(state){
+        siteHeader.classList.add("header-compact");
+    }else{
+        siteHeader.classList.remove("header-compact");
+    }
+
+    locked = true;
+
+    setTimeout(() => {
+        locked = false;
+    }, TRANSITION_TIME);
+
+}
+
+function updateHeaderState(){
+
+    const scrollY = window.scrollY;
+
+    const diff = scrollY - lastScrollY;
+
+    if(window.innerWidth <= 768 && !locked){
+
+        if(scrollY < TOP_SAFE_ZONE){
+
+            setCompact(false);
+
+        }
+        else if(diff > MIN_MOVEMENT){
+
+            setCompact(true);
+
+        }
+        else if(diff < -MIN_MOVEMENT){
+
+            setCompact(false);
+
+        }
+
+    }
+
+    lastScrollY = scrollY;
+    ticking = false;
+
+}
+
+window.addEventListener("scroll", () => {
+
+    if(!ticking){
+
+        window.requestAnimationFrame(updateHeaderState);
+        ticking = true;
+
+    }
+
+}, { passive:true });
 
 /* adding slider code 
 // =================== Slider ===================

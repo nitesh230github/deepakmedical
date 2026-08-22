@@ -1,4 +1,31 @@
 /*=========================================================
+                    COLOR THEME (CSS Variables)
+=========================================================*/
+
+:root{
+
+    --color-primary:#0d6e6a;
+    --color-primary-dark:#094f4c;
+
+    --color-cart:#3f6b8a;
+    --color-cart-dark:#2e5169;
+
+    --color-accent:#16a34a;
+    --color-accent-dark:#128a3e;
+
+    --color-whatsapp:#25d366;
+    --color-whatsapp-dark:#1da851;
+
+    --color-danger:#ef4444;
+    --color-danger-dark:#dc2626;
+
+    --color-bg:#f3f4f6;
+    --color-text:#1f2937;
+    --color-text-light:#6b7280;
+
+}
+
+/*=========================================================
                     GLOBAL RESET
 =========================================================*/
 
@@ -21,7 +48,7 @@ body{
 header{
 
     background:
-        linear-gradient(rgba(22,163,74,.30)),
+        linear-gradient(rgba(13,110,106,.35), rgba(13,110,106,.35)),
         url("images/website_images/header_banner.jpg");
 
     background-size:cover;
@@ -175,24 +202,31 @@ header{
 
 
 /*=========================================================
-                    CATEGORY DROPDOWN
+     CATEGORY DROPDOWN (Hidden)
+---------------------------------------------------------
+Buttons already same kaam karte hain, dropdown
+sirf backend/JS logic ke liye DOM me rakha gaya hai.
 =========================================================*/
 
 #categoryFilter{
 
-    padding:12px 18px;
+    position:absolute;
 
-    border:none;
+    width:1px;
 
-    border-radius:30px;
+    height:1px;
 
-    background:#fff;
+    padding:0;
 
-    font-size:15px;
+    margin:-1px;
 
-    font-weight:600;
+    overflow:hidden;
 
-    cursor:pointer;
+    clip:rect(0,0,0,0);
+
+    white-space:nowrap;
+
+    border:0;
 
 }
 
@@ -227,7 +261,7 @@ header{
 
 .cat-btn:hover{
 
-    background:#084f58;
+    background:var(--color-primary);
 
     color:#fff;
 
@@ -235,7 +269,7 @@ header{
 
 .cat-btn.active{
 
-    background:#084f58;
+    background:var(--color-primary);
 
     color:#fff;
 
@@ -486,7 +520,7 @@ header{
 
     height:36px;
 
-    background:#00897b;
+    background:var(--color-cart);
 
     color:#fff;
 
@@ -506,7 +540,7 @@ header{
 
 #products .card button:hover{
 
-    background:#00695c;
+    background:var(--color-cart-dark);
 
     transform:translateY(-2px);
 
@@ -566,7 +600,7 @@ header{
 
     border-radius:50%;
 
-    background:#127fec;
+    background:var(--color-primary);
 
     color:#000;
 
@@ -584,7 +618,7 @@ header{
 
 .qty-btn:hover{
 
-    background:#0958d9;
+    background:var(--color-primary);
 
     transform:scale(1.08);
 
@@ -612,7 +646,7 @@ header{
 
 #cartButton{
 
-    background:#2563eb;
+    background:var(--color-primary);
 
     color:#fff;
 
@@ -634,7 +668,7 @@ header{
 
 #cartButton:hover{
 
-    background:#1d4ed8;
+    background:var(--color-primary);
 
 }
 
@@ -708,7 +742,7 @@ header{
 
 .close-btn{
 
-    background:#ef4444;
+    background:var(--color-danger);
 
     color:#fff;
 
@@ -728,7 +762,7 @@ header{
 
 .close-btn:hover{
 
-    background:#dc2626;
+    background:var(--color-danger-dark);
 
 }
 
@@ -898,7 +932,7 @@ header{
 
     height:34px;
 
-    background:#127fec;
+    background:var(--color-primary);
 
     color:#fff;
 
@@ -946,7 +980,7 @@ header{
 
     border-radius:50%;
 
-    background:#ef4444;
+    background:var(--color-danger);
 
     color:#fff;
 
@@ -958,7 +992,7 @@ header{
 
 .remove-btn:hover{
 
-    background:#dc2626;
+    background:var(--color-danger-dark);
 
 }
 
@@ -1012,7 +1046,7 @@ header{
 
     height:46px;
 
-    background:#16a34a;
+    background:var(--color-accent);
 
     color:#fff;
 
@@ -1030,7 +1064,7 @@ header{
 
 .order-btn:hover{
 
-    background:#15803d;
+    background:var(--color-accent-dark);
 
 }
 
@@ -1314,7 +1348,87 @@ header{
 
 }
 
+/*=========================================================
+                    RADIO ICON (Animated)
+=========================================================*/
 
+.radio-icon{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:62px;
+
+    height:62px;
+
+    font-size:30px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    box-shadow:0 4px 14px rgba(0,0,0,.25);
+
+    text-decoration:none;
+
+    flex-shrink:0;
+
+    margin-top:14px;
+
+    animation:radio-bounce 2.5s ease-in-out infinite;
+
+    transition:transform .2s ease;
+
+}
+
+.radio-icon:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* Pulsing ring effect */
+
+.radio-pulse{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    border:2px solid #fbbf24;
+
+    animation:radio-ring 1.8s ease-out infinite;
+
+    pointer-events:none;
+
+}
+
+@keyframes radio-bounce{
+
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-3px); }
+
+}
+
+@keyframes radio-ring{
+
+    0%{
+        transform:scale(1);
+        opacity:.7;
+    }
+    100%{
+        transform:scale(1.6);
+        opacity:0;
+    }
+
+}
 
 
 /*=========================================================
@@ -1340,6 +1454,25 @@ header{
     align-items:stretch;
 
     gap:12px;
+
+}
+
+
+.radio-icon{
+
+    position:absolute;
+
+    top:10px;
+
+    right:0;
+
+    width:52px;
+
+    height:52px;
+
+    font-size:24px;
+
+    margin-top:0;
 
 }
 
@@ -1506,10 +1639,15 @@ header{
     line-height:1.2;
 
 }
-
 .info-row{
 
-    display:block;
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:8px;
 
 }
 
@@ -1517,7 +1655,7 @@ header{
 
     padding:0;
 
-    margin-bottom:8px;
+    margin-bottom:0;
 
 }
 
@@ -1529,15 +1667,17 @@ header{
 
     width:auto;
 
+    flex-shrink:0;
+
     display:flex;
 
-    flex-direction:row !important;
+    flex-direction:column;
 
-    align-items:baseline;
+    align-items:flex-end;
 
     justify-content:flex-start;
 
-    gap:4px;
+    gap:0;
 
     padding-right:0;
 
@@ -1545,13 +1685,13 @@ header{
 
 .product-right .mrp-price{
 
-    font-size:18px;
+    font-size:17px;
 
     font-weight:700;
 
     color:#111;
 
-    line-height:1;
+    line-height:1.3;
 
     white-space:nowrap;
 
@@ -1567,7 +1707,7 @@ header{
 
     letter-spacing:0;
 
-    line-height:1;
+    line-height:1.3;
 
 }
 
@@ -1650,10 +1790,23 @@ header{
 
     border-radius:999px;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.20);
+    box-shadow:0 8px 20px rgba(37,211,102,.35);
+
+    background:var(--color-whatsapp);
+
+    padding:16px 26px;
+
+    font-size:17px;
+
+    font-weight:700;
 
 }
 
+#cartButton:hover{
+
+    background:var(--color-whatsapp-dark);
+
+}
 
 /*=========================================================
                 CART
@@ -1827,6 +1980,46 @@ header{
     color:#fff;
 
 }*/
+/*=========================================================
+                MOBILE STICKY HEADER — COMPACT MODE
+=========================================================*/
+
+.logo-section{
+
+    overflow:hidden;
+
+    transition:transform .3s ease,
+               opacity .25s ease;
+
+    transform:translateY(0);
+    opacity:1;
+
+    will-change:transform;
+
+}
+
+header.header-compact .logo-section{
+
+    transform:translateY(-100%);
+    opacity:0;
+    pointer-events:none;
+
+    position:absolute;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+}
+
+header.header-compact{
+
+    padding-top:8px;
+
+}
+
 
 }
 
@@ -1952,6 +2145,6 @@ header{
 
 .zoom-sidebar-thumb.active{
 
-    border:2px solid #168b80 !important;
+    border:2px solid var(--color-primary) !important;
 
 }
