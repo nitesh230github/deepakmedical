@@ -288,6 +288,24 @@ function displayProducts(items){
 
 
         // =====================================================
+        // STOCK STATUS
+        //
+        // product.inStock === false  -> "Out of Stock" (red)
+        // anything else (true / missing) -> "In Stock" (green)
+        // Missing field defaults to true so older product
+        // entries don't break.
+        // =====================================================
+
+        let isInStock = product.inStock !== false;
+
+        let stockBadge = isInStock
+            ? `<div class="stock-badge in-stock"><span class="stock-dot"></span>In Stock</div>`
+            : `<div class="stock-badge out-of-stock"><span class="stock-dot"></span>Out of Stock</div>`;
+
+
+
+
+        // =====================================================
         // MULTIPLE IMAGE BADGE
         //
         // Badge will ONLY appear when product has more
@@ -327,6 +345,8 @@ function displayProducts(items){
             <div class="product-left">
 
                 <div class="product-image">
+
+                    ${stockBadge}
 
                     <img
                         src="${mainImage}"
@@ -402,16 +422,13 @@ function displayProducts(items){
 
                         <div class="info-right">
 
-                            <span class="mrp-price">
-
-                                ₹ ${product.price}
-
+                            <span class="mrp-text">
+                                MRP
                             </span>
 
+                            <span class="mrp-price">
 
-                            <span class="mrp-text">
-
-                                MRP
+                                ₹${product.price}
 
                             </span>
 
@@ -427,6 +444,22 @@ function displayProducts(items){
                 ================================================== -->
 
                 ${
+                    !isInStock
+
+                    ?
+
+                    `
+
+                    <button class="out-of-stock-btn" disabled>
+
+                        Out of Stock
+
+                    </button>
+
+                    `
+
+                    :
+
                     qty === 0
 
                     ?
@@ -1197,71 +1230,107 @@ document.addEventListener("keydown", function(event){
 });
 
 /* =========================================================
-   MOBILE STICKY HEADER — HIDE LOGO ON SCROLL DIRECTION
+   MOBILE HEADER — HIDE LOGO ONLY ON SCROLL DOWN
    ---------------------------------------------------------
-   Transition ke dauraan (300ms) naye scroll events ko
-   ignore karta hai — isse layout-shift se hone wala
-   feedback loop / flicker nahi hota.
+   Jaisa e-commerce apps (Amazon/Flipkart/Meesho) mein hota
+   hai: scroll down karne par SIRF logo + tagline hide hota
+   hai. Search bar aur category buttons HAMESHA visible
+   rehte hain — kabhi hide nahi hote.
+
+   Simplicity > fancy animation: logo ko seedha "display:none"
+   se hide/show kiya ja raha hai (instant, animated nahi).
+   Ye sabse zyada reliable tareeka hai — isme koi transform,
+   position:absolute, ya height-collapse trick use nahi hui,
+   isliye koi bhi layout/clipping bug possible nahi hai.
+
+   Cart button (#cartButton) header ke bahar, body ka direct
+   child hai (index.html mein) — isliye ye header par kuch bhi
+   ho, hamesha apni bottom-right corner wali jagah par rahega.
 ========================================================= */
 
 const siteHeader = document.querySelector("header");
 
 let lastScrollY = window.scrollY;
-let isCompact = false;
 let ticking = false;
-let locked = false;
 
-const MIN_MOVEMENT = 8;
-const TOP_SAFE_ZONE = 20;
-const TRANSITION_TIME = 320;   // CSS transition (.3s) se thoda zyada
+let accumulatedDelta = 0;   // current direction mein ab tak kitna continuously scroll hua
+let lastDirection = null;   // "down" | "up" | null
+let isLocked = false;       // toggle ke turant baad chhota cooldown (extra jitter-proofing)
 
-function setCompact(state){
+const TOGGLE_THRESHOLD = 45;  // itna CONTINUOUS scroll chahiye (px) tabhi toggle hoga
+const TOP_SAFE_ZONE = 20;     // page ke bilkul top par hamesha logo dikhna chahiye
+const LOCK_DURATION = 250;    // ms — toggle ke turant baad thoda cooldown
 
-    if(state === isCompact) return;
+function isMobileView(){
+    return window.innerWidth <= 768;
+}
 
-    isCompact = state;
+function setLogoHidden(hidden){
 
-    if(state){
-        siteHeader.classList.add("header-compact");
-    }else{
-        siteHeader.classList.remove("header-compact");
-    }
+    if(siteHeader.classList.contains("logo-hidden") === hidden) return;
 
-    locked = true;
+    siteHeader.classList.toggle("logo-hidden", hidden);
 
-    setTimeout(() => {
-        locked = false;
-    }, TRANSITION_TIME);
+    // Chhota cooldown — isse touch-scroll ke residual/bounce
+    // events turant dobara toggle nahi kar paate (glitch-proofing).
+    isLocked = true;
+    setTimeout(() => { isLocked = false; }, LOCK_DURATION);
 
 }
 
 function updateHeaderState(){
 
+    if(!isMobileView()){
+        setLogoHidden(false);
+        lastScrollY = window.scrollY;
+        accumulatedDelta = 0;
+        lastDirection = null;
+        ticking = false;
+        return;
+    }
+
     const scrollY = window.scrollY;
-
     const diff = scrollY - lastScrollY;
+    lastScrollY = scrollY;
 
-    if(window.innerWidth <= 768 && !locked){
+    // Page ke bilkul top par hamesha logo dikhna chahiye
+    if(scrollY <= TOP_SAFE_ZONE){
+        setLogoHidden(false);
+        accumulatedDelta = 0;
+        lastDirection = null;
+        ticking = false;
+        return;
+    }
 
-        if(scrollY < TOP_SAFE_ZONE){
+    if(isLocked || diff === 0){
+        ticking = false;
+        return;
+    }
 
-            setCompact(false);
+    const direction = diff > 0 ? "down" : "up";
 
+    // Direction badli (jitter/bounce) — accumulator reset karo,
+    // taaki chhoti aage-peeche movement ko "sustained scroll"
+    // na maan liya jaaye.
+    if(direction !== lastDirection){
+        accumulatedDelta = 0;
+        lastDirection = direction;
+    }
+
+    accumulatedDelta += Math.abs(diff);
+
+    if(accumulatedDelta >= TOGGLE_THRESHOLD){
+
+        if(direction === "down"){
+            setLogoHidden(true);   // sustained scroll down — logo hide
+        }else{
+            setLogoHidden(false);  // sustained scroll up — logo dikhao
         }
-        else if(diff > MIN_MOVEMENT){
 
-            setCompact(true);
-
-        }
-        else if(diff < -MIN_MOVEMENT){
-
-            setCompact(false);
-
-        }
+        accumulatedDelta = 0;
 
     }
 
-    lastScrollY = scrollY;
     ticking = false;
 
 }
@@ -1269,13 +1338,17 @@ function updateHeaderState(){
 window.addEventListener("scroll", () => {
 
     if(!ticking){
-
         window.requestAnimationFrame(updateHeaderState);
         ticking = true;
-
     }
 
 }, { passive:true });
+
+window.addEventListener("resize", () => {
+    if(!isMobileView()) setLogoHidden(false);
+});
+
+
 
 /* adding slider code 
 // =================== Slider ===================

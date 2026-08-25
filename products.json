@@ -9,6 +9,9 @@
     "saltContent": "Allantoin + Tea Tree Oil + Vitamin E (+Triclosan)",
     "uses": "Anti-acne soap; cleanses skin, reduces blemishes/inflammation, antibacterial for acne-prone skin",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/acnetoin_soap.jpg"
   },
   {
@@ -21,6 +24,9 @@
     "saltContent": "Omeprazole 20mg + Domperidone 10mg",
     "uses": "GERD, acidity, heartburn, acid reflux with nausea/bloating",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/aciloc_rd_tab.jpg"
   },
   {
@@ -33,6 +39,9 @@
     "saltContent": "Aceclofenac 100mg + Paracetamol 325mg + Serratiopeptidase 15mg",
     "uses": "Pain & inflammation from injury, post-op swelling, musculoskeletal pain",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/alcidol_sp_tab.jpg"
   },
   {
@@ -45,6 +54,9 @@
     "saltContent": "Vitamin E 400mg",
     "uses": "Vitamin E supplementation, antioxidant, skin & hair health",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/evinal_400_cap.jpg"
   },
   {
@@ -57,6 +69,9 @@
     "saltContent": "Ciprofloxacin 0.3% + Dexamethasone 0.1%",
     "uses": "Bacterial eye/ear infections with inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/alciflox_d_drop.jpg"
   },
   {
@@ -69,6 +84,9 @@
     "saltContent": "Aceclofenac 100mg + Paracetamol 325mg",
     "uses": "Pain, fever, inflammation (arthritis, back pain, toothache)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/aldigesic_p_tab.jpg"
   },
   {
@@ -81,6 +99,9 @@
     "saltContent": "Disodium Hydrogen Citrate 1.25g/5ml",
     "uses": "Urinary alkalizer — UTI burning, kidney stones, gout",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/alkacitral_syp.jpg"
   },
   {
@@ -93,6 +114,9 @@
     "saltContent": "Chlorpheniramine Maleate + Dextromethorphan",
     "uses": "Dry cough, throat irritation, allergic sneezing/runny nose",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/alkof_dx_syp.jpg"
   },
   {
@@ -105,6 +129,9 @@
     "saltContent": "amoxycillin 250 ",
     "uses": "Bacterial infections (respiratory, ENT, UTI etc.)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/almox_250_cap.jpg"
   },
   {
@@ -117,6 +144,9 @@
     "saltContent": " Amoxycillin 500mg + Clavulanic Acid 125mg",
     "uses": "Broad-spectrum bacterial infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/almox_cv_625_tab.jpg"
   },
   {
@@ -129,6 +159,9 @@
     "saltContent": "Levosalbutamol 1mg + Ambroxol 30mg + Guaifenesin 50mg",
     "uses": "Productive cough with breathlessness (asthma, bronchitis, COPD)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ambrodil_ls_syp.jpg"
   },
   {
@@ -141,6 +174,9 @@
     "saltContent": "Ambroxol 15mg + Salbutamol 1mg (per 5ml)",
     "uses": "Cough with mucus and bronchospasm",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ambrodil_s_syp.jpg"
   },
   {
@@ -153,6 +189,9 @@
     "saltContent": "Ambroxol 30mg + Levosalbutamol 1mg + Guaifenesin 50mg",
     "uses": "Productive cough with wheezing/breathlessness",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ambrox_ls_syp.jpg"
   },
   {
@@ -165,6 +204,9 @@
     "saltContent": "Amlodipine 5mg",
     "uses": "High BP / Hypertension / high blood pressure",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/amlip_5_tab.jpg"
   },
   {
@@ -177,6 +219,9 @@
     "saltContent": "Amlodipine 2.5mg",
     "uses": "High BP / Hypertension / high blood pressure ",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/amlovas_2.5_tab.jpg"
   },
   {
@@ -189,6 +234,9 @@
     "saltContent": "Amlodipine 5mg",
     "uses": "High BP / Hypertension / high blood pressure ",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/amlovas_5_tab.jpg"
   },
   {
@@ -201,6 +249,9 @@
     "saltContent": "Fungal Diastase 50mg + Pepsin 10mg",
     "uses": "Indigestion, bloating, gas, appetite stimulant",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/aristozyme_syp.jpg"
   },
   {
@@ -213,6 +264,9 @@
     "saltContent": "Salbutamol 4mg",
     "uses": "Asthma, bronchospasm relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/asthalin_4_tab.jpg"
   },
   {
@@ -225,6 +279,9 @@
     "saltContent": "Salbutamol ",
     "uses": "Acute asthma/COPD attack, breathlessness via nebulization",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/asthalin_respules.jpg"
   },
   {
@@ -237,6 +294,9 @@
     "saltContent": "Azithromycin 250mg",
     "uses": "Bacterial infections (respiratory, skin, ENT, STIs)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/atm_250_tab.jpg"
   },
   {
@@ -249,6 +309,9 @@
     "saltContent": "Azithromycin 250mg",
     "uses": "Bacterial infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/azikem_250_tab.jpg"
   },
   {
@@ -261,6 +324,9 @@
     "saltContent": "Azithromycin 500mg",
     "uses": "Bacterial infections",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/azikem_500_tab.jpg"
   },
   {
@@ -273,6 +339,9 @@
     "saltContent": "Vitamin B-Complex + Vitamin C",
     "uses": "Vitamin B/C deficiency, general tonic",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/becosules_cap.jpg"
   },
   {
@@ -285,6 +354,9 @@
     "saltContent": "Povidone Iodine",
     "uses": "Antiseptic for wounds, cuts, minor infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/bectodine_oint.jpg"
   },
   {
@@ -297,6 +369,9 @@
     "saltContent": "Povidone Iodine 10%",
     "uses": "Antiseptic, wound care, skin infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/betadine_10_oint.jpg"
   },
   {
@@ -309,6 +384,9 @@
     "saltContent": "Betamethasone + Gentamicin + Miconazole",
     "uses": "Skin infections with inflammation (bacterial + fungal, eczema)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/betamil_gm_cream.jpg"
   },
   {
@@ -321,6 +399,9 @@
     "saltContent": "Betamethasone",
     "uses": "Allergic conditions, inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/betnesol_oral_drop.jpg"
   },
   {
@@ -333,6 +414,9 @@
     "saltContent": "Betamethasone + Clioquinol",
     "uses": "Eczema/dermatitis with bacterial/fungal infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/betnovate_c_cream.jpg"
   },
   {
@@ -345,6 +429,9 @@
     "saltContent": "Betamethasone + Gentamicin + Miconazole",
     "uses": "Skin infection with inflammation (mixed bacterial-fungal)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/betnovate_gm_cream.jpg"
   },
   {
@@ -357,6 +444,9 @@
     "saltContent": "Betamethasone Valerate + Neomycin",
     "uses": "Bacterial skin infections with inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/betnovate_n_cream.jpg"
   },
   {
@@ -369,6 +459,9 @@
     "saltContent": "Terbutaline + Bromhexine + Guaifenesin + Menthol",
     "uses": "Cough with mucus, bronchospasm relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/brozedex_syp.jpg"
   },
   {
@@ -381,6 +474,9 @@
     "saltContent": "Chlorhexidine Gluconate + Silver Sulfadiazine/Silver Nitrate",
     "uses": "Burns, minor cuts, wound infection prevention",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/burnheal_cream.jpg"
   },
   {
@@ -393,6 +489,9 @@
     "saltContent": "Aminacrine + Cetrimide",
     "uses": "Minor burns, cuts, first-aid antiseptic",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/burnol_cream.jpg"
   },
   {
@@ -405,6 +504,9 @@
     "saltContent": "Cholecalciferol (Vitamin D3) 60,000 IU",
     "uses": "Vitamin D deficiency, bone health",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/calcitas_d3_cap.jpg"
   },
   {
@@ -417,6 +519,9 @@
     "saltContent": "Paracetamol 120mg/5ml",
     "uses": "Fever, pain relief (children)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/calpol_120_syp.jpg"
   },
   {
@@ -429,6 +534,9 @@
     "saltContent": "Paracetamol 250mg/5ml",
     "uses": "Fever, pain relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/calpol_250_syp.jpg"
   },
   {
@@ -441,6 +549,9 @@
     "saltContent": "Paracetamol 500mg",
     "uses": "Fever, mild-moderate pain",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/calpol_500_tab.jpg"
   },
   {
@@ -453,6 +564,9 @@
     "saltContent": "Paracetamol 650mg",
     "uses": "Fever, pain relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/calpol_650_tab.jpg"
   },
   {
@@ -465,6 +579,9 @@
     "saltContent": "Paracetamol",
     "uses": "Fever, pain in infants",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/calpol_oral_drop.jpg"
   },
   {
@@ -477,6 +594,9 @@
     "saltContent": "Diclofenac 50mg + Dicyclomine 20mg",
     "uses": "Abdominal cramps, colic, dysmenorrhea",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/cataspa_tab.jpg"
   },
   {
@@ -489,6 +609,9 @@
     "saltContent": "Cefpodoxime Proxetil 200mg",
     "uses": "Bacterial infections (respiratory, UTI, skin)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/cefdot_200_tab.jpg"
   },
   {
@@ -501,6 +624,9 @@
     "saltContent": "CIPROFLOXACIN + DEXAMETHASONE",
     "uses": "Bacterial eye/ear infections with inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ceflox_d_drop.jpg"
   },
   {
@@ -513,6 +639,9 @@
     "saltContent": "PARACETAMOL + PHENYLEPHRINE HCL + CAFFINE + DIPHENHYDRAMINE",
     "uses": "Common cold, allergy, congestion, fever",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/cheston_cold_tab.jpg"
   },
   {
@@ -525,6 +654,9 @@
     "saltContent": "PARACETAMOL + PHENYLEPHRINE HCL + CAFFINE + DIPHENHYDRAMINE ",
     "uses": "Cold/flu. Common cold, allergy, congestion, fever in liquid form",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/cheston_cold_syp.jpg"
   },
   {
@@ -537,6 +669,9 @@
     "saltContent": "Choline Salicylate + Lignocaine",
     "uses": "Mouth ulcer pain relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/choronex_gel.jpg"
   },
   {
@@ -549,6 +684,9 @@
     "saltContent": "Calcium Carbonate 500mg + Vitamin D3",
     "uses": "Calcium/Vitamin D deficiency, bone health",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/cipcal_500_tab.jpg"
   },
   {
@@ -561,6 +699,9 @@
     "saltContent": "Calcium + Vitamin D3 + Methylcobalamin + L-Methylfolate + Pyridoxal-5-phosphate",
     "uses": "Nutritional deficiency, nerve & bone health",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/cipcal_xt_tab.jpg"
   },
   {
@@ -573,6 +714,9 @@
     "saltContent": "Povidone Iodine 5%",
     "uses": "Antiseptic for cuts, wounds, burns",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/cipladine_oint.jpg"
   },
   {
@@ -585,6 +729,9 @@
     "saltContent": "Ciprofloxacin",
     "uses": "Bacterial eye/ear infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ciplox_drop.jpg"
   },
   {
@@ -597,6 +744,9 @@
     "saltContent": "Ciprofloxacin + Dexamethasone",
     "uses": "Bacterial eye/ear infections with inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ciplox_d_drop.jpg"
   },
   {
@@ -609,6 +759,9 @@
     "saltContent": "Ciprofloxacin 500mg",
     "uses": "Bacterial infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ciprodac_500_tab.jpg"
   },
   {
@@ -621,6 +774,9 @@
     "saltContent": "CLINDAMYCIN + NICOTINAMIDE",
     "uses": "Acne treatment",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/clinsol_gel.jpg"
   },
   {
@@ -633,6 +789,9 @@
     "saltContent": "CLOBETASOL + MICONAZOLE + NEOMYCIN",
     "uses": "Skin infection with inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/clobenate_gm_cream.jpg"
   },
   {
@@ -645,6 +804,9 @@
     "saltContent": "Clotrimazole (powder)",
     "uses": "Fungal skin infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/clocip_dusting_powd.jpg"
   },
   {
@@ -657,6 +819,9 @@
     "saltContent": "Clotrimazole",
     "uses": "Fungal skin infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/clocip_cream.jpg"
   },
   {
@@ -669,6 +834,9 @@
     "saltContent": "Clotrimazole (powder)",
     "uses": "Fungal skin infections",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/clot_1_powder_blue.jpg"
   },
   {
@@ -681,6 +849,9 @@
     "saltContent": "Ibuprofen 400mg + Paracetamol 325mg",
     "uses": "Pain, fever, inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/combiflam_tab.jpg"
   },
   {
@@ -693,6 +864,9 @@
     "saltContent": "Chlorthalidone ",
     "uses": "Hypertension High BP, high blood pressure",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ctd_12.5_tab.jpg"
   },
   {
@@ -705,6 +879,9 @@
     "saltContent": "Chlorthalidone ",
     "uses": "Hypertension High BP, high blood pressure",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ctd_6.25_tab.jpg"
   },
   {
@@ -717,6 +894,9 @@
     "saltContent": "Cetirizine",
     "uses": "Allergy, rhinitis, itching",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ctz_tab.jpg"
   },
   {
@@ -729,6 +909,9 @@
     "saltContent": "Cyproheptadine + Tricholine Citrate + Sorbitol",
     "uses": "Appetite stimulant, allergy relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/cypon_syp.jpg"
   },
   {
@@ -741,6 +924,9 @@
     "saltContent": "Deflazacort 6mg",
     "uses": "Anti-inflammatory, allergic/autoimmune conditions",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/deficicot_6_tab.jpg"
   },
   {
@@ -753,6 +939,9 @@
     "saltContent": "Dexamethasone",
     "uses": "Allergic & inflammatory conditions",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/demisone_tab.jpg"
   },
   {
@@ -765,6 +954,9 @@
     "saltContent": "Clobetasol + Gentamicin + Clotrimazole + Clioquinol + Tolnaftate",
     "uses": "Mixed bacterial/fungal skin infection with inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/dermi_5_cream.jpg"
   },
   {
@@ -777,6 +969,9 @@
     "saltContent": "Clobetasol + Neomycin/Gentamicin + Miconazole/Clotrimazole + Iodochlorhydroxyquin",
     "uses": "Mixed skin infections with inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/dermiford_cream.jpg"
   },
   {
@@ -789,6 +984,9 @@
     "saltContent": "Clobetasol + Neomycin + Miconazole ",
     "uses": "Mixed bacterial/fungal skin infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/dermikem_oc_cream.jpg"
   },
   {
@@ -801,6 +999,9 @@
     "saltContent": "Dithranol + Salicylic Acid",
     "uses": "Psoriasis, scaly skin conditions",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/derobin_oint.jpg"
   },
   {
@@ -813,6 +1014,9 @@
     "saltContent": "Dexamethasone",
     "uses": "Allergic/inflammatory conditions",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/dexona_tab.jpg"
   },
   {
@@ -825,6 +1029,9 @@
     "saltContent": "Iron + Folic Acid + Vitamin B12",
     "uses": "Anemia, iron deficiency",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/dexorange_cap.jpg"
   },
   {
@@ -837,6 +1044,9 @@
     "saltContent": "Iron + Folic Acid + VITAMIN B12 (liquid)",
     "uses": "Anemia tonic",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/dexorange_syp.jpg"
   },
   {
@@ -849,6 +1059,9 @@
     "saltContent": "PARACETAMOL + DICLOFENAC",
     "uses": "Pain, inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/dynapar_tab.jpg"
   },
   {
@@ -861,6 +1074,9 @@
     "saltContent": "Chloramphenicol + Beclometasone",
     "uses": "Ear infection, inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/earwell_drop.jpg"
   },
   {
@@ -873,6 +1089,9 @@
     "saltContent": "Liquid Paraffin + Milk of Magnesia + Sodium Picosulfate",
     "uses": "Constipation relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/easylax_plus_oral_emulsion.jpg"
   },
   {
@@ -885,6 +1104,9 @@
     "saltContent": "ORS (Sodium/Potassium/Glucose salts)",
     "uses": "Dehydration, diarrhea",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/electral_powd.jpg"
   },
   {
@@ -897,6 +1119,9 @@
     "saltContent": "ORS salts",
     "uses": "Dehydration management",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/electroryte_ors_powd.jpg"
   },
   {
@@ -909,6 +1134,9 @@
     "saltContent": "Hydroquinone + Mometasone (+Tretinoin)",
     "uses": "Hyperpigmentation, melasma",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/elosone_ht_cream.jpg"
   },
   {
@@ -921,6 +1149,9 @@
     "saltContent": "Fluoride/herbal toothpaste base",
     "uses": "Dental hygiene",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/enshine_toothpaste.jpg"
   },
   {
@@ -933,6 +1164,9 @@
     "saltContent": "Etoricoxib 120mg",
     "uses": "Osteoarthritis, joint/muscle pain",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/etoford_120_tab.jpg"
   },
   {
@@ -945,6 +1179,9 @@
     "saltContent": "Etoricoxib 90mg",
     "uses": "Osteoarthritis, rheumatoid arthritis pain",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/etoford_90_tab.jpg"
   },
   {
@@ -957,6 +1194,9 @@
     "saltContent": "Etoricoxib + Thiocolchicoside",
     "uses": "Back pain, muscle spasm with inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/etoford_mr_tab.jpg"
   },
   {
@@ -969,6 +1209,9 @@
     "saltContent": "Vitamin E  400mg",
     "uses": "Antioxidant, skin/hair health",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/evion_400_tab.jpg"
   },
   {
@@ -981,6 +1224,9 @@
     "saltContent": "Ofloxacin + Dexamethasone ",
     "uses": "Bacterial eye/ear infection with lubrication",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/festive_dee_drop.jpg"
   },
   {
@@ -993,6 +1239,9 @@
     "saltContent": "Ofloxacin ",
     "uses": "Bacterial eye/ear infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/festive_drop.jpg"
   },
   {
@@ -1005,6 +1254,9 @@
     "saltContent": "Metronidazole 400mg",
     "uses": "Bacterial/protozoal infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/flagyl_400_tab.jpg"
   },
   {
@@ -1017,6 +1269,9 @@
     "saltContent": "Ibuprofen + Paracetamol + Chlorzoxazone",
     "uses": "Muscle spasm pain relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/flexon_mr_tab.jpg"
   },
   {
@@ -1029,6 +1284,9 @@
     "saltContent": "Ibuprofen + Paracetamol",
     "uses": "Pain, fever, inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/flexon_tab.jpg"
   },
   {
@@ -1041,6 +1299,9 @@
     "saltContent": "Fluconazole 150mg",
     "uses": "Fungal infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/fluka_150_tab.jpg"
   },
   {
@@ -1053,6 +1314,9 @@
     "saltContent": " Chlorhexidine Gluconate  + Clobetasol  + Miconazole + Neomycin",
     "uses": "Mixed bacterial/fungal skin infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/fourderm_10_cream.jpg"
   },
   {
@@ -1065,6 +1329,9 @@
     "saltContent": " Chlorhexidine Gluconate  + Clobetasol  + Miconazole + Neomycin",
     "uses": "Mixed bacterial/fungal skin infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/fourderm_oint.jpg"
   },
   {
@@ -1077,6 +1344,9 @@
     "saltContent": "Cetirizine + Dextromethorphan + Phenylephrine",
     "uses": "Cold, cough, allergy",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/galirex_syp.jpg"
   },
   {
@@ -1089,6 +1359,9 @@
     "saltContent": "Glimepiride 1mg + Metformin 500mg",
     "uses": "Type 2 diabetes, Sugar",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/glycomet_gp1_tab.jpg"
   },
   {
@@ -1101,6 +1374,9 @@
     "saltContent": "Glimepiride 2mg + Metformin 500mg",
     "uses": "Type 2 diabetes",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/glycomet_gp2_tab.jpg"
   },
   {
@@ -1113,6 +1389,9 @@
     "saltContent": "Dill Oil/Sodium Bicarbonate (infant formula)",
     "uses": "Infant colic, gas relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/gripe_water.jpg"
   },
   {
@@ -1125,6 +1404,9 @@
     "saltContent": "Iron (Ferrous Ascorbate/IPC) + Folic Acid",
     "uses": "Iron deficiency anemia",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/hemoforte_syp.jpg"
   },
   {
@@ -1137,6 +1419,9 @@
     "saltContent": "Ferric Ammonium Citrate + Vitamin B12 + Folic Acid + Zinc",
     "uses": "Iron deficiency anemia",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/hemoplus_syp.jpg"
   },
   {
@@ -1149,6 +1434,9 @@
     "saltContent": "Chlorzoxazone + Diclofenac + Paracetamol",
     "uses": "Muscle spasm pain",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/intagesic_mr_tab.jpg"
   },
   {
@@ -1161,6 +1449,9 @@
     "saltContent": "Ketoconazole + Cetrimide",
     "uses": "Fungal skin infections (ringworm, athletes foot)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ketofly_soap.jpg"
   },
   {
@@ -1173,6 +1464,9 @@
     "saltContent": "Ketorolac Tromethamine 10mg",
     "uses": "Short-term moderate-severe pain relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ketoford_dt_tab.jpg"
   },
   {
@@ -1185,6 +1479,9 @@
     "saltContent": "Ketoconazole + Neomycin + Iodochlorhydroxyquinoline + Tolnaftate + Clobetasol",
     "uses": "Mixed bacterial/fungal skin infection with inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ketofresh_ct_cream.jpg"
   },
   {
@@ -1197,6 +1494,9 @@
     "saltContent": "Cetrimide 0.5% + Ketoconazole 2% (+Clobetasol)",
     "uses": "Fungal skin infection, dandruff, itching",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ketokem_ct_soap.jpg"
   },
   {
@@ -1209,6 +1509,9 @@
     "saltContent": "Ketoconazole 2%",
     "uses": "Antifungal cleansing soap",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ketokem_soap.jpg"
   },
   {
@@ -1221,6 +1524,9 @@
     "saltContent": "ORS salts (Sodium/Potassium/Glucose)",
     "uses": "Dehydration, diarrhea management",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/koplyte_ors_powd.jpg"
   },
   {
@@ -1233,6 +1539,9 @@
     "saltContent": "Clobetasol + Gentamicin + Iodochlorhydroxyquinoline + Ketoconazole + Tolnaftate",
     "uses": "Mixed bacterial/fungal skin infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/kt_5_derm_cream.jpg"
   },
   {
@@ -1245,6 +1554,9 @@
     "saltContent": "Ammonium Chloride + Diphenhydramine + Sodium Citrate + Menthol",
     "uses": "Cough, cold, allergy relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/kuffdryl_syp.jpg"
   },
   {
@@ -1257,6 +1569,9 @@
     "saltContent": "Levocetirizine 5mg + Montelukast 10mg",
     "uses": "Allergic rhinitis, sneezing/runny nose",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/l_hist_mont_tab.jpg"
   },
   {
@@ -1269,6 +1584,9 @@
     "saltContent": "Levocetirizine",
     "uses": "Allergy relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/l_hist_tab.jpg"
   },
   {
@@ -1281,6 +1599,9 @@
     "saltContent": "Shatavari + herbal galactagogues (Calcium, herbs)",
     "uses": "Increases breast milk production in lactating mothers",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/lactobuild_granules_powd.jpg"
   },
   {
@@ -1293,6 +1614,9 @@
     "saltContent": "Isabgol (Psyllium Husk)",
     "uses": "Constipation relief, fiber supplement",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/laxmi_sat_isabgol_powd.jpg"
   },
   {
@@ -1305,6 +1629,9 @@
     "saltContent": "Clotrimazole 2%",
     "uses": "Vaginal fungal infections (candidiasis)",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/leezole_gel.jpg"
   },
   {
@@ -1317,6 +1644,9 @@
     "saltContent": "Levocetirizine 5mg",
     "uses": "Allergy, rhinitis, urticaria",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/levobex_5_tab.jpg"
   },
   {
@@ -1329,6 +1659,9 @@
     "saltContent": "Vitamin C (Ascorbic Acid)",
     "uses": "Vitamin C deficiency, immunity",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/limcee_tab.jpg"
   },
   {
@@ -1341,6 +1674,9 @@
     "saltContent": "Herbal liver tonic + liver syrup",
     "uses": "Liver protection, supports digestion",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/liv52_ds_syp.jpg"
   },
   {
@@ -1353,6 +1689,9 @@
     "saltContent": "Herbal liver tonic + liver syrup ",
     "uses": "Liver health, appetite stimulant",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/liv52_syp.jpg"
   },
   {
@@ -1365,6 +1704,9 @@
     "saltContent": "Herbal liver tonic / SYRUP",
     "uses": "Hepatoprotective",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/livshine_ds_syp.jpg"
   },
   {
@@ -1377,6 +1719,9 @@
     "saltContent": "Luliconazole",
     "uses": "Fungal skin infections (ringworm, athletes foot)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/luliderm_cream.jpg"
   },
   {
@@ -1389,6 +1734,9 @@
     "saltContent": "Sildenafil Citrate 100mg",
     "uses": "Erectile dysfunction",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/manforce_100_tab.jpg"
   },
   {
@@ -1401,6 +1749,9 @@
     "saltContent": "Multivitamin syrup",
     "uses": "Vitamin supplementation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/medivit_syp.jpg"
   },
   {
@@ -1413,6 +1764,9 @@
     "saltContent": "Mefenamic Acid + Dicyclomine",
     "uses": "Abdominal cramps, menstrual pain",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/meftal_spas_tab.jpg"
   },
   {
@@ -1425,6 +1779,9 @@
     "saltContent": "Hydroquinone + Tretinoin + Mometasone",
     "uses": "Hyperpigmentation, melasma",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/melamet_cream.jpg"
   },
   {
@@ -1437,6 +1794,9 @@
     "saltContent": "Ergotamine + Caffeine ",
     "uses": "Migraine relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/migrafen_tab.jpg"
   },
   {
@@ -1449,6 +1809,9 @@
     "saltContent": "Levonorgestrel (emergency contraceptive)",
     "uses": "Emergency contraception",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/miss_me_tab.jpg"
   },
   {
@@ -1461,6 +1824,9 @@
     "saltContent": "Zinc Oxide + Salicylic Acid (antiseptic base)",
     "uses": "Minor skin irritation, diaper rash",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/momin_s_oint.jpg"
   },
   {
@@ -1473,6 +1839,9 @@
     "saltContent": "Cefpodoxime Proxetil 200mg",
     "uses": "Bacterial infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/monocef_o_200_tab.jpg"
   },
   {
@@ -1485,6 +1854,9 @@
     "saltContent": "Montelukast + Levocetirizine",
     "uses": "Allergic rhinitis, asthma",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/montas_l_tab.jpg"
   },
   {
@@ -1497,6 +1869,9 @@
     "saltContent": "Amoxycillin 500mg + Clavulanic Acid 125mg ",
     "uses": "Bacterial infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/moxatris_cv_625_tab.jpg"
   },
   {
@@ -1509,6 +1884,9 @@
     "saltContent": "Amoxycillin 500mg + Clavulanic Acid 125mg",
     "uses": "Bacterial infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/moxikind_cv_625_tab.jpg"
   },
   {
@@ -1521,6 +1899,9 @@
     "saltContent": "Moxifloxacin + Dexamethasone",
     "uses": "Bacterial eye infection with inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/moximax_d_drop.jpg"
   },
   {
@@ -1533,6 +1914,9 @@
     "saltContent": "Multivitamin",
     "uses": "General nutrition supplement",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/multi_vitamin_syp.jpg"
   },
   {
@@ -1545,6 +1929,9 @@
     "saltContent": "Mupirocin",
     "uses": "Bacterial skin infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/mupicip_oint.jpg"
   },
   {
@@ -1557,6 +1944,9 @@
     "saltContent": "Vitamin B1 + B6 + B12",
     "uses": "NNerve health, vitamin-b deficiency",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/neurobion_forte_tab.jpg"
   },
   {
@@ -1569,6 +1959,9 @@
     "saltContent": "OFLOXACIN + ORNIDAZOLE, ",
     "uses": "Diarrhea, GI bacterial/protozoal infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/nflox_tz_tab.jpg"
   },
   {
@@ -1581,6 +1974,9 @@
     "saltContent": "Nimesulide + Paracetamol",
     "uses": "Pain, fever",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/nicip_plus_tab.jpg"
   },
   {
@@ -1593,6 +1989,9 @@
     "saltContent": "Nimesulide 100mg",
     "uses": "Pain, inflammation, fever",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/nimesulide_100_tab.jpg"
   },
   {
@@ -1605,6 +2004,9 @@
     "saltContent": "Nimesulide + Paracetamol",
     "uses": "Pain, fever",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/nimucet_gold_tab.jpg"
   },
   {
@@ -1617,6 +2019,9 @@
     "saltContent": "Paracetamol  + Mefenamic",
     "uses": "Pain, fever (pediatric)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/nimucet_syp.jpg"
   },
   {
@@ -1629,6 +2034,9 @@
     "saltContent": "PARACETAMOL + NIMESULIDE",
     "uses": "Pain, inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/nimucet_tab.jpg"
   },
   {
@@ -1641,6 +2049,9 @@
     "saltContent": "Ketoconazole 2%",
     "uses": "Fungal skin/scalp infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/nizer_gel.jpg"
   },
   {
@@ -1653,6 +2064,9 @@
     "saltContent": "Onion extract + Allantoin + Heparin",
     "uses": "Scar reduction",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/no_scars_cream.jpg"
   },
   {
@@ -1665,6 +2079,9 @@
     "saltContent": "Nimesulide + Paracetamol",
     "uses": "Pain, fever",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/nodard_plus_tab.jpg"
   },
   {
@@ -1677,6 +2094,9 @@
     "saltContent": "OMEPRAZOLE",
     "uses": "Acidity, GERD",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/nogacid_cap.jpg"
   },
   {
@@ -1689,6 +2109,9 @@
     "saltContent": "Norfloxacin + Tinidazole",
     "uses": "Diarrhea, intestinal infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/norflokem_tz_tab.jpg"
   },
   {
@@ -1701,6 +2124,9 @@
     "saltContent": "Ofloxacin  + Metronidazole ",
     "uses": "Diarrhoea, Dysentery, Gastrointestinal Infection, Bacterial & parasitic infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/o2_syp.jpg"
   },
   {
@@ -1713,6 +2139,9 @@
     "saltContent": "Ofloxacin + Ornidazole",
     "uses": "Diarrhea, GI infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/oflakem_oz_syp.jpg"
   },
   {
@@ -1725,6 +2154,9 @@
     "saltContent": "Aluminium/Magnesium Hydroxide + Simethicone",
     "uses": "Acidity, gas relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/omee_mps_oral_susp.jpg"
   },
   {
@@ -1737,6 +2169,9 @@
     "saltContent": "Prednisolone 10mg",
     "uses": "Anti-inflammatory, allergic/autoimmune conditions",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/omnacortil_10_tab.jpg"
   },
   {
@@ -1749,6 +2184,9 @@
     "saltContent": "Diclofenac Diethylamine",
     "uses": "Muscle/joint pain relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/omnigel_100_oint.jpg"
   },
   {
@@ -1761,6 +2199,9 @@
     "saltContent": "Diclofenac Diethylamine",
     "uses": "Muscle/joint pain relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/omnigel_10_oint.jpg"
   },
   {
@@ -1773,6 +2214,9 @@
     "saltContent": "Diclofenac Diethylamine",
     "uses": "Muscle/joint pain relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/omnigel_20_oint.jpg"
   },
   {
@@ -1785,6 +2229,9 @@
     "saltContent": "Diclofenac Diethylamine",
     "uses": "Muscle/joint pain relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/omnigel_50_oint.jpg"
   },
   {
@@ -1797,6 +2244,9 @@
     "saltContent": "Diclofenac (spray form)",
     "uses": "Pain relief spray",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/omnigel_spray.jpg"
   },
   {
@@ -1809,6 +2259,9 @@
     "saltContent": "Ondansetron 4mg (MD)",
     "uses": "Nausea, vomiting",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ondem_md4_tab.jpg"
   },
   {
@@ -1821,6 +2274,9 @@
     "saltContent": "Choline Salicylate + Lignocaine",
     "uses": "Mouth ulcer pain relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/orafast_gel.jpg"
   },
   {
@@ -1833,6 +2289,9 @@
     "saltContent": "Folic Acid (1.5 Mg) + Lactic Acid Bacillus (60 M) + Niacinamide (100 Mg) + Riboflavin / Vitamin B2 (10 Mg)",
     "uses": " Mouth Ulcers",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/orogard_tab.jpg"
   },
   {
@@ -1845,6 +2304,9 @@
     "saltContent": "ORS salts",
     "uses": "Dehydration management",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ors_sam_kem_pow.jpg"
   },
   {
@@ -1857,6 +2319,9 @@
     "saltContent": "Glimepiride (1 mg) + Metformin Hydrochloride (500 mg)",
     "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ozomet_g1_tab.jpg"
   },
   {
@@ -1869,6 +2334,9 @@
     "saltContent": "Glimepiride (2 mg) + Metformin Hydrochloride (500 mg)",
     "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ozomet_g2_tab.jpg"
   },
   {
@@ -1881,6 +2349,9 @@
     "saltContent": "Glimepiride (1 mg) +Metformin Hydrochloride (500 mg) +Pioglitazone (15 mg)",
     "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ozomet_pg1_tab.jpg"
   },
   {
@@ -1893,6 +2364,9 @@
     "saltContent": "Glimepiride (2 mg) +Metformin Hydrochloride (500 mg) +Pioglitazone (15 mg)",
     "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ozomet_pg2_tab.jpg"
   },
   {
@@ -1905,6 +2379,9 @@
     "saltContent": "Metformin Hydrochloride (500 mg) + Glimepiride (1 mg) + Voglibose (0.2 mg)",
     "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ozomet_vg1_tab.jpg"
   },
   {
@@ -1917,6 +2394,9 @@
     "saltContent": "Metformin Hydrochloride (500 mg) + Glimepiride (2 mg) + Voglibose (0.2 mg)",
     "uses": "Type 2 diabetes management, Sugar",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ozomet_vg2_tab.jpg"
   },
   {
@@ -1929,6 +2409,9 @@
     "saltContent": "Pantoprazole 40mg",
     "uses": "Acidity, GERD",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/pantop_40_tab.jpg"
   },
   {
@@ -1941,6 +2424,9 @@
     "saltContent": "Pantoprazole + Domperidone",
     "uses": "Acidity with nausea/bloating",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/pantop_d_cap.jpg"
   },
   {
@@ -1953,6 +2439,9 @@
     "saltContent": "Pantoprazole + Domperidone SR",
     "uses": "GERD, acidity (sustained release)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/pantop_dsr_cap.jpg"
   },
   {
@@ -1965,6 +2454,9 @@
     "saltContent": "Dextromethorphan + Chlorpheniramine + Ammonium Chloride",
     "uses": "Dry cough, cold",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/phensedyl_dx_syp.jpg"
   },
   {
@@ -1977,6 +2469,9 @@
     "saltContent": "Vitamin B-Complex + Lysine + Cyanocobalamin +Pyridoxine + Nicotinamide ",
     "uses": "Vitamin B deficiency, tonic",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/polybion_lc_syp.jpg"
   },
   {
@@ -1989,6 +2484,9 @@
     "saltContent": "Pregabalin + Methylcobalamin",
     "uses": "Neuropathic pain",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/pregacip_m_cap.jpg"
   },
   {
@@ -2001,6 +2499,9 @@
     "saltContent": "BECLOMETHASONE + CLOTRIMAZOLE + Neomycin",
     "uses": "Mixed skin infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/qdiderm_oint.jpg"
   },
   {
@@ -2013,6 +2514,9 @@
     "saltContent": "Rabeprazole + Domperidone SR",
     "uses": "GERD, acidity",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/rabalkem_dsr_cap.jpg"
   },
   {
@@ -2025,6 +2529,9 @@
     "saltContent": "Diclofenac SR",
     "uses": "Pain, inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/reactin_100sr_tab.jpg"
   },
   {
@@ -2037,6 +2544,9 @@
     "saltContent": "Rabeprazole + Domperidone SR",
     "uses": "Acidity, GERD",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/rebozen_dsr_cap.jpg"
   },
   {
@@ -2049,6 +2559,9 @@
     "saltContent": "Carboxymethylcellulose",
     "uses": "Dry eyes, lubrication",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/refresh_tear_e_d_drop.jpg"
   },
   {
@@ -2061,6 +2574,9 @@
     "saltContent": "Rosuvastatin 10mg + Fenofibrate",
     "uses": "Cholesterol/lipid management",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/roseday_f10_tab.jpg"
   },
   {
@@ -2073,6 +2589,9 @@
     "saltContent": "Salicylic Acid",
     "uses": "Skin peeling, fungal/corn treatment",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/salicylic_acid_powd.jpg"
   },
   {
@@ -2085,6 +2604,9 @@
     "saltContent": "Paracetamol + Propyphenazone + Caffeine",
     "uses": "Headache, pain relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/saridon_tab.jpg"
   },
   {
@@ -2097,6 +2619,9 @@
     "saltContent": "Permethrin 5%",
     "uses": "Scabies treatment",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/scrabic_lotion.jpg"
   },
   {
@@ -2109,6 +2634,9 @@
     "saltContent": "Sildenafil 100mg + Dapoxetine 60mg",
     "uses": "Erectile dysfunction + premature ejaculation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/sigora_gold_tab.jpg"
   },
   {
@@ -2121,6 +2649,9 @@
     "saltContent": "Paracetamol + Phenylephrine + Chlorpheniramine",
     "uses": "Cold, allergy, congestion",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/sinarest_tab.jpg"
   },
   {
@@ -2133,6 +2664,9 @@
     "saltContent": "Hydroquinone + Mometasone + Tretinoin",
     "uses": "Melasma, hyperpigmentation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/skinshine_cream.jpg"
   },
   {
@@ -2145,6 +2679,9 @@
     "saltContent": "Choline Salicylate (8.7% w/w) and Lidocaine / Lignocaine (2.0% w/w)",
     "uses": "Mouth Ulcers, Braces & Orthodontic Pain",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/soregel_gel.jpg"
   },
   {
@@ -2157,6 +2694,9 @@
     "saltContent": "PARACETAMOL + DICYCLOMINE",
     "uses": "Abdominal cramps, STOMACH PAIN",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/spasmonil_tab.jpg"
   },
   {
@@ -2169,6 +2709,9 @@
     "saltContent": "Prochlorperazine",
     "uses": "Nausea, vomiting, vertigo",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/stemetil_md_tab.jpg"
   },
   {
@@ -2181,6 +2724,9 @@
     "saltContent": " Diclofenac ",
     "uses": "Pain relief gel",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/sumo_gel.jpg"
   },
   {
@@ -2193,6 +2739,9 @@
     "saltContent": "Nimesulide + Paracetamol",
     "uses": "Pain, fever",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/sumo_tab.jpg"
   },
   {
@@ -2205,6 +2754,9 @@
     "saltContent": "KETOCONAZOLE CLOBETASOLE NEOMYCIN TOLNAFLATE IODOCHLORHYDROXYQUINONE",
     "uses": "Skin lightening, Antifungal, Antibacterial ",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/superb_cream.jpg"
   },
   {
@@ -2217,6 +2769,9 @@
     "saltContent": "Multivitamin + Multimineral",
     "uses": "General health tonic",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/supradyn_daily_tab.jpg"
   },
   {
@@ -2229,6 +2784,9 @@
     "saltContent": "Tadalafil 20mg",
     "uses": "Erectile dysfunction",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/tadacip_20_tab.jpg"
   },
   {
@@ -2241,7 +2799,13 @@
     "saltContent": "Cefixime 200mg",
     "uses": "Bacterial infections",
     "bestseller": true,
-    "images": ["images/taxim_o_200_tab_box.jpg", "images/taxim.jpg"]
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
+    "images": [
+      "images/taxim_o_200_tab_box.jpg",
+      "images/taxim.jpg"
+    ]
   },
   {
     "id": 231,
@@ -2253,6 +2817,9 @@
     "saltContent": "Cefixime (syrup)",
     "uses": "Bacterial infections (pediatric), kids",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/taxim_o_dry_syp.jpg"
   },
   {
@@ -2265,6 +2832,9 @@
     "saltContent": "Tranexamic Acid (500 mg) + Mefenamic Acid (250 mg)",
     "uses": "Heavy menstrual bleeding + menstrual pain/cramps",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/tenacid_mf_tab.jpg"
   },
   {
@@ -2277,6 +2847,9 @@
     "saltContent": "Heparin Sodium",
     "uses": "Swelling, blood clot related pain (varicose)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/thrombotas_oint.jpg"
   },
   {
@@ -2289,6 +2862,9 @@
     "saltContent": "THYROXINE 100 mcg",
     "uses": "Hypothyroidism, thyroid",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/thyronorm_100_tab.jpg"
   },
   {
@@ -2301,6 +2877,9 @@
     "saltContent": "THYROXINE 50 mcg ",
     "uses": "Hypothyroidism, thyroid",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/thyronorm_50_tab.jpg"
   },
   {
@@ -2313,6 +2892,9 @@
     "saltContent": "THYROXINE 100 mcg ",
     "uses": "Hypothyroidism, thyroid",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/thyrox_100_tab.jpg"
   },
   {
@@ -2325,6 +2907,9 @@
     "saltContent": "THYROXINE 25 mcg",
     "uses": "Hypothyroidism, thyroid",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/thyrox_25_tab.jpg"
   },
   {
@@ -2337,6 +2922,9 @@
     "saltContent": "THYROXINE 50 mcg",
     "uses": "Hypothyroidism, thyroid",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/thyrox_50_tab.jpg"
   },
   {
@@ -2349,6 +2937,9 @@
     "saltContent": "Mupirocin",
     "uses": "Bacterial skin infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/top_bact_oint.jpg"
   },
   {
@@ -2361,6 +2952,9 @@
     "saltContent": "Hydroquinone + Tretinoin + Mometasone",
     "uses": "Skin pigmentation, melasma",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ultrabrite_cream.jpg"
   },
   {
@@ -2373,6 +2967,9 @@
     "saltContent": "Fungal Diastase + Pepsin + Activated Charcoal",
     "uses": "Indigestion, gas",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/unienzyme_syp.jpg"
   },
   {
@@ -2385,6 +2982,9 @@
     "saltContent": "Digestive enzymes (pediatric drop)",
     "uses": "Indigestion in infants",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/unienzyme_drop.jpg"
   },
   {
@@ -2397,6 +2997,9 @@
     "saltContent": "Dextromethorphan + Chlorpheniramine + Phenylephrine",
     "uses": "Cough & cold",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ventoranz_dx_syp.jpg"
   },
   {
@@ -2409,6 +3012,9 @@
     "saltContent": "Sildenafil Citrate 100mg",
     "uses": "Erectile dysfunction",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/vigore_100_tab.jpg"
   },
   {
@@ -2421,6 +3027,9 @@
     "saltContent": "Iron + Folic Acid + Vitamin B12",
     "uses": "Anemia",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/vitcofol_oral_suspen.jpg"
   },
   {
@@ -2433,6 +3042,9 @@
     "saltContent": "Albendazole (200mg)",
     "uses": "Parasitic infections + Intestinal Worm Infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/zeebee_syp.jpg"
   },
   {
@@ -2445,6 +3057,9 @@
     "saltContent": "Aceclofenac + Paracetamol",
     "uses": "Pain, fever, inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/zerodol_p_tab.jpg"
   },
   {
@@ -2457,6 +3072,9 @@
     "saltContent": "Aceclofenac + Paracetamol + Serratiopeptidase",
     "uses": "Pain & swelling relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/zerodol_sp_tab.jpg"
   },
   {
@@ -2469,6 +3087,9 @@
     "saltContent": "ACECLOFENAC + DROTAVERINE",
     "uses": "Abdominal pain, STOMACH PAIN",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/zerodol_spas_tab.jpg"
   },
   {
@@ -2481,6 +3102,9 @@
     "saltContent": "Aciclovir (Acyclovir)",
     "uses": "Herpes/shingles skin infection",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/zoster_skin_cream.jpg"
   },
   {
@@ -2493,6 +3117,9 @@
     "saltContent": "Aceclofenac + Paracetamol + Serratiopeptidase",
     "uses": "Pain, inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/zotadol_sp_tab.jpg"
   },
   {
@@ -2505,6 +3132,9 @@
     "saltContent": "Amoxycillin 500mg ",
     "uses": "Bacterial infections",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/zymox_500_cap.jpg"
   },
   {
@@ -2517,6 +3147,9 @@
     "saltContent": "Honey + Tulsi + herbal extracts",
     "uses": "Cough, sore throat relief (Ayurvedic)",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/dabur_honitus.jpg"
   },
   {
@@ -2529,6 +3162,9 @@
     "saltContent": "Clove Oil (Eugenol)",
     "uses": "Toothache relief",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/clove_oil.jpg"
   },
   {
@@ -2541,6 +3177,9 @@
     "saltContent": "Iron + Folic Acid + B12 (hematinic tonic)",
     "uses": "Anemia, iron deficiency",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/hemolab_forte_syp.jpg"
   },
   {
@@ -2553,6 +3192,9 @@
     "saltContent": "Ayurvedic herbo-mineral formulation",
     "uses": "Digestive tonic (Ayurvedic)",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/jhandu_mugdha_rasa.jpg"
   },
   {
@@ -2565,6 +3207,9 @@
     "saltContent": "Skin lightening herbal cream",
     "uses": "Fairness/skin brightening",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/lite_face_cream.jpg"
   },
   {
@@ -2577,6 +3222,9 @@
     "saltContent": "Ayurvedic herbal oil (Nirgundi, Eucalyptus, Camphor etc.)",
     "uses": "Joint & muscle pain relief",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ortho_oil.jpg"
   },
   {
@@ -2589,6 +3237,9 @@
     "saltContent": "Ayurvedic pain relief oil",
     "uses": "Joint/muscle pain",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ortho_aid_oil.jpg"
   },
   {
@@ -2601,6 +3252,9 @@
     "saltContent": "Ayurvedic herbal oil",
     "uses": "General wellness/massage oil",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/poshak_100_oil.jpg"
   },
   {
@@ -2613,6 +3267,9 @@
     "saltContent": "Ayurvedic herbal oil (200ml)",
     "uses": "General wellness/massage oil",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/poshak_200_oil.jpg"
   },
   {
@@ -2625,6 +3282,9 @@
     "saltContent": "Glucose powder",
     "uses": "Energy/instant refreshment drink",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/garima_glucose_orange.jpg"
   },
   {
@@ -2637,6 +3297,9 @@
     "saltContent": "CEFIXIME 200 mg",
     "uses": "Bacterial infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/cefaclass_200_tab.jpg"
   },
   {
@@ -2649,6 +3312,9 @@
     "saltContent": "Clobetasol propionate, Ketoconazole, Neomycin sulfate, Tolnaftate, and Iodochlorhydroxyquinoline",
     "uses": "bacterial and fungal infections, promote healthier skin",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/dermakt_neo_cream.jpg"
   },
   {
@@ -2661,6 +3327,9 @@
     "saltContent": "CEFIXIME",
     "uses": "bacterial infections in KIDS, including ear infections, throat infections like tonsillitis, bronchitis, and UTI",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/cefkem_syp.jpg"
   },
   {
@@ -2673,9 +3342,12 @@
     "saltContent": "Bisacodyl (5mg)",
     "uses": "constipation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/dulcoflex_tab.jpg"
   },
-   {
+  {
     "id": 292,
     "name": "HEMOLAB FORTE SYRUP (450 ML)",
     "company": "LABORATE",
@@ -2685,6 +3357,9 @@
     "saltContent": "Iron + Folic Acid + B12 (hematinic tonic)",
     "uses": "Anemia, iron deficiency",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/hemolab_forte_syp_450.jpg"
   },
   {
@@ -2697,6 +3372,9 @@
     "saltContent": "LYCOPENE + FOLIC ACID + CYANOCOBALAMIN",
     "uses": "vitamin or mineral syrup, support overall health, energy metabolism, and immune function",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/lykorich_syp.jpg"
   },
   {
@@ -2709,6 +3387,9 @@
     "saltContent": "PARACETAMOL + NIMESULIDE",
     "uses": "Pain, fever",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/nimudec_plus_tab.jpg"
   },
   {
@@ -2721,6 +3402,9 @@
     "saltContent": "PARACETAMOL + PHENYLEPHRINE HCL + CAFFINE + DIPHENHYDRAMINE",
     "uses": "Cold/flu , COMMON COLD, ALLERGY, CONGESTION, FEVER",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/tancet_cold&flu_tab.jpg"
   },
   {
@@ -2733,6 +3417,9 @@
     "saltContent": "FOLIC ACID + VITAMIN B12 + FERRIC AMMONIUM CITRATE",
     "uses": "Iron deficiency anemia",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/fercee_red_syp.jpg"
   },
   {
@@ -2745,6 +3432,9 @@
     "saltContent": "CETIRIZINE (5 mg)",
     "uses": "Cold, cough, allergy, blocked/runny/itchy nose, red/watery eyes, and skin rashes",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/okacet_syp.jpg"
   },
   {
@@ -2757,6 +3447,9 @@
     "category": "LIQUID",
     "packing": "100 ML",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/zedex_syp_1.jpg"
   },
   {
@@ -2769,6 +3462,9 @@
     "category": "LIQUID",
     "packing": "200 ML",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/amlycure_ds_syp_1.jpg"
   },
   {
@@ -2781,6 +3477,9 @@
     "category": "TABLET_CAP",
     "packing": "20*20",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/vasograin_ec_tab_box.jpg"
   },
   {
@@ -2793,6 +3492,9 @@
     "category": "TABLET_CAP",
     "packing": "10*2*10",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/sumo_cold_tab_box.jpg"
   },
   {
@@ -2805,6 +3507,9 @@
     "saltContent": "Ciprofloxacin 0.5% + Fluocinolone acetonide + Clotrimazole 1% + Neomycin",
     "uses": "Mixed bacterial + fungal skin infections; antibiotic-steroid-antifungal cream",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/ceflox_cf_cream.jpg"
   },
   {
@@ -2817,7 +3522,10 @@
     "saltContent": "Levocetirizine 2.5mg/5ml",
     "uses": "Antihistamine allergic rhinitis, sneezing, itching, skin allergy",
     "bestseller": false,
-    "image": "images/l_hist_syp.webp"
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
+    "image": "images/l_hist_syp.jpg"
   },
   {
     "id": 300,
@@ -2829,7 +3537,13 @@
     "saltContent": "Dextromethorphan HBr 10mg + Menthol 3.75mg + Terpin Hydrate 10mg /5ml",
     "uses": "Dry cough suppressant",
     "bestseller": true,
-    "image": "images/glycodin-100ml_syp_1.webp"
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
+    "images": [
+      "images/glycodin-100ml_syp_1.jpg",
+      "images/glycodin_100ml_syp_2.jpg"
+    ]
   },
   {
     "id": 302,
@@ -2841,7 +3555,10 @@
     "saltContent": "Itraconazole 200mg",
     "uses": "Antifungal  nail, skin, oral, systemic fungal infections",
     "bestseller": false,
-    "image": "images/itrostred_200_cap.webp"
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
+    "image": "images/itrostred_200_cap.jpg"
   },
   {
     "id": 303,
@@ -2853,6 +3570,9 @@
     "saltContent": "Clobetasol Propionate 0.05% + Ofloxacin 0.75% + Ornidazole 2% + Terbinafine 1%",
     "uses": "Mixed bacterial/fungal skin infection with inflammation (steroid+antibiotic+antifungal)",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/castor_nf_cream.jpg"
   },
   {
@@ -2865,7 +3585,10 @@
     "saltContent": "Cefixime 200mg/5ml",
     "uses": "Antibiotic  ear/throat/UTI/respiratory bacterial infections",
     "bestseller": false,
-    "image": "images/taxim_o_200_syp.webp"
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
+    "image": "images/taxim_o_200_syp.jpg"
   },
   {
     "id": 305,
@@ -2877,6 +3600,9 @@
     "saltContent": "Cefixime 100mg/5ml",
     "uses": "Antibiotic higher strength, ENT/respiratory/UTI/typhoid",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/taxim_o_forte_100mg_syp.jpg"
   },
   {
@@ -2889,6 +3615,9 @@
     "saltContent": "Chlorpheniramine Maleate 4mg + Dextromethorphan HBr 10mg /5ml",
     "uses": "Dry cough with allergy relief",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/codistar_dx.jpg"
   },
   {
@@ -2901,7 +3630,13 @@
     "saltContent": "Azithromycin 100mg/5ml",
     "uses": "Antibiotic ear/throat/skin/respiratory infections",
     "bestseller": false,
-    "image": "images/aziwok1.jpg"
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
+    "images": [
+      "images/aziwok1.jpg",
+      "images/aziwok2.jpg"
+    ]
   },
   {
     "id": 308,
@@ -2913,6 +3648,9 @@
     "saltContent": "Cefpodoxime Proxetil 100mg",
     "uses": "Antibiotic respiratory, UTI, ENT, skin infections",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/gudcef_100_tab.jpg"
   },
   {
@@ -2925,7 +3663,10 @@
     "saltContent": "Ofloxacin 100mg + Metronidazole 200mg /5ml",
     "uses": "Bacterial + protozoal (mixed) infections GI, urinary, dental",
     "bestseller": false,
-    "image": "images/o2_m_syp.webp"
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
+    "image": "images/o2_m_syp.jpg"
   },
   {
     "id": 311,
@@ -2937,6 +3678,9 @@
     "saltContent": "Cefpodoxime Proxetil 50mg/5ml",
     "uses": "Antibiotic ENT, respiratory, UTI (paediatric)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/monocef_o_50mg_syp.jpg"
   },
   {
@@ -2949,6 +3693,9 @@
     "saltContent": "Cefpodoxime Proxetil 100mg/5ml",
     "uses": "Same as above, higher strength",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/monocef_o_100mg_syp.jpg"
   },
   {
@@ -2961,6 +3708,9 @@
     "saltContent": "Amoxicillin 200mg + Clavulanic Acid 28.5mg /5ml",
     "uses": "Broad-spectrum antibiotic ENT, respiratory, skin, UTI",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/mega_cv_syp.jpg"
   },
   {
@@ -2973,6 +3723,9 @@
     "saltContent": "Cefpodoxime 100mg + Clavulanic Acid",
     "uses": "Resistant bacterial infections (beta-lactamase producing)",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/monocef_o_cv_100mg_syp.jpg"
   },
   {
@@ -2985,6 +3738,9 @@
     "saltContent": "Beclometasone 0.025% + Clotrimazole 1% + Neomycin 3500 IU",
     "uses": "Mixed bacterial+fungal skin infection with inflammation",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/surfaz_sn_cream.jpg"
   },
   {
@@ -2997,6 +3753,9 @@
     "saltContent": "Sulfamethoxazole 200mg + Trimethoprim 40mg /5ml",
     "uses": "Broad-spectrum antibiotic (cotrimoxazole) UTI, respiratory, GI infections",
     "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/septran_syp.jpg"
   },
   {
@@ -3009,6 +3768,9 @@
     "saltContent": "Chlorpheniramine Maleate 1mg + Paracetamol 125mg + Pseudoephedrine 15mg /5ml",
     "uses": "Cold/flu fever, congestion, allergy relief",
     "bestseller": true,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
     "image": "images/hatric_3_syp.jpg"
   },
   {
@@ -3021,7 +3783,10 @@
     "saltContent": "Clobetasol Propionate 0.05% + Miconazole 2% + Neomycin 0.5%",
     "uses": "Inflamed skin with secondary bacterial/fungal infection",
     "bestseller": true,
-    "image": "images/panderm++_cream.webp"
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
+    "image": "images/panderm++_cream.jpg"
   },
   {
     "id": 1008,
@@ -3033,10 +3798,9 @@
     "saltContent": "Levocetirizine (5mg) + Montelukast (10mg)",
     "uses": "Antihistamine + Leukotriene receptor antagonist allergic rhinitis, sneezing, nasal congestion, itching, associated with asthma/allergic symptoms",
     "bestseller": true,
-    "image": "images/l_hist_mont_syp.webp"
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
+    "image": "images/l_hist_mont_syp.jpg"
   }
-
-
 ]
-
-
