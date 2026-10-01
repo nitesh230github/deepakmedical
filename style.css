@@ -2260,152 +2260,186 @@ header.logo-hidden .logo-section{
     border:2px solid var(--color-primary) !important;
 
 }
-
-
 /* =========================================================
-   [NEW] SITE FOOTER (Address / Phone / Timing / Social)
+   [NEW] SMOOTH SCROLL
    ---------------------------------------------------------
-   Kyun add kiya:
-   index.html me naya <footer class="site-footer"> joda hai.
-   Ye CSS usko design deta hai, warna wo bina style ke
-   simple text jaisa dikhega.
-
-   Kahan paste karna hai:
-   style.css ke bilkul LAST me (aakhri line ke baad).
-   Last me isliye ki upar ka koi purana rule isse
-   override na kare.
+   "Contact Us" button dabane par page jhatke se nahi,
+   araam se (smooth) neeche footer tak scroll hoga.
+   Kahan paste: style.css ke last me.
 ========================================================= */
 
-.site-footer{
+html{
 
-    /* Aapke theme ka dark teal color (header se match karta hai) */
-    background:var(--color-primary-dark);
-
-    color:#fff;
-
-    /* Upar-neeche 32px, left-right 20px ki jagah */
-    padding:32px 20px;
-
-    /* Products grid aur footer ke beech gap */
-    margin-top:40px;
-
-    text-align:center;
-
-    font-family:'Poppins',Arial,sans-serif;
+    scroll-behavior:smooth;
 
 }
 
 
 /* =========================================================
-   FOOTER HEADING (Dukan ka naam)
+   [NEW] CONTACT US BUTTON (Header me)
+   ---------------------------------------------------------
+   White background + teal text, taaki dark green header par
+   alag se dikhe. Cart button se match karta hua pill shape.
 ========================================================= */
 
-.site-footer h2{
+.contact-btn{
 
-    font-size:22px;
+    background:#fff;
 
-    font-weight:700;
+    color:var(--color-primary-dark);
 
-    margin-bottom:12px;
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    white-space:nowrap;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+
+    transition:all .25s ease;
+
+}
+
+.contact-btn:hover{
+
+    background:#e6f4f3;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 14px rgba(0,0,0,.22);
 
 }
 
 
 /* =========================================================
-   FOOTER TEXT (Address, phone, timing, intro line)
+   [NEW] FOOTER LINKS (Phone number wali link)
    ---------------------------------------------------------
-   max-width isliye ki desktop par lambi line na bane
-   aur text padhne me aasaan rahe.
-========================================================= */
-
-.site-footer p{
-
-    max-width:700px;
-
-    margin:8px auto;
-
-    font-size:14px;
-
-    line-height:1.7;
-
-    color:rgba(255,255,255,.92);
-
-}
-
-
-/* =========================================================
-   FOOTER LINKS (Phone, WhatsApp, Facebook, Instagram)
-   ---------------------------------------------------------
-   Yellow color dark background par saaf dikhta hai.
+   Light blue + underline: normal link jaisa look.
+   Ye purane ".site-footer a" rule ko override karta hai
+   (kyunki ye baad me likha hai).
 ========================================================= */
 
 .site-footer a{
 
-    color:#ffd54f;
+    color:#8ecbff;
 
-    text-decoration:none;
+    text-decoration:underline;
+
+    text-underline-offset:3px;
 
     font-weight:600;
+
+    transition:color .2s ease;
 
 }
 
 .site-footer a:hover{
 
-    text-decoration:underline;
+    color:#fff;
 
 }
 
 
 /* =========================================================
-   SOCIAL LINKS ROW (Facebook | Instagram)
+   [UPDATED] SOCIAL ICONS ROW
+   ---------------------------------------------------------
+   Facebook, Instagram, WhatsApp ke logo (images/social/ folder
+   ki SVG files). flex + gap se teeno ek line me aate hain.
+   flex-wrap: chhoti screen par zarurat ho to neeche aa jayein.
 ========================================================= */
 
-.site-footer .social-links{
+.site-footer .social-icons{
 
-    margin-top:16px;
+    display:flex;
 
-    font-size:15px;
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:18px;
 
 }
 
 
 /* =========================================================
-   COPYRIGHT LINE
+   SOCIAL ICON (Logo ka link)
    ---------------------------------------------------------
-   Sabse neeche halki, chhoti line.
+   Logo khud gol aur rangeen hai, isliye alag background nahi.
+   text-decoration:none: upar ke ".site-footer a" ka underline
+   logo par na aaye.
 ========================================================= */
 
-.site-footer .copyright{
+.site-footer .social-icon{
 
-    margin-top:22px;
+    display:block;
 
-    font-size:12px;
+    width:48px;
 
-    opacity:.7;
+    height:48px;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.35);
+
+    transition:transform .2s ease,
+               box-shadow .2s ease;
+
+}
+
+/* Logo image link ke poore size me */
+.site-footer .social-icon img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+}
+
+/* Hover par thoda upar uthta hai aur bada hota hai */
+.site-footer .social-icon:hover{
+
+    transform:translateY(-4px) scale(1.1);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.45);
 
 }
 
 
 /* =========================================================
-   [NEW] FOOTER - MOBILE
+   [NEW] MOBILE: CONTACT US BUTTON
    ---------------------------------------------------------
-   Mobile par aapka floating cart button (fixed, bottom-right)
-   footer ke text ke upar aa jaata hai. Isliye neeche extra
-   padding di hai, taaki copyright aur social links button ke
-   peeche na chhup jaayein.
+   Mobile par search-cart column me hota hai, isliye
+   Contact Us button search box ke neeche poori width me
+   aata hai. (Cart button mobile par pehle se floating hai.)
 ========================================================= */
 
 @media (max-width:768px){
 
-    .site-footer{
+    .contact-btn{
 
-        padding:28px 16px 100px;
+        width:100%;
 
-    }
+        text-align:center;
 
-    .site-footer h2{
-
-        font-size:20px;
+        padding:12px 16px;
 
     }
 
