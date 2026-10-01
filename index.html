@@ -13,11 +13,11 @@
     
     <!-- [CHANGE] Title me keywords jode. Google result me ye blue link ban kar dikhta hai.
          SHEHAR ki jagah apne shehar ka naam likho (e.g. "Bhopal") -->
-    <title>Deepak Medical Agency | Online Medical Agency in REWA & MAUGANJ - Free Delivery</title>
+    <title>Deepak Medical Agency | Online Medical Store in SHEHAR - Free Home Delivery</title>
 
     <!-- [NEW] Description: Google result me title ke neeche ka text. Isme phone number aur shehar likha hai.
          PHONE_NUMBER aur SHEHAR apne hisab se badlo. 150-160 characters ke andar rakho -->
-    <meta name="description" content="Deepak Medical Agency, REWA & MAUGANJ. Sahi dawa, Sahi daam, Free & Fast Delivery. Call: +91 7804008789">
+    <meta name="description" content="Deepak Medical Agency, SHEHAR. Sahi dawa, sahi daam, free & fast home delivery. Tablets, syrups, creams, drops. Call: +91 PHONE_NUMBER">
 
     <!-- [NEW] Google ko batata hai ki ye site ko index karna hai -->
     <meta name="robots" content="index, follow">
@@ -33,7 +33,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Deepak Medical Agency">
     <meta property="og:title" content="Deepak Medical Agency | Online Medical Store">
-    <meta property="og:description" content="Sahi dawa, Sahi daam. Free & Fast Delivery.">
+    <meta property="og:description" content="Sahi dawa, sahi daam. Free & fast home delivery.">
     <meta property="og:url" content="https://deepakmedical.vercel.app/">
     <meta property="og:image" content="https://deepakmedical.vercel.app/images/website_images/logo.png">
 
@@ -44,12 +44,7 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Deepak Medical Agency",
-     "alternateName": [
-      "Deepak Medical And Surgical Agency",
-      "Deepak Medical Agency REWA",
-      "Deepak Medical Agency Mauganj",
-      "Deepak Medical Mauganj"
-      ],
+      "alternateName": "Deepak Medical",
       "url": "https://deepakmedical.vercel.app/"
     }
     </script>
@@ -64,19 +59,19 @@
       "name": "Deepak Medical Agency",
       "url": "https://deepakmedical.vercel.app/",
       "image": "https://deepakmedical.vercel.app/images/website_images/logo.png",
-      "telephone": "+917804008789",
+      "telephone": "+91PHONE_NUMBER",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Near Chirahula Mandir",
-        "addressLocality": "REWA",
-        "addressRegion": "MADHYA PRADESH",
-        "postalCode": "486001",
+        "streetAddress": "DUKAN KA ADDRESS",
+        "addressLocality": "SHEHAR",
+        "addressRegion": "STATE",
+        "postalCode": "PINCODE",
         "addressCountry": "IN"
       },
       "openingHours": "Mo-Su 09:00-21:00",
       "sameAs": [
-        "https://www.facebook.com/share/1DoJ9zAbfs/",
-        "https://www.instagram.com/deepakmedagency?stkn=aXE5NDZnMDlxdjJm"
+        "https://www.facebook.com/APKA_FACEBOOK_PAGE",
+        "https://www.instagram.com/APKA_INSTAGRAM_ID"
       ]
     }
     </script>
@@ -117,6 +112,11 @@
 
         <div class="search-cart">
           <input type="text" id="search" class="search-box" placeholder="🔍 Search Medicines...">
+        <!-- [NEW] Contact Us button: click karne par page ke sabse neeche footer (id="contact") tak
+             smooth scroll karta hai. href="#contact" footer ke id se match karta hai.
+             Isko style karne ke liye style.css me .contact-btn ka CSS add karna hai -->
+        <a href="#contact" class="contact-btn">📞 Contact Us</a>
+
         <div id="cartButton">🛒 Cart (0)</div>
     </div>
 
@@ -214,18 +214,38 @@
     <!-- Phone: tel: link se mobile par click karte hi call lag jaata hai -->
     <p>📞 <strong>Phone:</strong> <a href="tel:+91PHONE_NUMBER">+91 PHONE_NUMBER</a></p>
 
-    <!-- WhatsApp (optional): number ke aage 91 lagao, + ya space mat lagana. Nahi chahiye to ye line hata do -->
-    <p>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/91PHONE_NUMBER" target="_blank" rel="noopener noreferrer">Chat karein</a></p>
-
     <!-- Timing -->
     <p>🕘 <strong>Timing:</strong> Subah 9:00 baje se raat 9:00 baje tak (Sabhi din)</p>
 
-    <!-- Social links: rel="noopener noreferrer" security ke liye, target="_blank" naye tab me kholne ke liye -->
-    <p class="social-links">
-        <a href="https://www.facebook.com/APKA_FACEBOOK_PAGE" target="_blank" rel="noopener noreferrer">Facebook</a>
-        |
-        <a href="https://www.instagram.com/APKA_INSTAGRAM_ID" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </p>
+    <!-- [CHANGE] Social media icons: ab images/social/ folder ki SVG files use ho rahi hain (premium logo look).
+         Pehle text links the (Facebook | Instagram), ab professional icon buttons hain.
+         Teeno links apne asli links se badlo:
+           - Facebook:  APKA_FACEBOOK_PAGE  -> apne page ka username
+           - Instagram: APKA_INSTAGRAM_ID   -> apna instagram username
+           - WhatsApp:  91PHONE_NUMBER      -> 91 ke baad 10 digit number (+ ya space nahi)
+         aria-label / title: screen reader aur mouse hover par naam dikhane ke liye.
+         rel="noopener noreferrer": naye tab me safe kholne ke liye. -->
+    <div class="social-icons">
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/APKA_FACEBOOK_PAGE" target="_blank" rel="noopener noreferrer"
+           class="social-icon facebook" aria-label="Facebook" title="Facebook">
+            <img src="images/social/facebook.svg" alt="Facebook" width="48" height="48" loading="lazy">
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/APKA_INSTAGRAM_ID" target="_blank" rel="noopener noreferrer"
+           class="social-icon instagram" aria-label="Instagram" title="Instagram">
+            <img src="images/social/instagram.svg" alt="Instagram" width="48" height="48" loading="lazy">
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/91PHONE_NUMBER" target="_blank" rel="noopener noreferrer"
+           class="social-icon whatsapp" aria-label="WhatsApp" title="WhatsApp par chat karein">
+            <img src="images/social/whatsapp.svg" alt="WhatsApp" width="48" height="48" loading="lazy">
+        </a>
+
+    </div>
 
     <p class="copyright">© 2026 Deepak Medical Agency. All rights reserved.</p>
 
