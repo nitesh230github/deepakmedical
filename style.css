@@ -2444,3 +2444,111 @@ html{
     }
 
 }
+
+
+/* =========================================================
+   [MISSING PART - ISE ADD KARO] SITE FOOTER BASE DESIGN
+   ---------------------------------------------------------
+   Aapke style.css me footer ka ye basic design nahi tha
+   (sirf link aur social icons ka CSS tha). Isliye footer
+   preview me bina background/center ke plain text dikh raha tha.
+
+   Kahan paste karna hai: style.css ke bilkul LAST me
+   (contact button / social icons wale CSS ke baad).
+========================================================= */
+
+.site-footer{
+
+    /* Dark petrol blue (Garg Agency wala): white text bahut saaf dikhta hai */
+    background:#072831;
+
+    color:#fff;
+
+    padding:32px 20px;
+
+    /* Products aur footer ke beech gap */
+    margin-top:40px;
+
+    /* Saara text beech me */
+    text-align:center;
+
+    font-family:'Poppins',Arial,sans-serif;
+
+}
+
+
+/* Footer heading (dukan ka naam) */
+
+.site-footer h2{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+
+/* Footer text (address, phone, timing, intro line).
+   max-width: lambi line na bane, padhne me aasaan rahe. */
+
+.site-footer p{
+
+    max-width:700px;
+
+    margin:8px auto;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:rgba(255,255,255,.92);
+
+}
+
+
+/* Address/Phone/Timing ke label (bold) */
+
+.site-footer strong{
+
+    color:#fff;
+
+}
+
+
+/* Copyright line (sabse neeche, halki aur chhoti) */
+
+.site-footer .copyright{
+
+    margin-top:22px;
+
+    font-size:12px;
+
+    opacity:.7;
+
+}
+
+
+/* =========================================================
+   FOOTER - MOBILE
+   ---------------------------------------------------------
+   Mobile par floating cart button (neeche right me) footer
+   ke text ko na dhake, isliye neeche extra padding.
+========================================================= */
+
+@media (max-width:768px){
+
+    .site-footer{
+
+        padding:28px 16px 100px;
+
+    }
+
+    .site-footer h2{
+
+        font-size:20px;
+
+    }
+
+}
