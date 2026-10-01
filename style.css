@@ -2260,3 +2260,153 @@ header.logo-hidden .logo-section{
     border:2px solid var(--color-primary) !important;
 
 }
+
+
+/* =========================================================
+   [NEW] SITE FOOTER (Address / Phone / Timing / Social)
+   ---------------------------------------------------------
+   Kyun add kiya:
+   index.html me naya <footer class="site-footer"> joda hai.
+   Ye CSS usko design deta hai, warna wo bina style ke
+   simple text jaisa dikhega.
+
+   Kahan paste karna hai:
+   style.css ke bilkul LAST me (aakhri line ke baad).
+   Last me isliye ki upar ka koi purana rule isse
+   override na kare.
+========================================================= */
+
+.site-footer{
+
+    /* Aapke theme ka dark teal color (header se match karta hai) */
+    background:var(--color-primary-dark);
+
+    color:#fff;
+
+    /* Upar-neeche 32px, left-right 20px ki jagah */
+    padding:32px 20px;
+
+    /* Products grid aur footer ke beech gap */
+    margin-top:40px;
+
+    text-align:center;
+
+    font-family:'Poppins',Arial,sans-serif;
+
+}
+
+
+/* =========================================================
+   FOOTER HEADING (Dukan ka naam)
+========================================================= */
+
+.site-footer h2{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+
+/* =========================================================
+   FOOTER TEXT (Address, phone, timing, intro line)
+   ---------------------------------------------------------
+   max-width isliye ki desktop par lambi line na bane
+   aur text padhne me aasaan rahe.
+========================================================= */
+
+.site-footer p{
+
+    max-width:700px;
+
+    margin:8px auto;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:rgba(255,255,255,.92);
+
+}
+
+
+/* =========================================================
+   FOOTER LINKS (Phone, WhatsApp, Facebook, Instagram)
+   ---------------------------------------------------------
+   Yellow color dark background par saaf dikhta hai.
+========================================================= */
+
+.site-footer a{
+
+    color:#ffd54f;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.site-footer a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* =========================================================
+   SOCIAL LINKS ROW (Facebook | Instagram)
+========================================================= */
+
+.site-footer .social-links{
+
+    margin-top:16px;
+
+    font-size:15px;
+
+}
+
+
+/* =========================================================
+   COPYRIGHT LINE
+   ---------------------------------------------------------
+   Sabse neeche halki, chhoti line.
+========================================================= */
+
+.site-footer .copyright{
+
+    margin-top:22px;
+
+    font-size:12px;
+
+    opacity:.7;
+
+}
+
+
+/* =========================================================
+   [NEW] FOOTER - MOBILE
+   ---------------------------------------------------------
+   Mobile par aapka floating cart button (fixed, bottom-right)
+   footer ke text ke upar aa jaata hai. Isliye neeche extra
+   padding di hai, taaki copyright aur social links button ke
+   peeche na chhup jaayein.
+========================================================= */
+
+@media (max-width:768px){
+
+    .site-footer{
+
+        padding:28px 16px 100px;
+
+    }
+
+    .site-footer h2{
+
+        font-size:20px;
+
+    }
+
+}
