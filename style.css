@@ -7,200 +7,39 @@
    (purana :root poora hata kar ye paste karo)
 ######################################################### */
 
+
 :root{
-
-    /* [CHANGED] Naya main theme color (Garg Agency wala dark petrol teal).
-       Poori website ke buttons, header, footer sab isi se chalenge. */
+ 
+    /* Main theme color: dark petrol teal.
+       Header aur footer DONO isi se chalte hain, isliye hamesha same rahenge. */
     --color-primary:#072831;
-
-    /* [CHANGED] Primary ka aur gehra shade: hover par use hota hai */
+ 
+    /* Primary ka aur gehra shade (abhi zyada jagah use nahi hota, kabhi zarurat ho to) */
     --color-primary-dark:#041a20;
-
-    /* [NEW] Primary ka halka shade: header gradient ke shuruat me use hota hai
-       taaki header flat na dikhe */
-    --color-primary-light:#0c3b48;
-
+ 
+    /* [NEW] Primary ka HALKA shade: button par hover ya click (active) hone par
+       ye color aayega. Dark theme me hover hamesha halka hona chahiye,
+       taaki user ko pata chale ki button react kar raha hai. */
+    --color-primary-light:#1b5a6b;
+ 
     --color-cart:#3f6b8a;
     --color-cart-dark:#2e5169;
-
+ 
     --color-accent:#16a34a;
     --color-accent-dark:#128a3e;
-
+ 
     --color-whatsapp:#25d366;
     --color-whatsapp-dark:#1da851;
-
+ 
     --color-danger:#ef4444;
     --color-danger-dark:#dc2626;
-
+ 
     --color-bg:#f3f4f6;
     --color-text:#1f2937;
     --color-text-light:#6b7280;
-
+ 
 }
 
-
-/* #########################################################
-   PART 2: YE POORA BLOCK style.css KE BILKUL LAST ME PASTE KARO
-   ---------------------------------------------------------
-   Kyun zaroori hai:
-   Kuch jagah purane CSS me teal color seedha (hardcoded) likha tha,
-   variable se nahi, isliye sirf :root badalne se wo nahi badalte.
-   Aur dark color par kuch cheezein (black text, same color ka
-   button on header) dikhna band ho jaati. Ye block wo sab theek karta hai.
-   Last me isliye ki ye purane rules ko override kare.
-######################################################### */
-
-
-/* =========================================================
-   HEADER BACKGROUND
-   ---------------------------------------------------------
-   Pehle 3 teal colors seedha likhe the (#0d6e6a, #0a5a57, #083f3d).
-   Ab variables se: halka -> primary -> dark.
-========================================================= */
-
-header{
-
-    background:linear-gradient(135deg,
-                var(--color-primary-light) 0%,
-                var(--color-primary) 60%,
-                var(--color-primary-dark) 100%);
-
-}
-
-
-/* =========================================================
-   CATEGORY BUTTONS (Header me)
-   ---------------------------------------------------------
-   Problem: active/hover button ka color header jaisa hi hone se
-   wo header me ghul jata. Isliye safed inset ring (andar ki border)
-   di hai. "inset" isliye ki header-bottom scroll container hai
-   aur bahar ki shadow kat jati.
-   Hover par ab primary-dark use hota hai.
-========================================================= */
-
-.cat-btn:hover{
-
-    background:var(--color-primary-dark);
-
-    box-shadow:inset 0 0 0 2px rgba(255,255,255,.9),
-               0 6px 14px rgba(0,0,0,.30);
-
-}
-
-.cat-btn.active{
-
-    box-shadow:inset 0 0 0 2px #fff,
-               0 4px 14px rgba(0,0,0,.35);
-
-}
-
-.cat-btn.active:hover{
-
-    background:var(--color-primary-dark);
-
-}
-
-
-/* =========================================================
-   CART BUTTON (sirf desktop)
-   ---------------------------------------------------------
-   Desktop par cart button header jaise color me hai, isliye
-   safed ring. Hover par primary-dark.
-   Mobile par cart button green floating hai, usko chhua nahi.
-========================================================= */
-
-@media (min-width:769px){
-
-    #cartButton{
-
-        box-shadow:inset 0 0 0 2px rgba(255,255,255,.85);
-
-    }
-
-    #cartButton:hover{
-
-        background:var(--color-primary-dark);
-
-    }
-
-}
-
-
-/* =========================================================
-   PRODUCT + / - BUTTONS
-   ---------------------------------------------------------
-   Pehle text black (#000) tha. Dark background par black text
-   dikhta nahi, isliye white. Hover par primary-dark.
-========================================================= */
-
-.qty-btn{
-
-    color:#fff;
-
-}
-
-.qty-btn:hover{
-
-    background:var(--color-primary-dark);
-
-}
-
-
-/* =========================================================
-   PRODUCT CARD HOVER SHADOW
-   ---------------------------------------------------------
-   Pehle shadow me purana teal rgba(13,110,106) tha, ab naye
-   primary (7,40,49) ka.
-========================================================= */
-
-.card:hover{
-
-    box-shadow:0 4px 10px rgba(16,24,40,.08),
-               0 16px 32px rgba(7,40,49,.18);
-
-}
-
-
-/* =========================================================
-   ZOOM VIEWER: ACTIVE THUMBNAIL
-   ---------------------------------------------------------
-   Zoom ka background kaala (black) hai, dark teal border uspar
-   dikhta nahi. Isliye safed border.
-========================================================= */
-
-.zoom-sidebar-thumb.active{
-
-    border:2px solid #fff !important;
-
-}
-
-
-/* =========================================================
-   CONTACT US BUTTON HOVER
-   ---------------------------------------------------------
-   Pehle hover par halka teal tint (#e6f4f3) tha, ab naye
-   color ke hisab se halka grey-blue.
-========================================================= */
-
-.contact-btn:hover{
-
-    background:#e3edf0;
-
-}
-
-
-/* =========================================================
-   FOOTER BACKGROUND
-   ---------------------------------------------------------
-   Pehle #072831 seedha likha tha, ab variable se. Isse footer
-   hamesha site ke primary color ke saath hi badlega.
-========================================================= */
-
-.site-footer{
-
-    background:var(--color-primary);
-
-}
 /*=========================================================
                     GLOBAL RESET
 =========================================================*/
@@ -2728,3 +2567,153 @@ html{
     }
 
 }
+
+ 
+/* #########################################################
+   PART 2: YE POORA BLOCK style.css KE BILKUL LAST ME PASTE KARO
+   ---------------------------------------------------------
+   Agar pehle wala "Part 2" paste kar chuke ho (HEADER BACKGROUND se
+   shuru hone wala), to use poora hata kar ye naya paste karo,
+   warna dono mix honge.
+   Last me isliye ki ye purane rules ko override kare.
+######################################################### */
+ 
+ 
+/* =========================================================
+   HEADER BACKGROUND (Footer ke same color)
+   ---------------------------------------------------------
+   Pehle header me 3 teal colors ka gradient seedha likha tha,
+   isliye footer se alag dikhta tha. Ab dono var(--color-primary)
+   se chalte hain: bilkul same color.
+========================================================= */
+ 
+header{
+ 
+    background:var(--color-primary);
+ 
+}
+ 
+ 
+/* =========================================================
+   CATEGORY BUTTONS (Header me)
+   ---------------------------------------------------------
+   Hover aur active (jo category chuni ho) dono me halka
+   teal (--color-primary-light). Header dark hai, to halka
+   color alag se saaf dikhta hai.
+========================================================= */
+ 
+.cat-btn:hover{
+ 
+    background:var(--color-primary-light);
+ 
+    color:#fff;
+ 
+    box-shadow:0 6px 14px rgba(0,0,0,.30);
+ 
+}
+ 
+.cat-btn.active{
+ 
+    background:var(--color-primary-light);
+ 
+    color:#fff;
+ 
+    box-shadow:0 4px 14px rgba(0,0,0,.35);
+ 
+}
+ 
+ 
+/* =========================================================
+   CART BUTTON (sirf desktop)
+   ---------------------------------------------------------
+   Desktop par cart button header ke color jaisa hi hai, isliye
+   safed outline (andar ki ring) di hai. Hover par halka teal.
+   Mobile par green floating cart button hai, usko chhua nahi.
+========================================================= */
+ 
+@media (min-width:769px){
+ 
+    #cartButton{
+ 
+        box-shadow:inset 0 0 0 2px rgba(255,255,255,.85);
+ 
+    }
+ 
+    #cartButton:hover{
+ 
+        background:var(--color-primary-light);
+ 
+    }
+ 
+}
+ 
+ 
+/* =========================================================
+   PRODUCT + / - BUTTONS
+   ---------------------------------------------------------
+   Pehle text black (#000) tha, dark background par dikhta nahi,
+   isliye white. Hover par halka teal.
+========================================================= */
+ 
+.qty-btn{
+ 
+    color:#fff;
+ 
+}
+ 
+.qty-btn:hover{
+ 
+    background:var(--color-primary-light);
+ 
+}
+ 
+ 
+/* =========================================================
+   PRODUCT CARD HOVER SHADOW
+   ---------------------------------------------------------
+   Purana teal rgba(13,110,106) hata kar naye primary ka.
+========================================================= */
+ 
+.card:hover{
+ 
+    box-shadow:0 4px 10px rgba(16,24,40,.08),
+               0 16px 32px rgba(7,40,49,.18);
+ 
+}
+ 
+ 
+/* =========================================================
+   ZOOM VIEWER: ACTIVE THUMBNAIL
+   ---------------------------------------------------------
+   Zoom ka background kaala hai, dark border dikhta nahi,
+   isliye safed border.
+========================================================= */
+ 
+.zoom-sidebar-thumb.active{
+ 
+    border:2px solid #fff !important;
+ 
+}
+ 
+ 
+/* =========================================================
+   CONTACT US BUTTON HOVER
+========================================================= */
+ 
+.contact-btn:hover{
+ 
+    background:#e3edf0;
+ 
+}
+ 
+ 
+/* =========================================================
+   FOOTER BACKGROUND (Header ke same color)
+========================================================= */
+ 
+.site-footer{
+ 
+    background:var(--color-primary);
+ 
+}
+ 
