@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- [CHANGE] lang="en" ko "en-IN" kiya: Google ko pata chale ki site India ke liye hai -->
+<html lang="en-IN">
 
 <head>
 
@@ -7,8 +8,73 @@
 
     <meta name="viewport"
     content="width=device-width, initial-scale=1.0">
+     <!-- Google verification  -->
+    <meta name="google-site-verification" content="bP2ZQSnXWnFK7as2zfLtir3p8HBD09xhsLlbXhtNBjo" />
+    
+    <!-- [CHANGE] Title me keywords jode. Google result me ye blue link ban kar dikhta hai.
+         SHEHAR ki jagah apne shehar ka naam likho (e.g. "Bhopal") -->
+    <title>Deepak Medical Agency | Online Medical Store in SHEHAR - Free Home Delivery</title>
 
-    <title>Deepak Medical Agency</title>
+    <!-- [NEW] Description: Google result me title ke neeche ka text. Isme phone number aur shehar likha hai.
+         PHONE_NUMBER aur SHEHAR apne hisab se badlo. 150-160 characters ke andar rakho -->
+    <meta name="description" content="Deepak Medical Agency, SHEHAR. Sahi dawa, sahi daam, free & fast home delivery. Tablets, syrups, creams, drops. Call: +91 PHONE_NUMBER">
+
+    <!-- [NEW] Google ko batata hai ki ye site ko index karna hai -->
+    <meta name="robots" content="index, follow">
+
+    <!-- [NEW] Canonical: Google ko batata hai ki asli URL yehi hai (duplicate URLs se bachata hai) -->
+    <link rel="canonical" href="https://deepakmedical.vercel.app/">
+
+    <!-- [NEW] Favicon: Google result me "Vercel" wale globe icon ki jagah aapka logo dikhega.
+         Logo square hona chahiye (kam se kam 48x48 px, behtar 192x192) -->
+    <link rel="icon" type="image/png" href="images/website_images/logo.png">
+
+    <!-- [NEW] Open Graph: WhatsApp, Facebook par link share karne par title, description aur logo dikhega -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Deepak Medical Agency">
+    <meta property="og:title" content="Deepak Medical Agency | Online Medical Store">
+    <meta property="og:description" content="Sahi dawa, sahi daam. Free & fast home delivery.">
+    <meta property="og:url" content="https://deepakmedical.vercel.app/">
+    <meta property="og:image" content="https://deepakmedical.vercel.app/images/website_images/logo.png">
+
+    <!-- [NEW] Schema 1 (WebSite): Google result me upar "Vercel" ki jagah
+         "Deepak Medical Agency" site name dikhane me madad karta hai -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Deepak Medical Agency",
+      "alternateName": "Deepak Medical",
+      "url": "https://deepakmedical.vercel.app/"
+    }
+    </script>
+
+    <!-- [NEW] Schema 2 (Pharmacy): Google ko dukan ka phone, address, timing aur social links batata hai.
+         Saari CAPITAL letters wali details apni asli details se badlo.
+         "sameAs" me Facebook aur Instagram ke links jaate hain -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Pharmacy",
+      "name": "Deepak Medical Agency",
+      "url": "https://deepakmedical.vercel.app/",
+      "image": "https://deepakmedical.vercel.app/images/website_images/logo.png",
+      "telephone": "+91PHONE_NUMBER",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "DUKAN KA ADDRESS",
+        "addressLocality": "SHEHAR",
+        "addressRegion": "STATE",
+        "postalCode": "PINCODE",
+        "addressCountry": "IN"
+      },
+      "openingHours": "Mo-Su 09:00-21:00",
+      "sameAs": [
+        "https://www.facebook.com/APKA_FACEBOOK_PAGE",
+        "https://www.instagram.com/APKA_INSTAGRAM_ID"
+      ]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +92,10 @@
     <div class="header-top">
 
         <div class="logo-section">
-            <img src="images/website_images/logo.png" class="logo">
+            <!-- [CHANGE] alt text add kiya: Google Images aur accessibility ke liye zaroori hai -->
+            <img src="images/website_images/logo.png" class="logo" alt="Deepak Medical Agency logo">
             <div class="brand">
+                <!-- Ye aapka main H1 heading hai, Google ke liye sabse important. Sirf ek H1 hi rakhna -->
                 <h1>Deepak Medical Agency</h1>
                 <p>सही दवा💊 सही दाम💰 FREE & FAST Delivery🚚</p>
             </div>
@@ -124,8 +192,41 @@
 
 <div id="cartArea"></div>
 
+<!-- [NEW] Footer: Dukan ka address, phone, timing aur social links.
+     Ye text page par visible hona zaroori hai, tabhi Google ise snippet me use kar sakta hai.
+     Neeche CAPITAL letters wali details apni asli details se badlo.
+     Isko style karne ke liye style.css me .site-footer ka CSS add karna (alag se diya hai) -->
+<footer class="site-footer" id="contact">
+
+    <h2>Deepak Medical Agency</h2>
+
+    <!-- Chhota intro text: Google ko page ke baare me samajhne me madad milti hai -->
+    <p>Deepak Medical Agency, SHEHAR me aapki bharosemand medical dukan. Tablets, syrups, creams aur drops, sahi daam par home delivery ke saath.</p>
+
+    <!-- Address -->
+    <p>📍 <strong>Address:</strong> DUKAN KA POORA ADDRESS, SHEHAR, STATE - PINCODE</p>
+
+    <!-- Phone: tel: link se mobile par click karte hi call lag jaata hai -->
+    <p>📞 <strong>Phone:</strong> <a href="tel:+91PHONE_NUMBER">+91 PHONE_NUMBER</a></p>
+
+    <!-- WhatsApp (optional): number ke aage 91 lagao, + ya space mat lagana. Nahi chahiye to ye line hata do -->
+    <p>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/91PHONE_NUMBER" target="_blank" rel="noopener noreferrer">Chat karein</a></p>
+
+    <!-- Timing -->
+    <p>🕘 <strong>Timing:</strong> Subah 9:00 baje se raat 9:00 baje tak (Sabhi din)</p>
+
+    <!-- Social links: rel="noopener noreferrer" security ke liye, target="_blank" naye tab me kholne ke liye -->
+    <p class="social-links">
+        <a href="https://www.facebook.com/APKA_FACEBOOK_PAGE" target="_blank" rel="noopener noreferrer">Facebook</a>
+        |
+        <a href="https://www.instagram.com/APKA_INSTAGRAM_ID" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </p>
+
+    <p class="copyright">© 2026 Deepak Medical Agency. All rights reserved.</p>
+
+</footer>
+
 <script src="script.js"></script>
 
 </body>
 </html>
-                              
