@@ -2,27 +2,42 @@
                     COLOR THEME (CSS Variables)
 =========================================================*/
 
+/* #########################################################
+   PART 1: ISE style.css KE SABSE UPAR WALE :root SE REPLACE KARO
+   (purana :root poora hata kar ye paste karo)
+######################################################### */
+
+
 :root{
-
-    --color-primary:#0d6e6a;
-    --color-primary-dark:#094f4c;
-
+ 
+    /* Main theme color: dark petrol teal.
+       Header aur footer DONO isi se chalte hain, isliye hamesha same rahenge. */
+    --color-primary:#072831;
+ 
+    /* Primary ka aur gehra shade (abhi zyada jagah use nahi hota, kabhi zarurat ho to) */
+    --color-primary-dark:#041a20;
+ 
+    /* [NEW] Primary ka HALKA shade: button par hover ya click (active) hone par
+       ye color aayega. Dark theme me hover hamesha halka hona chahiye,
+       taaki user ko pata chale ki button react kar raha hai. */
+    --color-primary-light:#1b5a6b;
+ 
     --color-cart:#3f6b8a;
     --color-cart-dark:#2e5169;
-
+ 
     --color-accent:#16a34a;
     --color-accent-dark:#128a3e;
-
+ 
     --color-whatsapp:#25d366;
     --color-whatsapp-dark:#1da851;
-
+ 
     --color-danger:#ef4444;
     --color-danger-dark:#dc2626;
-
+ 
     --color-bg:#f3f4f6;
     --color-text:#1f2937;
     --color-text-light:#6b7280;
-
+ 
 }
 
 /*=========================================================
@@ -2260,3 +2275,445 @@ header.logo-hidden .logo-section{
     border:2px solid var(--color-primary) !important;
 
 }
+/* =========================================================
+   [NEW] SMOOTH SCROLL
+   ---------------------------------------------------------
+   "Contact Us" button dabane par page jhatke se nahi,
+   araam se (smooth) neeche footer tak scroll hoga.
+   Kahan paste: style.css ke last me.
+========================================================= */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+/* =========================================================
+   [NEW] CONTACT US BUTTON (Header me)
+   ---------------------------------------------------------
+   White background + teal text, taaki dark green header par
+   alag se dikhe. Cart button se match karta hua pill shape.
+========================================================= */
+
+.contact-btn{
+
+    background:#fff;
+
+    color:var(--color-primary-dark);
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    white-space:nowrap;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+
+    transition:all .25s ease;
+
+}
+
+.contact-btn:hover{
+
+    background:#e6f4f3;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 14px rgba(0,0,0,.22);
+
+}
+
+
+/* =========================================================
+   [NEW] FOOTER LINKS (Phone number wali link)
+   ---------------------------------------------------------
+   Light blue + underline: normal link jaisa look.
+   Ye purane ".site-footer a" rule ko override karta hai
+   (kyunki ye baad me likha hai).
+========================================================= */
+
+.site-footer a{
+
+    color:#8ecbff;
+
+    text-decoration:underline;
+
+    text-underline-offset:3px;
+
+    font-weight:600;
+
+    transition:color .2s ease;
+
+}
+
+.site-footer a:hover{
+
+    color:#fff;
+
+}
+
+
+/* =========================================================
+   [UPDATED] SOCIAL ICONS ROW
+   ---------------------------------------------------------
+   Facebook, Instagram, WhatsApp ke logo (images/social/ folder
+   ki SVG files). flex + gap se teeno ek line me aate hain.
+   flex-wrap: chhoti screen par zarurat ho to neeche aa jayein.
+========================================================= */
+
+.site-footer .social-icons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:18px;
+
+}
+
+
+/* =========================================================
+   SOCIAL ICON (Logo ka link)
+   ---------------------------------------------------------
+   Logo khud gol aur rangeen hai, isliye alag background nahi.
+   text-decoration:none: upar ke ".site-footer a" ka underline
+   logo par na aaye.
+========================================================= */
+
+.site-footer .social-icon{
+
+    display:block;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.35);
+
+    transition:transform .2s ease,
+               box-shadow .2s ease;
+
+}
+
+/* Logo image link ke poore size me */
+.site-footer .social-icon img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+}
+
+/* Hover par thoda upar uthta hai aur bada hota hai */
+.site-footer .social-icon:hover{
+
+    transform:translateY(-4px) scale(1.1);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.45);
+
+}
+
+
+/* =========================================================
+   [NEW] MOBILE: CONTACT US BUTTON
+   ---------------------------------------------------------
+   Mobile par search-cart column me hota hai, isliye
+   Contact Us button search box ke neeche poori width me
+   aata hai. (Cart button mobile par pehle se floating hai.)
+========================================================= */
+
+@media (max-width:768px){
+
+    .contact-btn{
+
+        width:100%;
+
+        text-align:center;
+
+        padding:12px 16px;
+
+    }
+
+}
+
+
+/* =========================================================
+   [MISSING PART - ISE ADD KARO] SITE FOOTER BASE DESIGN
+   ---------------------------------------------------------
+   Aapke style.css me footer ka ye basic design nahi tha
+   (sirf link aur social icons ka CSS tha). Isliye footer
+   preview me bina background/center ke plain text dikh raha tha.
+
+   Kahan paste karna hai: style.css ke bilkul LAST me
+   (contact button / social icons wale CSS ke baad).
+========================================================= */
+
+.site-footer{
+
+    /* Dark petrol blue (Garg Agency wala): white text bahut saaf dikhta hai */
+    background:#072831;
+
+    color:#fff;
+
+    padding:32px 20px;
+
+    /* Products aur footer ke beech gap */
+    margin-top:40px;
+
+    /* Saara text beech me */
+    text-align:center;
+
+    font-family:'Poppins',Arial,sans-serif;
+
+}
+
+
+/* Footer heading (dukan ka naam) */
+
+.site-footer h2{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+
+/* Footer text (address, phone, timing, intro line).
+   max-width: lambi line na bane, padhne me aasaan rahe. */
+
+.site-footer p{
+
+    max-width:700px;
+
+    margin:8px auto;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:rgba(255,255,255,.92);
+
+}
+
+
+/* Address/Phone/Timing ke label (bold) */
+
+.site-footer strong{
+
+    color:#fff;
+
+}
+
+
+/* Copyright line (sabse neeche, halki aur chhoti) */
+
+.site-footer .copyright{
+
+    margin-top:22px;
+
+    font-size:12px;
+
+    opacity:.7;
+
+}
+
+
+/* =========================================================
+   FOOTER - MOBILE
+   ---------------------------------------------------------
+   Mobile par floating cart button (neeche right me) footer
+   ke text ko na dhake, isliye neeche extra padding.
+========================================================= */
+
+@media (max-width:768px){
+
+    .site-footer{
+
+        padding:28px 16px 100px;
+
+    }
+
+    .site-footer h2{
+
+        font-size:20px;
+
+    }
+
+}
+
+ 
+/* #########################################################
+   PART 2: YE POORA BLOCK style.css KE BILKUL LAST ME PASTE KARO
+   ---------------------------------------------------------
+   Agar pehle wala "Part 2" paste kar chuke ho (HEADER BACKGROUND se
+   shuru hone wala), to use poora hata kar ye naya paste karo,
+   warna dono mix honge.
+   Last me isliye ki ye purane rules ko override kare.
+######################################################### */
+ 
+ 
+/* =========================================================
+   HEADER BACKGROUND (Footer ke same color)
+   ---------------------------------------------------------
+   Pehle header me 3 teal colors ka gradient seedha likha tha,
+   isliye footer se alag dikhta tha. Ab dono var(--color-primary)
+   se chalte hain: bilkul same color.
+========================================================= */
+ 
+header{
+ 
+    background:var(--color-primary);
+ 
+}
+ 
+ 
+/* =========================================================
+   CATEGORY BUTTONS (Header me)
+   ---------------------------------------------------------
+   Hover aur active (jo category chuni ho) dono me halka
+   teal (--color-primary-light). Header dark hai, to halka
+   color alag se saaf dikhta hai.
+========================================================= */
+ 
+.cat-btn:hover{
+ 
+    background:var(--color-primary-light);
+ 
+    color:#fff;
+ 
+    box-shadow:0 6px 14px rgba(0,0,0,.30);
+ 
+}
+ 
+.cat-btn.active{
+ 
+    background:var(--color-primary-light);
+ 
+    color:#fff;
+ 
+    box-shadow:0 4px 14px rgba(0,0,0,.35);
+ 
+}
+ 
+ 
+/* =========================================================
+   CART BUTTON (sirf desktop)
+   ---------------------------------------------------------
+   Desktop par cart button header ke color jaisa hi hai, isliye
+   safed outline (andar ki ring) di hai. Hover par halka teal.
+   Mobile par green floating cart button hai, usko chhua nahi.
+========================================================= */
+ 
+@media (min-width:769px){
+ 
+    #cartButton{
+ 
+        box-shadow:inset 0 0 0 2px rgba(255,255,255,.85);
+ 
+    }
+ 
+    #cartButton:hover{
+ 
+        background:var(--color-primary-light);
+ 
+    }
+ 
+}
+ 
+ 
+/* =========================================================
+   PRODUCT + / - BUTTONS
+   ---------------------------------------------------------
+   Pehle text black (#000) tha, dark background par dikhta nahi,
+   isliye white. Hover par halka teal.
+========================================================= */
+ 
+.qty-btn{
+ 
+    color:#fff;
+ 
+}
+ 
+.qty-btn:hover{
+ 
+    background:var(--color-primary-light);
+ 
+}
+ 
+ 
+/* =========================================================
+   PRODUCT CARD HOVER SHADOW
+   ---------------------------------------------------------
+   Purana teal rgba(13,110,106) hata kar naye primary ka.
+========================================================= */
+ 
+.card:hover{
+ 
+    box-shadow:0 4px 10px rgba(16,24,40,.08),
+               0 16px 32px rgba(7,40,49,.18);
+ 
+}
+ 
+ 
+/* =========================================================
+   ZOOM VIEWER: ACTIVE THUMBNAIL
+   ---------------------------------------------------------
+   Zoom ka background kaala hai, dark border dikhta nahi,
+   isliye safed border.
+========================================================= */
+ 
+.zoom-sidebar-thumb.active{
+ 
+    border:2px solid #fff !important;
+ 
+}
+ 
+ 
+/* =========================================================
+   CONTACT US BUTTON HOVER
+========================================================= */
+ 
+.contact-btn:hover{
+ 
+    background:#e3edf0;
+ 
+}
+ 
+ 
+/* =========================================================
+   FOOTER BACKGROUND (Header ke same color)
+========================================================= */
+ 
+.site-footer{
+ 
+    background:var(--color-primary);
+ 
+}
+ 

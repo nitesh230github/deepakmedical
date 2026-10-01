@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- [CHANGE] lang="en" ko "en-IN" kiya: Google ko pata chale ki site India ke liye hai -->
+<html lang="en-IN">
 
 <head>
 
@@ -10,7 +11,71 @@
      <!-- Google verification  -->
     <meta name="google-site-verification" content="bP2ZQSnXWnFK7as2zfLtir3p8HBD09xhsLlbXhtNBjo" />
     
-    <title>Deepak Medical Agency</title>
+    <title>Deepak Medical Agency </title>
+
+    <!-- Description: Google result me title ke neeche ka text (150-160 characters ke andar rakho) -->
+    <meta name="description" content="Deepak Medical Agency, Rewa & Mauganj. Sahi dawa, Sahi daam, Free & Fast Delivery. " >
+
+    <!-- Google ko batata hai ki ye site ko index karna hai -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical: Google ko batata hai ki asli URL yehi hai (duplicate URLs se bachata hai) -->
+    <link rel="canonical" href="https://deepakmedical.vercel.app/">
+
+    <!-- Favicon: Google result me "Vercel" wale globe icon ki jagah aapka logo dikhega.
+         Logo square hona chahiye (kam se kam 48x48 px, behtar 192x192) -->
+    <link rel="icon" type="image/png" href="images/website_images/logo.png">
+
+    <!-- Open Graph: WhatsApp, Facebook par link share karne par title, description aur logo dikhega -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Deepak Medical Agency, Rewa">
+    <meta property="og:title" content="Deepak Medical Agency | Online Medical Store">
+    <meta property="og:description" content="Sahi dawa, Sahi daam. Free & Fast Delivery.">
+    <meta property="og:url" content="https://deepakmedical.vercel.app/">
+    <meta property="og:image" content="https://deepakmedical.vercel.app/images/website_images/logo.png">
+
+    <!-- Schema 1 (WebSite): Google result me upar "Vercel" ki jagah
+         "Deepak Medical Agency" site name dikhane me madad karta hai -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Deepak Medical Agency",
+      "alternateName": [
+        "Deepak Medical Agency Rewa",
+        "Deepak Medical and Surgical Agency",
+        "Deepak Medical Agency Mauganj",
+        "Deepak Medical Mauganj"
+      ],
+      "url": "https://deepakmedical.vercel.app/"
+    }
+    </script>
+
+    <!-- Schema 2 (Pharmacy): Google ko dukan ka address, timing aur social links batata hai.
+         NOTE: Ye sirf Google ke liye hai, visitors ko ye page par dikhta nahi.
+         Visitors ko dikhne wali details neeche <footer> me alag se bharni padti hain.
+         Phone number ready ho to yaha "telephone": "+91XXXXXXXXXX" bhi add kar sakte ho. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Pharmacy",
+      "name": "Deepak Medical Agency",
+      "url": "https://deepakmedical.vercel.app/",
+      "image": "https://deepakmedical.vercel.app/images/website_images/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chirahula Mandir",
+        "addressLocality": "Rewa",
+        "addressRegion": "MP",
+        "addressCountry": "IN"
+      },
+      "openingHours": "Mo-Su 09:00-21:00",
+      "sameAs": [
+        "https://www.facebook.com/share/1DoJ9zAbfs/",
+        "https://www.instagram.com/deepakmedagency/"
+      ]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +93,9 @@
     <div class="header-top">
 
         <div class="logo-section">
-            <img src="images/website_images/logo.png" class="logo">
+            <img src="images/website_images/logo.png" class="logo" alt="Deepak Medical Agency logo">
             <div class="brand">
+                <!-- Ye aapka main H1 heading hai, Google ke liye sabse important. Sirf ek H1 hi rakhna -->
                 <h1>Deepak Medical Agency</h1>
                 <p>सही दवा💊 सही दाम💰 FREE & FAST Delivery🚚</p>
             </div>
@@ -46,6 +112,11 @@
 
         <div class="search-cart">
           <input type="text" id="search" class="search-box" placeholder="🔍 Search Medicines...">
+
+        <!-- Contact Us button: click karne par page ke sabse neeche footer (id="contact") tak
+             smooth scroll karta hai. href="#contact" footer ke id se match karta hai. -->
+        <a href="#contact" class="contact-btn">📞 Contact Us</a>
+
         <div id="cartButton">🛒 Cart (0)</div>
     </div>
 
@@ -126,8 +197,56 @@
 
 <div id="cartArea"></div>
 
+<!-- =========================================================
+     FOOTER (Visitors ko page par dikhne wali details)
+     [FIXED] Pehle yaha placeholders (SHEHAR, DUKAN KA POORA ADDRESS,
+     PHONE_NUMBER, APKA_FACEBOOK_PAGE...) the, isliye preview me wahi dikh rahe the.
+     Ab address, Facebook aur Instagram asli bhar diye hain.
+     SIRF PHONE_NUMBER aapko khud badalna hai (2 jagah: Phone line aur WhatsApp link).
+     ========================================================= -->
+<footer class="site-footer" id="contact">
+
+    <h2>Deepak Medical Agency</h2>
+
+    <p>Deepak Medical Agency, Rewa aur Mauganj me aapki bharosemand medical dukan. Tablets, syrups, creams aur drops, sahi daam par home delivery ke saath.</p>
+
+    <!-- Address -->
+    <p>📍 <strong>Address:</strong> Chirahula Mandir, Rewa, Madhya Pradesh</p>
+
+    <!-- Phone: tel: link se mobile par click karte hi call lag jaata hai 
+    <p>📞 <strong>Phone:</strong> <a href="tel:+91PHONE_NUMBER">+91 PHONE_NUMBER</a></p>  -->
+
+    <!-- Timing -->
+    <p>🕘 <strong>Timing:</strong> Subah 9:00 baje se raat 9:00 baje tak (Sabhi din)</p>
+
+    <!-- Social media icons (images/social/ folder ki SVG files) -->
+    <div class="social-icons">
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/1DoJ9zAbfs/" target="_blank" rel="noopener noreferrer"
+           class="social-icon facebook" aria-label="Facebook" title="Facebook">
+            <img src="images/social/facebook.svg" alt="Facebook" width="48" height="48" loading="lazy">
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/deepakmedagency/" target="_blank" rel="noopener noreferrer"
+           class="social-icon instagram" aria-label="Instagram" title="Instagram">
+            <img src="images/social/instagram.svg" alt="Instagram" width="48" height="48" loading="lazy">
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/917804008789" target="_blank" rel="noopener noreferrer"
+           class="social-icon whatsapp" aria-label="WhatsApp" title="WhatsApp par chat karein">
+            <img src="images/social/whatsapp.svg" alt="WhatsApp" width="48" height="48" loading="lazy">
+        </a>
+
+    </div>
+
+    <p class="copyright">© 2026 Deepak Medical Agency. All rights reserved.</p>
+
+</footer>
+
 <script src="script.js"></script>
 
 </body>
 </html>
-                              
