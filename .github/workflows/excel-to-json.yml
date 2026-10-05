@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "products.xlsx"
-      - "scripts/excel_to_json.py"
+      - "scripts/updated_data_excel_to_json.py"
   workflow_dispatch:   # Actions tab se manually bhi chala sakte ho
 
 permissions:
@@ -23,7 +23,7 @@ jobs:
       - run: pip install openpyxl
 
       - name: Excel se JSON banao
-        run: python scripts/excel_to_json.py
+        run: python scripts/updated_data_excel_to_json.py
 
       - name: Change ho to commit karo
         run: |
