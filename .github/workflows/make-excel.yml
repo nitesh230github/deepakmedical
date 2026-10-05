@@ -1,0 +1,25 @@
+name: ONE-TIME - JSON se Excel banao
+
+on:
+  workflow_dispatch:   # Actions tab me 'Run workflow' button se chalao
+
+permissions:
+  contents: write
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install openpyxl
+      - run: python scripts/json_to_excel.py
+      - name: products.xlsx commit karo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add products.xlsx
+          git commit -m "Create products.xlsx from products.json" || echo "no change"
+          git push
