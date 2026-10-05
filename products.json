@@ -1077,7 +1077,10 @@
     "inStock": true,
     "discount": null,
     "scheme": null,
-    "image": "images/earwell_drop.jpg, earwell_drop_box.jpg"
+    "images": [
+      "images/earwell_drop.jpg",
+      "images/earwell_drop_box.jpg"
+    ]
   },
   {
     "id": 73,
@@ -2802,7 +2805,10 @@
     "inStock": true,
     "discount": null,
     "scheme": null,
-    "image": "images/taxim_o_200_tab_box.jpg, taxim.jpg"
+    "images": [
+      "images/taxim_o_200_tab_box.jpg",
+      "images/taxim.jpg"
+    ]
   },
   {
     "id": 231,
@@ -3362,7 +3368,7 @@
   {
     "id": 274,
     "name": "LYKORICH Z SYRUP",
-    "company": null,
+    "company": "",
     "price": 210.25,
     "category": "LIQUID",
     "packing": "225 ml",
@@ -3537,7 +3543,10 @@
     "inStock": true,
     "discount": null,
     "scheme": null,
-    "image": "images/glycodin-100ml_syp_1.jpg, glycodin_100ml_syp_2.jpg"
+    "images": [
+      "images/glycodin-100ml_syp_1.jpg",
+      "images/glycodin_100ml_syp_2.jpg"
+    ]
   },
   {
     "id": 302,
@@ -3627,7 +3636,10 @@
     "inStock": true,
     "discount": null,
     "scheme": null,
-    "image": "images/aziwok1.jpg, aziwok2.jpg"
+    "images": [
+      "images/aziwok1.jpg",
+      "images/aziwok2.jpg"
+    ]
   },
   {
     "id": 308,
