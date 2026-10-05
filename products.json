@@ -834,7 +834,7 @@
     "saltContent": "Clotrimazole (powder)",
     "uses": "Fungal skin infections",
     "bestseller": false,
-    "inStock": false,
+    "inStock": true,
     "discount": null,
     "scheme": null,
     "image": "images/clot_1_powder_blue.jpg"
@@ -4039,7 +4039,7 @@
     "category": "TABLET_CAP",
     "packing": "10*1*6",
     "saltContent": "disulfiram 500mg",
-    "uses": "Verify karke likhein",
+    "uses": "treat chronic alcohol addiction",
     "bestseller": true,
     "inStock": true,
     "discount": null,
@@ -4120,6 +4120,21 @@
     "discount": null,
     "scheme": null,
     "image": "images/lactobiotic_spores.jpg"
+  },
+  {
+    "id": 328,
+    "name": "CHARMOJA OINT 15G",
+    "company": "",
+    "price": 40,
+    "category": "OTHERS",
+    "packing": "15G",
+    "saltContent": "",
+    "uses": "Ringworm + Itching + Khujli + Eczema + Anti-bacterial and antifungal infections",
+    "bestseller": false,
+    "inStock": true,
+    "discount": null,
+    "scheme": null,
+    "image": "images/charmoja.jpg"
   },
   {
     "id": 1008,
