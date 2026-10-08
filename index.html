@@ -1,34 +1,50 @@
 <!DOCTYPE html>
-<!-- [CHANGE] lang="en" ko "en-IN" kiya: Google ko pata chale ki site India ke liye hai -->
+<!-- lang="en-IN": Google ko batata hai ki site India ke liye hai -->
 <html lang="en-IN">
 
 <head>
 
+    <!-- =====================================================
+         1. BASIC SETTINGS
+         ===================================================== -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-     <!-- Google verification  -->
-    <meta name="google-site-verification" content="bP2ZQSnXWnFK7as2zfLtir3p8HBD09xhsLlbXhtNBjo" />
-    
-    <title>Deepak Medical Agency, Rewa | Wholesale Medicines & Free Delivery </title>
+    <!-- Google Search Console verification (isko mat hatana, warna verification toot jayega) -->
+    <meta name="google-site-verification" content="bP2ZQSnXWnFK7as2zfLtir3p8HBD09xhsLlbXhtNBjo">
 
-    <!-- Description: Google result me title ke neeche ka text (150-160 characters ke andar rakho) -->
-    <meta name="description" content="Deepak Medical Agency, Rewa & Mauganj. Sahi dawa, Sahi daam, Free & Fast Delivery. " >
 
-    <!-- Google ko batata hai ki ye site ko index karna hai -->
+    <!-- =====================================================
+         2. SEO (Google Search ke liye)
+         ===================================================== -->
+    <title>Deepak Medical Agency, Rewa | Wholesale Medicines & Free Delivery</title>
+
+    <!-- Description: Google result me title ke neeche dikhta hai (150-160 characters ke andar rakho) -->
+    <meta name="description" content="Deepak Medical Agency, Rewa & Mauganj. Sahi dawa, Sahi daam, Free & Fast Delivery.">
+
+    <!-- Google ko batata hai ki ye page index karna hai -->
     <meta name="robots" content="index, follow">
 
-    <!-- Canonical: Google ko batata hai ki asli URL yehi hai (duplicate URLs se bachata hai) -->
+    <!-- Canonical: asli URL batata hai (duplicate URLs se bachata hai) -->
     <link rel="canonical" href="https://deepakmedical.vercel.app/">
 
-    <!-- Favicon: Google result me "Vercel" wale globe icon ki jagah aapka logo dikhega.
-         Logo square hona chahiye (kam se kam 48x48 px, behtar 192x192) 
-    <link rel="icon" type="image/png" href="images/website_images/logo.png">         -->
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Open Graph: WhatsApp, Facebook par link share karne par title, description aur logo dikhega -->
+    <!-- =====================================================
+         3. ICONS (Favicon)
+         Logo square hona chahiye (kam se kam 48x48 px, behtar 192x192)
+         ===================================================== -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+
+    <!-- TODO: /apple-touch-icon.png file repo me nahi hai (404 aa raha tha).
+         Jab 180x180 px ki PNG bana ke root folder me daalo, tab niche wali line uncomment karo.
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    -->
+
+
+    <!-- =====================================================
+         4. SOCIAL SHARING (Open Graph)
+         WhatsApp / Facebook par link share karne par title, description aur logo dikhta hai
+         ===================================================== -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Deepak Medical Agency, Rewa">
     <meta property="og:title" content="Deepak Medical Agency | Online Medical Store">
@@ -36,8 +52,12 @@
     <meta property="og:url" content="https://deepakmedical.vercel.app/">
     <meta property="og:image" content="https://deepakmedical.vercel.app/images/website_images/logo.png">
 
-    <!-- Schema 1 (WebSite): Google result me upar "Vercel" ki jagah
-         "Deepak Medical Agency" site name dikhane me madad karta hai -->
+
+    <!-- =====================================================
+         5. STRUCTURED DATA (Schema) - sirf Google ke liye, visitors ko dikhta nahi
+         ===================================================== -->
+
+    <!-- Schema 1 (WebSite): Google result me "Vercel" ki jagah "Deepak Medical Agency" naam dikhane me madad karta hai -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -53,10 +73,8 @@
     }
     </script>
 
-    <!-- Schema 2 (Pharmacy): Google ko dukan ka address, timing aur social links batata hai.
-         NOTE: Ye sirf Google ke liye hai, visitors ko ye page par dikhta nahi.
-         Visitors ko dikhne wali details neeche <footer> me alag se bharni padti hain.
-         Phone number ready ho to yaha "telephone": "+91XXXXXXXXXX" bhi add kar sakte ho. -->
+    <!-- Schema 2 (Pharmacy): Google ko dukan ka address, timing, phone aur social links batata hai.
+         Address / phone badalna ho to yahin badlo (aur neeche footer me bhi). -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -82,6 +100,10 @@
     }
     </script>
 
+
+    <!-- =====================================================
+         6. FONTS & STYLES
+         ===================================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -90,125 +112,120 @@
 
 </head>
 
+
 <body>
 
+<!-- =========================================================
+     HEADER
+     Upar wali row: logo, radio, search, contact, cart
+     Neeche wali row: category filter (dropdown + buttons)
+     ========================================================= -->
 <header>
 
-    <!-- Top Row -->
+    <!-- ---------- Top Row ---------- -->
     <div class="header-top">
 
+        <!-- Logo + Brand name -->
         <div class="logo-section">
             <img src="images/website_images/logo.png" class="logo" alt="Deepak Medical Agency logo">
             <div class="brand">
-                <!-- Ye aapka main H1 heading hai, Google ke liye sabse important. Sirf ek H1 hi rakhna -->
+                <!-- Main H1: Google ke liye sabse important. Poore page par sirf EK h1 rakhna -->
                 <h1>Deepak Medical Agency</h1>
                 <p>सही दवा💊 सही दाम💰 FREE & FAST Delivery🚚</p>
             </div>
         </div>
 
+        <!-- Radio icon: dusri website (medicalstorewala) naye tab me kholta hai -->
         <a href="https://medicalstorewala.vercel.app/"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="radio-icon"
-             title="Listen Live">
-             📻
-          <span class="radio-pulse"></span>
+           target="_blank"
+           rel="noopener noreferrer"
+           class="radio-icon"
+           title="Listen Live"
+           aria-label="Listen Live">
+            📻
+            <span class="radio-pulse"></span>
         </a>
 
+        <!-- Search + Contact + Cart -->
         <div class="search-cart">
-          <input type="text" id="search" class="search-box" placeholder="🔍 Search Medicines...">
 
-        <!-- Contact Us button: click karne par page ke sabse neeche footer (id="contact") tak
-             smooth scroll karta hai. href="#contact" footer ke id se match karta hai.    -->
-        <a href="#contact" class="contact-btn" aria-label="Contact Us"><span class="contact-icon">📞</span> <span class="contact-text">Contact Us</span></a> 
-        <!-- <a href="#contact" class="contact-btn" aria-label="Contact Us"> <span class="contact-icon"> <img src="images/social/contact.svg" alt="Call" class="call-icon-img"> </span> <span class="contact-text">Contact Us</span> </a>
-        -->
-        <div id="cartButton">🛒 Cart (0)</div>
+            <!-- Search box (script.js isko id="search" se pakadta hai) -->
+            <input type="text" id="search" class="search-box" placeholder="🔍 Search Medicines..." aria-label="Search Medicines">
+
+            <!-- Contact Us: click par page ke neeche footer (id="contact") tak smooth scroll hota hai -->
+            <a href="#contact" class="contact-btn" aria-label="Contact Us">
+                <span class="contact-icon">📞</span>
+                <span class="contact-text">Contact Us</span>
+            </a>
+
+            <!-- Cart button (script.js isko id="cartButton" se pakadta hai, count yahin update hota hai) -->
+            <div id="cartButton">🛒 Cart (0)</div>
+
+        </div>
+
     </div>
 
-</div>
 
-
-    <!-- Bottom Row -->
-
+    <!-- ---------- Bottom Row: Category filter ---------- -->
     <div class="header-bottom">
 
-        <select id="categoryFilter">
-
-            <option value="ALL">📂 All </option>
+        <!-- Dropdown: style.css isko screen par chhupa deta hai (sirf script.js ke liye).
+             script.js isme current category yaad rakhta hai. Hatana mat. -->
+        <select id="categoryFilter" aria-label="Category">
+            <option value="ALL">📂 All</option>
             <option value="TABLET_CAP">💊 Tablets</option>
             <option value="LIQUID">🧴 Syrups</option>
             <option value="CREAM_OINT">🧴 Creams</option>
-            <option value="DROP">👁‍🗨 Drops</option>
+            <option value="DROP">👁 Drops</option>
             <option value="OTHERS">📦 Others</option>
-
         </select>
 
-        <button class="cat-btn active" onclick="selectCategory('ALL',this)"> 📂 All </button> 
-
-        <button class="cat-btn"
-        onclick="selectCategory('TABLET_CAP',this)">
-            💊 Tablets
-        </button>
-
-        <button class="cat-btn"
-        onclick="selectCategory('LIQUID',this)">
-            🧴 Syrups
-        </button>
-
-        <button class="cat-btn"
-        onclick="selectCategory('CREAM_OINT',this)">
-            🧴 Creams
-         </button>
-
-        <button class="cat-btn"
-        onclick="selectCategory('DROP',this)">
-            👁 Drops
-        </button>
-         <!---   
-        <button class="cat-btn"
-        onclick="selectCategory('OINTMENT',this)">
-            🩹 Ointment
-        </button>    -->
-
-        <button class="cat-btn"
-        onclick="selectCategory('OTHERS',this)">
-            📦 Others
-        </button>
+        <!-- Category buttons (desktop + mobile dono par yahi dikhte hain).
+             data-category ki value upar dropdown ki value se match honi chahiye.
+             Click ka kaam script.js karta hai (inline onclick nahi). -->
+        <button class="cat-btn active" data-category="ALL">📂 All</button>
+        <button class="cat-btn" data-category="TABLET_CAP">💊 Tablets</button>
+        <button class="cat-btn" data-category="LIQUID">🧴 Syrups</button>
+        <button class="cat-btn" data-category="CREAM_OINT">🧴 Creams</button>
+        <button class="cat-btn" data-category="DROP">👁 Drops</button>
+        <button class="cat-btn" data-category="OTHERS">📦 Others</button>
 
     </div>
 
 </header>
 
-<!-- Slider code  
-<div class="slider">
-
-    <button class="prev">&#10094;</button>
-
-    <div class="slides">
-
-        <img src="images/website_images/slider1.jpg">
-
-        <img src="images/website_images/slider2.jpg">
-
-        <img src="images/website_images/slider3.jpg">
-
-    </div>
-
-    <button class="next">&#10095;</button>
-
-</div> -->
-
-<div id="products"></div>
-
-<div id="cartArea"></div>
 
 <!-- =========================================================
-     FOOTER (Visitors ko page par dikhne wali details)
-     [FIXED] Pehle yaha placeholders (SHEHAR, DUKAN KA POORA ADDRESS,
-     PHONE_NUMBER, APKA_FACEBOOK_PAGE...) the, isliye preview me wahi dikh rahe the.
-     Ab address, Facebook aur Instagram asli bhar diye hain.
-     SIRF PHONE_NUMBER aapko khud badalna hai (2 jagah: Phone line aur WhatsApp link).
+     OPTIONAL: Image Slider (abhi band hai)
+     Chalu karna ho to niche ka comment hata do aur style.css / script.js me slider ka code bhi check karo.
+
+<div class="slider">
+    <button class="prev">&#10094;</button>
+    <div class="slides">
+        <img src="images/website_images/slider1.jpg" alt="Slider 1">
+        <img src="images/website_images/slider2.jpg" alt="Slider 2">
+        <img src="images/website_images/slider3.jpg" alt="Slider 3">
+    </div>
+    <button class="next">&#10095;</button>
+</div>
+     ========================================================= -->
+
+
+<!-- =========================================================
+     MAIN CONTENT
+     Dono khaali div ko script.js bharta hai:
+       #products  -> products.json se medicine cards
+       #cartArea  -> cart ka content
+     ========================================================= -->
+<main>
+    <div id="products"></div>
+    <div id="cartArea"></div>
+</main>
+
+
+<!-- =========================================================
+     FOOTER (Visitors ko dikhne wali details)
+     "Contact Us" button yahin (id="contact") tak scroll karta hai.
      ========================================================= -->
 <footer class="site-footer" id="contact">
 
@@ -216,31 +233,27 @@
 
     <p>Wholesale Supply of Medicines & OTC Products in Rewa & Mauganj with FREE delivery.</p>
 
-    <!-- Address 
-    <p>📍 <strong>Address:</strong> Chirahula Mandir, Rewa, Madhya Pradesh</p>  -->
+    <!-- Address / Phone / Timing: abhi band hain.
+         Dikhana ho to niche ka comment hata do (phone number schema wala hi bhar diya hai).
 
-    <!-- Phone: tel: link se mobile par click karte hi call lag jaata hai 
-    <p>📞 <strong>Phone:</strong> <a href="tel:+91PHONE_NUMBER">+91 PHONE_NUMBER</a></p>  -->
+    <p>📍 <strong>Address:</strong> Chirahula Mandir, Rewa, Madhya Pradesh</p>
+    <p>📞 <strong>Phone:</strong> <a href="tel:+917804008789">+91 78040 08789</a></p>
+    <p>🕘 <strong>Timing:</strong> Subah 9:00 baje se raat 9:00 baje tak (Sabhi din)</p>
+    -->
 
-    <!-- Timing 
-    <p>🕘 <strong>Timing:</strong> Subah 9:00 baje se raat 9:00 baje tak (Sabhi din)</p> -->
-
-    <!-- Social media icons (images/social/ folder ki SVG files) -->
+    <!-- Social media icons (SVG files: images/social/) -->
     <div class="social-icons">
 
-        <!-- Facebook -->
         <a href="https://www.facebook.com/share/1DoJ9zAbfs/" target="_blank" rel="noopener noreferrer"
            class="social-icon facebook" aria-label="Facebook" title="Facebook">
             <img src="images/social/facebook.svg" alt="Facebook" width="48" height="48" loading="lazy">
         </a>
 
-        <!-- Instagram -->
         <a href="https://www.instagram.com/deepakmedagency/" target="_blank" rel="noopener noreferrer"
            class="social-icon instagram" aria-label="Instagram" title="Instagram">
             <img src="images/social/instagram.svg" alt="Instagram" width="48" height="48" loading="lazy">
         </a>
 
-        <!-- WhatsApp -->
         <a href="https://wa.me/917804008789" target="_blank" rel="noopener noreferrer"
            class="social-icon whatsapp" aria-label="WhatsApp" title="WhatsApp par chat karein">
             <img src="images/social/whatsapp.svg" alt="WhatsApp" width="48" height="48" loading="lazy">
@@ -252,6 +265,8 @@
 
 </footer>
 
+
+<!-- Saari functionality yahan se chalti hai (body ke end me, taaki page pehle load ho) -->
 <script src="script.js"></script>
 
 </body>
