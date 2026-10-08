@@ -1,250 +1,316 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+/* =========================================================
+   DEEPAK MEDICAL AGENCY - script.js
+   ---------------------------------------------------------
+   FILE MAP (upar se neeche):
+     1. CONFIG            - saari settings ek jagah
+     2. STATE             - global variables
+     3. HELPERS           - chhote reusable functions
+     4. CART STORAGE      - localStorage (save / load / 24h expiry / sync)
+     5. SEARCH & FILTER   - search box + category filter
+     6. PRODUCT DISPLAY   - product cards banana
+     7. CART ACTIONS      - add / increase / decrease / remove
+     8. CART PAGE         - cart ki alag page-view (open / back / render)
+     9. ORDER             - WhatsApp + Google Sheet par order bhejna
+    10. IMAGE ZOOM        - product image viewer
+    11. HEADER SCROLL     - mobile par logo hide/show
+    12. INIT              - page load par sab start karna
+    13. SLIDER (OPTIONAL) - abhi band hai
+========================================================= */
 
-let cartOpen = false;
 
-/* saving time stamp of cart to automatically deltion after 24H */ 
-const savedTime =
-Number(localStorage.getItem("cartTime"));
+/* =========================================================
+   1. CONFIG
+   Kuch badalna ho (number, timing, URL) to sirf yahin badlo.
+========================================================= */
 
-const ONE_DAY = 24 * 60 * 60 * 1000;
+const CONFIG = {
 
-if(savedTime && (Date.now() - savedTime > ONE_DAY)){
+    // WhatsApp number (country code ke saath, + ke bina)
+    WHATSAPP_NUMBER: "917804008789",
 
-    localStorage.removeItem("cart");
+    // Order ka backup Google Sheet me jaata hai (Apps Script URL)
+    SHEET_URL: "https://script.google.com/macros/s/AKfycbwVDN0OlZ5srpTFPFEIR0O0B43Oe5vcHap70EJcfBtsbXuPLy8QdKMTs8NtwaJ3JRnGxA/exec",
+    SHEET_SECRET: "DeepakMedical2026",
 
-    localStorage.removeItem("cartTime");
+    // Order form checks (client side = sirf customer ki madad ke liye, asli check Apps Script me hota hai)
+    MIN_ORDER_DELAY_MS: 3000,     // page khulne ke itne ms se pehle order = bot maana jaayega
+    MAX_NAME_LENGTH: 50,
+    MAX_ADDRESS_LENGTH: 200,
 
-    cart = [];
+    // Cart itne time baad automatically delete (24 ghante)
+    CART_EXPIRY_MS: 24 * 60 * 60 * 1000,
 
-}
+    // Search typing rukne ke itne ms baad chalega
+    SEARCH_DELAY_MS: 300,
+
+    // Mobile header: itna continuous scroll (px) hone par logo toggle hoga
+    HEADER_TOGGLE_THRESHOLD: 45,
+    HEADER_TOP_SAFE_ZONE: 20,     // page ke top par logo hamesha dikhega
+    HEADER_LOCK_MS: 250,          // toggle ke baad chhota cooldown
+    MOBILE_MAX_WIDTH: 768
+};
 
 
+/* =========================================================
+   2. STATE (global variables)
+========================================================= */
+
+let products = [];          // products.json ka poora data
+let displayOrder = [];      // ek baar shuffle hua order (bestsellers upar)
+let currentProducts = [];   // abhi screen par dikh rahe (filtered) products
+let cart = [];              // cart items
+
+// Cart page ka navigation state (section 8)
+let savedScrollY = 0;       // cart kholne se pehle products page kahan tak scroll tha
+let cartPushed = false;     // cart hamne khola (browser history me entry bani) ya seedha #cart link se aaye
+let leavingCart = false;    // back chal raha hai, dobara close mat karo
+
+const pageLoadTime = Date.now();   // bot detect karne ke liye (order ke time se compare hota hai)
+
+
+/* =========================================================
+   3. HELPERS
+========================================================= */
+
+/* Array ko randomly shuffle karta hai (original array ko nahi chhedta) */
 function shuffleArray(array){
 
-    let arr = [...array];
+    const arr = [...array];
 
     for(let i = arr.length - 1; i > 0; i--){
 
-        let j = Math.floor(Math.random() * (i + 1));
+        const j = Math.floor(Math.random() * (i + 1));
 
         [arr[i], arr[j]] = [arr[j], arr[i]];
+
     }
 
     return arr;
 
 }
 
-/*  Jab tak customer typing continue karta hai, function call hold rehta hai. 
-Typing rukne ke 300ms baad hi search chalega — isse har keystroke pe re-render/reshuffle nahi hoga. */
-
+/* Debounce: jab tak customer type kar raha hai function hold rehta hai.
+   Typing rukne ke baad hi chalta hai, isse har key par re-render nahi hota. */
 function debounce(func, delay){
+
     let timer;
+
     return function(...args){
+
         clearTimeout(timer);
+
         timer = setTimeout(() => func.apply(this, args), delay);
+
     };
+
 }
 
-/* To Normalize the text, Original : tea/tree. Normalize : teatree  */
+/* Search ke liye text normalize: "Tea-Tree / Oil" -> "teatreeoil" */
 function normalizeText(text){
 
-    return text
+    return String(text ?? "")
         .toLowerCase()
-        .replace(/[\s+\-\/;(),.*]+/g,"");
+        .replace(/[\s+\-\/;(),.*]+/g, "");
+
+}
+
+/* Mobile number saaf karo: sirf digits rakho, +91 / 91 / 0 hata do.
+   "+91 98765-43210" -> "9876543210" */
+function normalizeMobile(raw){
+
+    let digits = String(raw ?? "").replace(/\D/g, "");
+
+    if(digits.length === 12 && digits.startsWith("91")){
+        digits = digits.slice(2);
+    }else if(digits.length === 11 && digits.startsWith("0")){
+        digits = digits.slice(1);
+    }
+
+    return digits;
+
+}
+
+/* HTML me text/attribute daalne se pehle special characters safe karta hai.
+   (Agar kisi product naam me " ya < aaye to layout nahi tootega) */
+function escapeHTML(value){
+
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+
+}
+
+/* Product ki saari images ki list.
+   Naye products: product.images = ["a.jpg", "b.jpg"]
+   Purane products: product.image = "a.jpg"   */
+function getProductImages(product){
+
+    if(Array.isArray(product.images) && product.images.length > 0){
+        return product.images;
+    }
+
+    return product.image ? [product.image] : [];
+
+}
+
+/* Product ki pehli (main) image */
+function getMainImage(product){
+
+    return getProductImages(product)[0] || "";
 
 }
 
 
-/* Helper function to match normalize text value. In future you can also add other keys for search like COMPANY or PACKING.
-   Now if you search Paracetamol fever, then its shows all items which contain paracetamol and uses value has fever text. */
+/* =========================================================
+   4. CART STORAGE (localStorage)
+========================================================= */
+
+/* Cart ko browser se load karo, 24 ghante se purana ho to delete */
+function loadCart(){
+
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const savedTime = Number(localStorage.getItem("cartTime"));
+
+    if(savedTime && (Date.now() - savedTime > CONFIG.CART_EXPIRY_MS)){
+
+        clearCartStorage();
+
+        cart = [];
+
+    }
+
+}
+
+/* Cart + time save karo (time se 24h expiry check hoti hai) */
+function saveCart(){
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    localStorage.setItem("cartTime", Date.now());
+
+}
+
+function clearCartStorage(){
+
+    localStorage.removeItem("cart");
+
+    localStorage.removeItem("cartTime");
+
+}
+
+/* Cart ko products.json se sync karo.
+   Kyun? Cart me purana naam/price/image save rehta hai. Agar image rename
+   ho gayi ya price badal gaya ya product hata diya gaya, to cart purana dikhata.
+   Isse cart hamesha latest data dikhata hai. */
+function syncCartWithProducts(){
+
+    cart = cart
+
+        // Jo product ab JSON me nahi hai, use cart se hatao
+        .filter(item => products.some(p => p.id === item.id))
+
+        // Baaki items ka latest data lo
+        .map(item => {
+
+            const p = products.find(prod => prod.id === item.id);
+
+            return {
+                ...item,
+                name: p.name,
+                packing: p.packing,
+                price: p.price,
+                image: getMainImage(p)
+            };
+
+        });
+
+    // Sirf cart update karo (cartTime nahi, warna 24h expiry badh jaayegi)
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+}
+
+
+/* =========================================================
+   5. SEARCH & FILTER
+========================================================= */
+
+/* Kya product search se match karta hai?
+   Har word product ke name / company / salt / uses me kahin bhi hona chahiye.
+   Example: "paracetamol fever" -> wahi products jinme dono words ho. */
 function matchesSearch(product, rawSearch){
 
-    // Empty search → show all
-    if(rawSearch.trim() === ''){
+    // Search khaali hai -> sab dikhao
+    if(rawSearch.trim() === ""){
         return true;
     }
 
-    // Product searchable text
-    let searchableText = normalizeText(
-        product.name + ' ' +
-        product.company + ' ' +
-        product.saltContent + ' ' +
+    const searchableText = normalizeText(
+        product.name + " " +
+        product.company + " " +
+        product.saltContent + " " +
         product.uses
     );
 
-    // User words
-    let words = rawSearch
+    const words = rawSearch
         .toLowerCase()
         .split(/\s+/)
-        .map(w => normalizeText(w))
-        .filter(w => w !== '');
+        .map(normalizeText)
+        .filter(w => w !== "");
 
-    // Every word must exist
-    return words.every(word =>
-        searchableText.includes(word)
-    );
- }
+    return words.every(word => searchableText.includes(word));
 
- /* adding priorty to search text
-function getSearchScore(product, rawSearch){
+}
 
-    let score = 0;
+/* Category buttons me se sahi wale ko "active" karo */
+function setActiveCategoryButton(category){
 
-    const name = normalizeText(product.name);
-
-    const salt = normalizeText(product.saltContent);
-
-    const uses = normalizeText(product.uses);
-
-    const words = rawSearch
-                  .toLowerCase()
-                  .split(/\s+/)
-                  .map(w => normalizeText(w))
-                  .filter(w => w !== "");
-
-    words.forEach(word => {
-
-        word = normalizeText(word);
-
-        if(name.includes(word)){
-            score += 100;
-        }
-
-        if(salt.includes(word)){
-            score += 50;
-        }
-
-        if(uses.includes(word)){
-            score += 20;
-        }
-
+    document.querySelectorAll(".cat-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.category === category);
     });
 
-    return score;
+}
 
-}  */
+/* Search + category dono lagakar products dikhao.
+   displayOrder me sirf .filter() hota hai (naya shuffle nahi),
+   isliye order stable rehta hai aur bestsellers upar hi rehte hain. */
+function filterProducts(){
 
-let products = [];
-let currentProducts = [];    // currently displayed/filtered products
-let displayOrder = [];       // stable shuffled order — sirf ek baar set hota hai
+    const rawSearch = document.getElementById("search").value;
 
-fetch("products.json")
-.then(response => response.json())
-.then(data => {
+    const category = document.getElementById("categoryFilter").value;
 
- products = data;
-
- let bestSellers =
- products.filter(product => product.bestseller);
-
- bestSellers = shuffleArray(bestSellers);
-
- let otherProducts =
- products.filter(product => !product.bestseller);
-
- otherProducts = shuffleArray(otherProducts);
-
- displayOrder = [
-    ...bestSellers,
-    ...otherProducts
-   ];
-
- currentProducts = displayOrder;
-
- displayProducts(currentProducts);
-
- showCart();
-
-
-    document.getElementById("search")
-    .addEventListener("keyup", debounce(filterProducts, 300));
-
-    document.getElementById("categoryFilter")
-    .addEventListener("change", filterProducts);
-
-})                                                         /* if fetch fail ho or JSON invalid, customer will see mesage instead of blank screen, */
-                                                           /* & error log will be in console(for debugging) */
-
-.catch(error => {
-
-    console.error("Products load failed:", error);
-
-    document.getElementById("products").innerHTML =
-        `<p style="padding:20px;text-align:center;color:#666;">
-            ⚠️ Products load nahi ho paaye. Please page refresh karein.
-        </p>`;
-
-});
-
-
-/*  Pehle: har search/filter call pe naya shuffleArray() chalta tha → products jump/reorder hote the
-Ab: displayOrder (jo load pe ek baar shuffle hui thi) se sirf .filter() kiya jaa raha hai → order stable rehta hai, bestsellers hamesha top pe rehte hain, 
-aur search jaldi (koi extra shuffle overhead nahi) chalta hai */
-
-function filterProducts() {
-
-    let rawSearch = document.getElementById('search').value;
-
-    let categoryValue =
-    document.getElementById("categoryFilter").value;
-
-    let filtered = displayOrder.filter(product =>
-        (categoryValue === "ALL" || product.category === categoryValue) &&
+    currentProducts = displayOrder.filter(product =>
+        (category === "ALL" || product.category === category) &&
         matchesSearch(product, rawSearch)
     );
 
- currentProducts = filtered;
+    displayProducts(currentProducts);
 
- displayProducts(currentProducts);
+    setActiveCategoryButton(category);
 
+}
 
- // Active category button update
-
- document.querySelectorAll(".cat-btn")
- .forEach(btn => btn.classList.remove("active"));
-
- let activeButton = document.querySelector(
- `.cat-btn[onclick*="${categoryValue}"]`
- );
-
- if(activeButton){
-
-    activeButton.classList.add("active");
-
- }
-
- }
-
-function selectCategory(category,button){
+/* Category button click par (dropdown ko bhi sync rakhta hai) */
+function selectCategory(category){
 
     document.getElementById("categoryFilter").value = category;
 
     filterProducts();
 
-    document.querySelectorAll(".cat-btn")
-    .forEach(btn => btn.classList.remove("active"));
-
-    button.classList.add("active");
-
 }
-/*=========================================================
-  DISPLAY PRODUCTS
-  ---------------------------------------------------------
-  Purpose:
-  - Display all products in product grid
-  - Show Add to Cart button if qty = 0
-  - Show Quantity selector if product already in cart
-=========================================================*/
 
-/*=========================================================
-  DISPLAY PRODUCTS
------------------------------------------------------------
-Purpose:
-- Display all products on website
-- Show Add to Cart button if quantity = 0
-- Show Quantity Selector if already added
-- Structure optimized for Desktop + Mobile Layout
-=========================================================*/
+
+/* =========================================================
+   6. PRODUCT DISPLAY
+   Har product ka card banata hai:
+   - Left: image (+ stock badge + multiple image badge)
+   - Right: naam, pack, company, MRP
+   - Neeche: Add to Cart / Quantity box / Out of Stock
+========================================================= */
 
 function displayProducts(items){
 
@@ -252,289 +318,128 @@ function displayProducts(items){
 
     items.forEach(product => {
 
-        // =====================================================
-        // CHECK CART QUANTITY
-        // =====================================================
+        // Cart me kitni quantity hai
+        const cartItem = cart.find(item => item.id === product.id);
+        const qty = cartItem ? cartItem.qty : 0;
 
-        let cartItem = cart.find(item => item.id === product.id);
+        // Images
+        const productImages = getProductImages(product);
+        const mainImage = getMainImage(product);
 
-        let qty = cartItem ? cartItem.qty : 0;
+        // Stock: inStock === false hi "Out of Stock" hai.
+        // Field missing ho to "In Stock" maana jaata hai (purane entries na toote).
+        const isInStock = product.inStock !== false;
 
-
-        // =====================================================
-        // PRODUCT IMAGE LIST
-        //
-        // New products:
-        // product.images = ["image1.jpg", "image2.jpg"]
-        //
-        // Old products:
-        // product.image = "image.jpg"
-        //
-        // This keeps old products working normally.
-        // =====================================================
-
-        let productImages =
-            Array.isArray(product.images) && product.images.length > 0
-                ? product.images
-                : [product.image];
-
-
-        // =====================================================
-        // MAIN IMAGE
-        // First image will be shown on product card.
-        // =====================================================
-
-        let mainImage = productImages[0];
-
-
-        // =====================================================
-        // STOCK STATUS
-        //
-        // product.inStock === false  -> "Out of Stock" (red)
-        // anything else (true / missing) -> "In Stock" (green)
-        // Missing field defaults to true so older product
-        // entries don't break.
-        // =====================================================
-
-        let isInStock = product.inStock !== false;
-
-        let stockBadge = isInStock
+        const stockBadge = isInStock
             ? `<div class="stock-badge in-stock"><span class="stock-dot"></span>In Stock</div>`
             : `<div class="stock-badge out-of-stock"><span class="stock-dot"></span>Out of Stock</div>`;
 
+        // Camera badge sirf tab jab 1 se zyada images ho
+        const imageBadge = productImages.length > 1
+            ? `<div class="multiple-image-badge">📷 ${productImages.length}</div>`
+            : "";
 
+        // Neeche wala button / quantity box
+        let actionHTML;
 
+        if(!isInStock){
 
-        // =====================================================
-        // MULTIPLE IMAGE BADGE
-        //
-        // Badge will ONLY appear when product has more
-        // than one image.
-        // =====================================================
+            actionHTML = `
+                <button class="out-of-stock-btn" disabled>Out of Stock</button>`;
 
-        let imageBadge = "";
+        }else if(qty === 0){
 
-        if(productImages.length > 1){
+            actionHTML = `
+                <button onclick="addToCart(${product.id})">Add to Cart</button>`;
 
-            imageBadge = `
+        }else{
 
-                <div class="multiple-image-badge">
-
-                    📷 ${productImages.length}
-
-                </div>
-
-            `;
+            actionHTML = `
+                <div class="qty-box">
+                    <div class="qty-btn minus" onclick="decreaseQtyById(${product.id})">&minus;</div>
+                    <div class="qty-value">${qty}</div>
+                    <div class="qty-btn plus" onclick="increaseQtyById(${product.id})">&plus;</div>
+                </div>`;
 
         }
 
-
-        // =====================================================
-        // PRODUCT CARD
-        // =====================================================
-
         html += `
-
         <div class="card">
 
-
-            <!-- =================================================
-                 LEFT SECTION - PRODUCT IMAGE
-            ================================================== -->
-
+            <!-- LEFT: image -->
             <div class="product-left">
-
                 <div class="product-image">
-
                     ${stockBadge}
-
                     <img
-                        src="${mainImage}"
-                        alt="${product.name}"
+                        src="${escapeHTML(mainImage)}"
+                        alt="${escapeHTML(product.name)}"
                         class="zoomable-image"
-                        onclick='openImageZoom(${JSON.stringify(productImages)})'>
-
-
-                    <!-- =========================================
-                         MULTIPLE IMAGE INDICATOR
-                         Only visible when multiple images exist.
-                    ========================================== -->
-
+                        data-id="${escapeHTML(product.id)}">
                     ${imageBadge}
-
                 </div>
-
             </div>
 
-
-            <!-- =================================================
-                 RIGHT SECTION - PRODUCT DETAILS
-            ================================================== -->
-
+            <!-- RIGHT: details -->
             <div class="product-right">
 
-
-                <!-- =============================================
-                     PRODUCT NAME
-                ============================================== -->
-
                 <div class="product-title">
-
-                    <h3>${product.name}</h3>
-
+                    <h3>${escapeHTML(product.name)}</h3>
                 </div>
-
-
-                <!-- =============================================
-                     PRODUCT INFORMATION
-                ============================================== -->
 
                 <div class="product-meta">
-
                     <div class="info-row">
 
-
-                        <!-- LEFT SIDE
-                             Packing + Manufacturer
-                        -->
-
                         <div class="info-left">
-
-                            <p class="packing">
-
-                                Pack : ${product.packing}
-
-                            </p>
-
-
-                            <p class="company">
-
-                                Mfg/Mkt : ${product.company}
-
-                            </p>
-
+                            <p class="packing">Pack : ${escapeHTML(product.packing)}</p>
+                            <p class="company">Mfg/Mkt : ${escapeHTML(product.company)}</p>
                         </div>
-
-
-                        <!-- RIGHT SIDE
-                             Price + MRP
-                        -->
 
                         <div class="info-right">
-
-                            <span class="mrp-text">
-                                MRP
-                            </span>
-
-                            <span class="mrp-price">
-
-                                ₹${product.price}
-
-                            </span>
-
+                            <span class="mrp-text">MRP</span>
+                            <span class="mrp-price">₹${escapeHTML(product.price)}</span>
                         </div>
 
                     </div>
-
                 </div>
 
-
-                <!-- =================================================
-                     ADD TO CART / QUANTITY SELECTOR
-                ================================================== -->
-
-                ${
-                    !isInStock
-
-                    ?
-
-                    `
-
-                    <button class="out-of-stock-btn" disabled>
-
-                        Out of Stock
-
-                    </button>
-
-                    `
-
-                    :
-
-                    qty === 0
-
-                    ?
-
-                    `
-
-                    <button
-                        onclick="addToCart(${product.id})">
-
-                        Add to Cart
-
-                    </button>
-
-                    `
-
-                    :
-
-                    `
-
-                    <div class="qty-box">
-
-
-                        <div
-                            class="qty-btn minus"
-                            onclick="decreaseQtyById(${product.id})">
-
-                            &minus;
-
-                        </div>
-
-
-                        <div class="qty-value">
-
-                            ${qty}
-
-                        </div>
-
-
-                        <div
-                            class="qty-btn plus"
-                            onclick="increaseQtyById(${product.id})">
-
-                            &plus;
-
-                        </div>
-
-                    </div>
-
-                    `
-
-                }
+                ${actionHTML}
 
             </div>
 
-        </div>
-
-        `;
+        </div>`;
 
     });
-
-
-    // =========================================================
-    // DISPLAY PRODUCTS
-    // =========================================================
 
     document.getElementById("products").innerHTML = html;
 
 }
+
+
+/* =========================================================
+   7. CART ACTIONS
+   Do tarah ke functions hain:
+   - ...ById(id)   : product list ke buttons ke liye
+   - ...(index)    : cart panel ke buttons ke liye
+========================================================= */
+
+/* Cart badalne ke baad: save + cart panel + product cards sab refresh */
+function refreshUI(){
+
+    saveCart();
+
+    showCart();
+
+    displayProducts(currentProducts);
+
+}
+
 function addToCart(id){
 
     const product = products.find(p => p.id === id);
 
     if(!product) return;
 
-    let item = cart.find(x => x.id === id);
+    const item = cart.find(x => x.id === id);
 
     if(item){
 
@@ -543,21 +448,12 @@ function addToCart(id){
     }else{
 
         cart.push({
-
-            id:product.id,
-
-            name:product.name,
-
-            packing:product.packing,
-
-            image: (Array.isArray(product.images) && product.images.length > 0)   /* firstly it checks image or images[] in  products.json */
-                ? product.images[0]                                              
-                : product.image,
-
-            price:product.price,
-
-            qty:1
-
+            id: product.id,
+            name: product.name,
+            packing: product.packing,
+            image: getMainImage(product),
+            price: product.price,
+            qty: 1
         });
 
     }
@@ -565,7 +461,6 @@ function addToCart(id){
     refreshUI();
 
 }
-
 
 function increaseQtyById(id){
 
@@ -581,194 +476,17 @@ function increaseQtyById(id){
 
 }
 
-
 function decreaseQtyById(id){
 
     const index = cart.findIndex(x => x.id === id);
 
-    if(index === -1) return;
+    if(index !== -1){
 
-    if(cart[index].qty > 1){
-
-        cart[index].qty--;
-
-    }else{
-
-        cart.splice(index,1);
+        decreaseQty(index);
 
     }
 
-    refreshUI();
-
 }
-
-
-function saveCart(){
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    localStorage.setItem("cartTime", Date.now());
-
-}
-
-function showCart(){
-
-    if(cart.length === 0){
-
-        closeCart();
-
-        setTimeout(() => {
-            document.getElementById("cartArea").innerHTML = "";
-        },350);
-
-        document.getElementById("cartButton").innerHTML =
-        "🛒 Cart (0)";
-
-        document.getElementById("cartButton").onclick =
-        toggleCart;
-
-        return;
-    }
-
-    let total = 0;
-
-    let html = `
-
-    <div class="cart-header">
-
-        <h2>🛒 Cart</h2>
-
-        <button class="close-btn"
-        onclick="closeCart()">
-             Close
-        </button>
-
-    </div>
-
-    `;
-
-    cart.forEach((item,index)=>{
-
-        total += item.price * item.qty;
-
-        html += `
-
-        <div class="cart-item">
-
-            <div class="cart-row">
-
-                <img
-                    src="${item.image}"
-                    class="cart-img"
-                    alt="${item.name}">
-
-                <div class="cart-details">
-
-                    <div class="cart-item-top">
-
-                        <span class="cart-name">
-                            ${item.name}
-                        </span>
-
-                        <span class="cart-price">
-                            ₹${item.price}
-                        </span>
-
-                    </div>
-
-                    <div class="cart-pack">
-                        (${item.packing})
-                    </div>
-
-                    <div class="cart-action">
-
-                        <div class="cart-qty-box">
-
-                            <div class="qty-btn minus"
-                                onclick="decreaseQty(${index})">
-                                &minus;
-                            </div>
-
-                            <div class="qty-value">
-                                ${item.qty}
-                            </div>
-
-                            <div class="qty-btn plus"
-                                onclick="increaseQty(${index})">
-                                &plus;
-                            </div>
-
-                        </div>
-
-                        <button class="remove-btn"
-                            onclick="removeItem(${index})">
-                            &times;
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        `;
-
-    });
-
-    html += `
-
-    <h3 class="total">
-        Total ₹${total.toFixed(2)}
-    </h3>
-
-    <input
-    id="customerName"
-    placeholder="Customer Name">
-
-    <input
-    id="customerMobile"
-    placeholder="Mobile Number">
-
-    <input
-    id="customerAddress"
-    placeholder="Address">
-
-    <br><br>
-
-    <button class="order-btn"
-        onclick="sendOrder()">
-        Order on WhatsApp
-    </button>
-
-    `;
-
-    document.getElementById("cartArea").innerHTML = html;
-
-    let totalItems = 0;
-
-    cart.forEach(item=>{
-        totalItems += item.qty;
-    });
-
-    document.getElementById("cartButton").innerHTML =
-    `🛒 Cart (${totalItems})`;
-
-    document.getElementById("cartButton").onclick =
-    toggleCart;
-
-}
-function refreshUI(){
-
-    saveCart();
-
-    showCart();
-
-    displayProducts(currentProducts);
-
-}
-
 
 function increaseQty(index){
 
@@ -778,17 +496,15 @@ function increaseQty(index){
 
 }
 
-
 function decreaseQty(index){
 
     if(cart[index].qty > 1){
 
         cart[index].qty--;
 
-    }
-    else{
+    }else{
 
-        cart.splice(index,1);
+        cart.splice(index, 1);   // qty 1 thi aur minus dabaya -> item hata do
 
     }
 
@@ -798,20 +514,259 @@ function decreaseQty(index){
 
 function removeItem(index){
 
-    cart.splice(index,1);
+    cart.splice(index, 1);
 
     refreshUI();
+
 }
-  // Loose or Box order
-function changeOrderType(index,type){
 
-    cart[index].orderType = type;
 
-    saveCart();
+/* =========================================================
+   8. CART PAGE
+   ---------------------------------------------------------
+   Cart ab side se slide nahi hota. Cart button dabane par
+   products ki jagah poora CART PAGE dikhta hai (wholesale ke liye:
+   saare products ek saath dikhte hain).
 
-    showCart();
+   Kaise kaam karta hai:
+   - Cart kholne par URL me "#cart" lagta hai (browser history me ek entry)
+   - Phone / browser ka BACK button dabane par products page wapas aata hai
+   - "Back to Products" button bhi wahi karta hai
+   - Wapas aane par products page usi jagah scroll hota hai jahan tha
+   - style.css me body par "cart-view" class lagti hai aur wahi
+     products chhupa kar cart dikhati hai
+========================================================= */
 
- }
+function isCartRoute(){
+
+    return location.hash === "#cart";
+
+}
+
+/* Cart page kholo (header ke Cart button se) */
+function openCart(){
+
+    if(cart.length === 0 || isCartRoute()) return;
+
+    savedScrollY = window.scrollY;     // products page ki jagah yaad rakho
+
+    cartPushed = true;
+
+    location.hash = "cart";            // hashchange -> renderView() chalega
+
+}
+
+/* Cart page band karo, products page par wapas */
+function closeCart(){
+
+    if(!isCartRoute() || leavingCart) return;
+
+    leavingCart = true;
+
+    if(cartPushed){
+
+        cartPushed = false;
+
+        history.back();                // hashchange -> renderView()
+
+    }else{
+
+        // Seedha /#cart link se aaye the (history me peeche site se bahar jaata),
+        // isliye bas "#cart" hata do
+        history.replaceState(null, "", location.pathname + location.search);
+
+        renderView();
+
+    }
+
+}
+
+/* URL ke hisaab se sahi page dikhao (cart ya products).
+   Ye hashchange par, aur products load hone ke baad chalta hai. */
+function renderView(){
+
+    leavingCart = false;
+
+    // Khaali cart ke saath #cart par aaye: wapas products
+    if(isCartRoute() && cart.length === 0){
+
+        history.replaceState(null, "", location.pathname + location.search);
+
+    }
+
+    const showCartView = isCartRoute() && cart.length > 0;
+
+    const wasCartView = document.body.classList.contains("cart-view");
+
+    document.body.classList.toggle("cart-view", showCartView);
+
+    if(showCartView && !wasCartView){
+
+        showCart();
+
+        window.scrollTo(0, 0);
+
+    }
+
+    if(!showCartView){
+
+        cartPushed = false;
+
+        if(wasCartView){
+            window.scrollTo(0, savedScrollY);   // products wahin jahan chhode the
+        }
+
+    }
+
+}
+
+/* Cart ka HTML banata hai aur header ke Cart button ka count update karta hai */
+function showCart(){
+
+    const cartButton = document.getElementById("cartButton");
+
+    const cartArea = document.getElementById("cartArea");
+
+    // Customer ne jo type kiya hai use yaad rakho, warna qty badalte hi form khaali ho jaata tha
+    const typed = {
+        name:    document.getElementById("customerName")?.value    || "",
+        mobile:  document.getElementById("customerMobile")?.value  || "",
+        address: document.getElementById("customerAddress")?.value || ""
+    };
+
+    // ---------- Cart khaali ----------
+    if(cart.length === 0){
+
+        cartArea.innerHTML = "";
+
+        cartButton.innerHTML = "🛒 Cart (0)";
+
+        closeCart();    // cart page par the to products par wapas (warna kuch nahi hota)
+
+        return;
+    }
+
+    // ---------- Cart me items ----------
+    let total = 0;
+    let totalItems = 0;
+    let itemsHTML = "";
+
+    cart.forEach((item, index) => {
+
+        total += item.price * item.qty;
+        totalItems += item.qty;
+
+        itemsHTML += `
+        <div class="cart-item">
+            <div class="cart-row">
+
+                <img src="${escapeHTML(item.image)}" class="cart-img" alt="${escapeHTML(item.name)}">
+
+                <div class="cart-details">
+
+                    <div class="cart-item-top">
+                        <span class="cart-name">${escapeHTML(item.name)}</span>
+                        <span class="cart-price">₹${escapeHTML(item.price)}</span>
+                    </div>
+
+                    <div class="cart-pack">(${escapeHTML(item.packing)})</div>
+
+                    <div class="cart-action">
+
+                        <div class="cart-qty-box">
+                            <div class="qty-btn minus" onclick="decreaseQty(${index})">&minus;</div>
+                            <div class="qty-value">${item.qty}</div>
+                            <div class="qty-btn plus" onclick="increaseQty(${index})">&plus;</div>
+                        </div>
+
+                        <button class="remove-btn" onclick="removeItem(${index})">&times;</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>`;
+
+    });
+
+    cartArea.innerHTML = `
+
+    <!-- Upar: back button + title + clear -->
+    <div class="cart-header">
+
+        <button class="back-btn" onclick="closeCart()">← Back to Products</button>
+
+        <h2>🛒 Cart <span class="cart-count">(${cart.length} products, ${totalItems} qty)</span></h2>
+
+        <button class="clear-btn" onclick="clearCart()">Clear cart</button>
+
+    </div>
+
+    <div class="cart-layout">
+
+        <!-- Left: saare products ki list -->
+        <div class="cart-items">
+            ${itemsHTML}
+        </div>
+
+        <!-- Right (mobile par neeche): total + customer form + order button -->
+        <div class="cart-summary">
+
+            <h3 class="total">Total ₹${total.toFixed(2)}</h3>
+
+            <input id="customerName" placeholder="Customer Name"
+                   autocomplete="name" maxlength="${CONFIG.MAX_NAME_LENGTH}">
+
+            <input id="customerMobile" placeholder="Mobile Number"
+                   type="tel" inputmode="numeric" autocomplete="tel" maxlength="14">
+
+            <input id="customerAddress" placeholder="Address"
+                   autocomplete="street-address" maxlength="${CONFIG.MAX_ADDRESS_LENGTH}">
+
+            <!-- HONEYPOT: insaan ko ye dikhta nahi. Bots har field bhar dete hain, isse pakde jaate hain. -->
+            <div class="hp-wrap" aria-hidden="true">
+                <input id="companyWebsite" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button class="order-btn" onclick="sendOrder()">Order on WhatsApp</button>
+
+        </div>
+
+    </div>`;
+
+    // Typed values wapas daalo
+    document.getElementById("customerName").value    = typed.name;
+    document.getElementById("customerMobile").value  = typed.mobile;
+    document.getElementById("customerAddress").value = typed.address;
+
+    cartButton.innerHTML = `🛒 Cart (${totalItems})`;
+
+}
+
+/* Saare products cart se hatao (confirm ke baad) */
+function clearCart(){
+
+    if(!confirm("Cart ke saare products hata dein?")) return;
+
+    cart = [];
+
+    refreshUI();
+
+}
+
+
+/* =========================================================
+   9. ORDER (WhatsApp + Google Sheet)
+========================================================= */
+
+/* Ek cart item ki line (WhatsApp message aur Sheet dono me use hoti hai) */
+function formatOrderLine(item){
+
+    return `🔹 ${item.name} (${item.packing})\n` +
+           `   Qty : ${item.qty} | Amount : ₹${(item.price * item.qty).toFixed(2)}\n\n`;
+
+}
 
 function sendOrder(){
 
@@ -822,22 +777,26 @@ function sendOrder(){
         return;
     }
 
-    let name =
-    document.getElementById("customerName").value.trim();
+    const name = document.getElementById("customerName").value.trim();
+    const mobile = normalizeMobile(document.getElementById("customerMobile").value);
+    const address = document.getElementById("customerAddress").value.trim();
+    const honeypot = document.getElementById("companyWebsite").value;
 
-    let mobile =
-    document.getElementById("customerMobile").value.trim();
+    // ---------- Bot check ----------
+    // Honeypot bhara hua hai to ye bot hai: chup-chaap ruk jao (koi alert nahi)
+    if(honeypot !== ""){
+        return;
+    }
 
-    let address =
-    document.getElementById("customerAddress").value.trim();
-
-    if(name === ""){
+    // ---------- Validation (customer ki madad ke liye; asli check Apps Script me bhi hai) ----------
+    if(name.length < 2){
 
         alert("Please enter Customer Name");
 
         return;
     }
 
+    // India ka mobile: 6-9 se shuru, total 10 digits
     if(!/^[6-9]\d{9}$/.test(mobile)){
 
         alert("Please enter a valid 10 digit Mobile Number");
@@ -845,9 +804,19 @@ function sendOrder(){
         return;
     }
 
+    // ---------- Order ka text banao ----------
     let total = 0;
-    let totalProducts = cart.length;
-    let msg =
+    let productList = "";
+
+    cart.forEach(item => {
+
+        total += item.price * item.qty;
+
+        productList += formatOrderLine(item);
+
+    });
+
+    const message =
 `Hello Deepak Medical Agency
 
 Customer Name: ${name}
@@ -858,280 +827,111 @@ Address: ${address}
 
 Order Details:
 
-`;
+${productList}━━━━━━━━━━━━━━
 
-    cart.forEach(item => {
+Total Products : ${cart.length}
 
-        total += item.price * item.qty;
+Total Amount : ₹${total.toFixed(2)}`;
 
-        msg += `🔹 ${item.name} (${item.packing})
+    // ---------- 1) Google Sheet me backup (fail ho to bhi order nahi rukega) ----------
+    fetch(CONFIG.SHEET_URL, {
 
-      Qty : ${item.qty} | Amount : ₹${(item.price * item.qty).toFixed(2)}
+        method: "POST",
 
-       `;
+        mode: "no-cors",
 
+        body: JSON.stringify({
+            secret: CONFIG.SHEET_SECRET,
+            hp: honeypot,                          // honeypot (hamesha khaali hona chahiye)
+            elapsed: Date.now() - pageLoadTime,    // page khulne ke baad kitne ms me order aaya
+            name: name,
+            mobile: mobile,
+            address: address,
+            products: productList,
+            total: total.toFixed(2)
+        })
+
+    }).catch(error => {
+
+        console.error("Order log to Sheet failed:", error);
 
     });
 
-    msg += `━━━━━━━━━━━━━━
-
-   Total Products : ${totalProducts}
-
-   Total Amount : ₹${total.toFixed(2)}`;
-
-  let productList = "";
-
-cart.forEach(item => {
-
- productList +=
- `🔹 ${item.name} (${item.packing})
-
- Qty : ${item.qty} | Amount : ₹${(item.price * item.qty).toFixed(2)}
-
- `;
-
-});
-
-fetch("https://script.google.com/macros/s/AKfycbwVDN0OlZ5srpTFPFEIR0O0B43Oe5vcHap70EJcfBtsbXuPLy8QdKMTs8NtwaJ3JRnGxA/exec",{
-
-method:"POST",
-
-mode:"no-cors",
-
-body:JSON.stringify({
-
-secret:"DeepakMedical2026",
-
-name:name,
-
-mobile:mobile,
-
-address:address,
-
-products:productList,
-
-total:total.toFixed(2)
-
-})
-
-})
-.catch(error => {
-
-    console.error("Order log to Sheet failed:", error);
-
-});
+    // ---------- 2) WhatsApp kholo ----------
     window.open(
-"https://wa.me/917804008789?text=" +
-encodeURIComponent(msg)
+        `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=` + encodeURIComponent(message)
     );
 
-cart = [];
+    // ---------- 3) Cart saaf ----------
+    cart = [];
 
-localStorage.removeItem("cart");
+    clearCartStorage();
 
-localStorage.removeItem("cartTime");
+    showCart();     // cart khaali hai, to ye khud products page par wapas bhej deta hai
 
-showCart();
+    displayProducts(currentProducts);   // product cards me "Add to Cart" wapas aa jaaye
 
-closeCart();
-}
-function toggleCart(){
-
-    if(cart.length === 0){
-        return;
-    }
-
-    const cartArea = document.getElementById("cartArea");
-
-    if(cartOpen){
-
-        cartArea.style.transform = "translateX(100%)";
-        cartOpen = false;
-
-    }else{
-
-        cartArea.style.transform = "translateX(0)";
-        cartOpen = true;
-
-    }
-
-}
-
-function closeCart(){
-
-    document.getElementById("cartArea")
-    .style.transform = "translateX(100%)";
-
-    cartOpen = false;
 }
 
 
 /* =========================================================
-   PRODUCT IMAGE ZOOM / AMAZON STYLE VIEWER
-   ---------------------------------------------------------
-   Features:
-   - One large image at a time
-   - Small thumbnails on left side
-   - Thumbnail click changes large image
-   - Image stays inside screen
-   - Outside area click closes zoom
+   10. IMAGE ZOOM (Amazon style viewer)
+   - Left me chhote thumbnails, right me ek badi image
+   - Thumbnail click -> badi image badalti hai
+   - Bahar (dark area) click / tap ya ESC -> band
 ========================================================= */
 
 function openImageZoom(images){
 
-
-    /* =====================================================
-       SUPPORT SINGLE IMAGE + MULTIPLE IMAGES
-       -----------------------------------------------------
-       Old product:
-       openImageZoom("images/product.jpg")
-
-       New product:
-       openImageZoom([
-           "images/front.jpg",
-           "images/back.jpg"
-       ])
-    ===================================================== */
-
+    // Single image (string) ya multiple (array) dono chalte hain
     if(!Array.isArray(images)){
-
         images = [images];
-
     }
 
-
-    /* =====================================================
-       CREATE OVERLAY
-    ===================================================== */
-
+    // ---------- Overlay banao ----------
     const overlay = document.createElement("div");
 
     overlay.className = "image-zoom-overlay";
 
-
-    /* =====================================================
-       CREATE AMAZON-STYLE VIEWER
-       -----------------------------------------------------
-       Left  = thumbnails
-       Right = one large image
-    ===================================================== */
-
     overlay.innerHTML = `
-
         <div class="zoom-viewer">
 
-
-            <!-- =================================================
-                 LEFT THUMBNAIL SIDEBAR
-            ================================================== -->
-
+            <!-- Left: thumbnails -->
             <div class="zoom-sidebar">
-
-                ${
-                    images.map((image, index) => `
-
-                        <div
-                            class="zoom-sidebar-thumb ${
-                                index === 0 ? "active" : ""
-                            }"
-                            data-image="${image}">
-
-                            <img
-                                src="${image}"
-                                alt="Product image ${index + 1}">
-
-                        </div>
-
-                    `).join("")
-                }
-
+                ${images.map((image, index) => `
+                    <div class="zoom-sidebar-thumb ${index === 0 ? "active" : ""}"
+                         data-image="${escapeHTML(image)}">
+                        <img src="${escapeHTML(image)}" alt="Product image ${index + 1}">
+                    </div>
+                `).join("")}
             </div>
 
-
-            <!-- =================================================
-                 LARGE IMAGE AREA
-                 ONLY ONE IMAGE IS DISPLAYED HERE
-            ================================================== -->
-
+            <!-- Right: badi image -->
             <div class="zoom-main-image">
-
-                <img
-                    src="${images[0]}"
-                    class="zoomed-image"
-                    alt="Product Image">
-
+                <img src="${escapeHTML(images[0])}" class="zoomed-image" alt="Product Image">
             </div>
 
-
-        </div>
-
-    `;
-
-
-    /* =====================================================
-       ADD OVERLAY TO BODY
-    ===================================================== */
+        </div>`;
 
     document.body.appendChild(overlay);
 
+    // Fade-in animation
+    requestAnimationFrame(() => overlay.classList.add("active"));
 
-    /* =====================================================
-       START OVERLAY ANIMATION
-    ===================================================== */
+    const mainImage = overlay.querySelector(".zoomed-image");
 
-    requestAnimationFrame(() => {
+    const thumbnails = overlay.querySelectorAll(".zoom-sidebar-thumb");
 
-        overlay.classList.add("active");
-
-    });
-
-
-    /* =====================================================
-       GET MAIN IMAGE
-    ===================================================== */
-
-    const mainImage =
-        overlay.querySelector(".zoomed-image");
-
-
-    /* =====================================================
-       GET ALL THUMBNAILS
-    ===================================================== */
-
-    const thumbnails =
-        overlay.querySelectorAll(".zoom-sidebar-thumb");
-
-
-    /* =====================================================
-       THUMBNAIL CLICK
-       -----------------------------------------------------
-       Only main image changes.
-       Other images are NOT added to screen.
-    ===================================================== */
-
+    // ---------- Thumbnail click: sirf badi image badalti hai ----------
     thumbnails.forEach(thumbnail => {
 
         thumbnail.addEventListener("click", function(event){
 
             event.stopPropagation();
 
+            mainImage.src = this.dataset.image;
 
-            /* Change large image */
-
-            mainImage.src =
-                this.dataset.image;
-
-
-            /* Remove active border */
-
-            thumbnails.forEach(item => {
-
-                item.classList.remove("active");
-
-            });
-
-
-            /* Highlight selected thumbnail */
+            thumbnails.forEach(item => item.classList.remove("active"));
 
             this.classList.add("active");
 
@@ -1139,130 +939,61 @@ function openImageZoom(images){
 
     });
 
-
-    /* =========================================================
-   CLOSE ZOOM WHEN CLICKING / TAPPING OUTSIDE VIEWER
-   ---------------------------------------------------------
-   - Main image par click  → kuch nahi hoga
-   - Thumbnail par click   → image change hogi
-   - Viewer ke empty area  → zoom close
-   - Screen ke kisi bhi
-     dark/empty area par    → zoom close
-   - Mobile tap bhi work karega
-    ========================================================= */
-
+    // ---------- Bahar click / tap: band ----------
+    // Badi image ya thumbnail par click ho to band NAHI hoga
     overlay.addEventListener("click", function(event){
 
-      const clickedImage =
-        event.target.closest(".zoomed-image");
-
-      const clickedThumbnail =
-        event.target.closest(".zoom-sidebar-thumb");
-
-     /*  Large image ya thumbnail par click hua
-       to overlay close nahi hoga.
-      */
-
-        if(clickedImage || clickedThumbnail){
-
-          return;
-
-         }
-
-
-       /*
-       Baaki kahin bhi click hua:
-       zoom close.
-      */
+        if(event.target.closest(".zoomed-image") ||
+           event.target.closest(".zoom-sidebar-thumb")){
+            return;
+        }
 
         closeImageZoom(overlay);
 
-     });
+    });
 
 }
 
-/* =========================================================
-   CLOSE PRODUCT IMAGE ZOOM
-   ---------------------------------------------------------
-   Zoom overlay ko smoothly close karta hai.
-========================================================= */
-
 function closeImageZoom(overlay){
 
-    /* Remove active class for closing animation */
+    overlay.classList.remove("active");   // fade-out animation
 
-    overlay.classList.remove("active");
-
-
-    /* Wait for CSS fade-out animation */
-
+    // CSS animation khatam hone ke baad hata do
     setTimeout(() => {
 
         if(overlay && overlay.parentNode){
-
             overlay.parentNode.removeChild(overlay);
-
         }
 
     }, 250);
 
 }
 
-/* =========================================================
-   ESC KEY CLOSE
-========================================================= */
-
-document.addEventListener("keydown", function(event){
-
-    if(event.key === "Escape"){
-
-        const overlay =
-            document.querySelector(".image-zoom-overlay");
-
-        if(overlay){
-
-            closeImageZoom(overlay);
-
-        }
-
-    }
-
-});
 
 /* =========================================================
-   MOBILE HEADER — HIDE LOGO ONLY ON SCROLL DOWN
+   11. MOBILE HEADER - SCROLL DOWN par sirf LOGO hide
    ---------------------------------------------------------
-   Jaisa e-commerce apps (Amazon/Flipkart/Meesho) mein hota
-   hai: scroll down karne par SIRF logo + tagline hide hota
-   hai. Search bar aur category buttons HAMESHA visible
-   rehte hain — kabhi hide nahi hote.
+   Amazon/Flipkart jaisa: neeche scroll karo -> logo + tagline chhup jaata hai.
+   Search bar aur category buttons hamesha dikhte hain.
+   Upar scroll karo -> logo wapas.
 
-   Simplicity > fancy animation: logo ko seedha "display:none"
-   se hide/show kiya ja raha hai (instant, animated nahi).
-   Ye sabse zyada reliable tareeka hai — isme koi transform,
-   position:absolute, ya height-collapse trick use nahi hui,
-   isliye koi bhi layout/clipping bug possible nahi hai.
-
-   Cart button (#cartButton) header ke bahar, body ka direct
-   child hai (index.html mein) — isliye ye header par kuch bhi
-   ho, hamesha apni bottom-right corner wali jagah par rahega.
+   Tareeka simple rakha hai: header par "logo-hidden" class lagti/hatti hai,
+   aur CSS (style.css) logo ko hide karta hai.
+   Cart button header ke andar (.search-cart me) hai, uski position CSS se tay hoti hai.
 ========================================================= */
 
 const siteHeader = document.querySelector("header");
 
 let lastScrollY = window.scrollY;
-let ticking = false;
-
-let accumulatedDelta = 0;   // current direction mein ab tak kitna continuously scroll hua
-let lastDirection = null;   // "down" | "up" | null
-let isLocked = false;       // toggle ke turant baad chhota cooldown (extra jitter-proofing)
-
-const TOGGLE_THRESHOLD = 45;  // itna CONTINUOUS scroll chahiye (px) tabhi toggle hoga
-const TOP_SAFE_ZONE = 20;     // page ke bilkul top par hamesha logo dikhna chahiye
-const LOCK_DURATION = 250;    // ms — toggle ke turant baad thoda cooldown
+let ticking = false;            // scroll events ko frame ke hisaab se limit karne ke liye
+let accumulatedDelta = 0;       // ek hi direction me ab tak kitna scroll hua
+let lastDirection = null;       // "down" | "up" | null
+let isLocked = false;           // toggle ke turant baad cooldown (jitter se bachne ke liye)
 
 function isMobileView(){
-    return window.innerWidth <= 768;
+
+    return window.innerWidth <= CONFIG.MOBILE_MAX_WIDTH;
+
 }
 
 function setLogoHidden(hidden){
@@ -1271,21 +1002,29 @@ function setLogoHidden(hidden){
 
     siteHeader.classList.toggle("logo-hidden", hidden);
 
-    // Chhota cooldown — isse touch-scroll ke residual/bounce
-    // events turant dobara toggle nahi kar paate (glitch-proofing).
+    // Chhota cooldown: touch-scroll ke bounce se turant dobara toggle na ho
     isLocked = true;
-    setTimeout(() => { isLocked = false; }, LOCK_DURATION);
+
+    setTimeout(() => { isLocked = false; }, CONFIG.HEADER_LOCK_MS);
+
+}
+
+function resetScrollTracking(){
+
+    accumulatedDelta = 0;
+    lastDirection = null;
 
 }
 
 function updateHeaderState(){
 
+    ticking = false;
+
+    // Desktop par logo hamesha dikhta hai
     if(!isMobileView()){
         setLogoHidden(false);
         lastScrollY = window.scrollY;
-        accumulatedDelta = 0;
-        lastDirection = null;
-        ticking = false;
+        resetScrollTracking();
         return;
     }
 
@@ -1293,25 +1032,18 @@ function updateHeaderState(){
     const diff = scrollY - lastScrollY;
     lastScrollY = scrollY;
 
-    // Page ke bilkul top par hamesha logo dikhna chahiye
-    if(scrollY <= TOP_SAFE_ZONE){
+    // Page ke bilkul top par logo hamesha dikhao
+    if(scrollY <= CONFIG.HEADER_TOP_SAFE_ZONE){
         setLogoHidden(false);
-        accumulatedDelta = 0;
-        lastDirection = null;
-        ticking = false;
+        resetScrollTracking();
         return;
     }
 
-    if(isLocked || diff === 0){
-        ticking = false;
-        return;
-    }
+    if(isLocked || diff === 0) return;
 
     const direction = diff > 0 ? "down" : "up";
 
-    // Direction badli (jitter/bounce) — accumulator reset karo,
-    // taaki chhoti aage-peeche movement ko "sustained scroll"
-    // na maan liya jaaye.
+    // Direction badli (jitter) -> counter reset
     if(direction !== lastDirection){
         accumulatedDelta = 0;
         lastDirection = direction;
@@ -1319,40 +1051,153 @@ function updateHeaderState(){
 
     accumulatedDelta += Math.abs(diff);
 
-    if(accumulatedDelta >= TOGGLE_THRESHOLD){
+    // Kaafi continuous scroll hua tabhi toggle
+    if(accumulatedDelta >= CONFIG.HEADER_TOGGLE_THRESHOLD){
 
-        if(direction === "down"){
-            setLogoHidden(true);   // sustained scroll down — logo hide
-        }else{
-            setLogoHidden(false);  // sustained scroll up — logo dikhao
-        }
+        setLogoHidden(direction === "down");
 
         accumulatedDelta = 0;
 
     }
 
-    ticking = false;
+}
+
+
+/* =========================================================
+   12. INIT - page load par yahin se sab shuru hota hai
+========================================================= */
+
+/* products.json aane ke baad: order banao, cart sync karo, screen par dikhao */
+function initProducts(data){
+
+    products = data;
+
+    // Bestsellers pehle (shuffle), phir baaki (shuffle). Ek hi baar shuffle hota hai.
+    const bestSellers = shuffleArray(products.filter(p => p.bestseller));
+
+    const otherProducts = shuffleArray(products.filter(p => !p.bestseller));
+
+    displayOrder = [...bestSellers, ...otherProducts];
+
+    currentProducts = displayOrder;
+
+    syncCartWithProducts();
+
+    displayProducts(currentProducts);
+
+    showCart();
+
+    renderView();    // URL "#cart" ho (refresh par) to cart page dikhao
 
 }
 
-window.addEventListener("scroll", () => {
+/* Saare event listeners yahin lagte hain (HTML me inline onclick kam se kam) */
+function setupEventListeners(){
 
-    if(!ticking){
-        window.requestAnimationFrame(updateHeaderState);
-        ticking = true;
-    }
+    // Search: "input" event (keyup nahi), taaki paste / mobile keyboard bhi pakde jaaye
+    document.getElementById("search")
+        .addEventListener("input", debounce(filterProducts, CONFIG.SEARCH_DELAY_MS));
 
-}, { passive:true });
+    // Dropdown category
+    document.getElementById("categoryFilter")
+        .addEventListener("change", filterProducts);
 
-window.addEventListener("resize", () => {
-    if(!isMobileView()) setLogoHidden(false);
-});
+    // Category buttons (HTML me data-category="TABLET_CAP" jaise attribute hain)
+    document.querySelectorAll(".cat-btn").forEach(btn => {
+        btn.addEventListener("click", () => selectCategory(btn.dataset.category));
+    });
+
+    // Cart button -> cart page
+    document.getElementById("cartButton")
+        .addEventListener("click", openCart);
+
+    // Browser / phone ka BACK button (URL "#cart" badalta hai) -> sahi page dikhao
+    window.addEventListener("hashchange", renderView);
+
+    // Product image click -> zoom viewer (ek hi listener poore products area par)
+    document.getElementById("products").addEventListener("click", event => {
+
+        const img = event.target.closest(".zoomable-image");
+
+        if(!img) return;
+
+        const product = products.find(p => String(p.id) === img.dataset.id);
+
+        if(product){
+            openImageZoom(getProductImages(product));
+        }
+
+    });
+
+    // ESC dabane par zoom band
+    document.addEventListener("keydown", event => {
+
+        if(event.key !== "Escape") return;
+
+        const overlay = document.querySelector(".image-zoom-overlay");
+
+        if(overlay){
+            closeImageZoom(overlay);
+        }
+
+    });
+
+    // Mobile header scroll
+    window.addEventListener("scroll", () => {
+
+        if(!ticking){
+            window.requestAnimationFrame(updateHeaderState);
+            ticking = true;
+        }
+
+    }, { passive: true });
+
+    window.addEventListener("resize", () => {
+
+        if(!isMobileView()) setLogoHidden(false);
+
+    });
+
+}
+
+/* ---------- START ---------- */
+
+loadCart();
+
+setupEventListeners();
+
+fetch("products.json")
+    .then(response => {
+
+        if(!response.ok) throw new Error("HTTP " + response.status);
+
+        return response.json();
+
+    })
+    .then(initProducts)
+    .catch(error => {
+
+        // Fetch fail ya JSON galat ho to customer ko blank screen ki jagah message dikhe.
+        // Asli error developer ke liye console me hai.
+        console.error("Products load failed:", error);
+
+        document.getElementById("products").innerHTML =
+            `<p style="padding:20px;text-align:center;color:#666;">
+                ⚠️ Products load nahi ho paaye. Please page refresh karein.
+            </p>`;
+
+    });
 
 
+/* =========================================================
+   13. SLIDER (OPTIONAL - abhi band hai)
+   Chalu karna ho to:
+     1) index.html me slider ka HTML uncomment karo
+     2) niche ka code uncomment karo
+     3) style.css me .slider / .slides ka CSS check karo
+========================================================= */
 
-/* adding slider code 
-// =================== Slider ===================
-
+/*
 let currentSlide = 0;
 
 const slides = document.querySelector(".slides");
@@ -1363,20 +1208,13 @@ const totalSlides = slideImages.length;
 
 function updateSlider(){
 
-    slides.style.transform =
-    `translateX(-${currentSlide * 100}%)`;
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 
 }
 
 function nextSlide(){
 
-    currentSlide++;
-
-    if(currentSlide >= totalSlides){
-
-        currentSlide = 0;
-
-    }
+    currentSlide = (currentSlide + 1) % totalSlides;
 
     updateSlider();
 
@@ -1384,23 +1222,15 @@ function nextSlide(){
 
 function prevSlide(){
 
-    currentSlide--;
-
-    if(currentSlide < 0){
-
-        currentSlide = totalSlides - 1;
-
-    }
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
 
     updateSlider();
 
 }
 
-document.querySelector(".next")
-.addEventListener("click",nextSlide);
+document.querySelector(".next").addEventListener("click", nextSlide);
 
-document.querySelector(".prev")
-.addEventListener("click",prevSlide);
+document.querySelector(".prev").addEventListener("click", prevSlide);
 
-setInterval(nextSlide,4000);
+setInterval(nextSlide, 4000);
 */
