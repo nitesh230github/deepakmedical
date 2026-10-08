@@ -9,7 +9,7 @@
      5. SEARCH & FILTER   - search box + category filter
      6. PRODUCT DISPLAY   - product cards banana
      7. CART ACTIONS      - add / increase / decrease / remove
-     8. CART PANEL        - cart ka UI (open / close / render)
+     8. CART PAGE         - cart ki alag page-view (open / back / render)
      9. ORDER             - WhatsApp + Google Sheet par order bhejna
     10. IMAGE ZOOM        - product image viewer
     11. HEADER SCROLL     - mobile par logo hide/show
@@ -59,7 +59,11 @@ let products = [];          // products.json ka poora data
 let displayOrder = [];      // ek baar shuffle hua order (bestsellers upar)
 let currentProducts = [];   // abhi screen par dikh rahe (filtered) products
 let cart = [];              // cart items
-let cartOpen = false;       // cart panel khula hai ya nahi
+
+// Cart page ka navigation state (section 8)
+let savedScrollY = 0;       // cart kholne se pehle products page kahan tak scroll tha
+let cartPushed = false;     // cart hamne khola (browser history me entry bani) ya seedha #cart link se aaye
+let leavingCart = false;    // back chal raha hai, dobara close mat karo
 
 const pageLoadTime = Date.now();   // bot detect karne ke liye (order ke time se compare hota hai)
 
@@ -518,8 +522,103 @@ function removeItem(index){
 
 
 /* =========================================================
-   8. CART PANEL (side se aane wala cart)
+   8. CART PAGE
+   ---------------------------------------------------------
+   Cart ab side se slide nahi hota. Cart button dabane par
+   products ki jagah poora CART PAGE dikhta hai (wholesale ke liye:
+   saare products ek saath dikhte hain).
+
+   Kaise kaam karta hai:
+   - Cart kholne par URL me "#cart" lagta hai (browser history me ek entry)
+   - Phone / browser ka BACK button dabane par products page wapas aata hai
+   - "Back to Products" button bhi wahi karta hai
+   - Wapas aane par products page usi jagah scroll hota hai jahan tha
+   - style.css me body par "cart-view" class lagti hai aur wahi
+     products chhupa kar cart dikhati hai
 ========================================================= */
+
+function isCartRoute(){
+
+    return location.hash === "#cart";
+
+}
+
+/* Cart page kholo (header ke Cart button se) */
+function openCart(){
+
+    if(cart.length === 0 || isCartRoute()) return;
+
+    savedScrollY = window.scrollY;     // products page ki jagah yaad rakho
+
+    cartPushed = true;
+
+    location.hash = "cart";            // hashchange -> renderView() chalega
+
+}
+
+/* Cart page band karo, products page par wapas */
+function closeCart(){
+
+    if(!isCartRoute() || leavingCart) return;
+
+    leavingCart = true;
+
+    if(cartPushed){
+
+        cartPushed = false;
+
+        history.back();                // hashchange -> renderView()
+
+    }else{
+
+        // Seedha /#cart link se aaye the (history me peeche site se bahar jaata),
+        // isliye bas "#cart" hata do
+        history.replaceState(null, "", location.pathname + location.search);
+
+        renderView();
+
+    }
+
+}
+
+/* URL ke hisaab se sahi page dikhao (cart ya products).
+   Ye hashchange par, aur products load hone ke baad chalta hai. */
+function renderView(){
+
+    leavingCart = false;
+
+    // Khaali cart ke saath #cart par aaye: wapas products
+    if(isCartRoute() && cart.length === 0){
+
+        history.replaceState(null, "", location.pathname + location.search);
+
+    }
+
+    const showCartView = isCartRoute() && cart.length > 0;
+
+    const wasCartView = document.body.classList.contains("cart-view");
+
+    document.body.classList.toggle("cart-view", showCartView);
+
+    if(showCartView && !wasCartView){
+
+        showCart();
+
+        window.scrollTo(0, 0);
+
+    }
+
+    if(!showCartView){
+
+        cartPushed = false;
+
+        if(wasCartView){
+            window.scrollTo(0, savedScrollY);   // products wahin jahan chhode the
+        }
+
+    }
+
+}
 
 /* Cart ka HTML banata hai aur header ke Cart button ka count update karta hai */
 function showCart(){
@@ -538,12 +637,11 @@ function showCart(){
     // ---------- Cart khaali ----------
     if(cart.length === 0){
 
-        closeCart();
-
-        // Slide-out animation khatam hone ke baad content hatao
-        setTimeout(() => { cartArea.innerHTML = ""; }, 350);
+        cartArea.innerHTML = "";
 
         cartButton.innerHTML = "🛒 Cart (0)";
+
+        closeCart();    // cart page par the to products par wapas (warna kuch nahi hota)
 
         return;
     }
@@ -551,19 +649,14 @@ function showCart(){
     // ---------- Cart me items ----------
     let total = 0;
     let totalItems = 0;
-
-    let html = `
-    <div class="cart-header">
-        <h2>🛒 Cart</h2>
-        <button class="close-btn" onclick="closeCart()">Close</button>
-    </div>`;
+    let itemsHTML = "";
 
     cart.forEach((item, index) => {
 
         total += item.price * item.qty;
         totalItems += item.qty;
 
-        html += `
+        itemsHTML += `
         <div class="cart-item">
             <div class="cart-row">
 
@@ -597,28 +690,50 @@ function showCart(){
 
     });
 
-    html += `
-    <h3 class="total">Total ₹${total.toFixed(2)}</h3>
+    cartArea.innerHTML = `
 
-    <input id="customerName" placeholder="Customer Name"
-           autocomplete="name" maxlength="${CONFIG.MAX_NAME_LENGTH}">
+    <!-- Upar: back button + title + clear -->
+    <div class="cart-header">
 
-    <input id="customerMobile" placeholder="Mobile Number"
-           type="tel" inputmode="numeric" autocomplete="tel" maxlength="14">
+        <button class="back-btn" onclick="closeCart()">← Back to Products</button>
 
-    <input id="customerAddress" placeholder="Address"
-           autocomplete="street-address" maxlength="${CONFIG.MAX_ADDRESS_LENGTH}">
+        <h2>🛒 Cart <span class="cart-count">(${cart.length} products, ${totalItems} qty)</span></h2>
 
-    <!-- HONEYPOT: insaan ko ye dikhta nahi. Bots har field bhar dete hain, isse pakde jaate hain. -->
-    <div class="hp-wrap" aria-hidden="true">
-        <input id="companyWebsite" type="text" tabindex="-1" autocomplete="off">
+        <button class="clear-btn" onclick="clearCart()">Clear cart</button>
+
     </div>
 
-    <br><br>
+    <div class="cart-layout">
 
-    <button class="order-btn" onclick="sendOrder()">Order on WhatsApp</button>`;
+        <!-- Left: saare products ki list -->
+        <div class="cart-items">
+            ${itemsHTML}
+        </div>
 
-    cartArea.innerHTML = html;
+        <!-- Right (mobile par neeche): total + customer form + order button -->
+        <div class="cart-summary">
+
+            <h3 class="total">Total ₹${total.toFixed(2)}</h3>
+
+            <input id="customerName" placeholder="Customer Name"
+                   autocomplete="name" maxlength="${CONFIG.MAX_NAME_LENGTH}">
+
+            <input id="customerMobile" placeholder="Mobile Number"
+                   type="tel" inputmode="numeric" autocomplete="tel" maxlength="14">
+
+            <input id="customerAddress" placeholder="Address"
+                   autocomplete="street-address" maxlength="${CONFIG.MAX_ADDRESS_LENGTH}">
+
+            <!-- HONEYPOT: insaan ko ye dikhta nahi. Bots har field bhar dete hain, isse pakde jaate hain. -->
+            <div class="hp-wrap" aria-hidden="true">
+                <input id="companyWebsite" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button class="order-btn" onclick="sendOrder()">Order on WhatsApp</button>
+
+        </div>
+
+    </div>`;
 
     // Typed values wapas daalo
     document.getElementById("customerName").value    = typed.name;
@@ -629,24 +744,14 @@ function showCart(){
 
 }
 
-/* Cart button par click: panel kholo ya band karo */
-function toggleCart(){
+/* Saare products cart se hatao (confirm ke baad) */
+function clearCart(){
 
-    if(cart.length === 0) return;
+    if(!confirm("Cart ke saare products hata dein?")) return;
 
-    const cartArea = document.getElementById("cartArea");
+    cart = [];
 
-    cartArea.style.transform = cartOpen ? "translateX(100%)" : "translateX(0)";
-
-    cartOpen = !cartOpen;
-
-}
-
-function closeCart(){
-
-    document.getElementById("cartArea").style.transform = "translateX(100%)";
-
-    cartOpen = false;
+    refreshUI();
 
 }
 
@@ -762,9 +867,7 @@ Total Amount : ₹${total.toFixed(2)}`;
 
     clearCartStorage();
 
-    showCart();
-
-    closeCart();
+    showCart();     // cart khaali hai, to ye khud products page par wapas bhej deta hai
 
     displayProducts(currentProducts);   // product cards me "Add to Cart" wapas aa jaaye
 
@@ -984,6 +1087,8 @@ function initProducts(data){
 
     showCart();
 
+    renderView();    // URL "#cart" ho (refresh par) to cart page dikhao
+
 }
 
 /* Saare event listeners yahin lagte hain (HTML me inline onclick kam se kam) */
@@ -1002,9 +1107,12 @@ function setupEventListeners(){
         btn.addEventListener("click", () => selectCategory(btn.dataset.category));
     });
 
-    // Cart button
+    // Cart button -> cart page
     document.getElementById("cartButton")
-        .addEventListener("click", toggleCart);
+        .addEventListener("click", openCart);
+
+    // Browser / phone ka BACK button (URL "#cart" badalta hai) -> sahi page dikhao
+    window.addEventListener("hashchange", renderView);
 
     // Product image click -> zoom viewer (ek hi listener poore products area par)
     document.getElementById("products").addEventListener("click", event => {
