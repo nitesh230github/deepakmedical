@@ -102,7 +102,7 @@ def is_rx(product):
     value = product.get("rx")
     if value is None or value == "":
         return True
-    return str(value).strip().lower() not in ("no", "n", "0", "false", "non-rx", "otc")
+    return str(value).strip().lower() not in ("no", "n", "0", "false", "nahi", "na", "non-rx", "non rx", "nonrx", "otc")
 
 
 def clean_text(value):
