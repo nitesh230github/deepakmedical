@@ -302,16 +302,25 @@ function setActiveCategoryButton(category){
 /* Search + category dono lagakar products dikhao.
    displayOrder me sirf .filter() hota hai (naya shuffle nahi),
    isliye order stable rehta hai aur bestsellers upar hi rehte hain. */
-function filterProducts(){
+/* Search box aur category ke hisaab se products ki filtered list */
+function computeFilteredProducts(){
 
     const rawSearch = document.getElementById("search").value;
 
     const category = document.getElementById("categoryFilter").value;
 
-    currentProducts = displayOrder.filter(product =>
+    return displayOrder.filter(product =>
         (category === "ALL" || product.category === category) &&
         matchesSearch(product, rawSearch)
     );
+
+}
+
+function filterProducts(){
+
+    const category = document.getElementById("categoryFilter").value;
+
+    currentProducts = computeFilteredProducts();
 
     // Naya search / category: phir se pehle 24 products se shuru
     visibleCount = firstPageSize();
@@ -403,6 +412,23 @@ function buildProductCard(product, index = 99){
         ? 'loading="eager"'
         : 'loading="lazy" decoding="async"';
 
+    // Product page ka link (products.json me "url" hota hai, build_product_pages.py jodta hai).
+    // url ho to image aur naam dono us page par le jaate hain; na ho to purana zoom chalta hai.
+    const imgTag = `<img
+                        src="${escapeHTML(mainImage)}"
+                        alt="${escapeHTML(product.name)}"
+                        ${product.url ? "" : 'class="zoomable-image"'}
+                        ${loadingAttrs}
+                        data-id="${escapeHTML(product.id)}">`;
+
+    const imageHTML = product.url
+        ? `<a class="product-link" href="${escapeHTML(product.url)}" aria-label="${escapeHTML(product.name)} - details">${imgTag}</a>`
+        : imgTag;
+
+    const titleHTML = product.url
+        ? `<a href="${escapeHTML(product.url)}">${escapeHTML(product.name)}</a>`
+        : escapeHTML(product.name);
+
     return `
     <div class="card" data-id="${escapeHTML(product.id)}">
 
@@ -410,12 +436,7 @@ function buildProductCard(product, index = 99){
             <div class="product-left">
                 <div class="product-image">
                     ${stockBadge}
-                    <img
-                        src="${escapeHTML(mainImage)}"
-                        alt="${escapeHTML(product.name)}"
-                        class="zoomable-image"
-                        ${loadingAttrs}
-                        data-id="${escapeHTML(product.id)}">
+                    ${imageHTML}
                     ${imageBadge}
                 </div>
             </div>
@@ -424,7 +445,7 @@ function buildProductCard(product, index = 99){
             <div class="product-right">
 
                 <div class="product-title">
-                    <h3>${escapeHTML(product.name)}</h3>
+                    <h3>${titleHTML}</h3>
                 </div>
 
                 <div class="product-meta">
@@ -1430,6 +1451,102 @@ function updateHeaderState(){
    12. INIT - page load par yahin se sab shuru hota hai
 ========================================================= */
 
+/* ---------- URL se search / category (product page ka search box /?q=... aur breadcrumb /?cat=... se aata hai) ---------- */
+function applyUrlParams(){
+
+    const params = new URLSearchParams(location.search);
+
+    const q = params.get("q");
+
+    const cat = params.get("cat");
+
+    if(q){
+        document.getElementById("search").value = q.slice(0, 80);
+    }
+
+    const select = document.getElementById("categoryFilter");
+
+    if(cat && [...select.options].some(option => option.value === cat)){
+        select.value = cat;
+    }
+
+}
+
+
+/* ---------- List ki halat yaad rakhna (product page se wapas aane ke liye) ----------
+   Customer product kholta hai aur BACK dabata hai: use wahi list, wahi scroll, wahi search milni chahiye.
+   Order bhi save hota hai kyunki list random shuffle hoti hai. */
+const LIST_STATE_KEY = "dmaListState";
+
+function saveListState(){
+
+    // Cart page par ho to list ki halat save mat karo
+    if(isCartRoute() || displayOrder.length === 0) return;
+
+    try{
+
+        sessionStorage.setItem(LIST_STATE_KEY, JSON.stringify({
+            y: window.scrollY,
+            count: visibleCount,
+            q: document.getElementById("search").value,
+            cat: document.getElementById("categoryFilter").value,
+            order: displayOrder.map(p => p.id)
+        }));
+
+    }catch(error){
+
+        // Private mode me sessionStorage band ho sakta hai, koi baat nahi
+
+    }
+
+}
+
+/* true = list wapas set ho gayi */
+function restoreListState(){
+
+    try{
+
+        const nav = performance.getEntriesByType("navigation")[0];
+
+        if(!nav || nav.type !== "back_forward") return false;
+
+        const saved = JSON.parse(sessionStorage.getItem(LIST_STATE_KEY));
+
+        if(!saved || !Array.isArray(saved.order)) return false;
+
+        // Purana order wapas (naye products, agar aaye hon, end me)
+        const byId = new Map(products.map(p => [String(p.id), p]));
+
+        const ordered = saved.order.map(id => byId.get(String(id))).filter(Boolean);
+
+        const inOrder = new Set(ordered.map(p => p.id));
+
+        displayOrder = [...ordered, ...products.filter(p => !inOrder.has(p.id))];
+
+        document.getElementById("search").value = saved.q || "";
+
+        document.getElementById("categoryFilter").value = saved.cat || "ALL";
+
+        currentProducts = computeFilteredProducts();
+
+        visibleCount = Math.max(saved.count || 0, firstPageSize());
+
+        setActiveCategoryButton(document.getElementById("categoryFilter").value);
+
+        // Cards bante hi scroll wahan le jao
+        requestAnimationFrame(() => window.scrollTo({ top: saved.y || 0, behavior: "instant" }));
+
+        return true;
+
+    }catch(error){
+
+        return false;
+
+    }
+
+}
+
+
 /* products.json aane ke baad: order banao, cart sync karo, screen par dikhao */
 function initProducts(data){
 
@@ -1442,11 +1559,21 @@ function initProducts(data){
 
     displayOrder = [...bestSellers, ...otherProducts];
 
-    currentProducts = displayOrder;
-
-    visibleCount = firstPageSize();
-
     syncCartWithProducts();
+
+    // Product page se BACK karke aaye ho to list wahin, usi order me, usi scroll par
+    // (warna random order badal jaata aur customer phir upar se shuru karta). Nahi to URL ke ?q= / ?cat= dekho.
+    if(!restoreListState()){
+
+        applyUrlParams();
+
+        currentProducts = computeFilteredProducts();
+
+        visibleCount = firstPageSize();
+
+        setActiveCategoryButton(document.getElementById("categoryFilter").value);
+
+    }
 
     renderProductList();
 
@@ -1511,6 +1638,24 @@ function setupEventListeners(){
         if(event.key === "Enter" && event.target.matches(".qty-input")){
             event.target.blur();
         }
+    });
+
+    // Product page par jaate waqt list ki halat yaad rakho
+    window.addEventListener("pagehide", saveListState);
+
+    // Browser ne poora page cache se wapas diya (back button): cart product page par badla ho sakta hai
+    window.addEventListener("pageshow", event => {
+
+        if(!event.persisted) return;
+
+        loadCart();
+
+        syncCartWithProducts();
+
+        renderProductList();
+
+        showCart();
+
     });
 
     // Cart button -> cart page

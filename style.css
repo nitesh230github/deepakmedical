@@ -614,6 +614,29 @@ header{
 }
 
 
+/* Image / naam par click = product ka page (script.js link banata hai) */
+.product-link{
+
+    display:block;
+    width:100%;
+
+}
+
+.product-title h3 a{
+
+    color:inherit;
+    text-decoration:none;
+
+}
+
+.product-title h3 a:hover{
+
+    color:var(--color-cart-dark);
+    text-decoration:underline;
+
+}
+
+
 /* ---------- Badges on image ---------- */
 
 /* In Stock / Out of Stock (top-left) */
