@@ -14,7 +14,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/acnetoin_soap.jpg"
+    "image": "images/acnetoin_soap.jpg",
+    "slug": "acnetoin-soap",
+    "url": "/medicine/acnetoin-soap/"
   },
   {
     "id": 58,
@@ -31,7 +33,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/aciloc_rd_tab.jpg"
+    "image": "images/aciloc_rd_tab.jpg",
+    "slug": "aciloc-rd-tab",
+    "url": "/medicine/aciloc-rd-tab/"
   },
   {
     "id": 114,
@@ -48,7 +52,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/alcidol_sp_tab.jpg"
+    "image": "images/alcidol_sp_tab.jpg",
+    "slug": "alcidol-sp-tab",
+    "url": "/medicine/alcidol-sp-tab/"
   },
   {
     "id": 245,
@@ -65,7 +71,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/evinal_400_cap.jpg"
+    "image": "images/evinal_400_cap.jpg",
+    "slug": "evinal-400-vitamin-e-cap",
+    "url": "/medicine/evinal-400-vitamin-e-cap/"
   },
   {
     "id": 130,
@@ -82,7 +90,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/alciflox_d_drop.jpg"
+    "image": "images/alciflox_d_drop.jpg",
+    "slug": "alciflox-d-drop",
+    "url": "/medicine/alciflox-d-drop/"
   },
   {
     "id": 149,
@@ -99,7 +109,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/aldigesic_p_tab.jpg"
+    "image": "images/aldigesic_p_tab.jpg",
+    "slug": "aldigesic-p-tab",
+    "url": "/medicine/aldigesic-p-tab/"
   },
   {
     "id": 111,
@@ -116,7 +128,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/alkacitral_syp.jpg"
+    "image": "images/alkacitral_syp.jpg",
+    "slug": "alkacitral-syrup",
+    "url": "/medicine/alkacitral-syrup/"
   },
   {
     "id": 140,
@@ -133,7 +147,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/alkof_dx_syp.jpg"
+    "image": "images/alkof_dx_syp.jpg",
+    "slug": "alkof-dx-syrup",
+    "url": "/medicine/alkof-dx-syrup/"
   },
   {
     "id": 105,
@@ -150,7 +166,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/almox_250_cap.jpg"
+    "image": "images/almox_250_cap.jpg",
+    "slug": "almox-250-cap",
+    "url": "/medicine/almox-250-cap/"
   },
   {
     "id": 150,
@@ -167,7 +185,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/almox_cv_625_tab.jpg"
+    "image": "images/almox_cv_625_tab.jpg",
+    "slug": "almox-cv-625-tab",
+    "url": "/medicine/almox-cv-625-tab/"
   },
   {
     "id": 51,
@@ -184,7 +204,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ambrodil_ls_syp.jpg"
+    "image": "images/ambrodil_ls_syp.jpg",
+    "slug": "ambrodil-ls-syrup",
+    "url": "/medicine/ambrodil-ls-syrup/"
   },
   {
     "id": 52,
@@ -201,7 +223,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ambrodil_s_syp.jpg"
+    "image": "images/ambrodil_s_syp.jpg",
+    "slug": "ambrodil-s-syrup",
+    "url": "/medicine/ambrodil-s-syrup/"
   },
   {
     "id": 151,
@@ -218,7 +242,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ambrox_ls_syp.jpg"
+    "image": "images/ambrox_ls_syp.jpg",
+    "slug": "ambrox-ls-syrup",
+    "url": "/medicine/ambrox-ls-syrup/"
   },
   {
     "id": 80,
@@ -235,7 +261,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/amlip_5_tab.jpg"
+    "image": "images/amlip_5_tab.jpg",
+    "slug": "amlip-5-tab",
+    "url": "/medicine/amlip-5-tab/"
   },
   {
     "id": 47,
@@ -252,7 +280,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/amlovas_2.5_tab.jpg"
+    "image": "images/amlovas_2.5_tab.jpg",
+    "slug": "amlovas-2-5-tab",
+    "url": "/medicine/amlovas-2-5-tab/"
   },
   {
     "id": 46,
@@ -269,7 +299,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/amlovas_5_tab.jpg"
+    "image": "images/amlovas_5_tab.jpg",
+    "slug": "amlovas-5-tab",
+    "url": "/medicine/amlovas-5-tab/"
   },
   {
     "id": 54,
@@ -286,7 +318,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/aristozyme_syp.jpg"
+    "image": "images/aristozyme_syp.jpg",
+    "slug": "aristozyme-syrup",
+    "url": "/medicine/aristozyme-syrup/"
   },
   {
     "id": 17,
@@ -303,7 +337,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/asthalin_4_tab.jpg"
+    "image": "images/asthalin_4_tab.jpg",
+    "slug": "asthalin-4-tab",
+    "url": "/medicine/asthalin-4-tab/"
   },
   {
     "id": 23,
@@ -320,7 +356,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/asthalin_respules.jpg"
+    "image": "images/asthalin_respules.jpg",
+    "slug": "asthalin-respules",
+    "url": "/medicine/asthalin-respules/"
   },
   {
     "id": 232,
@@ -337,7 +375,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/atm_250_tab.jpg"
+    "image": "images/atm_250_tab.jpg",
+    "slug": "atm-250-tab",
+    "url": "/medicine/atm-250-tab/"
   },
   {
     "id": 126,
@@ -354,7 +394,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/azikem_250_tab.jpg"
+    "image": "images/azikem_250_tab.jpg",
+    "slug": "azikem-250-tab",
+    "url": "/medicine/azikem-250-tab/"
   },
   {
     "id": 127,
@@ -371,7 +413,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/azikem_500_tab.jpg"
+    "image": "images/azikem_500_tab.jpg",
+    "slug": "azikem-500-tab",
+    "url": "/medicine/azikem-500-tab/"
   },
   {
     "id": 56,
@@ -388,7 +432,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/becosules_cap.jpg"
+    "image": "images/becosules_cap.jpg",
+    "slug": "becosules-cap",
+    "url": "/medicine/becosules-cap/"
   },
   {
     "id": 97,
@@ -405,7 +451,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/bectodine_oint.jpg"
+    "image": "images/bectodine_oint.jpg",
+    "slug": "bectodine-oint",
+    "url": "/medicine/bectodine-oint/"
   },
   {
     "id": 244,
@@ -422,7 +470,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/betadine_10_oint.jpg"
+    "image": "images/betadine_10_oint.jpg",
+    "slug": "betadine-10-oint",
+    "url": "/medicine/betadine-10-oint/"
   },
   {
     "id": 36,
@@ -439,7 +489,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/betamil_gm_cream.jpg"
+    "image": "images/betamil_gm_cream.jpg",
+    "slug": "betamil-gm-cream",
+    "url": "/medicine/betamil-gm-cream/"
   },
   {
     "id": 33,
@@ -456,7 +508,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/betnesol_oral_drop.jpg"
+    "image": "images/betnesol_oral_drop.jpg",
+    "slug": "betnesol-oral-drop",
+    "url": "/medicine/betnesol-oral-drop/"
   },
   {
     "id": 55,
@@ -473,7 +527,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/betnovate_c_cream.jpg"
+    "image": "images/betnovate_c_cream.jpg",
+    "slug": "betnovate-c-cream",
+    "url": "/medicine/betnovate-c-cream/"
   },
   {
     "id": 22,
@@ -490,7 +546,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/betnovate_gm_cream.jpg"
+    "image": "images/betnovate_gm_cream.jpg",
+    "slug": "betnovate-gm-cream",
+    "url": "/medicine/betnovate-gm-cream/"
   },
   {
     "id": 37,
@@ -507,7 +565,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/betnovate_n_cream.jpg"
+    "image": "images/betnovate_n_cream.jpg",
+    "slug": "betnovate-n-cream",
+    "url": "/medicine/betnovate-n-cream/"
   },
   {
     "id": 66,
@@ -524,7 +584,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/brozedex_syp.jpg"
+    "image": "images/brozedex_syp.jpg",
+    "slug": "brozedex-syrup",
+    "url": "/medicine/brozedex-syrup/"
   },
   {
     "id": 141,
@@ -541,7 +603,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/burnheal_cream.jpg"
+    "image": "images/burnheal_cream.jpg",
+    "slug": "burnheal-cream",
+    "url": "/medicine/burnheal-cream/"
   },
   {
     "id": 85,
@@ -558,7 +622,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/burnol_cream.jpg"
+    "image": "images/burnol_cream.jpg",
+    "slug": "burnol-cream",
+    "url": "/medicine/burnol-cream/"
   },
   {
     "id": 133,
@@ -575,7 +641,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/calcitas_d3_cap.jpg"
+    "image": "images/calcitas_d3_cap.jpg",
+    "slug": "calcitas-d3-cap",
+    "url": "/medicine/calcitas-d3-cap/"
   },
   {
     "id": 34,
@@ -592,7 +660,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/calpol_120_syp.jpg"
+    "image": "images/calpol_120_syp.jpg",
+    "slug": "calpol-120-syrup",
+    "url": "/medicine/calpol-120-syrup/"
   },
   {
     "id": 35,
@@ -609,7 +679,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/calpol_250_syp.jpg"
+    "image": "images/calpol_250_syp.jpg",
+    "slug": "calpol-250-syrup",
+    "url": "/medicine/calpol-250-syrup/"
   },
   {
     "id": 10,
@@ -626,7 +698,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/calpol_500_tab.jpg"
+    "image": "images/calpol_500_tab.jpg",
+    "slug": "calpol-500-tab",
+    "url": "/medicine/calpol-500-tab/"
   },
   {
     "id": 11,
@@ -643,7 +717,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/calpol_650_tab.jpg"
+    "image": "images/calpol_650_tab.jpg",
+    "slug": "calpol-650-tab",
+    "url": "/medicine/calpol-650-tab/"
   },
   {
     "id": 227,
@@ -660,7 +736,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/calpol_oral_drop.jpg"
+    "image": "images/calpol_oral_drop.jpg",
+    "slug": "calpol-oral-drop",
+    "url": "/medicine/calpol-oral-drop/"
   },
   {
     "id": 65,
@@ -677,7 +755,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/cataspa_tab.jpg"
+    "image": "images/cataspa_tab.jpg",
+    "slug": "cataspa-tab",
+    "url": "/medicine/cataspa-tab/"
   },
   {
     "id": 117,
@@ -694,7 +774,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/cefdot_200_tab.jpg"
+    "image": "images/cefdot_200_tab.jpg",
+    "slug": "cefdot-200-tab",
+    "url": "/medicine/cefdot-200-tab/"
   },
   {
     "id": 88,
@@ -711,7 +793,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ceflox_d_drop.jpg"
+    "image": "images/ceflox_d_drop.jpg",
+    "slug": "ceflox-d-drop",
+    "url": "/medicine/ceflox-d-drop/"
   },
   {
     "id": 71,
@@ -728,7 +812,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/cheston_cold_tab.jpg"
+    "image": "images/cheston_cold_tab.jpg",
+    "slug": "cheston-cold-tab",
+    "url": "/medicine/cheston-cold-tab/"
   },
   {
     "id": 166,
@@ -745,7 +831,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/cheston_cold_syp.jpg"
+    "image": "images/cheston_cold_syp.jpg",
+    "slug": "cheston-cold-syrup",
+    "url": "/medicine/cheston-cold-syrup/"
   },
   {
     "id": 214,
@@ -762,7 +850,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/choronex_gel.jpg"
+    "image": "images/choronex_gel.jpg",
+    "slug": "choronex-gel",
+    "url": "/medicine/choronex-gel/"
   },
   {
     "id": 216,
@@ -779,7 +869,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/cipcal_500_tab.jpg"
+    "image": "images/cipcal_500_tab.jpg",
+    "slug": "cipcal-500-tab",
+    "url": "/medicine/cipcal-500-tab/"
   },
   {
     "id": 77,
@@ -796,7 +888,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/cipcal_xt_tab.jpg"
+    "image": "images/cipcal_xt_tab.jpg",
+    "slug": "cipcal-xt-tab",
+    "url": "/medicine/cipcal-xt-tab/"
   },
   {
     "id": 143,
@@ -813,7 +907,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/cipladine_oint.jpg"
+    "image": "images/cipladine_oint.jpg",
+    "slug": "cipladine-oint",
+    "url": "/medicine/cipladine-oint/"
   },
   {
     "id": 25,
@@ -830,7 +926,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ciplox_drop.jpg"
+    "image": "images/ciplox_drop.jpg",
+    "slug": "ciplox-drop",
+    "url": "/medicine/ciplox-drop/"
   },
   {
     "id": 26,
@@ -847,7 +945,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ciplox_d_drop.jpg"
+    "image": "images/ciplox_d_drop.jpg",
+    "slug": "ciplox-d-drop",
+    "url": "/medicine/ciplox-d-drop/"
   },
   {
     "id": 135,
@@ -864,7 +964,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ciprodac_500_tab.jpg"
+    "image": "images/ciprodac_500_tab.jpg",
+    "slug": "ciprodac-500-tab",
+    "url": "/medicine/ciprodac-500-tab/"
   },
   {
     "id": 102,
@@ -881,7 +983,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/clinsol_gel.jpg"
+    "image": "images/clinsol_gel.jpg",
+    "slug": "clinsol-gel",
+    "url": "/medicine/clinsol-gel/"
   },
   {
     "id": 94,
@@ -898,7 +1002,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/clobenate_gm_cream.jpg"
+    "image": "images/clobenate_gm_cream.jpg",
+    "slug": "clobenate-gm-cream",
+    "url": "/medicine/clobenate-gm-cream/"
   },
   {
     "id": 70,
@@ -915,7 +1021,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/clocip_dusting_powd.jpg"
+    "image": "images/clocip_dusting_powd.jpg",
+    "slug": "clocip-dusting-powder",
+    "url": "/medicine/clocip-dusting-powder/"
   },
   {
     "id": 92,
@@ -932,7 +1040,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/clocip_cream.jpg"
+    "image": "images/clocip_cream.jpg",
+    "slug": "clocip-cream",
+    "url": "/medicine/clocip-cream/"
   },
   {
     "id": 69,
@@ -949,7 +1059,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/clot_1_powder_blue.jpg"
+    "image": "images/clot_1_powder_blue.jpg",
+    "slug": "clot-1-powder-blue",
+    "url": "/medicine/clot-1-powder-blue/"
   },
   {
     "id": 179,
@@ -966,7 +1078,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/combiflam_tab.jpg"
+    "image": "images/combiflam_tab.jpg",
+    "slug": "combiflam-tab",
+    "url": "/medicine/combiflam-tab/"
   },
   {
     "id": 12,
@@ -983,7 +1097,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ctd_12.5_tab.jpg"
+    "image": "images/ctd_12.5_tab.jpg",
+    "slug": "ctd-12-5-tab",
+    "url": "/medicine/ctd-12-5-tab/"
   },
   {
     "id": 13,
@@ -1000,7 +1116,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ctd_6.25_tab.jpg"
+    "image": "images/ctd_6.25_tab.jpg",
+    "slug": "ctd-6-25-tab",
+    "url": "/medicine/ctd-6-25-tab/"
   },
   {
     "id": 137,
@@ -1017,7 +1135,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ctz_tab.jpg"
+    "image": "images/ctz_tab.jpg",
+    "slug": "ctz-tab",
+    "url": "/medicine/ctz-tab/"
   },
   {
     "id": 209,
@@ -1034,7 +1154,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/cypon_syp.jpg"
+    "image": "images/cypon_syp.jpg",
+    "slug": "cypon-syrup",
+    "url": "/medicine/cypon-syrup/"
   },
   {
     "id": 190,
@@ -1051,7 +1173,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/deficicot_6_tab.jpg"
+    "image": "images/deficicot_6_tab.jpg",
+    "slug": "deficicot-6-tab",
+    "url": "/medicine/deficicot-6-tab/"
   },
   {
     "id": 128,
@@ -1068,7 +1192,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/demisone_tab.jpg"
+    "image": "images/demisone_tab.jpg",
+    "slug": "demisone-tab",
+    "url": "/medicine/demisone-tab/"
   },
   {
     "id": 144,
@@ -1085,7 +1211,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/dermi_5_cream.jpg"
+    "image": "images/dermi_5_cream.jpg",
+    "slug": "dermi-5-cream",
+    "url": "/medicine/dermi-5-cream/"
   },
   {
     "id": 178,
@@ -1102,7 +1230,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/dermiford_cream.jpg"
+    "image": "images/dermiford_cream.jpg",
+    "slug": "dermiford-cream",
+    "url": "/medicine/dermiford-cream/"
   },
   {
     "id": 87,
@@ -1119,7 +1249,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/dermikem_oc_cream.jpg"
+    "image": "images/dermikem_oc_cream.jpg",
+    "slug": "dermikem-oc-cream",
+    "url": "/medicine/dermikem-oc-cream/"
   },
   {
     "id": 194,
@@ -1136,7 +1268,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/derobin_oint.jpg"
+    "image": "images/derobin_oint.jpg",
+    "slug": "derobin-oint",
+    "url": "/medicine/derobin-oint/"
   },
   {
     "id": 18,
@@ -1153,7 +1287,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/dexona_tab.jpg"
+    "image": "images/dexona_tab.jpg",
+    "slug": "dexona-tab",
+    "url": "/medicine/dexona-tab/"
   },
   {
     "id": 239,
@@ -1170,7 +1306,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/dexorange_cap.jpg"
+    "image": "images/dexorange_cap.jpg",
+    "slug": "dexorange-cap",
+    "url": "/medicine/dexorange-cap/"
   },
   {
     "id": 200,
@@ -1187,7 +1325,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/dexorange_syp.jpg"
+    "image": "images/dexorange_syp.jpg",
+    "slug": "dexorange-syrup",
+    "url": "/medicine/dexorange-syrup/"
   },
   {
     "id": 233,
@@ -1204,7 +1344,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/dynapar_tab.jpg"
+    "image": "images/dynapar_tab.jpg",
+    "slug": "dynapar-tab",
+    "url": "/medicine/dynapar-tab/"
   },
   {
     "id": 202,
@@ -1224,7 +1366,9 @@
     "images": [
       "images/earwell_drop.jpg",
       "images/earwell_drop_box.jpg"
-    ]
+    ],
+    "slug": "earwell-drop",
+    "url": "/medicine/earwell-drop/"
   },
   {
     "id": 73,
@@ -1241,7 +1385,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/easylax_plus_oral_emulsion.jpg"
+    "image": "images/easylax_plus_oral_emulsion.jpg",
+    "slug": "easylax-plus-oral-emulsion",
+    "url": "/medicine/easylax-plus-oral-emulsion/"
   },
   {
     "id": 53,
@@ -1258,7 +1404,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/electral_powd.jpg"
+    "image": "images/electral_powd.jpg",
+    "slug": "electral-powder",
+    "url": "/medicine/electral-powder/"
   },
   {
     "id": 224,
@@ -1275,7 +1423,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/electroryte_ors_powd.jpg"
+    "image": "images/electroryte_ors_powd.jpg",
+    "slug": "electroryte-ors-powd",
+    "url": "/medicine/electroryte-ors-powd/"
   },
   {
     "id": 154,
@@ -1292,7 +1442,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/elosone_ht_cream.jpg"
+    "image": "images/elosone_ht_cream.jpg",
+    "slug": "elosone-ht-cream",
+    "url": "/medicine/elosone-ht-cream/"
   },
   {
     "id": 174,
@@ -1309,7 +1461,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/enshine_toothpaste.jpg"
+    "image": "images/enshine_toothpaste.jpg",
+    "slug": "enshine-toothpaste",
+    "url": "/medicine/enshine-toothpaste/"
   },
   {
     "id": 115,
@@ -1326,7 +1480,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/etoford_120_tab.jpg"
+    "image": "images/etoford_120_tab.jpg",
+    "slug": "etoford-120-tab",
+    "url": "/medicine/etoford-120-tab/"
   },
   {
     "id": 156,
@@ -1343,7 +1499,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/etoford_90_tab.jpg"
+    "image": "images/etoford_90_tab.jpg",
+    "slug": "etoford-90-tab",
+    "url": "/medicine/etoford-90-tab/"
   },
   {
     "id": 81,
@@ -1360,7 +1518,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/etoford_mr_tab.jpg"
+    "image": "images/etoford_mr_tab.jpg",
+    "slug": "etoford-mr-tab",
+    "url": "/medicine/etoford-mr-tab/"
   },
   {
     "id": 4,
@@ -1377,7 +1537,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/evion_400_tab.jpg"
+    "image": "images/evion_400_tab.jpg",
+    "slug": "evion-400-tab",
+    "url": "/medicine/evion-400-tab/"
   },
   {
     "id": 90,
@@ -1394,7 +1556,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/festive_dee_drop.jpg"
+    "image": "images/festive_dee_drop.jpg",
+    "slug": "festive-dee-drop",
+    "url": "/medicine/festive-dee-drop/"
   },
   {
     "id": 89,
@@ -1411,7 +1575,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/festive_drop.jpg"
+    "image": "images/festive_drop.jpg",
+    "slug": "festive-drop",
+    "url": "/medicine/festive-drop/"
   },
   {
     "id": 32,
@@ -1428,7 +1594,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/flagyl_400_tab.jpg"
+    "image": "images/flagyl_400_tab.jpg",
+    "slug": "flagyl-400-tab",
+    "url": "/medicine/flagyl-400-tab/"
   },
   {
     "id": 60,
@@ -1445,7 +1613,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/flexon_mr_tab.jpg"
+    "image": "images/flexon_mr_tab.jpg",
+    "slug": "flexon-mr-tab",
+    "url": "/medicine/flexon-mr-tab/"
   },
   {
     "id": 59,
@@ -1462,7 +1632,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/flexon_tab.jpg"
+    "image": "images/flexon_tab.jpg",
+    "slug": "flexon-tab",
+    "url": "/medicine/flexon-tab/"
   },
   {
     "id": 147,
@@ -1479,7 +1651,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/fluka_150_tab.jpg"
+    "image": "images/fluka_150_tab.jpg",
+    "slug": "fluka-150-tab",
+    "url": "/medicine/fluka-150-tab/"
   },
   {
     "id": 68,
@@ -1496,7 +1670,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/fourderm_10_cream.jpg"
+    "image": "images/fourderm_10_cream.jpg",
+    "slug": "fourderm-cream",
+    "url": "/medicine/fourderm-cream/"
   },
   {
     "id": 67,
@@ -1513,7 +1689,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/fourderm_oint.jpg"
+    "image": "images/fourderm_oint.jpg",
+    "slug": "fourderm-cream-67",
+    "url": "/medicine/fourderm-cream-67/"
   },
   {
     "id": 160,
@@ -1530,7 +1708,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/galirex_syp.jpg"
+    "image": "images/galirex_syp.jpg",
+    "slug": "galirex-syrup",
+    "url": "/medicine/galirex-syrup/"
   },
   {
     "id": 19,
@@ -1547,7 +1727,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/glycomet_gp1_tab.jpg"
+    "image": "images/glycomet_gp1_tab.jpg",
+    "slug": "glycomet-gp1-tab",
+    "url": "/medicine/glycomet-gp1-tab/"
   },
   {
     "id": 20,
@@ -1564,7 +1746,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/glycomet_gp2_tab.jpg"
+    "image": "images/glycomet_gp2_tab.jpg",
+    "slug": "glycomet-gp2-tab",
+    "url": "/medicine/glycomet-gp2-tab/"
   },
   {
     "id": 212,
@@ -1581,7 +1765,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/gripe_water.jpg"
+    "image": "images/gripe_water.jpg",
+    "slug": "gripe-water",
+    "url": "/medicine/gripe-water/"
   },
   {
     "id": 110,
@@ -1598,7 +1784,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/hemoforte_syp.jpg"
+    "image": "images/hemoforte_syp.jpg",
+    "slug": "hemoforte-syrup",
+    "url": "/medicine/hemoforte-syrup/"
   },
   {
     "id": 122,
@@ -1615,7 +1803,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/hemoplus_syp.jpg"
+    "image": "images/hemoplus_syp.jpg",
+    "slug": "hemoplus-syrup",
+    "url": "/medicine/hemoplus-syrup/"
   },
   {
     "id": 82,
@@ -1632,7 +1822,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/intagesic_mr_tab.jpg"
+    "image": "images/intagesic_mr_tab.jpg",
+    "slug": "intagesic-mr-tab",
+    "url": "/medicine/intagesic-mr-tab/"
   },
   {
     "id": 106,
@@ -1649,7 +1841,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ketofly_soap.jpg"
+    "image": "images/ketofly_soap.jpg",
+    "slug": "ketofly-soap",
+    "url": "/medicine/ketofly-soap/"
   },
   {
     "id": 157,
@@ -1666,7 +1860,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ketoford_dt_tab.jpg"
+    "image": "images/ketoford_dt_tab.jpg",
+    "slug": "ketoford-dt-tab",
+    "url": "/medicine/ketoford-dt-tab/"
   },
   {
     "id": 91,
@@ -1683,7 +1879,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ketofresh_ct_cream.jpg"
+    "image": "images/ketofresh_ct_cream.jpg",
+    "slug": "ketofresh-ct-cream",
+    "url": "/medicine/ketofresh-ct-cream/"
   },
   {
     "id": 132,
@@ -1700,7 +1898,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ketokem_ct_soap.jpg"
+    "image": "images/ketokem_ct_soap.jpg",
+    "slug": "ketokem-ct-soap",
+    "url": "/medicine/ketokem-ct-soap/"
   },
   {
     "id": 131,
@@ -1717,7 +1917,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ketokem_soap.jpg"
+    "image": "images/ketokem_soap.jpg",
+    "slug": "ketokem-soap",
+    "url": "/medicine/ketokem-soap/"
   },
   {
     "id": 167,
@@ -1734,7 +1936,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/koplyte_ors_powd.jpg"
+    "image": "images/koplyte_ors_powd.jpg",
+    "slug": "koplyte-ors-powd",
+    "url": "/medicine/koplyte-ors-powd/"
   },
   {
     "id": 84,
@@ -1751,7 +1955,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/kt_5_derm_cream.jpg"
+    "image": "images/kt_5_derm_cream.jpg",
+    "slug": "kt-5-derm-cream",
+    "url": "/medicine/kt-5-derm-cream/"
   },
   {
     "id": 113,
@@ -1768,7 +1974,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/kuffdryl_syp.jpg"
+    "image": "images/kuffdryl_syp.jpg",
+    "slug": "kuffdryl-syrup",
+    "url": "/medicine/kuffdryl-syrup/"
   },
   {
     "id": 235,
@@ -1785,7 +1993,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/l_hist_mont_tab.jpg"
+    "image": "images/l_hist_mont_tab.jpg",
+    "slug": "l-hist-mont-tab",
+    "url": "/medicine/l-hist-mont-tab/"
   },
   {
     "id": 129,
@@ -1802,7 +2012,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/l_hist_tab.jpg"
+    "image": "images/l_hist_tab.jpg",
+    "slug": "l-hist-tab",
+    "url": "/medicine/l-hist-tab/"
   },
   {
     "id": 74,
@@ -1819,7 +2031,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/lactobuild_granules_powd.jpg"
+    "image": "images/lactobuild_granules_powd.jpg",
+    "slug": "lactobuild-granules-powd",
+    "url": "/medicine/lactobuild-granules-powd/"
   },
   {
     "id": 226,
@@ -1836,7 +2050,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/laxmi_sat_isabgol_powd.jpg"
+    "image": "images/laxmi_sat_isabgol_powd.jpg",
+    "slug": "laxmi-sat-isabgol-powd",
+    "url": "/medicine/laxmi-sat-isabgol-powd/"
   },
   {
     "id": 186,
@@ -1853,7 +2069,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/leezole_gel.jpg"
+    "image": "images/leezole_gel.jpg",
+    "slug": "leezole-vaginal-gel",
+    "url": "/medicine/leezole-vaginal-gel/"
   },
   {
     "id": 146,
@@ -1870,7 +2088,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/levobex_5_tab.jpg"
+    "image": "images/levobex_5_tab.jpg",
+    "slug": "levobex-5-tab",
+    "url": "/medicine/levobex-5-tab/"
   },
   {
     "id": 9,
@@ -1887,7 +2107,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/limcee_tab.jpg"
+    "image": "images/limcee_tab.jpg",
+    "slug": "limcee-tab",
+    "url": "/medicine/limcee-tab/"
   },
   {
     "id": 7,
@@ -1904,7 +2126,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/liv52_ds_syp.jpg"
+    "image": "images/liv52_ds_syp.jpg",
+    "slug": "liv-52-ds-syrup",
+    "url": "/medicine/liv-52-ds-syrup/"
   },
   {
     "id": 8,
@@ -1921,7 +2145,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/liv52_syp.jpg"
+    "image": "images/liv52_syp.jpg",
+    "slug": "liv-52-syrup",
+    "url": "/medicine/liv-52-syrup/"
   },
   {
     "id": 158,
@@ -1938,7 +2164,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/livshine_ds_syp.jpg"
+    "image": "images/livshine_ds_syp.jpg",
+    "slug": "livshine-ds-syrup",
+    "url": "/medicine/livshine-ds-syrup/"
   },
   {
     "id": 228,
@@ -1955,7 +2183,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/luliderm_cream.jpg"
+    "image": "images/luliderm_cream.jpg",
+    "slug": "luliderm-cream",
+    "url": "/medicine/luliderm-cream/"
   },
   {
     "id": 208,
@@ -1972,7 +2202,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/manforce_100_tab.jpg"
+    "image": "images/manforce_100_tab.jpg",
+    "slug": "manforce-100-tab",
+    "url": "/medicine/manforce-100-tab/"
   },
   {
     "id": 99,
@@ -1989,7 +2221,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/medivit_syp.jpg"
+    "image": "images/medivit_syp.jpg",
+    "slug": "medivit-syrup",
+    "url": "/medicine/medivit-syrup/"
   },
   {
     "id": 38,
@@ -2006,7 +2240,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/meftal_spas_tab.jpg"
+    "image": "images/meftal_spas_tab.jpg",
+    "slug": "meftal-spas-tab",
+    "url": "/medicine/meftal-spas-tab/"
   },
   {
     "id": 153,
@@ -2023,7 +2259,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/melamet_cream.jpg"
+    "image": "images/melamet_cream.jpg",
+    "slug": "melamet-cream",
+    "url": "/medicine/melamet-cream/"
   },
   {
     "id": 191,
@@ -2040,7 +2278,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/migrafen_tab.jpg"
+    "image": "images/migrafen_tab.jpg",
+    "slug": "migrafen-tab",
+    "url": "/medicine/migrafen-tab/"
   },
   {
     "id": 171,
@@ -2057,7 +2297,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/miss_me_tab.jpg"
+    "image": "images/miss_me_tab.jpg",
+    "slug": "miss-me-tab",
+    "url": "/medicine/miss-me-tab/"
   },
   {
     "id": 155,
@@ -2074,7 +2316,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/momin_s_oint.jpg"
+    "image": "images/momin_s_oint.jpg",
+    "slug": "momin-s-oint",
+    "url": "/medicine/momin-s-oint/"
   },
   {
     "id": 61,
@@ -2091,7 +2335,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/monocef_o_200_tab.jpg"
+    "image": "images/monocef_o_200_tab.jpg",
+    "slug": "monocef-o-200-tab",
+    "url": "/medicine/monocef-o-200-tab/"
   },
   {
     "id": 165,
@@ -2108,7 +2354,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/montas_l_tab.jpg"
+    "image": "images/montas_l_tab.jpg",
+    "slug": "montas-l-tab",
+    "url": "/medicine/montas-l-tab/"
   },
   {
     "id": 236,
@@ -2125,7 +2373,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/moxatris_cv_625_tab.jpg"
+    "image": "images/moxatris_cv_625_tab.jpg",
+    "slug": "moxatris-cv-625-tab",
+    "url": "/medicine/moxatris-cv-625-tab/"
   },
   {
     "id": 210,
@@ -2142,7 +2392,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/moxikind_cv_625_tab.jpg"
+    "image": "images/moxikind_cv_625_tab.jpg",
+    "slug": "moxikind-cv-625-tab",
+    "url": "/medicine/moxikind-cv-625-tab/"
   },
   {
     "id": 139,
@@ -2159,7 +2411,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/moximax_d_drop.jpg"
+    "image": "images/moximax_d_drop.jpg",
+    "slug": "moximax-d-drop",
+    "url": "/medicine/moximax-d-drop/"
   },
   {
     "id": 107,
@@ -2176,7 +2430,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/multi_vitamin_syp.jpg"
+    "image": "images/multi_vitamin_syp.jpg",
+    "slug": "multi-vitamin-syrup",
+    "url": "/medicine/multi-vitamin-syrup/"
   },
   {
     "id": 100,
@@ -2193,7 +2449,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/mupicip_oint.jpg"
+    "image": "images/mupicip_oint.jpg",
+    "slug": "mupicip-oint",
+    "url": "/medicine/mupicip-oint/"
   },
   {
     "id": 30,
@@ -2210,7 +2468,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/neurobion_forte_tab.jpg"
+    "image": "images/neurobion_forte_tab.jpg",
+    "slug": "neurobion-forte-tab",
+    "url": "/medicine/neurobion-forte-tab/"
   },
   {
     "id": 78,
@@ -2227,7 +2487,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/nflox_tz_tab.jpg"
+    "image": "images/nflox_tz_tab.jpg",
+    "slug": "nflox-tz-tab",
+    "url": "/medicine/nflox-tz-tab/"
   },
   {
     "id": 123,
@@ -2244,7 +2506,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/nicip_plus_tab.jpg"
+    "image": "images/nicip_plus_tab.jpg",
+    "slug": "nicip-plus-tab",
+    "url": "/medicine/nicip-plus-tab/"
   },
   {
     "id": 168,
@@ -2261,7 +2525,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/nimesulide_100_tab.jpg"
+    "image": "images/nimesulide_100_tab.jpg",
+    "slug": "nimesulide-100mg-tab",
+    "url": "/medicine/nimesulide-100mg-tab/"
   },
   {
     "id": 3,
@@ -2278,7 +2544,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/nimucet_gold_tab.jpg"
+    "image": "images/nimucet_gold_tab.jpg",
+    "slug": "nimucet-gold-tab",
+    "url": "/medicine/nimucet-gold-tab/"
   },
   {
     "id": 118,
@@ -2295,7 +2563,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/nimucet_syp.jpg"
+    "image": "images/nimucet_syp.jpg",
+    "slug": "nimucet-syrup",
+    "url": "/medicine/nimucet-syrup/"
   },
   {
     "id": 145,
@@ -2312,7 +2582,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/nimucet_tab.jpg"
+    "image": "images/nimucet_tab.jpg",
+    "slug": "nimucet-tab",
+    "url": "/medicine/nimucet-tab/"
   },
   {
     "id": 242,
@@ -2329,7 +2601,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/nizer_gel.jpg"
+    "image": "images/nizer_gel.jpg",
+    "slug": "nizer-gel",
+    "url": "/medicine/nizer-gel/"
   },
   {
     "id": 170,
@@ -2346,7 +2620,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/no_scars_cream.jpg"
+    "image": "images/no_scars_cream.jpg",
+    "slug": "no-scars-cream",
+    "url": "/medicine/no-scars-cream/"
   },
   {
     "id": 148,
@@ -2363,7 +2639,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/nodard_plus_tab.jpg"
+    "image": "images/nodard_plus_tab.jpg",
+    "slug": "nodard-plus-tab",
+    "url": "/medicine/nodard-plus-tab/"
   },
   {
     "id": 134,
@@ -2380,7 +2658,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/nogacid_cap.jpg"
+    "image": "images/nogacid_cap.jpg",
+    "slug": "nogacid-cap",
+    "url": "/medicine/nogacid-cap/"
   },
   {
     "id": 159,
@@ -2397,7 +2677,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/norflokem_tz_tab.jpg"
+    "image": "images/norflokem_tz_tab.jpg",
+    "slug": "norflokem-tz-tab",
+    "url": "/medicine/norflokem-tz-tab/"
   },
   {
     "id": 243,
@@ -2414,7 +2696,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/o2_syp.jpg"
+    "image": "images/o2_syp.jpg",
+    "slug": "o2-syrup",
+    "url": "/medicine/o2-syrup/"
   },
   {
     "id": 217,
@@ -2431,7 +2715,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/oflakem_oz_syp.jpg"
+    "image": "images/oflakem_oz_syp.jpg",
+    "slug": "oflakem-oz-syrup",
+    "url": "/medicine/oflakem-oz-syrup/"
   },
   {
     "id": 152,
@@ -2448,7 +2734,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/omee_mps_oral_susp.jpg"
+    "image": "images/omee_mps_oral_susp.jpg",
+    "slug": "omee-mps-oral-susp",
+    "url": "/medicine/omee-mps-oral-susp/"
   },
   {
     "id": 21,
@@ -2465,7 +2753,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/omnacortil_10_tab.jpg"
+    "image": "images/omnacortil_10_tab.jpg",
+    "slug": "omnacortil-10-tab",
+    "url": "/medicine/omnacortil-10-tab/"
   },
   {
     "id": 119,
@@ -2482,7 +2772,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/omnigel_100_oint.jpg"
+    "image": "images/omnigel_100_oint.jpg",
+    "slug": "omnigel-100-oint",
+    "url": "/medicine/omnigel-100-oint/"
   },
   {
     "id": 142,
@@ -2499,7 +2791,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/omnigel_10_oint.jpg"
+    "image": "images/omnigel_10_oint.jpg",
+    "slug": "omnigel-10-oint",
+    "url": "/medicine/omnigel-10-oint/"
   },
   {
     "id": 185,
@@ -2516,7 +2810,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/omnigel_20_oint.jpg"
+    "image": "images/omnigel_20_oint.jpg",
+    "slug": "omnigel-20-oint",
+    "url": "/medicine/omnigel-20-oint/"
   },
   {
     "id": 184,
@@ -2533,7 +2829,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/omnigel_50_oint.jpg"
+    "image": "images/omnigel_50_oint.jpg",
+    "slug": "omnigel-50-oint",
+    "url": "/medicine/omnigel-50-oint/"
   },
   {
     "id": 138,
@@ -2550,7 +2848,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/omnigel_spray.jpg"
+    "image": "images/omnigel_spray.jpg",
+    "slug": "omnigel-spray",
+    "url": "/medicine/omnigel-spray/"
   },
   {
     "id": 64,
@@ -2567,7 +2867,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ondem_md4_tab.jpg"
+    "image": "images/ondem_md4_tab.jpg",
+    "slug": "ondem-md4-tab",
+    "url": "/medicine/ondem-md4-tab/"
   },
   {
     "id": 95,
@@ -2584,7 +2886,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/orafast_gel.jpg"
+    "image": "images/orafast_gel.jpg",
+    "slug": "orafast-gel",
+    "url": "/medicine/orafast-gel/"
   },
   {
     "id": 124,
@@ -2601,7 +2905,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/orogard_tab.jpg"
+    "image": "images/orogard_tab.jpg",
+    "slug": "orogard-tab",
+    "url": "/medicine/orogard-tab/"
   },
   {
     "id": 183,
@@ -2618,7 +2924,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ors_sam_kem_pow.jpg"
+    "image": "images/ors_sam_kem_pow.jpg",
+    "slug": "ors-sam-kem-pow",
+    "url": "/medicine/ors-sam-kem-pow/"
   },
   {
     "id": 44,
@@ -2635,7 +2943,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ozomet_g1_tab.jpg"
+    "image": "images/ozomet_g1_tab.jpg",
+    "slug": "ozomet-g1-tab",
+    "url": "/medicine/ozomet-g1-tab/"
   },
   {
     "id": 45,
@@ -2652,7 +2962,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ozomet_g2_tab.jpg"
+    "image": "images/ozomet_g2_tab.jpg",
+    "slug": "ozomet-g2-tab",
+    "url": "/medicine/ozomet-g2-tab/"
   },
   {
     "id": 43,
@@ -2669,7 +2981,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ozomet_pg1_tab.jpg"
+    "image": "images/ozomet_pg1_tab.jpg",
+    "slug": "ozomet-pg1-tab",
+    "url": "/medicine/ozomet-pg1-tab/"
   },
   {
     "id": 42,
@@ -2686,7 +3000,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ozomet_pg2_tab.jpg"
+    "image": "images/ozomet_pg2_tab.jpg",
+    "slug": "ozomet-pg2-tab",
+    "url": "/medicine/ozomet-pg2-tab/"
   },
   {
     "id": 41,
@@ -2703,7 +3019,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ozomet_vg1_tab.jpg"
+    "image": "images/ozomet_vg1_tab.jpg",
+    "slug": "ozomet-vg1-tab",
+    "url": "/medicine/ozomet-vg1-tab/"
   },
   {
     "id": 40,
@@ -2720,7 +3038,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ozomet_vg2_tab.jpg"
+    "image": "images/ozomet_vg2_tab.jpg",
+    "slug": "ozomet-vg2-tab",
+    "url": "/medicine/ozomet-vg2-tab/"
   },
   {
     "id": 14,
@@ -2737,7 +3057,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/pantop_40_tab.jpg"
+    "image": "images/pantop_40_tab.jpg",
+    "slug": "pantop-40-tab",
+    "url": "/medicine/pantop-40-tab/"
   },
   {
     "id": 16,
@@ -2754,7 +3076,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/pantop_d_cap.jpg"
+    "image": "images/pantop_d_cap.jpg",
+    "slug": "pantop-d-cap",
+    "url": "/medicine/pantop-d-cap/"
   },
   {
     "id": 15,
@@ -2771,7 +3095,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/pantop_dsr_cap.jpg"
+    "image": "images/pantop_dsr_cap.jpg",
+    "slug": "pantop-dsr-cap",
+    "url": "/medicine/pantop-dsr-cap/"
   },
   {
     "id": 112,
@@ -2788,7 +3114,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/phensedyl_dx_syp.jpg"
+    "image": "images/phensedyl_dx_syp.jpg",
+    "slug": "phensedyl-dx-syrup",
+    "url": "/medicine/phensedyl-dx-syrup/"
   },
   {
     "id": 28,
@@ -2805,7 +3133,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/polybion_lc_syp.jpg"
+    "image": "images/polybion_lc_syp.jpg",
+    "slug": "polybion-lc-syrup",
+    "url": "/medicine/polybion-lc-syrup/"
   },
   {
     "id": 162,
@@ -2822,7 +3152,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/pregacip_m_cap.jpg"
+    "image": "images/pregacip_m_cap.jpg",
+    "slug": "pregacip-m-cap",
+    "url": "/medicine/pregacip-m-cap/"
   },
   {
     "id": 104,
@@ -2839,7 +3171,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/qdiderm_oint.jpg"
+    "image": "images/qdiderm_oint.jpg",
+    "slug": "qdiderm-cream",
+    "url": "/medicine/qdiderm-cream/"
   },
   {
     "id": 161,
@@ -2856,7 +3190,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/rabalkem_dsr_cap.jpg"
+    "image": "images/rabalkem_dsr_cap.jpg",
+    "slug": "rabalkem-dsr-cap",
+    "url": "/medicine/rabalkem-dsr-cap/"
   },
   {
     "id": 192,
@@ -2873,7 +3209,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/reactin_100sr_tab.jpg"
+    "image": "images/reactin_100sr_tab.jpg",
+    "slug": "reactin-100sr-tab",
+    "url": "/medicine/reactin-100sr-tab/"
   },
   {
     "id": 76,
@@ -2890,7 +3228,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/rebozen_dsr_cap.jpg"
+    "image": "images/rebozen_dsr_cap.jpg",
+    "slug": "rebozen-dsr-cap",
+    "url": "/medicine/rebozen-dsr-cap/"
   },
   {
     "id": 24,
@@ -2907,7 +3247,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/refresh_tear_e_d_drop.jpg"
+    "image": "images/refresh_tear_e_d_drop.jpg",
+    "slug": "refresh-tear-e-d-drop",
+    "url": "/medicine/refresh-tear-e-d-drop/"
   },
   {
     "id": 199,
@@ -2924,7 +3266,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/roseday_f10_tab.jpg"
+    "image": "images/roseday_f10_tab.jpg",
+    "slug": "roseday-f10-tab",
+    "url": "/medicine/roseday-f10-tab/"
   },
   {
     "id": 223,
@@ -2941,7 +3285,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/salicylic_acid_powd.jpg"
+    "image": "images/salicylic_acid_powd.jpg",
+    "slug": "salicylic-acid-powder",
+    "url": "/medicine/salicylic-acid-powder/"
   },
   {
     "id": 31,
@@ -2958,7 +3304,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/saridon_tab.jpg"
+    "image": "images/saridon_tab.jpg",
+    "slug": "saridon-tab",
+    "url": "/medicine/saridon-tab/"
   },
   {
     "id": 103,
@@ -2975,7 +3323,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/scrabic_lotion.jpg"
+    "image": "images/scrabic_lotion.jpg",
+    "slug": "scrabic-lotion",
+    "url": "/medicine/scrabic-lotion/"
   },
   {
     "id": 201,
@@ -2992,7 +3342,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/sigora_gold_tab.jpg"
+    "image": "images/sigora_gold_tab.jpg",
+    "slug": "sigora-gold-tab",
+    "url": "/medicine/sigora-gold-tab/"
   },
   {
     "id": 229,
@@ -3009,7 +3361,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/sinarest_tab.jpg"
+    "image": "images/sinarest_tab.jpg",
+    "slug": "sinarest-tab",
+    "url": "/medicine/sinarest-tab/"
   },
   {
     "id": 211,
@@ -3026,7 +3380,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/skinshine_cream.jpg"
+    "image": "images/skinshine_cream.jpg",
+    "slug": "skinshine-cream",
+    "url": "/medicine/skinshine-cream/"
   },
   {
     "id": 120,
@@ -3043,7 +3399,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/soregel_gel.jpg"
+    "image": "images/soregel_gel.jpg",
+    "slug": "soregel-gel",
+    "url": "/medicine/soregel-gel/"
   },
   {
     "id": 83,
@@ -3060,7 +3418,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/spasmonil_tab.jpg"
+    "image": "images/spasmonil_tab.jpg",
+    "slug": "spasmonil-tab",
+    "url": "/medicine/spasmonil-tab/"
   },
   {
     "id": 230,
@@ -3077,7 +3437,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/stemetil_md_tab.jpg"
+    "image": "images/stemetil_md_tab.jpg",
+    "slug": "stemetil-md-tab",
+    "url": "/medicine/stemetil-md-tab/"
   },
   {
     "id": 187,
@@ -3094,7 +3456,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/sumo_gel.jpg"
+    "image": "images/sumo_gel.jpg",
+    "slug": "sumo-gel",
+    "url": "/medicine/sumo-gel/"
   },
   {
     "id": 193,
@@ -3111,7 +3475,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/sumo_tab.jpg"
+    "image": "images/sumo_tab.jpg",
+    "slug": "sumo-tab",
+    "url": "/medicine/sumo-tab/"
   },
   {
     "id": 93,
@@ -3128,7 +3494,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/superb_cream.jpg"
+    "image": "images/superb_cream.jpg",
+    "slug": "superb-cream",
+    "url": "/medicine/superb-cream/"
   },
   {
     "id": 39,
@@ -3145,7 +3513,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/supradyn_daily_tab.jpg"
+    "image": "images/supradyn_daily_tab.jpg",
+    "slug": "supradyn-daily-tab",
+    "url": "/medicine/supradyn-daily-tab/"
   },
   {
     "id": 172,
@@ -3162,7 +3532,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/tadacip_20_tab.jpg"
+    "image": "images/tadacip_20_tab.jpg",
+    "slug": "tadacip-20-tab",
+    "url": "/medicine/tadacip-20-tab/"
   },
   {
     "id": 181,
@@ -3182,7 +3554,9 @@
     "images": [
       "images/taxim_o_200_tab_box.jpg",
       "images/taxim.jpg"
-    ]
+    ],
+    "slug": "taxim-o-200-tab",
+    "url": "/medicine/taxim-o-200-tab/"
   },
   {
     "id": 231,
@@ -3199,7 +3573,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/taxim_o_dry_syp.jpg"
+    "image": "images/taxim_o_dry_syp.jpg",
+    "slug": "taxim-o-dry-syrup",
+    "url": "/medicine/taxim-o-dry-syrup/"
   },
   {
     "id": 86,
@@ -3216,7 +3592,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/tenacid_mf_tab.jpg"
+    "image": "images/tenacid_mf_tab.jpg",
+    "slug": "tenacid-mf-tab",
+    "url": "/medicine/tenacid-mf-tab/"
   },
   {
     "id": 189,
@@ -3233,7 +3611,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/thrombotas_oint.jpg"
+    "image": "images/thrombotas_oint.jpg",
+    "slug": "thrombotas-oint",
+    "url": "/medicine/thrombotas-oint/"
   },
   {
     "id": 5,
@@ -3250,7 +3630,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/thyronorm_100_tab.jpg"
+    "image": "images/thyronorm_100_tab.jpg",
+    "slug": "thyronorm-100-tab",
+    "url": "/medicine/thyronorm-100-tab/"
   },
   {
     "id": 6,
@@ -3267,7 +3649,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/thyronorm_50_tab.jpg"
+    "image": "images/thyronorm_50_tab.jpg",
+    "slug": "thyronorm-50-tab",
+    "url": "/medicine/thyronorm-50-tab/"
   },
   {
     "id": 48,
@@ -3284,7 +3668,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/thyrox_100_tab.jpg"
+    "image": "images/thyrox_100_tab.jpg",
+    "slug": "thyrox-100-tab",
+    "url": "/medicine/thyrox-100-tab/"
   },
   {
     "id": 50,
@@ -3301,7 +3687,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/thyrox_25_tab.jpg"
+    "image": "images/thyrox_25_tab.jpg",
+    "slug": "thyrox-25-tab",
+    "url": "/medicine/thyrox-25-tab/"
   },
   {
     "id": 49,
@@ -3318,7 +3706,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/thyrox_50_tab.jpg"
+    "image": "images/thyrox_50_tab.jpg",
+    "slug": "thyrox-50-tab",
+    "url": "/medicine/thyrox-50-tab/"
   },
   {
     "id": 163,
@@ -3335,7 +3725,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/top_bact_oint.jpg"
+    "image": "images/top_bact_oint.jpg",
+    "slug": "top-bact-oint",
+    "url": "/medicine/top-bact-oint/"
   },
   {
     "id": 221,
@@ -3352,7 +3744,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ultrabrite_cream.jpg"
+    "image": "images/ultrabrite_cream.jpg",
+    "slug": "ultrabrite-cream",
+    "url": "/medicine/ultrabrite-cream/"
   },
   {
     "id": 136,
@@ -3369,7 +3763,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/unienzyme_syp.jpg"
+    "image": "images/unienzyme_syp.jpg",
+    "slug": "unienzyme-syrup",
+    "url": "/medicine/unienzyme-syrup/"
   },
   {
     "id": 219,
@@ -3386,7 +3782,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/unienzyme_drop.jpg"
+    "image": "images/unienzyme_drop.jpg",
+    "slug": "unienzyme-drop",
+    "url": "/medicine/unienzyme-drop/"
   },
   {
     "id": 72,
@@ -3403,7 +3801,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ventoranz_dx_syp.jpg"
+    "image": "images/ventoranz_dx_syp.jpg",
+    "slug": "ventoranz-dx-syrup",
+    "url": "/medicine/ventoranz-dx-syrup/"
   },
   {
     "id": 164,
@@ -3420,7 +3820,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/vigore_100_tab.jpg"
+    "image": "images/vigore_100_tab.jpg",
+    "slug": "vigore-100-tab",
+    "url": "/medicine/vigore-100-tab/"
   },
   {
     "id": 182,
@@ -3437,7 +3839,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/vitcofol_oral_suspen.jpg"
+    "image": "images/vitcofol_oral_suspen.jpg",
+    "slug": "vitcofol-oral-suspen",
+    "url": "/medicine/vitcofol-oral-suspen/"
   },
   {
     "id": 96,
@@ -3454,7 +3858,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/zeebee_syp.jpg"
+    "image": "images/zeebee_syp.jpg",
+    "slug": "zeebee-syrup",
+    "url": "/medicine/zeebee-syrup/"
   },
   {
     "id": 62,
@@ -3471,7 +3877,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/zerodol_p_tab.jpg"
+    "image": "images/zerodol_p_tab.jpg",
+    "slug": "zerodol-p-tab",
+    "url": "/medicine/zerodol-p-tab/"
   },
   {
     "id": 63,
@@ -3488,7 +3896,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/zerodol_sp_tab.jpg"
+    "image": "images/zerodol_sp_tab.jpg",
+    "slug": "zerodol-sp-tab",
+    "url": "/medicine/zerodol-sp-tab/"
   },
   {
     "id": 180,
@@ -3505,7 +3915,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/zerodol_spas_tab.jpg"
+    "image": "images/zerodol_spas_tab.jpg",
+    "slug": "zerodol-spas-tab",
+    "url": "/medicine/zerodol-spas-tab/"
   },
   {
     "id": 101,
@@ -3522,7 +3934,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/zoster_skin_cream.jpg"
+    "image": "images/zoster_skin_cream.jpg",
+    "slug": "zoster-skin-cream",
+    "url": "/medicine/zoster-skin-cream/"
   },
   {
     "id": 220,
@@ -3539,7 +3953,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/zotadol_sp_tab.jpg"
+    "image": "images/zotadol_sp_tab.jpg",
+    "slug": "zotadol-sp-tab",
+    "url": "/medicine/zotadol-sp-tab/"
   },
   {
     "id": 79,
@@ -3556,7 +3972,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/zymox_500_cap.jpg"
+    "image": "images/zymox_500_cap.jpg",
+    "slug": "zymox-500-cap",
+    "url": "/medicine/zymox-500-cap/"
   },
   {
     "id": 1001,
@@ -3573,7 +3991,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/dabur_honitus.jpg"
+    "image": "images/dabur_honitus.jpg",
+    "slug": "dabur-honitus",
+    "url": "/medicine/dabur-honitus/"
   },
   {
     "id": 1002,
@@ -3590,7 +4010,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/clove_oil.jpg"
+    "image": "images/clove_oil.jpg",
+    "slug": "clove-oil",
+    "url": "/medicine/clove-oil/"
   },
   {
     "id": 293,
@@ -3607,7 +4029,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/hemolab_forte_syp.jpg"
+    "image": "images/hemolab_forte_syp.jpg",
+    "slug": "hemolab-forte-syrup",
+    "url": "/medicine/hemolab-forte-syrup/"
   },
   {
     "id": 1003,
@@ -3624,7 +4048,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/jhandu_mugdha_rasa.jpg"
+    "image": "images/jhandu_mugdha_rasa.jpg",
+    "slug": "jhandu-mugdha-rasa",
+    "url": "/medicine/jhandu-mugdha-rasa/"
   },
   {
     "id": 1004,
@@ -3641,7 +4067,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/lite_face_cream.jpg"
+    "image": "images/lite_face_cream.jpg",
+    "slug": "lite-face-cream",
+    "url": "/medicine/lite-face-cream/"
   },
   {
     "id": 1005,
@@ -3658,7 +4086,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ortho_oil.jpg"
+    "image": "images/ortho_oil.jpg",
+    "slug": "dr-ortho-oil",
+    "url": "/medicine/dr-ortho-oil/"
   },
   {
     "id": 291,
@@ -3675,7 +4105,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ortho_aid_oil.jpg"
+    "image": "images/ortho_aid_oil.jpg",
+    "slug": "ortho-aid-oil",
+    "url": "/medicine/ortho-aid-oil/"
   },
   {
     "id": 175,
@@ -3692,7 +4124,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/poshak_100_oil.jpg"
+    "image": "images/poshak_100_oil.jpg",
+    "slug": "chirayu-poshak-oil",
+    "url": "/medicine/chirayu-poshak-oil/"
   },
   {
     "id": 176,
@@ -3709,7 +4143,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/poshak_200_oil.jpg"
+    "image": "images/poshak_200_oil.jpg",
+    "slug": "chirayu-poshak-oil-176",
+    "url": "/medicine/chirayu-poshak-oil-176/"
   },
   {
     "id": 1006,
@@ -3726,7 +4162,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/garima_glucose_orange.jpg"
+    "image": "images/garima_glucose_orange.jpg",
+    "slug": "garima-glucose-orange",
+    "url": "/medicine/garima-glucose-orange/"
   },
   {
     "id": 116,
@@ -3743,7 +4181,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/cefaclass_200_tab.jpg"
+    "image": "images/cefaclass_200_tab.jpg",
+    "slug": "cefaclass-200-tab",
+    "url": "/medicine/cefaclass-200-tab/"
   },
   {
     "id": 121,
@@ -3760,7 +4200,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/dermakt_neo_cream.jpg"
+    "image": "images/dermakt_neo_cream.jpg",
+    "slug": "derma-kt-neo-cream",
+    "url": "/medicine/derma-kt-neo-cream/"
   },
   {
     "id": 234,
@@ -3777,7 +4219,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/cefkem_syp.jpg"
+    "image": "images/cefkem_syp.jpg",
+    "slug": "cefkem-syp",
+    "url": "/medicine/cefkem-syp/"
   },
   {
     "id": 240,
@@ -3794,7 +4238,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/dulcoflex_tab.jpg"
+    "image": "images/dulcoflex_tab.jpg",
+    "slug": "dulcoflex-tab",
+    "url": "/medicine/dulcoflex-tab/"
   },
   {
     "id": 292,
@@ -3811,7 +4257,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/hemolab_forte_syp_450.jpg"
+    "image": "images/hemolab_forte_syp_450.jpg",
+    "slug": "hemolab-forte-syrup-450-ml",
+    "url": "/medicine/hemolab-forte-syrup-450-ml/"
   },
   {
     "id": 274,
@@ -3828,7 +4276,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/lykorich_syp.jpg"
+    "image": "images/lykorich_syp.jpg",
+    "slug": "lykorich-z-syrup",
+    "url": "/medicine/lykorich-z-syrup/"
   },
   {
     "id": 273,
@@ -3845,7 +4295,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/nimudec_plus_tab.jpg"
+    "image": "images/nimudec_plus_tab.jpg",
+    "slug": "nimudec-plus-tab",
+    "url": "/medicine/nimudec-plus-tab/"
   },
   {
     "id": 272,
@@ -3862,7 +4314,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/tancet_cold&flu_tab.jpg"
+    "image": "images/tancet_cold&flu_tab.jpg",
+    "slug": "tancet-cold-flu-tab",
+    "url": "/medicine/tancet-cold-flu-tab/"
   },
   {
     "id": 271,
@@ -3879,7 +4333,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/fercee_red_syp.jpg"
+    "image": "images/fercee_red_syp.jpg",
+    "slug": "fercee-red-syrup",
+    "url": "/medicine/fercee-red-syrup/"
   },
   {
     "id": 1007,
@@ -3896,7 +4352,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/okacet_syp.jpg"
+    "image": "images/okacet_syp.jpg",
+    "slug": "okacet-syrup",
+    "url": "/medicine/okacet-syrup/"
   },
   {
     "id": 296,
@@ -3913,7 +4371,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/zedex_syp_1.jpg"
+    "image": "images/zedex_syp_1.jpg",
+    "slug": "zedex-cough-syrup",
+    "url": "/medicine/zedex-cough-syrup/"
   },
   {
     "id": 297,
@@ -3930,7 +4390,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/amlycure_ds_syp_1.jpg"
+    "image": "images/amlycure_ds_syp_1.jpg",
+    "slug": "amlycure-ds-syrup",
+    "url": "/medicine/amlycure-ds-syrup/"
   },
   {
     "id": 283,
@@ -3947,7 +4409,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/vasograin_ec_tab_box.jpg"
+    "image": "images/vasograin_ec_tab_box.jpg",
+    "slug": "vasograin-ec-tab",
+    "url": "/medicine/vasograin-ec-tab/"
   },
   {
     "id": 285,
@@ -3964,7 +4428,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/sumo_cold_tab_box.jpg"
+    "image": "images/sumo_cold_tab_box.jpg",
+    "slug": "sumo-cold-tab",
+    "url": "/medicine/sumo-cold-tab/"
   },
   {
     "id": 298,
@@ -3981,7 +4447,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ceflox_cf_cream.jpg"
+    "image": "images/ceflox_cf_cream.jpg",
+    "slug": "ceflox-cf-cream",
+    "url": "/medicine/ceflox-cf-cream/"
   },
   {
     "id": 299,
@@ -3998,7 +4466,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/l_hist_syp.jpg"
+    "image": "images/l_hist_syp.jpg",
+    "slug": "l-hist-syp",
+    "url": "/medicine/l-hist-syp/"
   },
   {
     "id": 300,
@@ -4018,7 +4488,9 @@
     "images": [
       "images/glycodin-100ml_syp_1.jpg",
       "images/glycodin_100ml_syp_2.jpg"
-    ]
+    ],
+    "slug": "glycodin-syp",
+    "url": "/medicine/glycodin-syp/"
   },
   {
     "id": 302,
@@ -4035,7 +4507,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/itrostred_200_cap.jpg"
+    "image": "images/itrostred_200_cap.jpg",
+    "slug": "itrostred-200-cap",
+    "url": "/medicine/itrostred-200-cap/"
   },
   {
     "id": 303,
@@ -4052,7 +4526,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/castor_nf_cream.jpg"
+    "image": "images/castor_nf_cream.jpg",
+    "slug": "castor-nf-cream",
+    "url": "/medicine/castor-nf-cream/"
   },
   {
     "id": 304,
@@ -4069,7 +4545,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/taxim_o_200_syp.jpg"
+    "image": "images/taxim_o_200_syp.jpg",
+    "slug": "taxim-o-200-syp",
+    "url": "/medicine/taxim-o-200-syp/"
   },
   {
     "id": 305,
@@ -4086,7 +4564,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/taxim_o_forte_100mg_syp.jpg"
+    "image": "images/taxim_o_forte_100mg_syp.jpg",
+    "slug": "taxim-o-forte-syp",
+    "url": "/medicine/taxim-o-forte-syp/"
   },
   {
     "id": 306,
@@ -4103,7 +4583,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/codistar_dx.jpg"
+    "image": "images/codistar_dx.jpg",
+    "slug": "codistar-dx-syp",
+    "url": "/medicine/codistar-dx-syp/"
   },
   {
     "id": 307,
@@ -4123,7 +4605,9 @@
     "images": [
       "images/aziwok1.jpg",
       "images/aziwok2.jpg"
-    ]
+    ],
+    "slug": "aziwok-syp",
+    "url": "/medicine/aziwok-syp/"
   },
   {
     "id": 308,
@@ -4140,7 +4624,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/gudcef_100_tab.jpg"
+    "image": "images/gudcef_100_tab.jpg",
+    "slug": "gudcef-tab",
+    "url": "/medicine/gudcef-tab/"
   },
   {
     "id": 309,
@@ -4157,7 +4643,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/o2_m_syp.jpg"
+    "image": "images/o2_m_syp.jpg",
+    "slug": "o2-m-syp",
+    "url": "/medicine/o2-m-syp/"
   },
   {
     "id": 311,
@@ -4174,7 +4662,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/monocef_o_50mg_syp.jpg"
+    "image": "images/monocef_o_50mg_syp.jpg",
+    "slug": "monocef-o-50mg-syp",
+    "url": "/medicine/monocef-o-50mg-syp/"
   },
   {
     "id": 312,
@@ -4191,7 +4681,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/monocef_o_100mg_syp.jpg"
+    "image": "images/monocef_o_100mg_syp.jpg",
+    "slug": "monocef-o-100mg-syp",
+    "url": "/medicine/monocef-o-100mg-syp/"
   },
   {
     "id": 313,
@@ -4208,7 +4700,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/mega_cv_syp.jpg"
+    "image": "images/mega_cv_syp.jpg",
+    "slug": "mega-cv-syp",
+    "url": "/medicine/mega-cv-syp/"
   },
   {
     "id": 314,
@@ -4225,7 +4719,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/monocef_o_cv_100mg_syp.jpg"
+    "image": "images/monocef_o_cv_100mg_syp.jpg",
+    "slug": "monocef-o-cv-100-syp",
+    "url": "/medicine/monocef-o-cv-100-syp/"
   },
   {
     "id": 315,
@@ -4242,7 +4738,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/surfaz_sn_cream.jpg"
+    "image": "images/surfaz_sn_cream.jpg",
+    "slug": "surfaz-sn-cream",
+    "url": "/medicine/surfaz-sn-cream/"
   },
   {
     "id": 316,
@@ -4259,7 +4757,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/septran_syp.jpg"
+    "image": "images/septran_syp.jpg",
+    "slug": "septran-syp",
+    "url": "/medicine/septran-syp/"
   },
   {
     "id": 317,
@@ -4276,7 +4776,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/hatric_3_syp.jpg"
+    "image": "images/hatric_3_syp.jpg",
+    "slug": "hatric-3-syp",
+    "url": "/medicine/hatric-3-syp/"
   },
   {
     "id": 332,
@@ -4293,7 +4795,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/panderm++_cream.jpg"
+    "image": "images/panderm++_cream.jpg",
+    "slug": "panderm-cream",
+    "url": "/medicine/panderm-cream/"
   },
   {
     "id": 327,
@@ -4310,7 +4814,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ringozone.jpg"
+    "image": "images/ringozone.jpg",
+    "slug": "ringozone",
+    "url": "/medicine/ringozone/"
   },
   {
     "id": 340,
@@ -4327,7 +4833,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/b_tex.jpg"
+    "image": "images/b_tex.jpg",
+    "slug": "b-tex",
+    "url": "/medicine/b-tex/"
   },
   {
     "id": 355,
@@ -4344,7 +4852,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/cheri_syp.jpg"
+    "image": "images/cheri_syp.jpg",
+    "slug": "cheri-syrup",
+    "url": "/medicine/cheri-syrup/"
   },
   {
     "id": 367,
@@ -4361,7 +4871,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ap_balm.jpg"
+    "image": "images/ap_balm.jpg",
+    "slug": "a-p-balm",
+    "url": "/medicine/a-p-balm/"
   },
   {
     "id": 369,
@@ -4378,7 +4890,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/sensodent_kf.jpg"
+    "image": "images/sensodent_kf.jpg",
+    "slug": "sensodent-kf-toothpaste",
+    "url": "/medicine/sensodent-kf-toothpaste/"
   },
   {
     "id": 371,
@@ -4395,7 +4909,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/zalimlotion.jpg"
+    "image": "images/zalimlotion.jpg",
+    "slug": "zalim-lotion",
+    "url": "/medicine/zalim-lotion/"
   },
   {
     "id": 336,
@@ -4412,7 +4928,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/ketorol_dt_tab.jpg"
+    "image": "images/ketorol_dt_tab.jpg",
+    "slug": "ketorol-dt-tab",
+    "url": "/medicine/ketorol-dt-tab/"
   },
   {
     "id": 248,
@@ -4429,7 +4947,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/mahacef_200_tab.jpg"
+    "image": "images/mahacef_200_tab.jpg",
+    "slug": "mahacef-200-tab",
+    "url": "/medicine/mahacef-200-tab/"
   },
   {
     "id": 246,
@@ -4446,7 +4966,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/telvas_40_tab.jpg"
+    "image": "images/telvas_40_tab.jpg",
+    "slug": "telvas-40-tab",
+    "url": "/medicine/telvas-40-tab/"
   },
   {
     "id": 356,
@@ -4463,7 +4985,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/p40_tab.jpg"
+    "image": "images/p40_tab.jpg",
+    "slug": "p40-tab",
+    "url": "/medicine/p40-tab/"
   },
   {
     "id": 395,
@@ -4480,7 +5004,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/rabitop_dsr_tab.jpg"
+    "image": "images/rabitop_dsr_tab.jpg",
+    "slug": "rabitop-dsr-cap",
+    "url": "/medicine/rabitop-dsr-cap/"
   },
   {
     "id": 394,
@@ -4497,7 +5023,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/mahamox_cv_625_tab.jpg"
+    "image": "images/mahamox_cv_625_tab.jpg",
+    "slug": "mahamox-cv-625-tab",
+    "url": "/medicine/mahamox-cv-625-tab/"
   },
   {
     "id": 267,
@@ -4514,7 +5042,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/fastac_fast_action_tab.jpg"
+    "image": "images/fastac_fast_action_tab.jpg",
+    "slug": "fastac-fast-action-tab",
+    "url": "/medicine/fastac-fast-action-tab/"
   },
   {
     "id": 335,
@@ -4531,7 +5061,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/orasore_dental_gel.jpg"
+    "image": "images/orasore_dental_gel.jpg",
+    "slug": "orasore-dental-gel",
+    "url": "/medicine/orasore-dental-gel/"
   },
   {
     "id": 380,
@@ -4548,7 +5080,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/leezole_3_kit.jpg"
+    "image": "images/leezole_3_kit.jpg",
+    "slug": "leezole-3-kit-tab",
+    "url": "/medicine/leezole-3-kit-tab/"
   },
   {
     "id": 390,
@@ -4565,7 +5099,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/pregabanyl_m_cap.jpg"
+    "image": "images/pregabanyl_m_cap.jpg",
+    "slug": "pregabanyl-m-cap",
+    "url": "/medicine/pregabanyl-m-cap/"
   },
   {
     "id": 391,
@@ -4582,7 +5118,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/recopress_500_tab.jpg"
+    "image": "images/recopress_500_tab.jpg",
+    "slug": "recopress-500-tab",
+    "url": "/medicine/recopress-500-tab/"
   },
   {
     "id": 324,
@@ -4599,7 +5137,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/petsaffa_60g.jpg"
+    "image": "images/petsaffa_60g.jpg",
+    "slug": "pet-safa-granules",
+    "url": "/medicine/pet-safa-granules/"
   },
   {
     "id": 323,
@@ -4616,7 +5156,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/triphala.jpg"
+    "image": "images/triphala.jpg",
+    "slug": "triphala-churna",
+    "url": "/medicine/triphala-churna/"
   },
   {
     "id": 177,
@@ -4633,7 +5175,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/mahanarayan_tel_b.jpg"
+    "image": "images/mahanarayan_tel_b.jpg",
+    "slug": "mahanarayan-oil-b",
+    "url": "/medicine/mahanarayan-oil-b/"
   },
   {
     "id": 325,
@@ -4650,7 +5194,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/kayam_churna_50g.jpg"
+    "image": "images/kayam_churna_50g.jpg",
+    "slug": "kayam-churna",
+    "url": "/medicine/kayam-churna/"
   },
   {
     "id": 393,
@@ -4667,7 +5213,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/lactobiotic_spores.jpg"
+    "image": "images/lactobiotic_spores.jpg",
+    "slug": "lactobiotic-respule",
+    "url": "/medicine/lactobiotic-respule/"
   },
   {
     "id": 328,
@@ -4684,7 +5232,9 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/charmoja.jpg"
+    "image": "images/charmoja.jpg",
+    "slug": "charmoja-oint-15g",
+    "url": "/medicine/charmoja-oint-15g/"
   },
   {
     "id": 1008,
@@ -4701,6 +5251,8 @@
     "scheme": null,
     "rx": true,
     "description": "",
-    "image": "images/l_hist_mont_syp.jpg"
+    "image": "images/l_hist_mont_syp.jpg",
+    "slug": "l-hist-mont-syp",
+    "url": "/medicine/l-hist-mont-syp/"
   }
 ]
