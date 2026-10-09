@@ -29,7 +29,7 @@ const CONFIG = {
     WHATSAPP_NUMBER: "917804008789",
 
     // Order ka backup Google Sheet me jaata hai (Apps Script URL)
-    SHEET_URL: "https://script.google.com/macros/s/AKfycbwVDN0OlZ5srpTFPFEIR0O0B43Oe5vcHap70EJcfBtsbXuPLy8QdKMTs8NtwaJ3JRnGxA/exec",
+    SHEET_URL: "https://script.google.com/macros/s/AKfycbwyaIhDC1lovVSVVEcTbjFi0BcLOJ9GgphwzuLKWxnJlkDcdUHlaf_ITYrMxwT_HsTuow/exec",
     SHEET_SECRET: "DeepakMedical2026",
 
     // Order form checks (client side = sirf customer ki madad ke liye, asli check Apps Script me hota hai)
