@@ -45,6 +45,12 @@ const CONFIG = {
     // Neeche pahunchne par spinner itni der ghumta hai, phir agle products aate hain
     LOAD_MORE_DELAY_MS: 700,
 
+    // Quantity: ek item ki max qty (typing me isse zyada daalne par yahi ban jaati hai)
+    MAX_QTY: 9999,
+
+    // "Item Added" message kitni der dikhe (style.css ke .added-toast animation se same rakho)
+    ADDED_FLASH_MS: 1200,
+
     // Search typing rukne ke itne ms baad chalega
     SEARCH_DELAY_MS: 300,
 
@@ -383,7 +389,9 @@ function buildProductCard(product, index = 99){
         actionHTML = `
             <div class="qty-box">
                 <div class="qty-btn minus" onclick="decreaseQtyById(${product.id})">&minus;</div>
-                <div class="qty-value">${qty}</div>
+                <input class="qty-input" type="text" inputmode="numeric" pattern="[0-9]*"
+                       maxlength="4" value="${qty}" data-id="${escapeHTML(product.id)}"
+                       aria-label="Quantity">
                 <div class="qty-btn plus" onclick="increaseQtyById(${product.id})">&plus;</div>
             </div>`;
 
@@ -491,16 +499,60 @@ function renderProductList(){
 
 }
 
-/* Cart badalne par sirf wahi ek card badlo (poori list dobara nahi banti: tez + images flicker nahi) */
-function updateCard(id){
+/* Cart badalne par sirf wahi ek card badlo (poori list dobara nahi banti: tez + images flicker nahi).
+   - Qty sirf badli (1 -> 5): card ko chhedte nahi, bas number badalte hain
+     (taaki typing, keyboard aur +/- click beech me na toote)
+   - "Add to Cart" <-> qty box badalna ho to card dobara banta hai */
+function updateCard(id, flash = false){
 
     const product = products.find(p => p.id === id);
 
-    const oldCard = document.querySelector(`#products .card[data-id="${id}"]`);
+    const card = document.querySelector(`#products .card[data-id="${id}"]`);
 
-    if(product && oldCard){
-        oldCard.outerHTML = buildProductCard(product);
+    if(!product || !card) return;
+
+    const cartItem = cart.find(item => item.id === id);
+
+    const qty = cartItem ? cartItem.qty : 0;
+
+    const qtyInput = card.querySelector(".qty-input");
+
+    if(qtyInput && qty > 0){
+
+        qtyInput.value = qty;
+
+        return;
+
     }
+
+    card.outerHTML = buildProductCard(product);
+
+    if(flash){
+        showAddedFlash(id);
+    }
+
+}
+
+/* Card ke upar thodi der "Item Added" dikhao (desktop + mobile dono par) */
+function showAddedFlash(id){
+
+    const card = document.querySelector(`#products .card[data-id="${id}"]`);
+
+    if(!card) return;
+
+    card.querySelector(".added-toast")?.remove();    // pehle wala ho to hata do
+
+    const toast = document.createElement("div");
+
+    toast.className = "added-toast";
+
+    toast.setAttribute("role", "status");
+
+    toast.textContent = "✔ Item Added";
+
+    card.appendChild(toast);
+
+    setTimeout(() => toast.remove(), CONFIG.ADDED_FLASH_MS + 100);
 
 }
 
@@ -584,16 +636,20 @@ function loadMoreProducts(){
 
 /* Cart badalne ke baad: save + cart page refresh.
    changedId diya ho to sirf wahi product card badalta hai, nahi diya to poori list (jaise Clear cart). */
-function refreshUI(changedId){
+function refreshUI(changedId, flash = false){
 
     saveCart();
 
-    showCart();
+    // Cart page me sirf qty badli ho to poora cart dobara nahi banta (typing / focus na toote).
+    // Item judne ya hatne par poora cart dobara banta hai.
+    if(!tryLightCartUpdate()){
+        showCart();
+    }
 
     if(changedId === undefined){
         renderProductList();
     }else{
-        updateCard(changedId);
+        updateCard(changedId, flash);
     }
 
 }
@@ -623,7 +679,7 @@ function addToCart(id){
 
     }
 
-    refreshUI(id);
+    refreshUI(id, true);     // true = card par "Item Added" dikhao
 
 }
 
@@ -675,6 +731,55 @@ function decreaseQty(index){
 
         cart.splice(index, 1);   // qty 1 thi aur minus dabaya -> item hata do
 
+    }
+
+    refreshUI(id);
+
+}
+
+/* Customer ne qty box me khud number type kiya (change event se chalta hai).
+   - 0 type kiya  -> item cart se hat jaata hai
+   - khaali chhoda -> purani qty wapas
+   - bahut bada number -> MAX_QTY tak */
+function applyTypedQty(input){
+
+    // data-id string hota hai, product ki asli id (number) wapas nikalo
+    const product = products.find(p => String(p.id) === input.dataset.id);
+
+    if(!product) return;
+
+    const id = product.id;
+
+    const current = cart.find(x => x.id === id)?.qty ?? 0;
+
+    const digits = input.value.replace(/\D/g, "");
+
+    if(digits === ""){
+        input.value = current;
+        return;
+    }
+
+    const qty = Math.min(parseInt(digits, 10), CONFIG.MAX_QTY);
+
+    if(qty === current){
+        input.value = current;      // jaise "007" -> "7"
+        return;
+    }
+
+    setQty(id, qty);
+
+}
+
+function setQty(id, qty){
+
+    const index = cart.findIndex(x => x.id === id);
+
+    if(index === -1) return;        // qty box sirf cart me maujood item par hota hai
+
+    if(qty <= 0){
+        cart.splice(index, 1);
+    }else{
+        cart[index].qty = qty;
     }
 
     refreshUI(id);
@@ -791,6 +896,60 @@ function renderView(){
 
 }
 
+/* Cart ka total amount aur total qty */
+function getCartTotals(){
+
+    let total = 0;
+    let totalItems = 0;
+
+    cart.forEach(item => {
+        total += item.price * item.qty;
+        totalItems += item.qty;
+    });
+
+    return { total, totalItems };
+
+}
+
+/* Cart page ke upar wala count, total aur header ka Cart button update (poora cart dobara banaye bina) */
+function updateCartSummary(){
+
+    const { total, totalItems } = getCartTotals();
+
+    const countEl = document.querySelector("#cartArea .cart-count");
+    const totalEl = document.querySelector("#cartArea .total");
+
+    if(countEl) countEl.textContent = `(${cart.length} products, ${totalItems} qty)`;
+    if(totalEl) totalEl.textContent = `Total ₹${total.toFixed(2)}`;
+
+    document.getElementById("cartButton").innerHTML = `🛒 Cart (${totalItems})`;
+
+}
+
+/* Cart page me sirf qty badli ho (items wahi ke wahi) to bas numbers badlo.
+   true = ho gaya, false = structure badla (item juda/hata) -> poora cart dobara banao */
+function tryLightCartUpdate(){
+
+    if(cart.length === 0) return false;
+
+    const rows = document.querySelectorAll("#cartArea .cart-item");
+
+    if(rows.length !== cart.length) return false;
+
+    for(let i = 0; i < rows.length; i++){
+        if(rows[i].dataset.id !== String(cart[i].id)) return false;
+    }
+
+    rows.forEach((row, i) => {
+        row.querySelector(".qty-input").value = cart[i].qty;
+    });
+
+    updateCartSummary();
+
+    return true;
+
+}
+
 /* Cart ka HTML banata hai aur header ke Cart button ka count update karta hai */
 function showCart(){
 
@@ -818,17 +977,14 @@ function showCart(){
     }
 
     // ---------- Cart me items ----------
-    let total = 0;
-    let totalItems = 0;
+    const { total, totalItems } = getCartTotals();
+
     let itemsHTML = "";
 
     cart.forEach((item, index) => {
 
-        total += item.price * item.qty;
-        totalItems += item.qty;
-
         itemsHTML += `
-        <div class="cart-item">
+        <div class="cart-item" data-id="${escapeHTML(item.id)}">
             <div class="cart-row">
 
                 <img src="${escapeHTML(item.image)}" class="cart-img" alt="${escapeHTML(item.name)}" loading="lazy" decoding="async">
@@ -846,7 +1002,9 @@ function showCart(){
 
                         <div class="cart-qty-box">
                             <div class="qty-btn minus" onclick="decreaseQty(${index})">&minus;</div>
-                            <div class="qty-value">${item.qty}</div>
+                            <input class="qty-input" type="text" inputmode="numeric" pattern="[0-9]*"
+                                   maxlength="4" value="${item.qty}" data-id="${escapeHTML(item.id)}"
+                                   aria-label="Quantity">
                             <div class="qty-btn plus" onclick="increaseQty(${index})">&plus;</div>
                         </div>
 
@@ -939,6 +1097,35 @@ function formatOrderLine(item){
 
 }
 
+/* Order ID banao: DMA-YYMMDD-XXXX   (jaise DMA-261009-K7QX)
+   - YYMMDD = aaj ki date (India time), isse Sheet me date se sort karna aasan
+   - XXXX   = 4 random akshar/number (0, O, 1, I jaise confusing akshar nahi)
+   Ye WhatsApp message aur Google Sheet dono me jaata hai, taaki customer aur aap ek hi ID se order dhundh sako. */
+function generateOrderId(){
+
+    const parts = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Asia/Kolkata",
+        year: "2-digit",
+        month: "2-digit",
+        day: "2-digit"
+    }).formatToParts(new Date());
+
+    const get = type => parts.find(p => p.type === type).value;
+
+    const datePart = get("year") + get("month") + get("day");
+
+    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+
+    const random = new Uint8Array(4);
+
+    crypto.getRandomValues(random);
+
+    const suffix = Array.from(random, n => chars[n % chars.length]).join("");
+
+    return `DMA-${datePart}-${suffix}`;
+
+}
+
 function sendOrder(){
 
     if(cart.length === 0){
@@ -987,8 +1174,12 @@ function sendOrder(){
 
     });
 
+    const orderId = generateOrderId();
+
     const message =
 `Hello Deepak Medical Agency
+
+Order ID: ${orderId}
 
 Customer Name: ${name}
 
@@ -1013,6 +1204,7 @@ Total Amount : ₹${total.toFixed(2)}`;
 
         body: JSON.stringify({
             secret: CONFIG.SHEET_SECRET,
+            orderId: orderId,
             hp: honeypot,                          // honeypot (hamesha khaali hona chahiye)
             elapsed: Date.now() - pageLoadTime,    // page khulne ke baad kitne ms me order aaya
             name: name,
@@ -1293,6 +1485,32 @@ function setupEventListeners(){
     // (warna footer neeche khisak jaata hai aur user wahan pahunch nahi paata)
     document.querySelector(".contact-btn")?.addEventListener("click", () => {
         suppressLoadUntil = Date.now() + 2000;
+    });
+
+    // Quantity box me type karna (product card + cart page dono). Ek hi listener sab ke liye.
+    document.addEventListener("change", event => {
+        if(event.target.matches(".qty-input")) applyTypedQty(event.target);
+    });
+
+    document.addEventListener("input", event => {
+        // Sirf digits (0-9) chalenge
+        if(event.target.matches(".qty-input")){
+            event.target.value = event.target.value.replace(/\D/g, "");
+        }
+    });
+
+    document.addEventListener("focusin", event => {
+        // Click karte hi poora number select: seedha naya number type karo
+        if(event.target.matches(".qty-input")){
+            setTimeout(() => event.target.select(), 0);
+        }
+    });
+
+    document.addEventListener("keydown", event => {
+        // Enter dabane par qty set + keyboard band
+        if(event.key === "Enter" && event.target.matches(".qty-input")){
+            event.target.blur();
+        }
     });
 
     // Cart button -> cart page
