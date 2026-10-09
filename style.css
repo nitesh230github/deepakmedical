@@ -446,6 +446,94 @@ header{
 }
 
 
+/* ---------- Infinite scroll spinner (list ke neeche) ---------- */
+
+.load-more{
+
+    display:none;               /* script.js tabhi "active" lagata hai jab aur products baaki hon */
+    justify-content:center;
+
+    padding:24px 0 8px;
+
+}
+
+.load-more.active{
+    display:flex;
+}
+
+.spinner{
+
+    width:38px;
+    height:38px;
+
+    border:4px solid #d1d5db;
+    border-top-color:var(--color-primary);
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+}
+
+@keyframes spin{
+    to{ transform:rotate(360deg); }
+}
+
+
+/* ---------- Not Found (search me kuch nahi mila) ---------- */
+
+.not-found{
+
+    grid-column:1 / -1;         /* grid ki poori width */
+
+    text-align:center;
+
+    padding:40px 16px;
+
+}
+
+.not-found-term{
+
+    margin-bottom:16px;
+
+    font-size:15px;
+    color:var(--color-text-light);
+
+}
+
+/* WhatsApp green button: click par WhatsApp chat khulti hai */
+.not-found-btn{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    background:var(--color-whatsapp);
+    color:#fff;
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    font-size:16px;
+    font-weight:700;
+
+    text-decoration:none;
+
+    box-shadow:0 8px 20px rgba(37,211,102,.35);
+
+    transition:background .2s ease, transform .2s ease;
+
+}
+
+.not-found-btn:hover{
+
+    background:var(--color-whatsapp-dark);
+
+    transform:translateY(-2px);
+
+}
+
+
 /* ---------- Image side ---------- */
 
 .product-left{
@@ -822,6 +910,7 @@ body.cart-view #cartArea{
 }
 
 body.cart-view #products,
+body.cart-view #loadMore,
 body.cart-view .header-bottom,
 body.cart-view .search-box,
 body.cart-view .contact-btn,
