@@ -419,6 +419,8 @@ header{
 
 .card{
 
+    position:relative;          /* "Item Added" message isi ke andar center me aata hai */
+
     background:#fff;
 
     border-radius:16px;
@@ -442,6 +444,134 @@ header{
     border-color:transparent;
 
     box-shadow:0 4px 10px rgba(16,24,40,.08), 0 16px 32px rgba(7,40,49,.18);
+
+}
+
+
+/* ---------- Infinite scroll spinner (list ke neeche) ---------- */
+
+.load-more{
+
+    display:none;               /* script.js tabhi "active" lagata hai jab aur products baaki hon */
+    justify-content:center;
+
+    padding:24px 0 8px;
+
+}
+
+.load-more.active{
+    display:flex;
+}
+
+.spinner{
+
+    width:38px;
+    height:38px;
+
+    border:4px solid #d1d5db;
+    border-top-color:var(--color-primary);
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+}
+
+@keyframes spin{
+    to{ transform:rotate(360deg); }
+}
+
+
+/* ---------- Not Found (search me kuch nahi mila) ---------- */
+
+.not-found{
+
+    grid-column:1 / -1;         /* grid ki poori width */
+
+    text-align:center;
+
+    padding:40px 16px;
+
+}
+
+.not-found-term{
+
+    margin-bottom:16px;
+
+    font-size:15px;
+    color:var(--color-text-light);
+
+}
+
+/* WhatsApp green button: click par WhatsApp chat khulti hai */
+.not-found-btn{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    background:var(--color-whatsapp);
+    color:#fff;
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    font-size:16px;
+    font-weight:700;
+
+    text-decoration:none;
+
+    box-shadow:0 8px 20px rgba(37,211,102,.35);
+
+    transition:background .2s ease, transform .2s ease;
+
+}
+
+.not-found-btn:hover{
+
+    background:var(--color-whatsapp-dark);
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ---------- "Item Added" message (card ke upar, thodi der) ----------
+   script.js (showAddedFlash) card me ye div jodta hai aur ~1.2 sec baad hata deta hai.
+   Time badalna ho to yahan animation ka 1.2s aur script.js ke CONFIG.ADDED_FLASH_MS dono badlo. */
+
+.added-toast{
+
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    background:var(--color-accent-dark);
+    color:#fff;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-size:14px;
+    font-weight:700;
+    white-space:nowrap;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.30);
+
+    pointer-events:none;        /* neeche ke buttons par click na roke */
+    z-index:5;
+
+    animation:added-pop 1.2s ease forwards;
+
+}
+
+@keyframes added-pop{
+
+    0%  { opacity:0; transform:translate(-50%,-50%) scale(.7); }
+    15% { opacity:1; transform:translate(-50%,-50%) scale(1); }
+    75% { opacity:1; transform:translate(-50%,-50%) scale(1); }
+    100%{ opacity:0; transform:translate(-50%,-60%) scale(1); }
 
 }
 
@@ -481,6 +611,29 @@ header{
 /* Image par click = zoom viewer khulta hai */
 .zoomable-image{
     cursor:zoom-in;
+}
+
+
+/* Image / naam par click = product ka page (script.js link banata hai) */
+.product-link{
+
+    display:block;
+    width:100%;
+
+}
+
+.product-title h3 a{
+
+    color:inherit;
+    text-decoration:none;
+
+}
+
+.product-title h3 a:hover{
+
+    color:var(--color-cart-dark);
+    text-decoration:underline;
+
 }
 
 
@@ -773,17 +926,41 @@ header{
 
 }
 
-.qty-value{
+/* Number wala hissa: ab input hai, customer click karke seedha qty type kar sakta hai
+   (mobile par number keypad khulta hai) */
+.qty-input{
 
     flex:1;
+    min-width:0;                /* flex me sikud sake, buttons ko dhakka na de */
+
+    height:100%;
 
     text-align:center;
 
+    font-family:inherit;
     font-size:17px;
     font-weight:700;
 
     color:#000;
     line-height:1;
+
+    background:transparent;
+    border:0;
+    border-radius:8px;
+    outline:none;
+
+    padding:0;
+    margin:0;
+
+    appearance:none;
+    -moz-appearance:textfield;
+
+}
+
+.qty-input:focus{
+
+    background:#fff;
+    box-shadow:0 0 0 2px var(--color-primary-light);
 
 }
 
@@ -822,6 +999,7 @@ body.cart-view #cartArea{
 }
 
 body.cart-view #products,
+body.cart-view #loadMore,
 body.cart-view .header-bottom,
 body.cart-view .search-box,
 body.cart-view .contact-btn,
@@ -1043,9 +1221,9 @@ body.cart-view #cartButton{
 
 }
 
-.cart-qty-box .qty-value{
+.cart-qty-box .qty-input{
 
-    font-size:15px;
+    font-size:16px;
 
 }
 
@@ -1082,7 +1260,7 @@ body.cart-view #cartButton{
 
 }
 
-#cartArea input{
+.cart-summary input{
 
     width:100%;
 
@@ -1092,7 +1270,7 @@ body.cart-view #cartButton{
     border:1px solid #ddd;
     border-radius:10px;
 
-    font-size:14px;
+    font-size:16px;     /* 16px: iPhone par focus karte hi page zoom nahi hota */
 
 }
 
@@ -1693,8 +1871,8 @@ body.cart-view #cartButton{
 
     }
 
-    #products .qty-value{
-        font-size:15px;
+    #products .qty-input{
+        font-size:16px;
     }
 
 

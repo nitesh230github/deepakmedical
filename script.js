@@ -7,7 +7,7 @@
      3. HELPERS           - chhote reusable functions
      4. CART STORAGE      - localStorage (save / load / 24h expiry / sync)
      5. SEARCH & FILTER   - search box + category filter
-     6. PRODUCT DISPLAY   - product cards banana
+     6. PRODUCT DISPLAY   - product cards, lazy loading, infinite scroll, Not Found
      7. CART ACTIONS      - add / increase / decrease / remove
      8. CART PAGE         - cart ki alag page-view (open / back / render)
      9. ORDER             - WhatsApp + Google Sheet par order bhejna
@@ -40,6 +40,17 @@ const CONFIG = {
     // Cart itne time baad automatically delete (24 ghante)
     CART_EXPIRY_MS: 24 * 60 * 60 * 1000,
 
+    // Infinite scroll: ek baar me itne products dikhte hain
+    PAGE_SIZE: 24,
+    // Neeche pahunchne par spinner itni der ghumta hai, phir agle products aate hain
+    LOAD_MORE_DELAY_MS: 700,
+
+    // Quantity: ek item ki max qty (typing me isse zyada daalne par yahi ban jaati hai)
+    MAX_QTY: 9999,
+
+    // "Item Added" message kitni der dikhe (style.css ke .added-toast animation se same rakho)
+    ADDED_FLASH_MS: 1200,
+
     // Search typing rukne ke itne ms baad chalega
     SEARCH_DELAY_MS: 300,
 
@@ -59,6 +70,13 @@ let products = [];          // products.json ka poora data
 let displayOrder = [];      // ek baar shuffle hua order (bestsellers upar)
 let currentProducts = [];   // abhi screen par dikh rahe (filtered) products
 let cart = [];              // cart items
+
+// Infinite scroll state (section 6)
+let visibleCount = 0;               // abhi screen par kitne products dikh rahe hain
+let isLoadingMore = false;          // agla batch aane me hai
+let loadToken = 0;                  // filter badalne par badhta hai (purana timer cancel karne ke liye)
+let suppressLoadUntil = 0;          // is time tak naya batch load nahi hoga (Contact Us scroll ke liye)
+let loadMoreObserver = null;
 
 // Cart page ka navigation state (section 8)
 let savedScrollY = 0;       // cart kholne se pehle products page kahan tak scroll tha
@@ -140,6 +158,13 @@ function escapeHTML(value){
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#39;");
+
+}
+
+/* Pehle batch me kitne products. Purane browser (IntersectionObserver nahi) me sab ek saath. */
+function firstPageSize(){
+
+    return ("IntersectionObserver" in window) ? CONFIG.PAGE_SIZE : Number.MAX_SAFE_INTEGER;
 
 }
 
@@ -277,18 +302,37 @@ function setActiveCategoryButton(category){
 /* Search + category dono lagakar products dikhao.
    displayOrder me sirf .filter() hota hai (naya shuffle nahi),
    isliye order stable rehta hai aur bestsellers upar hi rehte hain. */
-function filterProducts(){
+/* Search box aur category ke hisaab se products ki filtered list */
+function computeFilteredProducts(){
 
     const rawSearch = document.getElementById("search").value;
 
     const category = document.getElementById("categoryFilter").value;
 
-    currentProducts = displayOrder.filter(product =>
+    return displayOrder.filter(product =>
         (category === "ALL" || product.category === category) &&
         matchesSearch(product, rawSearch)
     );
 
-    displayProducts(currentProducts);
+}
+
+function filterProducts(){
+
+    const category = document.getElementById("categoryFilter").value;
+
+    currentProducts = computeFilteredProducts();
+
+    // Naya search / category: phir se pehle 24 products se shuru
+    visibleCount = firstPageSize();
+    loadToken++;
+    isLoadingMore = false;
+
+    renderProductList();
+
+    // Neeche scroll kiya hua tha to list ke upar le jao
+    if(window.scrollY > 0){
+        window.scrollTo({ top: 0 });
+    }
 
     setActiveCategoryButton(category);
 
@@ -312,69 +356,87 @@ function selectCategory(category){
    - Neeche: Add to Cart / Quantity box / Out of Stock
 ========================================================= */
 
-function displayProducts(items){
+/* Ek product ka card (HTML string). index = list me position (pehle 4 images turant load hoti hain) */
+function buildProductCard(product, index = 99){
 
-    let html = "";
+    // Cart me kitni quantity hai
+    const cartItem = cart.find(item => item.id === product.id);
+    const qty = cartItem ? cartItem.qty : 0;
 
-    items.forEach(product => {
+    // Images
+    const productImages = getProductImages(product);
+    const mainImage = getMainImage(product);
 
-        // Cart me kitni quantity hai
-        const cartItem = cart.find(item => item.id === product.id);
-        const qty = cartItem ? cartItem.qty : 0;
+    // Stock: inStock === false hi "Out of Stock" hai.
+    // Field missing ho to "In Stock" maana jaata hai (purane entries na toote).
+    const isInStock = product.inStock !== false;
 
-        // Images
-        const productImages = getProductImages(product);
-        const mainImage = getMainImage(product);
+    const stockBadge = isInStock
+        ? `<div class="stock-badge in-stock"><span class="stock-dot"></span>In Stock</div>`
+        : `<div class="stock-badge out-of-stock"><span class="stock-dot"></span>Out of Stock</div>`;
 
-        // Stock: inStock === false hi "Out of Stock" hai.
-        // Field missing ho to "In Stock" maana jaata hai (purane entries na toote).
-        const isInStock = product.inStock !== false;
+    // Camera badge sirf tab jab 1 se zyada images ho
+    const imageBadge = productImages.length > 1
+        ? `<div class="multiple-image-badge">📷 ${productImages.length}</div>`
+        : "";
 
-        const stockBadge = isInStock
-            ? `<div class="stock-badge in-stock"><span class="stock-dot"></span>In Stock</div>`
-            : `<div class="stock-badge out-of-stock"><span class="stock-dot"></span>Out of Stock</div>`;
+    // Neeche wala button / quantity box
+    let actionHTML;
 
-        // Camera badge sirf tab jab 1 se zyada images ho
-        const imageBadge = productImages.length > 1
-            ? `<div class="multiple-image-badge">📷 ${productImages.length}</div>`
-            : "";
+    if(!isInStock){
 
-        // Neeche wala button / quantity box
-        let actionHTML;
+        actionHTML = `
+            <button class="out-of-stock-btn" disabled>Out of Stock</button>`;
 
-        if(!isInStock){
+    }else if(qty === 0){
 
-            actionHTML = `
-                <button class="out-of-stock-btn" disabled>Out of Stock</button>`;
+        actionHTML = `
+            <button onclick="addToCart(${product.id})">Add to Cart</button>`;
 
-        }else if(qty === 0){
+    }else{
 
-            actionHTML = `
-                <button onclick="addToCart(${product.id})">Add to Cart</button>`;
+        actionHTML = `
+            <div class="qty-box">
+                <div class="qty-btn minus" onclick="decreaseQtyById(${product.id})">&minus;</div>
+                <input class="qty-input" type="text" inputmode="numeric" pattern="[0-9]*"
+                       maxlength="4" value="${qty}" data-id="${escapeHTML(product.id)}"
+                       aria-label="Quantity">
+                <div class="qty-btn plus" onclick="increaseQtyById(${product.id})">&plus;</div>
+            </div>`;
 
-        }else{
+    }
 
-            actionHTML = `
-                <div class="qty-box">
-                    <div class="qty-btn minus" onclick="decreaseQtyById(${product.id})">&minus;</div>
-                    <div class="qty-value">${qty}</div>
-                    <div class="qty-btn plus" onclick="increaseQtyById(${product.id})">&plus;</div>
-                </div>`;
+    // Lazy loading: screen ke bahar wali images tab load hongi jab user paas pahunche.
+    // Sabse upar ke 4 products turant load hote hain (page jaldi dikhe).
+    const loadingAttrs = index < 4
+        ? 'loading="eager"'
+        : 'loading="lazy" decoding="async"';
 
-        }
+    // Product page ka link (products.json me "url" hota hai, build_product_pages.py jodta hai).
+    // url ho to image aur naam dono us page par le jaate hain; na ho to purana zoom chalta hai.
+    const imgTag = `<img
+                        src="${escapeHTML(mainImage)}"
+                        alt="${escapeHTML(product.name)}"
+                        ${product.url ? "" : 'class="zoomable-image"'}
+                        ${loadingAttrs}
+                        data-id="${escapeHTML(product.id)}">`;
 
-        html += `
-        <div class="card">
+    const imageHTML = product.url
+        ? `<a class="product-link" href="${escapeHTML(product.url)}" aria-label="${escapeHTML(product.name)} - details">${imgTag}</a>`
+        : imgTag;
+
+    const titleHTML = product.url
+        ? `<a href="${escapeHTML(product.url)}">${escapeHTML(product.name)}</a>`
+        : escapeHTML(product.name);
+
+    return `
+    <div class="card" data-id="${escapeHTML(product.id)}">
 
             <!-- LEFT: image -->
             <div class="product-left">
                 <div class="product-image">
                     ${stockBadge}
-                    <img
-                        src="${escapeHTML(mainImage)}"
-                        alt="${escapeHTML(product.name)}"
-                        class="zoomable-image"
-                        data-id="${escapeHTML(product.id)}">
+                    ${imageHTML}
                     ${imageBadge}
                 </div>
             </div>
@@ -383,7 +445,7 @@ function displayProducts(items){
             <div class="product-right">
 
                 <div class="product-title">
-                    <h3>${escapeHTML(product.name)}</h3>
+                    <h3>${titleHTML}</h3>
                 </div>
 
                 <div class="product-meta">
@@ -406,11 +468,182 @@ function displayProducts(items){
 
             </div>
 
-        </div>`;
+        </div>
+    `.trim();
 
-    });
+}
 
-    document.getElementById("products").innerHTML = html;
+/* Not Found: search ka kuch nahi mila -> hara WhatsApp button, click par chat khulti hai */
+function buildNotFoundHTML(){
+
+    const term = document.getElementById("search").value.trim().slice(0, 80);
+
+    const text = term
+        ? `Hello Deepak Medical Agency, mujhe "${term}" chahiye. Kya ye available hai?`
+        : "Hello Deepak Medical Agency, mujhe ek dawa chahiye jo website par nahi mili.";
+
+    const link = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=` + encodeURIComponent(text);
+
+    return `
+    <div class="not-found">
+
+        ${term ? `<p class="not-found-term">&ldquo;${escapeHTML(term)}&rdquo; ke liye koi product nahi mila</p>` : ""}
+
+        <a class="not-found-btn" href="${link}" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">💬</span>
+            <span>Not Found ! Chat on WhatsApp</span>
+        </a>
+
+    </div>`;
+
+}
+
+/* currentProducts me se pehle "visibleCount" products screen par dikhao */
+function renderProductList(){
+
+    const productsEl = document.getElementById("products");
+
+    if(currentProducts.length === 0){
+
+        productsEl.innerHTML = buildNotFoundHTML();
+
+    }else{
+
+        productsEl.innerHTML = currentProducts
+            .slice(0, visibleCount)
+            .map((product, index) => buildProductCard(product, index))
+            .join("");
+
+    }
+
+    updateLoadMore();
+
+}
+
+/* Cart badalne par sirf wahi ek card badlo (poori list dobara nahi banti: tez + images flicker nahi).
+   - Qty sirf badli (1 -> 5): card ko chhedte nahi, bas number badalte hain
+     (taaki typing, keyboard aur +/- click beech me na toote)
+   - "Add to Cart" <-> qty box badalna ho to card dobara banta hai */
+function updateCard(id, flash = false){
+
+    const product = products.find(p => p.id === id);
+
+    const card = document.querySelector(`#products .card[data-id="${id}"]`);
+
+    if(!product || !card) return;
+
+    const cartItem = cart.find(item => item.id === id);
+
+    const qty = cartItem ? cartItem.qty : 0;
+
+    const qtyInput = card.querySelector(".qty-input");
+
+    if(qtyInput && qty > 0){
+
+        qtyInput.value = qty;
+
+        return;
+
+    }
+
+    card.outerHTML = buildProductCard(product);
+
+    if(flash){
+        showAddedFlash(id);
+    }
+
+}
+
+/* Card ke upar thodi der "Item Added" dikhao (desktop + mobile dono par) */
+function showAddedFlash(id){
+
+    const card = document.querySelector(`#products .card[data-id="${id}"]`);
+
+    if(!card) return;
+
+    card.querySelector(".added-toast")?.remove();    // pehle wala ho to hata do
+
+    const toast = document.createElement("div");
+
+    toast.className = "added-toast";
+
+    toast.setAttribute("role", "status");
+
+    toast.textContent = "✔ Item Added";
+
+    card.appendChild(toast);
+
+    setTimeout(() => toast.remove(), CONFIG.ADDED_FLASH_MS + 100);
+
+}
+
+
+/* ---------- INFINITE SCROLL ----------
+   Pehle 24 products. User list ke neeche pahunche to spinner ~0.7 sec ghumta hai,
+   phir agle 24 aate hain (Amazon jaisa). Search / category badalne par phir 24 se shuru.
+   Spinner (#loadMore) list ke neeche hai; IntersectionObserver dekhta hai ki wo screen par aaya ya nahi. */
+
+/* Spinner tabhi dikhao jab aur products baaki hon */
+function updateLoadMore(){
+
+    const loadMoreEl = document.getElementById("loadMore");
+
+    const hasMore = currentProducts.length > visibleCount;
+
+    loadMoreEl.classList.toggle("active", hasMore);
+
+    // Dobara observe: agar spinner abhi bhi screen par hai to agla batch bhi chalu ho jaaye
+    if(hasMore && loadMoreObserver){
+
+        loadMoreObserver.unobserve(loadMoreEl);
+
+        loadMoreObserver.observe(loadMoreEl);
+
+    }
+
+}
+
+function onLoadMoreVisible(entries){
+
+    if(entries[0].isIntersecting){
+        loadMoreProducts();
+    }
+
+}
+
+function loadMoreProducts(){
+
+    if(isLoadingMore) return;
+    if(visibleCount >= currentProducts.length) return;
+    if(Date.now() < suppressLoadUntil) return;
+
+    isLoadingMore = true;
+
+    const token = loadToken;
+
+    // Thoda ruko (spinner dikhe), phir agle products jodo
+    setTimeout(() => {
+
+        // Is beech search / category badal gaya to ye purana batch chhod do
+        if(token !== loadToken) return;
+
+        const start = visibleCount;
+
+        visibleCount += CONFIG.PAGE_SIZE;
+
+        const nextCards = currentProducts
+            .slice(start, visibleCount)
+            .map(product => buildProductCard(product))
+            .join("");
+
+        // Purane cards ko chhedte nahi, sirf neeche jodte hain (scroll jump nahi hota)
+        document.getElementById("products").insertAdjacentHTML("beforeend", nextCards);
+
+        isLoadingMore = false;
+
+        updateLoadMore();
+
+    }, CONFIG.LOAD_MORE_DELAY_MS);
 
 }
 
@@ -422,14 +655,23 @@ function displayProducts(items){
    - ...(index)    : cart panel ke buttons ke liye
 ========================================================= */
 
-/* Cart badalne ke baad: save + cart panel + product cards sab refresh */
-function refreshUI(){
+/* Cart badalne ke baad: save + cart page refresh.
+   changedId diya ho to sirf wahi product card badalta hai, nahi diya to poori list (jaise Clear cart). */
+function refreshUI(changedId, flash = false){
 
     saveCart();
 
-    showCart();
+    // Cart page me sirf qty badli ho to poora cart dobara nahi banta (typing / focus na toote).
+    // Item judne ya hatne par poora cart dobara banta hai.
+    if(!tryLightCartUpdate()){
+        showCart();
+    }
 
-    displayProducts(currentProducts);
+    if(changedId === undefined){
+        renderProductList();
+    }else{
+        updateCard(changedId, flash);
+    }
 
 }
 
@@ -458,7 +700,7 @@ function addToCart(id){
 
     }
 
-    refreshUI();
+    refreshUI(id, true);     // true = card par "Item Added" dikhao
 
 }
 
@@ -470,7 +712,7 @@ function increaseQtyById(id){
 
         item.qty++;
 
-        refreshUI();
+        refreshUI(id);
 
     }
 
@@ -490,13 +732,17 @@ function decreaseQtyById(id){
 
 function increaseQty(index){
 
+    const id = cart[index].id;
+
     cart[index].qty++;
 
-    refreshUI();
+    refreshUI(id);
 
 }
 
 function decreaseQty(index){
+
+    const id = cart[index].id;
 
     if(cart[index].qty > 1){
 
@@ -508,15 +754,66 @@ function decreaseQty(index){
 
     }
 
-    refreshUI();
+    refreshUI(id);
+
+}
+
+/* Customer ne qty box me khud number type kiya (change event se chalta hai).
+   - 0 type kiya  -> item cart se hat jaata hai
+   - khaali chhoda -> purani qty wapas
+   - bahut bada number -> MAX_QTY tak */
+function applyTypedQty(input){
+
+    // data-id string hota hai, product ki asli id (number) wapas nikalo
+    const product = products.find(p => String(p.id) === input.dataset.id);
+
+    if(!product) return;
+
+    const id = product.id;
+
+    const current = cart.find(x => x.id === id)?.qty ?? 0;
+
+    const digits = input.value.replace(/\D/g, "");
+
+    if(digits === ""){
+        input.value = current;
+        return;
+    }
+
+    const qty = Math.min(parseInt(digits, 10), CONFIG.MAX_QTY);
+
+    if(qty === current){
+        input.value = current;      // jaise "007" -> "7"
+        return;
+    }
+
+    setQty(id, qty);
+
+}
+
+function setQty(id, qty){
+
+    const index = cart.findIndex(x => x.id === id);
+
+    if(index === -1) return;        // qty box sirf cart me maujood item par hota hai
+
+    if(qty <= 0){
+        cart.splice(index, 1);
+    }else{
+        cart[index].qty = qty;
+    }
+
+    refreshUI(id);
 
 }
 
 function removeItem(index){
 
+    const id = cart[index].id;
+
     cart.splice(index, 1);
 
-    refreshUI();
+    refreshUI(id);
 
 }
 
@@ -620,6 +917,60 @@ function renderView(){
 
 }
 
+/* Cart ka total amount aur total qty */
+function getCartTotals(){
+
+    let total = 0;
+    let totalItems = 0;
+
+    cart.forEach(item => {
+        total += item.price * item.qty;
+        totalItems += item.qty;
+    });
+
+    return { total, totalItems };
+
+}
+
+/* Cart page ke upar wala count, total aur header ka Cart button update (poora cart dobara banaye bina) */
+function updateCartSummary(){
+
+    const { total, totalItems } = getCartTotals();
+
+    const countEl = document.querySelector("#cartArea .cart-count");
+    const totalEl = document.querySelector("#cartArea .total");
+
+    if(countEl) countEl.textContent = `(${cart.length} products, ${totalItems} qty)`;
+    if(totalEl) totalEl.textContent = `Total ₹${total.toFixed(2)}`;
+
+    document.getElementById("cartButton").innerHTML = `🛒 Cart (${totalItems})`;
+
+}
+
+/* Cart page me sirf qty badli ho (items wahi ke wahi) to bas numbers badlo.
+   true = ho gaya, false = structure badla (item juda/hata) -> poora cart dobara banao */
+function tryLightCartUpdate(){
+
+    if(cart.length === 0) return false;
+
+    const rows = document.querySelectorAll("#cartArea .cart-item");
+
+    if(rows.length !== cart.length) return false;
+
+    for(let i = 0; i < rows.length; i++){
+        if(rows[i].dataset.id !== String(cart[i].id)) return false;
+    }
+
+    rows.forEach((row, i) => {
+        row.querySelector(".qty-input").value = cart[i].qty;
+    });
+
+    updateCartSummary();
+
+    return true;
+
+}
+
 /* Cart ka HTML banata hai aur header ke Cart button ka count update karta hai */
 function showCart(){
 
@@ -647,20 +998,17 @@ function showCart(){
     }
 
     // ---------- Cart me items ----------
-    let total = 0;
-    let totalItems = 0;
+    const { total, totalItems } = getCartTotals();
+
     let itemsHTML = "";
 
     cart.forEach((item, index) => {
 
-        total += item.price * item.qty;
-        totalItems += item.qty;
-
         itemsHTML += `
-        <div class="cart-item">
+        <div class="cart-item" data-id="${escapeHTML(item.id)}">
             <div class="cart-row">
 
-                <img src="${escapeHTML(item.image)}" class="cart-img" alt="${escapeHTML(item.name)}">
+                <img src="${escapeHTML(item.image)}" class="cart-img" alt="${escapeHTML(item.name)}" loading="lazy" decoding="async">
 
                 <div class="cart-details">
 
@@ -675,7 +1023,9 @@ function showCart(){
 
                         <div class="cart-qty-box">
                             <div class="qty-btn minus" onclick="decreaseQty(${index})">&minus;</div>
-                            <div class="qty-value">${item.qty}</div>
+                            <input class="qty-input" type="text" inputmode="numeric" pattern="[0-9]*"
+                                   maxlength="4" value="${item.qty}" data-id="${escapeHTML(item.id)}"
+                                   aria-label="Quantity">
                             <div class="qty-btn plus" onclick="increaseQty(${index})">&plus;</div>
                         </div>
 
@@ -768,6 +1118,35 @@ function formatOrderLine(item){
 
 }
 
+/* Order ID banao: DMA-YYMMDD-XXXX   (jaise DMA-261009-K7QX)
+   - YYMMDD = aaj ki date (India time), isse Sheet me date se sort karna aasan
+   - XXXX   = 4 random akshar/number (0, O, 1, I jaise confusing akshar nahi)
+   Ye WhatsApp message aur Google Sheet dono me jaata hai, taaki customer aur aap ek hi ID se order dhundh sako. */
+function generateOrderId(){
+
+    const parts = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Asia/Kolkata",
+        year: "2-digit",
+        month: "2-digit",
+        day: "2-digit"
+    }).formatToParts(new Date());
+
+    const get = type => parts.find(p => p.type === type).value;
+
+    const datePart = get("year") + get("month") + get("day");
+
+    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+
+    const random = new Uint8Array(4);
+
+    crypto.getRandomValues(random);
+
+    const suffix = Array.from(random, n => chars[n % chars.length]).join("");
+
+    return `DMA-${datePart}-${suffix}`;
+
+}
+
 function sendOrder(){
 
     if(cart.length === 0){
@@ -816,8 +1195,12 @@ function sendOrder(){
 
     });
 
+    const orderId = generateOrderId();
+
     const message =
 `Hello Deepak Medical Agency
+
+Order ID: ${orderId}
 
 Customer Name: ${name}
 
@@ -842,6 +1225,7 @@ Total Amount : ₹${total.toFixed(2)}`;
 
         body: JSON.stringify({
             secret: CONFIG.SHEET_SECRET,
+            orderId: orderId,
             hp: honeypot,                          // honeypot (hamesha khaali hona chahiye)
             elapsed: Date.now() - pageLoadTime,    // page khulne ke baad kitne ms me order aaya
             name: name,
@@ -869,7 +1253,7 @@ Total Amount : ₹${total.toFixed(2)}`;
 
     showCart();     // cart khaali hai, to ye khud products page par wapas bhej deta hai
 
-    displayProducts(currentProducts);   // product cards me "Add to Cart" wapas aa jaaye
+    renderProductList();   // product cards me "Add to Cart" wapas aa jaaye
 
 }
 
@@ -1067,6 +1451,102 @@ function updateHeaderState(){
    12. INIT - page load par yahin se sab shuru hota hai
 ========================================================= */
 
+/* ---------- URL se search / category (product page ka search box /?q=... aur breadcrumb /?cat=... se aata hai) ---------- */
+function applyUrlParams(){
+
+    const params = new URLSearchParams(location.search);
+
+    const q = params.get("q");
+
+    const cat = params.get("cat");
+
+    if(q){
+        document.getElementById("search").value = q.slice(0, 80);
+    }
+
+    const select = document.getElementById("categoryFilter");
+
+    if(cat && [...select.options].some(option => option.value === cat)){
+        select.value = cat;
+    }
+
+}
+
+
+/* ---------- List ki halat yaad rakhna (product page se wapas aane ke liye) ----------
+   Customer product kholta hai aur BACK dabata hai: use wahi list, wahi scroll, wahi search milni chahiye.
+   Order bhi save hota hai kyunki list random shuffle hoti hai. */
+const LIST_STATE_KEY = "dmaListState";
+
+function saveListState(){
+
+    // Cart page par ho to list ki halat save mat karo
+    if(isCartRoute() || displayOrder.length === 0) return;
+
+    try{
+
+        sessionStorage.setItem(LIST_STATE_KEY, JSON.stringify({
+            y: window.scrollY,
+            count: visibleCount,
+            q: document.getElementById("search").value,
+            cat: document.getElementById("categoryFilter").value,
+            order: displayOrder.map(p => p.id)
+        }));
+
+    }catch(error){
+
+        // Private mode me sessionStorage band ho sakta hai, koi baat nahi
+
+    }
+
+}
+
+/* true = list wapas set ho gayi */
+function restoreListState(){
+
+    try{
+
+        const nav = performance.getEntriesByType("navigation")[0];
+
+        if(!nav || nav.type !== "back_forward") return false;
+
+        const saved = JSON.parse(sessionStorage.getItem(LIST_STATE_KEY));
+
+        if(!saved || !Array.isArray(saved.order)) return false;
+
+        // Purana order wapas (naye products, agar aaye hon, end me)
+        const byId = new Map(products.map(p => [String(p.id), p]));
+
+        const ordered = saved.order.map(id => byId.get(String(id))).filter(Boolean);
+
+        const inOrder = new Set(ordered.map(p => p.id));
+
+        displayOrder = [...ordered, ...products.filter(p => !inOrder.has(p.id))];
+
+        document.getElementById("search").value = saved.q || "";
+
+        document.getElementById("categoryFilter").value = saved.cat || "ALL";
+
+        currentProducts = computeFilteredProducts();
+
+        visibleCount = Math.max(saved.count || 0, firstPageSize());
+
+        setActiveCategoryButton(document.getElementById("categoryFilter").value);
+
+        // Cards bante hi scroll wahan le jao
+        requestAnimationFrame(() => window.scrollTo({ top: saved.y || 0, behavior: "instant" }));
+
+        return true;
+
+    }catch(error){
+
+        return false;
+
+    }
+
+}
+
+
 /* products.json aane ke baad: order banao, cart sync karo, screen par dikhao */
 function initProducts(data){
 
@@ -1079,11 +1559,23 @@ function initProducts(data){
 
     displayOrder = [...bestSellers, ...otherProducts];
 
-    currentProducts = displayOrder;
-
     syncCartWithProducts();
 
-    displayProducts(currentProducts);
+    // Product page se BACK karke aaye ho to list wahin, usi order me, usi scroll par
+    // (warna random order badal jaata aur customer phir upar se shuru karta). Nahi to URL ke ?q= / ?cat= dekho.
+    if(!restoreListState()){
+
+        applyUrlParams();
+
+        currentProducts = computeFilteredProducts();
+
+        visibleCount = firstPageSize();
+
+        setActiveCategoryButton(document.getElementById("categoryFilter").value);
+
+    }
+
+    renderProductList();
 
     showCart();
 
@@ -1105,6 +1597,65 @@ function setupEventListeners(){
     // Category buttons (HTML me data-category="TABLET_CAP" jaise attribute hain)
     document.querySelectorAll(".cat-btn").forEach(btn => {
         btn.addEventListener("click", () => selectCategory(btn.dataset.category));
+    });
+
+    // Infinite scroll: spinner (#loadMore) screen par aate hi agle products load
+    if("IntersectionObserver" in window){
+
+        loadMoreObserver = new IntersectionObserver(onLoadMoreVisible, { rootMargin: "0px 0px 100px 0px" });
+
+        loadMoreObserver.observe(document.getElementById("loadMore"));
+
+    }
+
+    // "Contact Us" se footer tak scroll ho raha ho to beech me naye products load mat karo
+    // (warna footer neeche khisak jaata hai aur user wahan pahunch nahi paata)
+    document.querySelector(".contact-btn")?.addEventListener("click", () => {
+        suppressLoadUntil = Date.now() + 2000;
+    });
+
+    // Quantity box me type karna (product card + cart page dono). Ek hi listener sab ke liye.
+    document.addEventListener("change", event => {
+        if(event.target.matches(".qty-input")) applyTypedQty(event.target);
+    });
+
+    document.addEventListener("input", event => {
+        // Sirf digits (0-9) chalenge
+        if(event.target.matches(".qty-input")){
+            event.target.value = event.target.value.replace(/\D/g, "");
+        }
+    });
+
+    document.addEventListener("focusin", event => {
+        // Click karte hi poora number select: seedha naya number type karo
+        if(event.target.matches(".qty-input")){
+            setTimeout(() => event.target.select(), 0);
+        }
+    });
+
+    document.addEventListener("keydown", event => {
+        // Enter dabane par qty set + keyboard band
+        if(event.key === "Enter" && event.target.matches(".qty-input")){
+            event.target.blur();
+        }
+    });
+
+    // Product page par jaate waqt list ki halat yaad rakho
+    window.addEventListener("pagehide", saveListState);
+
+    // Browser ne poora page cache se wapas diya (back button): cart product page par badla ho sakta hai
+    window.addEventListener("pageshow", event => {
+
+        if(!event.persisted) return;
+
+        loadCart();
+
+        syncCartWithProducts();
+
+        renderProductList();
+
+        showCart();
+
     });
 
     // Cart button -> cart page

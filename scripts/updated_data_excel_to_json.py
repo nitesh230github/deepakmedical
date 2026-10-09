@@ -1,6 +1,10 @@
 """
-products.xlsx  ->  products.json   (GitHub Action 'automation.yml' isko chalata hai)
-Local test:  python scripts/update_data.py
+products.xlsx  ->  products.json   (GitHub Action 'excel-to-json.yml' isko chalata hai)
+Local test:  python scripts/updated_data_excel_to_json.py
+
+Naye columns (Excel me kahin bhi, header ka naam 'Description' / 'Rx' kuch bhi case me chalega):
+  Description : product ka apna likha description (khali ho to website auto template banati hai)
+  Rx          : khali ya Yes = prescription medicine (default). No / OTC / FALSE = Rx nahi.
 """
 import json
 import os
@@ -18,7 +22,11 @@ CHECK_IMAGES = True
 TEXT_FIELDS = ["name", "company", "category", "packing", "saltContent", "uses"]
 NULLABLE_FIELDS = ["discount", "scheme"]
 ORDER = ["id", "name", "company", "price", "category", "packing", "saltContent",
-         "uses", "bestseller", "inStock", "discount", "scheme"]
+         "uses", "bestseller", "inStock", "discount", "scheme", "rx", "description"]
+
+# Header ka naam capital/small kisi bhi tarah likha ho, sahi naam pakad lo
+# (jaise "Description" -> "description", "Rx" -> "rx", "instock" -> "inStock")
+CANON = {h.lower(): h for h in ORDER + ["image"]}
 
 
 def clean(v):
@@ -53,6 +61,16 @@ def to_bool(v, default):
     return default
 
 
+def to_rx(v):
+    """Rx: khali = Rx (default). Sirf No / OTC / FALSE jaisa kuch likha ho tabhi Rx hat'ta hai."""
+    if v is None:
+        return True
+    if isinstance(v, bool):
+        return v
+    s = str(v).strip().lower()
+    return s not in ("false", "no", "n", "0", "nahi", "na", "otc", "non-rx", "non rx", "nonrx")
+
+
 def fix_image(name):
     name = name.strip()
     if not name:
@@ -70,7 +88,10 @@ def main():
         sys.exit(f"ERROR: '{SHEET_NAME}' sheet nahi mili. Sheets: {wb.sheetnames}")
     ws = wb[SHEET_NAME]
 
-    headers = [str(c.value).strip() if c.value is not None else "" for c in ws[1]]
+    headers = []
+    for c in ws[1]:
+        h = str(c.value).strip() if c.value is not None else ""
+        headers.append(CANON.get(h.lower(), h))
     for h in ("name", "price"):
         if h not in headers:
             sys.exit(f"ERROR: header me '{h}' column chahiye")
@@ -105,6 +126,8 @@ def main():
             p[f] = rec.get(f) or ""
         p["bestseller"] = to_bool(rec.get("bestseller"), False)
         p["inStock"] = to_bool(rec.get("inStock"), True)
+        p["rx"] = to_rx(rec.get("rx"))
+        p["description"] = rec.get("description") or ""     # Alt+Enter wali nayi lines bhi bachti hain
         for f in NULLABLE_FIELDS:
             v = rec.get(f)
             if v is not None and not isinstance(v, str):

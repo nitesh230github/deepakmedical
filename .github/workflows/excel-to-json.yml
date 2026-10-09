@@ -5,6 +5,7 @@ on:
     paths:
       - "products.xlsx"
       - "scripts/updated_data_excel_to_json.py"
+      - "scripts/build_product_pages.py"
   workflow_dispatch:   # Actions tab se manually bhi chala sakte ho
 
 permissions:
@@ -25,14 +26,20 @@ jobs:
       - name: Excel se JSON banao
         run: python scripts/updated_data_excel_to_json.py
 
+      # Har product ka alag page (medicine/<naam>/) + sitemap.xml banao,
+      # aur products.json me har product ka "url" jodo
+      - name: Product pages banao
+        run: python scripts/build_product_pages.py
+
       - name: Change ho to commit karo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add products.json
+          # -A: hataye gaye products ke purane pages bhi repo se hat jaayen
+          git add -A products.json sitemap.xml medicine
           if git diff --cached --quiet; then
-            echo "JSON me koi change nahi"
+            echo "Koi change nahi"
           else
-            git commit -m "Auto-update products.json from Excel"
+            git commit -m "Auto-update products.json and product pages from Excel"
             git push
           fi
